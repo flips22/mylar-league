@@ -72,8 +72,8 @@ def getAllSeries():
         
     #set default
     addIssue = False
-    #for line in range(len(jsonAllData['data'])):
-    for line in range(10): #for testing the first X number of series
+    for line in range(len(jsonAllData['data'])):
+    #for line in range(10): #for testing the first X number of series
 
         if line % 100 == 0: print("         Progress: %s series of %s pulled from mylar" % (line,len(jsonAllData['data'])))    
 

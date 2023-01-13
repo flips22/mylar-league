@@ -43,9 +43,11 @@ else:
 
 
 config = configparser.ConfigParser(allow_no_value=True)
-config.read('config.ini')
-#config.read('configPRIVATE.ini')
 
+if os.path.exists('configPRIVATE.ini'): # an attempt to prevent me from sharing my api keys (again) :)
+    config.read('configPRIVATE.ini')
+else:
+    config.read('config.ini')
 
 mylarAPI = config['mylar']['mylarapi']
 mylarBaseURL = config['mylar']['mylarbaseurl']
@@ -61,7 +63,12 @@ def getAllSeries():
     global newIssueCounter
     print("         Pulling all series data from mylar")
     
-    mylarAllData = requests.get(mylarGetAllURL).text
+    try :
+        mylarAllData = requests.get(mylarGetAllURL).text
+    except requests.exceptions.RequestException as e:
+        print('Exiting...   Something wrong with mylar API config')
+        raise SystemExit(e)
+
     jsonAllData = json.loads(mylarAllData)
     
     # Don't use headers, but might at a later date
@@ -147,6 +154,14 @@ def leagueify():
                             collection_list[line][2],
                             fulltitle,
                             date])
+            #if title starts with "The" also add a title that doesn't start with "The" for better matching
+            if re.match('^The ',fulltitle):
+                fulltitlenothe = re.sub('^The ','',fulltitle)
+                f_out.writerow([collection_list[line][1],
+                            collection_list[line][2],
+                            fulltitlenothe,
+                            date])
+        filelength = len(f.readlines())
 
 
 def chunkify():
@@ -179,8 +194,9 @@ def main():
         print("       First run of export starting...")
         getAllSeries()
         leagueify()
-        if len(masterFile) >= chunk_size:
-            chunkify()
+        with open(LOCGinputFile, "r") as f_length:
+            if(len(f_length.readlines())) >= chunk_size:
+                chunkify()
     else:
         print("       Delta run of export starting...")
         getAllSeries()
@@ -188,9 +204,9 @@ def main():
         if not newIssueCounter == 0:
             leagueify()
             print('         Found ' + str(newIssueCounter) + ' issues')
-
-            if len(deltaFile) >= chunk_size:
-                chunkify()
+            with open(LOCGinputFile, "r") as f_length:
+                if(len(f_length.readlines())) >= chunk_size:
+                    chunkify()
         else:
             print('         Found no new issues. No import files created.')
 

@@ -117,7 +117,7 @@ def getAllSeries():
                             
                     if addIssue:
                         f = csv.writer(open(masterFile, 'a', encoding='utf-8'), delimiter=';', lineterminator='\n')    
-                        f_delta = csv.writer(open(deltaFile, 'w', encoding='utf-8'), delimiter=';', lineterminator='\n')
+                        f_delta = csv.writer(open(deltaFile, 'a', encoding='utf-8'), delimiter=';', lineterminator='\n')
                         newIssueCounter += 1
                         print('Adding new issue of ' + jsonIssueData['data']['comic'][0]['name'] +  ' to delta file and master file')
                         f_delta.writerow([jsonIssueData['data']['issues'][issue]['id'],

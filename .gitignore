@@ -6,11 +6,10 @@ __pycache__/
 *$py.class
 .vscode/
 
-# PyInstaller
 
 *.csv
 writeconfigfile.py
 
 configPRIVATE.ini
 
-
+.~lock*

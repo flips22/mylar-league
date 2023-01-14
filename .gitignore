@@ -13,3 +13,6 @@ writeconfigfile.py
 configPRIVATE.ini
 
 .~lock*
+
+ReadingLists/*
+ReadingLists

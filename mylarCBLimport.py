@@ -272,7 +272,7 @@ def findVolumeDetails(series,year):
                             result_matches += 1
                             publisher = publisher_temp
                             if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
-                            comicID = result.id_
+                            comicID = result.volume_id
                             numIssues = result.issue_count
                             print("         Found on comicvine: %s - %s (%s) : %s (%s issues)" % (publisher, series, year, comicID, numIssues))
 

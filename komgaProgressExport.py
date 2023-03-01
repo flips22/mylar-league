@@ -61,7 +61,7 @@ for line in range(len(jsonAllData['content'])):
         #             jsonIssueData['content'][issue]['number'],
         #             jsonIssueData['content'][issue]['metadata']['releaseDate']])
 
-        fullTitle = seriesName + ' #' + str(jsonIssueData['content'][issue]['number'])
+        fullTitle = seriesName + ' #' + str(jsonIssueData['content'][issue]['metadata']['number'])
 
         finp.writerow([jsonAllData['content'][line]['metadata']['publisher'],
                     seriesName,

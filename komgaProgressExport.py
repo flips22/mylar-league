@@ -20,7 +20,7 @@ komgaPass = config['komga']['komgapass']
 
 timeStamp = time.strftime("%Y%m%d-%H%M%S")
 
-komgaFile = 'komgareadprogress-' + timeStamp + '.csv'
+#komgaFile = 'komgareadprogress-' + timeStamp + '.csv'
 komgaInputFile = 'komgareadprogress-IMPORT-' + timeStamp + '.csv'
 
 komgaSeriesReadProgURL = komgaBaseURL + 'api/v1/series?read_status=READ&read_status=IN_PROGRESS'
@@ -33,7 +33,7 @@ except requests.exceptions.RequestException as e:
 
 jsonAllData = json.loads(komgaAllRead)
 
-f = csv.writer(open(komgaFile, 'w', encoding='utf-8'), delimiter=';', lineterminator='\n')
+#f = csv.writer(open(komgaFile, 'w', encoding='utf-8'), delimiter=';', lineterminator='\n')
 finp = csv.writer(open(komgaInputFile, 'w', encoding='utf-8'), delimiter=';', lineterminator='\n')
 print("         Pulling read progress from komga...") 
 
@@ -51,14 +51,15 @@ for line in range(len(jsonAllData['content'])):
         #seriesName = re.sub(' \([0-9][0-9][0-9][0-9]\)','', jsonAllData['content'][line]['name'])
         #seriesYear = re.findall('\(([0-9][0-9][0-9][0-9])\)',jsonAllData['content'][line]['name'])
         seriesName = re.sub(' \([0-9][0-9][0-9][0-9]\)','', jsonIssueData['content'][issue]['seriesTitle'])
-        seriesYear = re.findall('\(([0-9][0-9][0-9][0-9])\)',jsonIssueData['content'][issue]['seriesTitle'])
+        seriesName = re.sub(' V[0-9]{1,3}$','',seriesName)
+        #seriesYear = re.findall('\(([0-9][0-9][0-9][0-9])\)',jsonIssueData['content'][issue]['seriesTitle'])
 
-        f.writerow([jsonIssueData['content'][issue]['id'],
-                    jsonAllData['content'][line]['metadata']['publisher'],
-                    seriesName,
-                    seriesYear[0],
-                    jsonIssueData['content'][issue]['number'],
-                    jsonIssueData['content'][issue]['metadata']['releaseDate']])
+        # f.writerow([jsonIssueData['content'][issue]['id'],
+        #             jsonAllData['content'][line]['metadata']['publisher'],
+        #             seriesName,
+        #             seriesYear[0],
+        #             jsonIssueData['content'][issue]['number'],
+        #             jsonIssueData['content'][issue]['metadata']['releaseDate']])
 
         fullTitle = seriesName + ' #' + str(jsonIssueData['content'][issue]['number'])
 

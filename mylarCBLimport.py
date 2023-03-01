@@ -167,7 +167,10 @@ def parseCBLfiles():
 
                     cblinput = fileroot.findall("./Books/Book")
                     for series in cblinput:
-                        line = series.attrib['Series'].replace(",",""),series.attrib['Volume']
+                        if len(list(series)) == 0:
+                            line = series.attrib['Series'].replace(",",""),series.attrib['Volume'],'Unknown','Unknown'
+                        else:
+                            line = series.attrib['Series'].replace(",",""),series.attrib['Volume'],'Unknown',series[0].attrib['Series']
                         series_list.append(list(line))
                 except:
                     print("Unable to process file at %s" % ( os.path.join(str(root), str(file)) ))
@@ -203,7 +206,7 @@ def isSeriesInMylar(comicID):
         return False
 
     #In the event of if else failure
-    return False;
+    return False
 
 def addSeriesToMylar(comicID):
     if comicID.isnumeric():
@@ -327,6 +330,7 @@ def readExistingData():
                 if not i == 0: #Skip header row
                     fields = [x.strip() for x in data[i].split(",")]
                     dataList.append(fields)
+    print(dataList)
 
     return dataList
 
@@ -358,14 +362,17 @@ def mergeDataLists(list1, list2):
     global numNewSeries
 
     mainDataTitles = []
+    newDataTitles = []
     mergedTitleSet = ()
     finalMergedList = []
 
     #Extract first 2 row elements to modified list
     for row in mainDataList:
-        mainDataTitles.append([row[Column.SERIES], row[Column.YEAR]])
+        mainDataTitles.append([row[Column.SERIES], row[Column.YEAR],row[Column.COMICID]])
+    for row in dataToMerge:
+        newDataTitles.append([row[Column.SERIES], row[Column.YEAR],row[Column.COMICID]])
 
-    mergedTitleList = mainDataTitles + dataToMerge
+    mergedTitleList = mainDataTitles + newDataTitles
     mergedTitleList.sort()
 
     numExistingSeries = len(mainDataList)
@@ -387,11 +394,11 @@ def mergeDataLists(list1, list2):
         else:
           #if VERBOSE: print("Merged row: %s NOT found in main data" % (list(row)))
           #Use the list with only
-          newData = [row[Column.SERIES],row[Column.YEAR],"Unknown","Unknown",False]
+          newData = [row[Column.SERIES],row[Column.YEAR],"Unknown",row[2],False]
           finalMergedList.append(newData)
 
     numNewSeries = len(finalMergedList) - numExistingSeries
-
+    print(finalMergedList)
     return finalMergedList
 
 
@@ -405,7 +412,7 @@ def main():
 
     #Process CBL files
     cblSeriesList = parseCBLfiles()
-    
+
     #Process Wishlist
     #cblSeriesList = parseWishlist()
 
@@ -423,6 +430,10 @@ def main():
         publisher = mergedData[rowIndex][Column.PUBLISHER]
         comicID = mergedData[rowIndex][Column.COMICID]
         inMylar = mergedData[rowIndex][Column.INMYLAR]
+        if inMylar == 'True':
+            inMylar = True
+        if inMylar == 'False':
+            inMylar = False
         checkMylar = False
         comicIDExists = comicID.isnumeric()
 
@@ -443,7 +454,7 @@ def main():
                 comicID = str(cv_data[1])
 
         #Check if series exists in mylar
-        if inMylar == "True":
+        if inMylar == True:
             #Match exists in mylar
             if FORCE_RECHECK_MYLAR_MATCHES:
                 #Force recheck anyway

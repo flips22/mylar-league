@@ -47,10 +47,11 @@ for line in range(len(jsonAllData['content'])):
        
     komgaIssueData = requests.get(komgaIssuesURL, auth=HTTPBasicAuth(komgaUser, komgaPass)).text
     jsonIssueData = json.loads(komgaIssueData)
-
     for issue in range(len(jsonIssueData['content'])):
-        seriesName = re.sub(' \([0-9][0-9][0-9][0-9]\)','', jsonAllData['content'][line]['name'])
-        seriesYear = re.findall('\(([0-9][0-9][0-9][0-9])\)',jsonAllData['content'][line]['name'])
+        #seriesName = re.sub(' \([0-9][0-9][0-9][0-9]\)','', jsonAllData['content'][line]['name'])
+        #seriesYear = re.findall('\(([0-9][0-9][0-9][0-9])\)',jsonAllData['content'][line]['name'])
+        seriesName = re.sub(' \([0-9][0-9][0-9][0-9]\)','', jsonIssueData['content'][issue]['seriesTitle'])
+        seriesYear = re.findall('\(([0-9][0-9][0-9][0-9])\)',jsonIssueData['content'][issue]['seriesTitle'])
 
         f.writerow([jsonIssueData['content'][issue]['id'],
                     jsonAllData['content'][line]['metadata']['publisher'],

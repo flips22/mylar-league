@@ -58,6 +58,7 @@ import re
 from simyan.comicvine import Comicvine
 from simyan.sqlite_cache import SQLiteCache
 import configparser
+import unicodedata
 
 config = configparser.ConfigParser(allow_no_value=True)
 
@@ -112,7 +113,7 @@ mylarAPI = config['mylar']['mylarapi']
 mylarBaseURL = config['mylar']['mylarbaseurl']
 
 FORCE_RECHECK_MYLAR_MATCHES = False
-ADD_NEW_SERIES_TO_MYLAR = True
+ADD_NEW_SERIES_TO_MYLAR = False
 
 mylarAddURL = mylarBaseURL + 'api?apikey=' + mylarAPI + '&cmd=addComic&id='
 mylarCheckURL = mylarBaseURL + 'api?apikey=' + mylarAPI + '&cmd=getComic&id='
@@ -133,6 +134,10 @@ wishlistURL = 'https://leagueofcomicgeeks.com/profile/' + leagueUserName + '/wis
 series_pat_str = '(?<=data-sorting=")(.+?(?="))'
 volume_pat_str = '(?<="series" data-begin=")(.+?(?="))'
 
+dynamicNameTemplate = '[^a-zA-Z0-9]'
+stop_words = ['the', 'a', 'and']
+yearStringCleanTemplate = '[^0-9]'
+cleanStringTemplate = '[^a-zA-Z0-9\:\-\(\) ]'
 
 def parseWishlist():
     series_list = []
@@ -167,7 +172,7 @@ def parseCBLfiles():
 
                     cblinput = fileroot.findall("./Books/Book")
                     for series in cblinput:
-                        if len(list(series)) == 0:
+                        if len(list(series)) <= 1:
                             line = series.attrib['Series'].replace(",",""),series.attrib['Volume'],'Unknown','Unknown'
                         else:
                             line = series.attrib['Series'].replace(",",""),series.attrib['Volume'],'Unknown',series[0].attrib['Series']
@@ -260,7 +265,10 @@ def findVolumeDetails(series,year):
             else: #Results were found
                 for result in response: #Iterate through CV results
                     #If exact series name and year match
-                    if result.name.lower() == series.lower() and str(result.start_year) == year:
+                    resultCleanName = getCleanName(result.name)
+                    seriesCleanName = getCleanName(series)
+                    if resultCleanName == seriesCleanName and str(result.start_year) == year:
+                    #if result.name.lower() == series.lower() and str(result.start_year) == year:
 
                         publisher_temp = result.publisher.name
                         result_publishers.append(publisher_temp)
@@ -330,7 +338,7 @@ def readExistingData():
                 if not i == 0: #Skip header row
                     fields = [x.strip() for x in data[i].split(",")]
                     dataList.append(fields)
-    print(dataList)
+    #print(dataList)
 
     return dataList
 
@@ -398,8 +406,24 @@ def mergeDataLists(list1, list2):
           finalMergedList.append(newData)
 
     numNewSeries = len(finalMergedList) - numExistingSeries
-    print(finalMergedList)
+    #print(finalMergedList)
     return finalMergedList
+
+
+def getCleanName(string):
+    string = str(string)
+    string = stripAccents(string.lower())
+    cleanString = " ".join([word for word in str(
+        string).split() if word not in stop_words])
+    cleanString = re.sub(dynamicNameTemplate, '', str(cleanString))
+
+    return cleanString
+
+def stripAccents(s):
+    # Converts accented letters to their basic english counterpart
+    s = str(s)
+    return ''.join(c for c in unicodedata.normalize('NFD', s) if unicodedata.category(c) != 'Mn')
+
 
 
 def main():

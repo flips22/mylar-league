@@ -7,7 +7,7 @@ __pycache__/
 .vscode/
 
 
-*.csv
+/*.csv
 writeconfigfile.py
 
 configPRIVATE.ini

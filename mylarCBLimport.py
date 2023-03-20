@@ -259,7 +259,6 @@ def findVolumeDetails(series,year):
             searchparam = "name:" + series
 
             response = session.volume_list(params={"filter": searchparam})
-
             if len(response) == 0:
                 print("     No results found for %s (%s)" % (series,year))
             else: #Results were found
@@ -288,30 +287,30 @@ def findVolumeDetails(series,year):
                             print("         Found on comicvine: %s - %s (%s) : %s (%s issues)" % (publisher, series, year, comicID, numIssues))
 
                     #Handle multiple publisher matches
-                if result_matches > 1:
-                    print("             Warning: Multiple valid matches found! Publishers: %s" % (", ".join(result_publishers)))
+                    if result_matches > 1:
+                        print("             Warning: Multiple valid matches found! Publishers: %s" % (", ".join(result_publishers)))
 
-                    #set result to preferred publisher
-                    for item in series_matches:
-                        if item['publisher']['name'] in PUBLISHER_PREFERRED or preferred_matches == 0:
-                            numIssues = item['count_of_issues']
-                            if numIssues > issueCounter:
-                                #Current series has more issues than any other preferred results!
-                                publisher = item['publisher']['name']
-                                comicID = item['id']
-                                issueCounter = numIssues
-                                ## TODO: Remove "preferred text labels"
-                                print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                            else:
-                                #Another series has more issues
-                                print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item['publisher']['name'],item['id'],numIssues))
+                        #set result to preferred publisher
+                        for item in series_matches:
+                            if item['publisher']['name'] in PUBLISHER_PREFERRED or preferred_matches == 0:
+                                numIssues = item['count_of_issues']
+                                if numIssues > issueCounter:
+                                    #Current series has more issues than any other preferred results!
+                                    publisher = item['publisher']['name']
+                                    comicID = item['id']
+                                    issueCounter = numIssues
+                                    ## TODO: Remove "preferred text labels"
+                                    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                else:
+                                    #Another series has more issues
+                                    print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item['publisher']['name'],item['id'],numIssues))
 
-                if len(response) == 0: # is this going to work?
-                    print("         No results found for %s (%s)" % (series,year))
+                    if len(response) == 0: # is this going to work?
+                        print("         No results found for %s (%s)" % (series,year))
 
-                if result_matches_blacklist > 0 and result_matches == 0:
-                    #Only invalid results found
-                    print("             No valid results found for %s (%s). %s blacklisted results found with the following publishers: %s" % (series,year,result_matches_blacklist, ",".join(publisher_blacklist_results)))
+                    if result_matches_blacklist > 0 and result_matches == 0:
+                        #Only invalid results found
+                        print("             No valid results found for %s (%s). %s blacklisted results found with the following publishers: %s" % (series,year,result_matches_blacklist, ",".join(publisher_blacklist_results)))
         except Exception as e:
             print("     There was an error processing %s (%s)" % (series,year))
             print(repr(e))
@@ -466,7 +465,7 @@ def main():
             #Self-imposed search limit to prevent hitting limits
             if searchCount < CV_SEARCH_LIMIT:
                 #sleeping at least 1 second is what comicvine reccomends. If you are more than 450 requests in 15 minutes (900 seconds) you will be rate limited. So if you are going to be importing for a straight 15 minutes (wow), then you would want to changet this to 2.
-                if searchCount > 0: time.sleep(CV_API_RATE)
+                #if searchCount > 0: time.sleep(CV_API_RATE)#removed and using Simyan's rate limiting.
 
                 #Update field in data list
                 cv_data = findVolumeDetails(series,year)

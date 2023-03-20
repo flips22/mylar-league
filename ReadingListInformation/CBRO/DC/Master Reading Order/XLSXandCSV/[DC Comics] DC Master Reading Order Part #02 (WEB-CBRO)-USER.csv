@@ -1,0 +1,777 @@
+,SeriesName,SeriesStartYear,IssueNum,IssueType,CoverDate,Name,SeriesID,IssueID,CV Series Name,CV Series Year,CV Issue Number,CV Cover Image,CV Issue URL,Days Between Issues,CV Series Publisher
+1,Batman,1940,404,Issue,1987-02-01,Comicvine,796,27733,Batman,1940,404, ,https://comicvine.gamespot.com/batman-404-who-i-am-how-i-came-to-be/4000-27733/,28 days 00:00:00,DC Comics
+2,Batman,1940,405,Issue,1987-03-01,Comicvine,796,27842,Batman,1940,405, ,https://comicvine.gamespot.com/batman-405-war-is-declared/4000-27842/,31 days 00:00:00,DC Comics
+3,Batman,1940,406,Issue,1987-04-01,Comicvine,796,27951,Batman,1940,406, ,https://comicvine.gamespot.com/batman-406-black-dawn/4000-27951/,30 days 00:00:00,DC Comics
+4,Batman,1940,407,Issue,1987-05-01,Comicvine,796,28066,Batman,1940,407, ,https://comicvine.gamespot.com/batman-407-friend-in-need/4000-28066/,642 days 00:00:00,DC Comics
+5,Catwoman,1989,1,Issue,1989-02-01,Comicvine,4176,30847,Catwoman,1989,1, ,https://comicvine.gamespot.com/catwoman-1-metamorphosis/4000-30847/,28 days 00:00:00,DC Comics
+6,Catwoman,1989,2,Issue,1989-03-01,Comicvine,4176,30959,Catwoman,1989,2, ,https://comicvine.gamespot.com/catwoman-2-downtown-babylon/4000-30959/,31 days 00:00:00,DC Comics
+7,Catwoman,1989,3,Issue,1989-04-01,Comicvine,4176,31053,Catwoman,1989,3, ,https://comicvine.gamespot.com/catwoman-3-gothic-baptism/4000-31053/,30 days 00:00:00,DC Comics
+8,Catwoman,1989,4,Issue,1989-05-01,Comicvine,4176,31168,Catwoman,1989,4, ,https://comicvine.gamespot.com/catwoman-4-consecration/4000-31168/,852 days 00:00:00,DC Comics
+9,Tales of the Green Lantern Corps Annual,1985,2,Issue,1986-12-31,Comicvine,21324,134743,Tales of the Green Lantern Corps Annual,1985,2, ,https://comicvine.gamespot.com/tales-of-the-green-lantern-corps-annual-2-escapist/4000-134743/,6941 days 00:00:00,DC Comics
+10,Batman and the Monster Men,2005,1,Issue,2006-01-01,Comicvine,22773,136618,Batman: The Monster Men,2006,1, ,https://comicvine.gamespot.com/dark-moon-rising-batman-and-the-monster-men-1/4000-136618/,31 days 00:00:00,DC Comics
+11,Batman and the Monster Men,2005,2,Issue,2006-02-01,Comicvine,22773,136619,Batman: The Monster Men,2006,2, ,https://comicvine.gamespot.com/dark-moon-rising-batman-the-monster-men-2/4000-136619/,28 days 00:00:00,DC Comics
+12,Batman and the Monster Men,2005,3,Issue,2006-03-01,Comicvine,22773,136620,Batman: The Monster Men,2006,3, ,https://comicvine.gamespot.com/dark-moon-rising-batman-the-monster-men-3/4000-136620/,31 days 00:00:00,DC Comics
+13,Batman and the Monster Men,2005,4,Issue,2006-04-01,Comicvine,22773,136621,Batman: The Monster Men,2006,4, ,https://comicvine.gamespot.com/dark-moon-rising-batman-the-monster-men-4/4000-136621/,30 days 00:00:00,DC Comics
+14,Batman and the Monster Men,2005,5,Issue,2006-05-01,Comicvine,22773,136622,Batman: The Monster Men,2006,5, ,https://comicvine.gamespot.com/dark-moon-rising-batman-the-monster-men-5/4000-136622/,31 days 00:00:00,DC Comics
+15,Batman and the Monster Men,2005,6,Issue,2006-06-01,Comicvine,22773,136623,Batman: The Monster Men,2006,6, ,https://comicvine.gamespot.com/dark-moon-rising-batman-the-monster-men-6/4000-136623/,122 days 00:00:00,DC Comics
+16,Batman and the Mad Monk,2006,1,Issue,2006-10-01,Comicvine,22771,136608,Batman: The Mad Monk,2006,1, ,https://comicvine.gamespot.com/dark-moon-rising-batman-and-the-mad-monk-1/4000-136608/,31 days 00:00:00,DC Comics
+17,Batman and the Mad Monk,2006,2,Issue,2006-11-01,Comicvine,22771,136609,Batman: The Mad Monk,2006,2, ,https://comicvine.gamespot.com/dark-moon-rising-batman-and-the-mad-monk-2/4000-136609/,30 days 00:00:00,DC Comics
+18,Batman and the Mad Monk,2006,3,Issue,2006-12-01,Comicvine,22771,136610,Batman: The Mad Monk,2006,3, ,https://comicvine.gamespot.com/dark-moon-rising-batman-and-the-mad-monk-3/4000-136610/,31 days 00:00:00,DC Comics
+19,Batman and the Mad Monk,2006,4,Issue,2007-01-01,Comicvine,22771,136611,Batman: The Mad Monk,2006,4, ,https://comicvine.gamespot.com/dark-moon-rising-batman-and-the-mad-monk-4/4000-136611/,31 days 00:00:00,DC Comics
+20,Batman and the Mad Monk,2006,5,Issue,2007-02-01,Comicvine,22771,136612,Batman: The Mad Monk,2006,5, ,https://comicvine.gamespot.com/dark-moon-rising-batman-and-the-mad-monk-5/4000-136612/,28 days 00:00:00,DC Comics
+21,Batman and the Mad Monk,2006,6,Issue,2007-03-01,Comicvine,22771,136613,Batman: The Mad Monk,2006,6, ,https://comicvine.gamespot.com/dark-moon-rising-batman-and-the-mad-monk-6/4000-136613/,758 days 00:00:00,DC Comics
+22,Batman: The Man Who Laughs,2005,1,Issue,2005-02-01,Comicvine,22099,132956,Batman: The Man Who Laughs,2005,1, ,https://comicvine.gamespot.com/batman-the-man-who-laughs-1/4000-132956/,942 days 00:00:00,DC Comics
+23,Batman Confidential,2007,7,Issue,2007-09-01,Comicvine,18231,111594,Batman Confidential,2007,7, ,https://comicvine.gamespot.com/batman-confidential-7-lovers-madmen-part-one-its-f/4000-111594/,30 days 00:00:00,DC Comics
+24,Batman Confidential,2007,8,Issue,2007-10-01,Comicvine,18231,113065,Batman Confidential,2007,8, ,https://comicvine.gamespot.com/batman-confidential-8-peace-in-arms-lovers-madmen-/4000-113065/,31 days 00:00:00,DC Comics
+25,Batman Confidential,2007,9,Issue,2007-11-01,Comicvine,18231,114439,Batman Confidential,2007,9, ,https://comicvine.gamespot.com/batman-confidential-9-lovers-madmen-part-three-cri/4000-114439/,30 days 00:00:00,DC Comics
+26,Batman Confidential,2007,10,Issue,2007-12-01,Comicvine,18231,115576,Batman Confidential,2007,10, ,https://comicvine.gamespot.com/batman-confidential-10-lovers-madmen-part-four/4000-115576/,31 days 00:00:00,DC Comics
+27,Batman Confidential,2007,11,Issue,2008-01-01,Comicvine,18231,118229,Batman Confidential,2007,11, ,https://comicvine.gamespot.com/batman-confidential-11-lovers-madmen-part-five-thi/4000-118229/,31 days 00:00:00,DC Comics
+28,Batman Confidential,2007,12,Issue,2008-02-01,Comicvine,18231,122424,Batman Confidential,2007,12, ,https://comicvine.gamespot.com/batman-confidential-12-lovers-and-madmen-conclusio/4000-122424/,3683 days 00:00:00,DC Comics
+29,Batman: Four of a Kind,1995,1,Issue,1998-01-01,Comicvine,34189,253722,Batman: Four of a Kind,1998,1, ,https://comicvine.gamespot.com/batman-four-of-a-kind-1-four-of-a-kind/4000-253722/,4080 days 00:00:00,DC Comics
+30,Man of Steel,1986,1,Issue,1986-10-31,Comicvine,3611,27236,The Man of Steel,1986,1, ,https://comicvine.gamespot.com/the-man-of-steel-1-from-out-of-the-green-dawn/4000-27236/,0 days 00:00:00,DC Comics
+31,Man of Steel,1986,2,Issue,1986-10-31,Comicvine,3611,27315,The Man of Steel,1986,2, ,https://comicvine.gamespot.com/the-man-of-steel-2-the-story-of-the-century/4000-27315/,30 days 00:00:00,DC Comics
+32,Man of Steel,1986,3,Issue,1986-11-30,Comicvine,3611,27343,The Man of Steel,1986,3, ,https://comicvine.gamespot.com/the-man-of-steel-3-one-night-in-gotham-city/4000-27343/,0 days 00:00:00,DC Comics
+33,Man of Steel,1986,4,Issue,1986-11-30,Comicvine,3611,27422,The Man of Steel,1986,4, ,https://comicvine.gamespot.com/the-man-of-steel-4-enemy-mine/4000-27422/,1 days 00:00:00,DC Comics
+34,Man of Steel,1986,5,Issue,1986-12-01,Comicvine,3611,27447,The Man of Steel,1986,5, ,https://comicvine.gamespot.com/the-man-of-steel-5-the-mirror-crackd/4000-27447/,0 days 00:00:00,DC Comics
+35,Man of Steel,1986,6,Issue,1986-12-01,Comicvine,3611,27531,The Man of Steel,1986,6, ,https://comicvine.gamespot.com/the-man-of-steel-6-the-haunting/4000-27531/,6939 days 00:00:00,DC Comics
+36,Superman/Shazam: First Thunder,2005,1,Issue,2005-11-30,Comicvine,18975,112556,Superman/Shazam: First Thunder,2005,1, ,https://comicvine.gamespot.com/supermanshazam-first-thunder-1-part-i-a-face-in-th/4000-112556/,1 days 00:00:00,DC Comics
+37,Superman/Shazam: First Thunder,2005,2,Issue,2005-12-01,Comicvine,18975,112599,Superman/Shazam: First Thunder,2005,2, ,https://comicvine.gamespot.com/supermanshazam-first-thunder-2-part-two-odd-couple/4000-112599/,31 days 00:00:00,DC Comics
+38,Superman/Shazam: First Thunder,2005,3,Issue,2006-01-01,Comicvine,18975,112600,Superman/Shazam: First Thunder,2005,3, ,https://comicvine.gamespot.com/supermanshazam-first-thunder-3-part-iii-titans/4000-112600/,31 days 00:00:00,DC Comics
+39,Superman/Shazam: First Thunder,2005,4,Issue,2006-02-01,Comicvine,18975,112603,Superman/Shazam: First Thunder,2005,4, ,https://comicvine.gamespot.com/supermanshazam-first-thunder-4-part-iv-men-and-boy/4000-112603/,6913 days 00:00:00,DC Comics
+40,Wonder Woman,1987,1,Issue,1987-02-28,Comicvine,3824,27759,Wonder Woman,1987,1, ,https://comicvine.gamespot.com/wonder-woman-1-the-princess-and-the-power/4000-27759/,31 days 00:00:00,DC Comics
+41,Wonder Woman,1987,2,Issue,1987-03-31,Comicvine,3824,27870,Wonder Woman,1987,2, ,https://comicvine.gamespot.com/wonder-woman-2-a-fire-in-the-sky/4000-27870/,30 days 00:00:00,DC Comics
+42,Wonder Woman,1987,3,Issue,1987-04-30,Comicvine,3824,27979,Wonder Woman,1987,3, ,https://comicvine.gamespot.com/wonder-woman-3-deadly-arrival/4000-27979/,31 days 00:00:00,DC Comics
+43,Wonder Woman,1987,4,Issue,1987-05-31,Comicvine,3824,28091,Wonder Woman,1987,4, ,https://comicvine.gamespot.com/wonder-woman-4-a-long-days-journey-into-fright/4000-28091/,30 days 00:00:00,DC Comics
+44,Wonder Woman,1987,5,Issue,1987-06-30,Comicvine,3824,28193,Wonder Woman,1987,5, ,https://comicvine.gamespot.com/wonder-woman-5-the-ares-assault/4000-28193/,31 days 00:00:00,DC Comics
+45,Wonder Woman,1987,6,Issue,1987-07-31,Comicvine,3824,28305,Wonder Woman,1987,6, ,https://comicvine.gamespot.com/wonder-woman-6-powerplay/4000-28305/,31 days 00:00:00,DC Comics
+46,Wonder Woman,1987,7,Issue,1987-08-31,Comicvine,3824,28430,Wonder Woman,1987,7, ,https://comicvine.gamespot.com/wonder-woman-7-rebirth/4000-28430/,576 days 00:00:00,DC Comics
+47,Aquaman,1986,1,Issue,1986-02-01,Comicvine,3591,26446,Aquaman,1986,1, ,https://comicvine.gamespot.com/aquaman-1-in-the-shadowy-depths-of-atlantis/4000-26446/,28 days 00:00:00,DC Comics
+48,Aquaman,1986,2,Issue,1986-03-01,Comicvine,3591,26550,Aquaman,1986,2, ,https://comicvine.gamespot.com/aquaman-2-mortal-combat-for-the-future-of-atlantis/4000-26550/,31 days 00:00:00,DC Comics
+49,Aquaman,1986,3,Issue,1986-04-01,Comicvine,3591,26643,Aquaman,1986,3, ,https://comicvine.gamespot.com/aquaman-3-orms-scheme/4000-26643/,30 days 00:00:00,DC Comics
+50,Aquaman,1986,4,Issue,1986-05-01,Comicvine,3591,26740,Aquaman,1986,4, ,https://comicvine.gamespot.com/aquaman-4-thicker-than-water/4000-26740/,1460 days 00:00:00,DC Comics
+51,Legends of the Dark Knight,1989,6,Issue,1990-04-30,Comicvine,4200,32654,Legends of the Dark Knight,1989,6, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-6-gothic-a-romance-volu/4000-32654/,31 days 00:00:00,DC Comics
+52,Legends of the Dark Knight,1989,7,Issue,1990-05-31,Comicvine,4200,32750,Legends of the Dark Knight,1989,7, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-7-gothic-a-romance-volu/4000-32750/,30 days 00:00:00,DC Comics
+53,Legends of the Dark Knight,1989,8,Issue,1990-06-30,Comicvine,4200,32867,Legends of the Dark Knight,1989,8, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-8-gothic-a-romance-volu/4000-32867/,31 days 00:00:00,DC Comics
+54,Legends of the Dark Knight,1989,9,Issue,1990-07-31,Comicvine,4200,32989,Legends of the Dark Knight,1989,9, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-9-gothic-a-romance-volu/4000-32989/,31 days 00:00:00,DC Comics
+55,Legends of the Dark Knight,1989,10,Issue,1990-08-31,Comicvine,4200,33107,Legends of the Dark Knight,1989,10, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-10-gothic-a-romance-vol/4000-33107/,30 days 00:00:00,DC Comics
+56,Legends of the Dark Knight,1989,11,Issue,1990-09-30,Comicvine,4200,33226,Legends of the Dark Knight,1989,11, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-11-prey-part-one/4000-33226/,61 days 00:00:00,DC Comics
+57,Legends of the Dark Knight,1989,12,Issue,1990-11-30,Comicvine,4200,33454,Legends of the Dark Knight,1989,12, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-12-prey-part-two-dark-s/4000-33454/,31 days 00:00:00,DC Comics
+58,Legends of the Dark Knight,1989,13,Issue,1990-12-31,Comicvine,4200,33559,Legends of the Dark Knight,1989,13, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-13-prey-part-three-nigh/4000-33559/,31 days 00:00:00,DC Comics
+59,Legends of the Dark Knight,1989,14,Issue,1991-01-31,Comicvine,4200,33803,Legends of the Dark Knight,1989,14, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-14-prey-book-iv-the-nig/4000-33803/,28 days 00:00:00,DC Comics
+60,Legends of the Dark Knight,1989,15,Issue,1991-02-28,Comicvine,4200,33902,Legends of the Dark Knight,1989,15, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-15-prey-conclusion-the-/4000-33902/,31 days 00:00:00,DC Comics
+61,Legends of the Dark Knight,1989,16,Issue,1991-03-31,Comicvine,4200,34013,Legends of the Dark Knight,1989,16, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-16-venom-part-one/4000-34013/,30 days 00:00:00,DC Comics
+62,Legends of the Dark Knight,1989,17,Issue,1991-04-30,Comicvine,4200,34118,Legends of the Dark Knight,1989,17, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-17-venom-part-two/4000-34118/,31 days 00:00:00,DC Comics
+63,Legends of the Dark Knight,1989,18,Issue,1991-05-31,Comicvine,4200,34220,Legends of the Dark Knight,1989,18, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-18-venom-part-three/4000-34220/,30 days 00:00:00,DC Comics
+64,Legends of the Dark Knight,1989,19,Issue,1991-06-30,Comicvine,4200,34321,Legends of the Dark Knight,1989,19, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-19-venom-part-four/4000-34321/,1 days 00:00:00,DC Comics
+65,Legends of the Dark Knight,1989,20,Issue,1991-07-01,Comicvine,4200,34440,Legends of the Dark Knight,1989,20, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-20-venom-part-five/4000-34440/,5522 days 00:00:00,DC Comics
+66,Gotham by Gaslight,1989,1,Issue,2006-08-13,Comicvine,52306,358009,Batman: Gotham by Gaslight,2006,1, ,https://comicvine.gamespot.com/batman-gotham-by-gaslight-1-tpb/4000-358009/,4914 days 00:00:00,DC Comics
+67,Green Arrow: The Wonder Year,1993,1,Issue,1993-02-28,Comicvine,4961,36822,Green Arrow: The Wonder Year,1993,1, ,https://comicvine.gamespot.com/green-arrow-the-wonder-year-1-part-1/4000-36822/,31 days 00:00:00,DC Comics
+68,Green Arrow: The Wonder Year,1993,2,Issue,1993-03-31,Comicvine,4961,36928,Green Arrow: The Wonder Year,1993,2, ,https://comicvine.gamespot.com/green-arrow-the-wonder-year-2-part-2/4000-36928/,30 days 00:00:00,DC Comics
+69,Green Arrow: The Wonder Year,1993,3,Issue,1993-04-30,Comicvine,4961,37046,Green Arrow: The Wonder Year,1993,3, ,https://comicvine.gamespot.com/green-arrow-the-wonder-year-3-part-3/4000-37046/,31 days 00:00:00,DC Comics
+70,Green Arrow: The Wonder Year,1993,4,Issue,1993-05-31,Comicvine,4961,37180,Green Arrow: The Wonder Year,1993,4, ,https://comicvine.gamespot.com/green-arrow-the-wonder-year-4-part-4/4000-37180/,5235 days 00:00:00,DC Comics
+71,Green Arrow: Year One,2007,1,Issue,2007-09-30,Comicvine,18880,111591,Green Arrow Year One,2007,1, ,https://comicvine.gamespot.com/green-arrow-year-one-1-part-one/4000-111591/,0 days 00:00:00,DC Comics
+72,Green Arrow: Year One,2007,2,Issue,2007-09-30,Comicvine,18880,111937,Green Arrow Year One,2007,2, ,https://comicvine.gamespot.com/green-arrow-year-one-2-part-two/4000-111937/,31 days 00:00:00,DC Comics
+73,Green Arrow: Year One,2007,3,Issue,2007-10-31,Comicvine,18880,112979,Green Arrow Year One,2007,3, ,https://comicvine.gamespot.com/green-arrow-year-one-3-part-three/4000-112979/,0 days 00:00:00,DC Comics
+74,Green Arrow: Year One,2007,4,Issue,2007-10-31,Comicvine,18880,114373,Green Arrow Year One,2007,4, ,https://comicvine.gamespot.com/green-arrow-year-one-4-part-four/4000-114373/,30 days 00:00:00,DC Comics
+75,Green Arrow: Year One,2007,5,Issue,2007-11-30,Comicvine,18880,115070,Green Arrow Year One,2007,5, ,https://comicvine.gamespot.com/green-arrow-year-one-5-part-five/4000-115070/,0 days 00:00:00,DC Comics
+76,Green Arrow: Year One,2007,6,Issue,2007-11-30,Comicvine,18880,116978,Green Arrow Year One,2007,6, ,https://comicvine.gamespot.com/green-arrow-year-one-6-part-six/4000-116978/,4777 days 00:00:00,DC Comics
+77,Legends of the Dark Knight,1992,65,Issue,1994-11-01,Comicvine,4720,39976,Batman: Legends of the Dark Knight,1992,65, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-65-going-sane-pa/4000-39976/,30 days 00:00:00,DC Comics
+78,Legends of the Dark Knight,1992,66,Issue,1994-12-01,Comicvine,4720,40117,Batman: Legends of the Dark Knight,1992,66, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-66-going-sane-pa/4000-40117/,31 days 00:00:00,DC Comics
+79,Legends of the Dark Knight,1992,67,Issue,1995-01-01,Comicvine,4720,40360,Batman: Legends of the Dark Knight,1992,67, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-67-going-sane-pa/4000-40360/,31 days 00:00:00,DC Comics
+80,Legends of the Dark Knight,1992,68,Issue,1995-02-01,Comicvine,4720,40489,Batman: Legends of the Dark Knight,1992,68, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-68-going-sane-pa/4000-40489/,669 days 00:00:00,DC Comics
+81,Batman: The Long Halloween,1996,1,Issue,1996-12-01,Comicvine,6822,48827,Batman: The Long Halloween,1996,1, ,https://comicvine.gamespot.com/batman-the-long-halloween-1-crime/4000-48827/,31 days 00:00:00,DC Comics
+82,Batman: The Long Halloween,1996,2,Issue,1997-01-01,Comicvine,6822,48828,Batman: The Long Halloween,1996,2, ,https://comicvine.gamespot.com/batman-the-long-halloween-2-thanksgiving/4000-48828/,31 days 00:00:00,DC Comics
+83,Batman: The Long Halloween,1996,3,Issue,1997-02-01,Comicvine,6822,48829,Batman: The Long Halloween,1996,3, ,https://comicvine.gamespot.com/batman-the-long-halloween-3-christmas/4000-48829/,28 days 00:00:00,DC Comics
+84,Batman: The Long Halloween,1996,4,Issue,1997-03-01,Comicvine,6822,48830,Batman: The Long Halloween,1996,4, ,https://comicvine.gamespot.com/batman-the-long-halloween-4-new-years-eve/4000-48830/,31 days 00:00:00,DC Comics
+85,Batman: The Long Halloween,1996,5,Issue,1997-04-01,Comicvine,6822,48831,Batman: The Long Halloween,1996,5, ,https://comicvine.gamespot.com/batman-the-long-halloween-5-valentines-day/4000-48831/,30 days 00:00:00,DC Comics
+86,Batman: The Long Halloween,1996,6,Issue,1997-05-01,Comicvine,6822,48832,Batman: The Long Halloween,1996,6, ,https://comicvine.gamespot.com/batman-the-long-halloween-6-st-patricks-day/4000-48832/,31 days 00:00:00,DC Comics
+87,Batman: The Long Halloween,1996,7,Issue,1997-06-01,Comicvine,6822,48833,Batman: The Long Halloween,1996,7, ,https://comicvine.gamespot.com/batman-the-long-halloween-7-april-fools-day/4000-48833/,30 days 00:00:00,DC Comics
+88,Batman: The Long Halloween,1996,8,Issue,1997-07-01,Comicvine,6822,48834,Batman: The Long Halloween,1996,8, ,https://comicvine.gamespot.com/batman-the-long-halloween-8-mothers-day/4000-48834/,31 days 00:00:00,DC Comics
+89,Batman: The Long Halloween,1996,9,Issue,1997-08-01,Comicvine,6822,48835,Batman: The Long Halloween,1996,9, ,https://comicvine.gamespot.com/batman-the-long-halloween-9-fathers-day/4000-48835/,31 days 00:00:00,DC Comics
+90,Batman: The Long Halloween,1996,10,Issue,1997-09-01,Comicvine,6822,48836,Batman: The Long Halloween,1996,10, ,https://comicvine.gamespot.com/batman-the-long-halloween-10-independence-day/4000-48836/,30 days 00:00:00,DC Comics
+91,Batman: The Long Halloween,1996,11,Issue,1997-10-01,Comicvine,6822,48837,Batman: The Long Halloween,1996,11, ,https://comicvine.gamespot.com/batman-the-long-halloween-11-roman-holiday/4000-48837/,31 days 00:00:00,DC Comics
+92,Batman: The Long Halloween,1996,12,Issue,1997-11-01,Comicvine,6822,48838,Batman: The Long Halloween,1996,12, ,https://comicvine.gamespot.com/batman-the-long-halloween-12-labor-day/4000-48838/,30 days 00:00:00,DC Comics
+93,Batman: The Long Halloween,1996,13,Issue,1997-12-01,Comicvine,6822,48839,Batman: The Long Halloween,1996,13, ,https://comicvine.gamespot.com/batman-the-long-halloween-13-punishment/4000-48839/,2557 days 00:00:00,DC Comics
+94,Batman Annual,1961,14,Issue,1990-12-01,Comicvine,3109,82299,Batman Annual,1961,14, ,https://comicvine.gamespot.com/batman-annual-14-the-eye-of-the-beholder/4000-82299/,3196 days 00:00:00,DC Comics
+95,Batman: Dark Victory,1999,0,Issue,1999-09-01,Comicvine,6312,106658,Batman: Dark Victory,1999,0, ,https://comicvine.gamespot.com/batman-dark-victory-0-wizard-exclusive-preview/4000-106658/,91 days 00:00:00,DC Comics
+96,Batman: Dark Victory,1999,1,Issue,1999-12-01,Comicvine,6312,106655,Batman: Dark Victory,1999,1, ,https://comicvine.gamespot.com/batman-dark-victory-1-war/4000-106655/,31 days 00:00:00,DC Comics
+97,Batman: Dark Victory,1999,2,Issue,2000-01-01,Comicvine,6312,46207,Batman: Dark Victory,1999,2, ,https://comicvine.gamespot.com/batman-dark-victory-2-secrets/4000-46207/,31 days 00:00:00,DC Comics
+98,Batman: Dark Victory,1999,3,Issue,2000-02-01,Comicvine,6312,46254,Batman: Dark Victory,1999,3, ,https://comicvine.gamespot.com/batman-dark-victory-3-toys/4000-46254/,29 days 00:00:00,DC Comics
+99,Batman: Dark Victory,1999,4,Issue,2000-03-01,Comicvine,6312,106656,Batman: Dark Victory,1999,4, ,https://comicvine.gamespot.com/batman-dark-victory-4-lost/4000-106656/,31 days 00:00:00,DC Comics
+100,Batman: Dark Victory,1999,5,Issue,2000-04-01,Comicvine,6312,106659,Batman: Dark Victory,1999,5, ,https://comicvine.gamespot.com/batman-dark-victory-5-love/4000-106659/,30 days 00:00:00,DC Comics
+101,Batman: Dark Victory,1999,6,Issue,2000-05-01,Comicvine,6312,106660,Batman: Dark Victory,1999,6, ,https://comicvine.gamespot.com/batman-dark-victory-6-hate/4000-106660/,31 days 00:00:00,DC Comics
+102,Batman: Dark Victory,1999,7,Issue,2000-06-01,Comicvine,6312,106661,Batman: Dark Victory,1999,7, ,https://comicvine.gamespot.com/batman-dark-victory-7-fools/4000-106661/,30 days 00:00:00,DC Comics
+103,Batman: Dark Victory,1999,8,Issue,2000-07-01,Comicvine,6312,106662,Batman: Dark Victory,1999,8, ,https://comicvine.gamespot.com/batman-dark-victory-8-battle/4000-106662/,31 days 00:00:00,DC Comics
+104,Batman: Dark Victory,1999,9,Issue,2000-08-01,Comicvine,6312,106663,Batman: Dark Victory,1999,9, ,https://comicvine.gamespot.com/batman-dark-victory-9-orphans/4000-106663/,31 days 00:00:00,DC Comics
+105,Batman: Dark Victory,1999,10,Issue,2000-09-01,Comicvine,6312,106664,Batman: Dark Victory,1999,10, ,https://comicvine.gamespot.com/batman-dark-victory-10-justice/4000-106664/,30 days 00:00:00,DC Comics
+106,Batman: Dark Victory,1999,11,Issue,2000-10-01,Comicvine,6312,106665,Batman: Dark Victory,1999,11, ,https://comicvine.gamespot.com/batman-dark-victory-11-passion/4000-106665/,31 days 00:00:00,DC Comics
+107,Batman: Dark Victory,1999,12,Issue,2000-11-01,Comicvine,6312,106666,Batman: Dark Victory,1999,12, ,https://comicvine.gamespot.com/batman-dark-victory-12-revenge/4000-106666/,30 days 00:00:00,DC Comics
+108,Batman: Dark Victory,1999,13,Issue,2000-12-01,Comicvine,6312,106667,Batman: Dark Victory,1999,13, ,https://comicvine.gamespot.com/batman-dark-victory-13-peace/4000-106667/,1431 days 00:00:00,DC Comics
+109,Catwoman: When in Rome,2005,1,Issue,2004-11-01,Comicvine,19181,114800,Catwoman: When in Rome,2004,1, ,https://comicvine.gamespot.com/catwoman-when-in-rome-1-monday/4000-114800/,30 days 00:00:00,DC Comics
+110,Catwoman: When in Rome,2005,2,Issue,2004-12-01,Comicvine,19181,115007,Catwoman: When in Rome,2004,2, ,https://comicvine.gamespot.com/catwoman-when-in-rome-2-tuesday/4000-115007/,31 days 00:00:00,DC Comics
+111,Catwoman: When in Rome,2005,3,Issue,2005-01-01,Comicvine,19181,115008,Catwoman: When in Rome,2004,3, ,https://comicvine.gamespot.com/catwoman-when-in-rome-3-wednesday/4000-115008/,59 days 00:00:00,DC Comics
+112,Catwoman: When in Rome,2005,4,Issue,2005-03-01,Comicvine,19181,115010,Catwoman: When in Rome,2004,4, ,https://comicvine.gamespot.com/catwoman-when-in-rome-4-thursday/4000-115010/,31 days 00:00:00,DC Comics
+113,Catwoman: When in Rome,2005,5,Issue,2005-04-01,Comicvine,19181,115012,Catwoman: When in Rome,2004,5, ,https://comicvine.gamespot.com/catwoman-when-in-rome-5-friday/4000-115012/,30 days 00:00:00,DC Comics
+114,Catwoman: When in Rome,2005,6,Issue,2005-05-01,Comicvine,19181,115011,Catwoman: When in Rome,2004,6, ,https://comicvine.gamespot.com/catwoman-when-in-rome-6-saturday/4000-115011/,2831 days 00:00:00,DC Comics
+115,Batman Chronicles: The Gauntlet,1997,1,Issue,1997-07-31,Comicvine,34056,222073,Batman Chronicles: The Gauntlet,1997,1, ,https://comicvine.gamespot.com/batman-chronicles-the-gauntlet-1-gn/4000-222073/,1219 days 00:00:00,DC Comics
+116,Robin: Year One,2001,1,Issue,2000-12-01,Comicvine,9134,68422,Robin: Year One,2000,1, ,https://comicvine.gamespot.com/robin-year-one-1/4000-68422/,31 days 00:00:00,DC Comics
+117,Robin: Year One,2001,2,Issue,2001-01-01,Comicvine,9134,68423,Robin: Year One,2000,2, ,https://comicvine.gamespot.com/robin-year-one-2/4000-68423/,31 days 00:00:00,DC Comics
+118,Robin: Year One,2001,3,Issue,2001-02-01,Comicvine,9134,68424,Robin: Year One,2000,3, ,https://comicvine.gamespot.com/robin-year-one-3/4000-68424/,28 days 00:00:00,DC Comics
+119,Robin: Year One,2001,4,Issue,2001-03-01,Comicvine,9134,68425,Robin: Year One,2000,4, ,https://comicvine.gamespot.com/robin-year-one-4/4000-68425/,702 days 00:00:00,DC Comics
+120,Batgirl: Year One,2003,1,Issue,2003-02-01,Comicvine,10088,134881,Batgirl Year One,2003,1, ,https://comicvine.gamespot.com/batgirl-year-one-1-masquerade/4000-134881/,28 days 00:00:00,DC Comics
+121,Batgirl: Year One,2003,2,Issue,2003-03-01,Comicvine,10088,134882,Batgirl Year One,2003,2, ,https://comicvine.gamespot.com/batgirl-year-one-2-future-tense/4000-134882/,31 days 00:00:00,DC Comics
+122,Batgirl: Year One,2003,3,Issue,2003-04-01,Comicvine,10088,134883,Batgirl Year One,2003,3, ,https://comicvine.gamespot.com/batgirl-year-one-3-afterglow/4000-134883/,30 days 00:00:00,DC Comics
+123,Batgirl: Year One,2003,4,Issue,2003-05-01,Comicvine,10088,134884,Batgirl Year One,2003,4, ,https://comicvine.gamespot.com/batgirl-year-one-4-cave-dwellers/4000-134884/,31 days 00:00:00,DC Comics
+124,Batgirl: Year One,2003,5,Issue,2003-06-01,Comicvine,10088,94196,Batgirl Year One,2003,5, ,https://comicvine.gamespot.com/batgirl-year-one-5-moth-to-a-flame/4000-94196/,30 days 00:00:00,DC Comics
+125,Batgirl: Year One,2003,6,Issue,2003-07-01,Comicvine,10088,94197,Batgirl Year One,2003,6, ,https://comicvine.gamespot.com/batgirl-year-one-6-bird-of-prey/4000-94197/,31 days 00:00:00,DC Comics
+126,Batgirl: Year One,2003,7,Issue,2003-08-01,Comicvine,10088,94198,Batgirl Year One,2003,7, ,https://comicvine.gamespot.com/batgirl-year-one-7-hearts-afire/4000-94198/,31 days 00:00:00,DC Comics
+127,Batgirl: Year One,2003,8,Issue,2003-09-01,Comicvine,10088,94199,Batgirl Year One,2003,8, ,https://comicvine.gamespot.com/batgirl-year-one-8-seasoned-crime-fighter/4000-94199/,30 days 00:00:00,DC Comics
+128,Batgirl: Year One,2003,9,Issue,2003-10-01,Comicvine,10088,94200,Batgirl Year One,2003,9, ,https://comicvine.gamespot.com/batgirl-year-one-9-ashes-blood/4000-94200/,4231 days 00:00:00,DC Comics
+129,Legends of the Dark Knight,1989,28,Issue,1992-03-01,Comicvine,4200,35487,Legends of the Dark Knight,1989,28, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-28-faces-part-1/4000-35487/,31 days 00:00:00,DC Comics
+130,Legends of the Dark Knight,1989,29,Issue,1992-04-01,Comicvine,4200,35592,Legends of the Dark Knight,1989,29, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-29-faces-part-2/4000-35592/,30 days 00:00:00,DC Comics
+131,Legends of the Dark Knight,1989,30,Issue,1992-05-01,Comicvine,4200,35696,Legends of the Dark Knight,1989,30, ,https://comicvine.gamespot.com/legends-of-the-dark-knight-30-faces-part-3/4000-35696/,1917 days 00:00:00,DC Comics
+132,Batman Annual,1961,11,Issue,1987-01-31,Comicvine,3109,53102,Batman Annual,1961,11, ,https://comicvine.gamespot.com/batman-annual-11-mortal-clay-love-bird/4000-53102/,8096 days 00:00:00,DC Comics
+133,Batman Confidential,2007,26,Issue,2009-04-01,Comicvine,18231,151877,Batman Confidential,2007,26, ,https://comicvine.gamespot.com/batman-confidential-26-a-new-dawn-part-one/4000-151877/,30 days 00:00:00,DC Comics
+134,Batman Confidential,2007,27,Issue,2009-05-01,Comicvine,18231,153463,Batman Confidential,2007,27, ,https://comicvine.gamespot.com/batman-confidential-27-a-new-dawn-part-2/4000-153463/,31 days 00:00:00,DC Comics
+135,Batman Confidential,2007,28,Issue,2009-06-01,Comicvine,18231,155262,Batman Confidential,2007,28, ,https://comicvine.gamespot.com/batman-confidential-28-a-new-dawn-part-3/4000-155262/,7092 days 00:00:00,DC Comics
+136,Green Lantern: Emerald Dawn,1989,1,Issue,1989-12-31,Comicvine,4189,31964,Green Lantern: Emerald Dawn,1989,1, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-1-the-sign/4000-31964/,31 days 00:00:00,DC Comics
+137,Green Lantern: Emerald Dawn,1989,2,Issue,1990-01-31,Comicvine,4189,32291,Green Lantern: Emerald Dawn,1989,2, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-2-the-trail/4000-32291/,28 days 00:00:00,DC Comics
+138,Green Lantern: Emerald Dawn,1989,3,Issue,1990-02-28,Comicvine,4189,32386,Green Lantern: Emerald Dawn,1989,3, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-3-the-ring/4000-32386/,31 days 00:00:00,DC Comics
+139,Green Lantern: Emerald Dawn,1989,4,Issue,1990-03-31,Comicvine,4189,32488,Green Lantern: Emerald Dawn,1989,4, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-4-the-corps/4000-32488/,30 days 00:00:00,DC Comics
+140,Green Lantern: Emerald Dawn,1989,5,Issue,1990-04-30,Comicvine,4189,32596,Green Lantern: Emerald Dawn,1989,5, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-5-the-test/4000-32596/,31 days 00:00:00,DC Comics
+141,Green Lantern: Emerald Dawn,1989,6,Issue,1990-05-31,Comicvine,4189,32696,Green Lantern: Emerald Dawn,1989,6, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-6-the-dawn/4000-32696/,334 days 00:00:00,DC Comics
+142,Green Lantern: Emerald Dawn II,1991,1,Issue,1991-04-30,Comicvine,4552,52081,Green Lantern: Emerald Dawn II,1991,1, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-ii-1-90-days-part-1-the/4000-52081/,31 days 00:00:00,DC Comics
+143,Green Lantern: Emerald Dawn II,1991,2,Issue,1991-05-31,Comicvine,4552,52082,Green Lantern: Emerald Dawn II,1991,2, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-ii-2-90-days-part-2-bal/4000-52082/,30 days 00:00:00,DC Comics
+144,Green Lantern: Emerald Dawn II,1991,3,Issue,1991-06-30,Comicvine,4552,52083,Green Lantern: Emerald Dawn II,1991,3, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-ii-3-90-days-part-3-pow/4000-52083/,31 days 00:00:00,DC Comics
+145,Green Lantern: Emerald Dawn II,1991,4,Issue,1991-07-31,Comicvine,4552,52084,Green Lantern: Emerald Dawn II,1991,4, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-ii-4-90-days-part-four-/4000-52084/,31 days 00:00:00,DC Comics
+146,Green Lantern: Emerald Dawn II,1991,5,Issue,1991-08-31,Comicvine,4552,52085,Green Lantern: Emerald Dawn II,1991,5, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-ii-5-90-days-part-five-/4000-52085/,30 days 00:00:00,DC Comics
+147,Green Lantern: Emerald Dawn II,1991,6,Issue,1991-09-30,Comicvine,4552,52086,Green Lantern: Emerald Dawn II,1991,6, ,https://comicvine.gamespot.com/green-lantern-emerald-dawn-ii-6-90-days-part-six-t/4000-52086/,6058 days 00:00:00,DC Comics
+148,Green Lantern,2005,29,Issue,2008-05-01,Comicvine,18216,125972,Green Lantern,2005,29, ,https://comicvine.gamespot.com/green-lantern-29-secret-origin-part-1/4000-125972/,31 days 00:00:00,DC Comics
+149,Green Lantern,2005,30,Issue,2008-06-01,Comicvine,18216,129008,Green Lantern,2005,30, ,https://comicvine.gamespot.com/green-lantern-30-secret-origin-part-2/4000-129008/,30 days 00:00:00,DC Comics
+150,Green Lantern,2005,31,Issue,2008-07-01,Comicvine,18216,130995,Green Lantern,2005,31, ,https://comicvine.gamespot.com/green-lantern-31-secret-origin-part-3/4000-130995/,31 days 00:00:00,DC Comics
+151,Green Lantern,2005,32,Issue,2008-08-01,Comicvine,18216,131805,Green Lantern,2005,32, ,https://comicvine.gamespot.com/green-lantern-32-secret-origin-part-4/4000-131805/,31 days 00:00:00,DC Comics
+152,Green Lantern,2005,33,Issue,2008-09-01,Comicvine,18216,134558,Green Lantern,2005,33, ,https://comicvine.gamespot.com/green-lantern-33-secret-origin-part-5/4000-134558/,30 days 00:00:00,DC Comics
+153,Green Lantern,2005,34,Issue,2008-10-01,Comicvine,18216,137371,Green Lantern,2005,34, ,https://comicvine.gamespot.com/green-lantern-34-secret-origin-part-6/4000-137371/,31 days 00:00:00,DC Comics
+154,Green Lantern,2005,35,Issue,2008-11-01,Comicvine,18216,140096,Green Lantern,2005,35, ,https://comicvine.gamespot.com/green-lantern-35-secret-origin-part-7/4000-140096/,7945 days 00:00:00,DC Comics
+155,Superman,1987,1,Issue,1987-01-31,Comicvine,3816,27645,Superman,1987,1, ,https://comicvine.gamespot.com/superman-1-heart-of-stone/4000-27645/,28 days 00:00:00,DC Comics
+156,Superman,1987,2,Issue,1987-02-28,Comicvine,3816,27753,Superman,1987,2, ,https://comicvine.gamespot.com/superman-2-the-secret-revealed/4000-27753/,3990 days 00:00:00,DC Comics
+157,JLA: Year One,1998,1,Issue,1998-01-31,Comicvine,6171,44591,JLA: Year One,1998,1, ,https://comicvine.gamespot.com/jla-year-one-1-justice-league-of-america-year-one/4000-44591/,28 days 00:00:00,DC Comics
+158,JLA: Year One,1998,2,Issue,1998-02-28,Comicvine,6171,44699,JLA: Year One,1998,2, ,https://comicvine.gamespot.com/jla-year-one-2-group-dynamic/4000-44699/,31 days 00:00:00,DC Comics
+159,JLA: Year One,1998,3,Issue,1998-03-31,Comicvine,6171,44793,JLA: Year One,1998,3, ,https://comicvine.gamespot.com/jla-year-one-3-guess-who/4000-44793/,30 days 00:00:00,DC Comics
+160,JLA: Year One,1998,4,Issue,1998-04-30,Comicvine,6171,44879,JLA: Year One,1998,4, ,https://comicvine.gamespot.com/jla-year-one-4-while-you-were-out/4000-44879/,31 days 00:00:00,DC Comics
+161,JLA: Year One,1998,5,Issue,1998-05-31,Comicvine,6171,44964,JLA: Year One,1998,5, ,https://comicvine.gamespot.com/jla-year-one-5-a-league-divided/4000-44964/,30 days 00:00:00,DC Comics
+162,JLA: Year One,1998,6,Issue,1998-06-30,Comicvine,6171,45049,JLA: Year One,1998,6, ,https://comicvine.gamespot.com/jla-year-one-6-sum-of-their-parts/4000-45049/,31 days 00:00:00,DC Comics
+163,JLA: Year One,1998,7,Issue,1998-07-31,Comicvine,6171,45131,JLA: Year One,1998,7, ,https://comicvine.gamespot.com/jla-year-one-7-the-american-way/4000-45131/,31 days 00:00:00,DC Comics
+164,JLA: Year One,1998,8,Issue,1998-08-31,Comicvine,6171,45219,JLA: Year One,1998,8, ,https://comicvine.gamespot.com/jla-year-one-8-loose-ends/4000-45219/,30 days 00:00:00,DC Comics
+165,JLA: Year One,1998,9,Issue,1998-09-30,Comicvine,6171,45309,JLA: Year One,1998,9, ,https://comicvine.gamespot.com/jla-year-one-9-change-the-world/4000-45309/,31 days 00:00:00,DC Comics
+166,JLA: Year One,1998,10,Issue,1998-10-31,Comicvine,6171,45376,JLA: Year One,1998,10, ,https://comicvine.gamespot.com/jla-year-one-10-heaven-and-earth/4000-45376/,30 days 00:00:00,DC Comics
+167,JLA: Year One,1998,11,Issue,1998-11-30,Comicvine,6171,45445,JLA: Year One,1998,11, ,https://comicvine.gamespot.com/jla-year-one-11-stalag-earth/4000-45445/,31 days 00:00:00,DC Comics
+168,JLA: Year One,1998,12,Issue,1998-12-31,Comicvine,6171,45506,JLA: Year One,1998,12, ,https://comicvine.gamespot.com/jla-year-one-12-justice-for-all/4000-45506/,4596 days 00:00:00,DC Comics
+169,Blue Beetle,1986,1,Issue,1986-06-01,Comicvine,3595,26835,Blue Beetle,1986,1, ,https://comicvine.gamespot.com/blue-beetle-1-out-from-the-ashes/4000-26835/,30 days 00:00:00,DC Comics
+170,Blue Beetle,1986,2,Issue,1986-07-01,Comicvine,3595,26937,Blue Beetle,1986,2, ,https://comicvine.gamespot.com/blue-beetle-2-this-citys-not-for-burning/4000-26937/,31 days 00:00:00,DC Comics
+171,Blue Beetle,1986,3,Issue,1986-08-01,Comicvine,3595,27035,Blue Beetle,1986,3, ,https://comicvine.gamespot.com/blue-beetle-3-if-this-be-madness/4000-27035/,31 days 00:00:00,DC Comics
+172,Blue Beetle,1986,4,Issue,1986-09-01,Comicvine,3595,27132,Blue Beetle,1986,4, ,https://comicvine.gamespot.com/blue-beetle-4-the-answer-is-alchemy/4000-27132/,30 days 00:00:00,DC Comics
+173,Blue Beetle,1986,5,Issue,1986-10-01,Comicvine,3595,27223,Blue Beetle,1986,5, ,https://comicvine.gamespot.com/blue-beetle-5-ask-the-right-question/4000-27223/,31 days 00:00:00,DC Comics
+174,Blue Beetle,1986,6,Issue,1986-11-01,Comicvine,3595,27329,Blue Beetle,1986,6, ,https://comicvine.gamespot.com/blue-beetle-6-face-off/4000-27329/,30 days 00:00:00,DC Comics
+175,Blue Beetle,1986,7,Issue,1986-12-01,Comicvine,3595,27434,Blue Beetle,1986,7, ,https://comicvine.gamespot.com/blue-beetle-7-gang-war/4000-27434/,31 days 00:00:00,DC Comics
+176,Blue Beetle,1986,8,Issue,1987-01-01,Comicvine,3595,27627,Blue Beetle,1986,8, ,https://comicvine.gamespot.com/blue-beetle-8-henchman/4000-27627/,4230 days 00:00:00,DC Comics
+177,Legends of the DC Universe,1998,7,Issue,1998-08-01,Comicvine,7262,51642,Legends of the DC Universe,1998,7, ,https://comicvine.gamespot.com/legends-of-the-dc-universe-7-peacemakers-part-1/4000-51642/,31 days 00:00:00,DC Comics
+178,Legends of the DC Universe,1998,8,Issue,1998-09-01,Comicvine,7262,51643,Legends of the DC Universe,1998,8, ,https://comicvine.gamespot.com/legends-of-the-dc-universe-8-peacemakers-part-2/4000-51643/,30 days 00:00:00,DC Comics
+179,Legends of the DC Universe,1998,9,Issue,1998-10-01,Comicvine,7262,51644,Legends of the DC Universe,1998,9, ,https://comicvine.gamespot.com/legends-of-the-dc-universe-9-peacemakers-part-3/4000-51644/,517 days 00:00:00,DC Comics
+180,Legends of the Dark Knight,1992,127,Issue,2000-03-01,Comicvine,4720,46985,Batman: Legends of the Dark Knight,1992,127, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-127-the-arrow-an/4000-46985/,31 days 00:00:00,DC Comics
+181,Legends of the Dark Knight,1958,128,Issue,2000-04-01,Comicvine,4720,46986,Batman: Legends of the Dark Knight,1992,128, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-128-the-arrow-an/4000-46986/,30 days 00:00:00,DC Comics
+182,Legends of the Dark Knight,1958,129,Issue,2000-05-01,Comicvine,4720,46987,Batman: Legends of the Dark Knight,1992,129, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-129-the-arrow-an/4000-46987/,31 days 00:00:00,DC Comics
+183,Legends of the Dark Knight,1958,130,Issue,2000-06-01,Comicvine,4720,46988,Batman: Legends of the Dark Knight,1992,130, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-130-the-arrow-an/4000-46988/,30 days 00:00:00,DC Comics
+184,Legends of the Dark Knight,1958,131,Issue,2000-07-01,Comicvine,4720,46989,Batman: Legends of the Dark Knight,1992,131, ,https://comicvine.gamespot.com/batman-legends-of-the-dark-knight-131-the-arrow-an/4000-46989/,4750 days 00:00:00,DC Comics
+185,Batman,1940,408,Issue,1987-06-30,Comicvine,796,28165,Batman,1940,408, ,https://comicvine.gamespot.com/batman-408-did-robin-die-tonight/4000-28165/,31 days 00:00:00,DC Comics
+186,Batman,1940,409,Issue,1987-07-31,Comicvine,796,28277,Batman,1940,409, ,https://comicvine.gamespot.com/batman-409-just-another-kid-on-crime-alley/4000-28277/,6423 days 00:00:00,DC Comics
+187,Nightwing,1996,101,Issue,2005-03-01,Comicvine,5755,96773,Nightwing,1996,101, ,https://comicvine.gamespot.com/nightwing-101-year-one-chapter-one-only-robins-hav/4000-96773/,0 days 00:00:00,DC Comics
+188,Nightwing,1996,102,Issue,2005-03-01,Comicvine,5755,96774,Nightwing,1996,102, ,https://comicvine.gamespot.com/nightwing-102-year-one-chapter-two-friends-in-high/4000-96774/,31 days 00:00:00,DC Comics
+189,Nightwing,1996,103,Issue,2005-04-01,Comicvine,5755,96775,Nightwing,1996,103, ,https://comicvine.gamespot.com/nightwing-103-year-one-chapter-three-deadman-talki/4000-96775/,0 days 00:00:00,DC Comics
+190,Nightwing,1996,104,Issue,2005-04-01,Comicvine,5755,96776,Nightwing,1996,104, ,https://comicvine.gamespot.com/nightwing-104-year-one-chapter-four-night-and-the-/4000-96776/,30 days 00:00:00,DC Comics
+191,Nightwing,1996,105,Issue,2005-05-01,Comicvine,5755,96777,Nightwing,1996,105, ,https://comicvine.gamespot.com/nightwing-105-year-one-chapter-five-like-killing-t/4000-96777/,0 days 00:00:00,DC Comics
+192,Nightwing,1996,106,Issue,2005-05-01,Comicvine,5755,96778,Nightwing,1996,106, ,https://comicvine.gamespot.com/nightwing-106-year-one-chapter-six-first-flight/4000-96778/,7913 days 00:00:00,DC Comics
+193,Legion of Super-Heroes Vol. 3 Annual,1982,2,Issue,1983-09-01,Comicvine,3116,22716,Legion of Super-Heroes Annual,1982,2, ,https://comicvine.gamespot.com/legion-of-super-heroes-annual-2-whatever-gods-ther/4000-22716/,1125 days 00:00:00,DC Comics
+194,Booster Gold,1986,8,Issue,1986-09-30,Comicvine,3596,27134,Booster Gold,1986,8, ,https://comicvine.gamespot.com/booster-gold-8-time-bridge-chapter-i/4000-27134/,31 days 00:00:00,DC Comics
+195,Booster Gold,1986,9,Issue,1986-10-31,Comicvine,3596,27225,Booster Gold,1986,9, ,https://comicvine.gamespot.com/booster-gold-9-time-bridge-chapter-ii/4000-27225/,152 days 00:00:00,DC Comics
+196,Blue Beetle,1986,11,Issue,1987-04-01,Comicvine,3595,27952,Blue Beetle,1986,11, ,https://comicvine.gamespot.com/blue-beetle-11-havoc-is-the-hybrid/4000-27952/,30 days 00:00:00,DC Comics
+197,Blue Beetle,1986,12,Issue,1987-05-01,Comicvine,3595,28067,Blue Beetle,1986,12, ,https://comicvine.gamespot.com/blue-beetle-12-man-in-the-middle/4000-28067/,31 days 00:00:00,DC Comics
+198,Blue Beetle,1986,13,Issue,1987-06-01,Comicvine,3595,28166,Blue Beetle,1986,13, ,https://comicvine.gamespot.com/blue-beetle-13-prometheus-unbound/4000-28166/,30 days 00:00:00,DC Comics
+199,Blue Beetle,1986,14,Issue,1987-07-01,Comicvine,3595,28278,Blue Beetle,1986,14, ,https://comicvine.gamespot.com/blue-beetle-14-the-phantom-of-pago-island/4000-28278/,31 days 00:00:00,DC Comics
+200,Blue Beetle,1986,15,Issue,1987-08-01,Comicvine,3595,28401,Blue Beetle,1986,15, ,https://comicvine.gamespot.com/blue-beetle-15-in-combat-with-carapax/4000-28401/,122 days 00:00:00,DC Comics
+201,Firestorm,1987,58,Issue,1987-04-01,Comicvine,3115,27957,The Fury of Firestorm,1982,58, ,https://comicvine.gamespot.com/the-fury-of-firestorm-58-gambit/4000-27957/,60 days 00:00:00,DC Comics
+202,Firestorm,1987,59,Issue,1987-05-31,Comicvine,3115,28071,The Fury of Firestorm,1982,59, ,https://comicvine.gamespot.com/the-fury-of-firestorm-59-glass-houses/4000-28071/,122 days 00:00:00,DC Comics
+203,Wonder Woman,1987,8,Issue,1987-09-30,Comicvine,3824,28537,Wonder Woman,1987,8, ,https://comicvine.gamespot.com/wonder-woman-8-time-passages/4000-28537/,31 days 00:00:00,DC Comics
+204,Wonder Woman,1987,9,Issue,1987-10-31,Comicvine,3824,28657,Wonder Woman,1987,9, ,https://comicvine.gamespot.com/wonder-woman-9-blood-of-the-cheetah/4000-28657/,272 days 00:00:00,DC Comics
+205,The Question,1987,1,Issue,1987-02-01,Comicvine,3805,27749,The Question,1986,1, ,https://comicvine.gamespot.com/the-question-1-the-bad-news/4000-27749/,28 days 00:00:00,DC Comics
+206,The Question,1987,2,Issue,1987-03-01,Comicvine,3805,27861,The Question,1986,2, ,https://comicvine.gamespot.com/the-question-2-butterfly/4000-27861/,31 days 00:00:00,DC Comics
+207,The Question,1987,3,Issue,1987-04-01,Comicvine,3805,27967,The Question,1986,3, ,https://comicvine.gamespot.com/the-question-3-suffer-the-children/4000-27967/,30 days 00:00:00,DC Comics
+208,The Question,1987,4,Issue,1987-05-01,Comicvine,3805,28079,The Question,1986,4, ,https://comicvine.gamespot.com/the-question-4-the-sacrifice/4000-28079/,31 days 00:00:00,DC Comics
+209,The Question,1987,5,Issue,1987-06-01,Comicvine,3805,28180,The Question,1986,5, ,https://comicvine.gamespot.com/the-question-5-cityscape/4000-28180/,30 days 00:00:00,DC Comics
+210,The Question,1987,6,Issue,1987-07-01,Comicvine,3805,28293,The Question,1986,6, ,https://comicvine.gamespot.com/the-question-6-that-small-rain-down-can-rain/4000-28293/,31 days 00:00:00,DC Comics
+211,The Question,1987,7,Issue,1987-08-01,Comicvine,3805,28417,The Question,1986,7, ,https://comicvine.gamespot.com/the-question-7-survivor/4000-28417/,31 days 00:00:00,DC Comics
+212,The Question,1987,8,Issue,1987-09-01,Comicvine,3805,28524,The Question,1986,8, ,https://comicvine.gamespot.com/the-question-8-mikado/4000-28524/,30 days 00:00:00,DC Comics
+213,The Question,1987,9,Issue,1987-10-01,Comicvine,3805,28643,The Question,1986,9, ,https://comicvine.gamespot.com/the-question-9-watchers/4000-28643/,31 days 00:00:00,DC Comics
+214,The Question,1987,10,Issue,1987-11-01,Comicvine,3805,28757,The Question,1986,10, ,https://comicvine.gamespot.com/the-question-10-santa-prisca/4000-28757/,30 days 00:00:00,DC Comics
+215,The Question,1987,11,Issue,1987-12-01,Comicvine,3805,28878,The Question,1986,11, ,https://comicvine.gamespot.com/the-question-11-transformation/4000-28878/,123 days 00:00:00,DC Comics
+216,Action Comics,1938,590,Issue,1987-07-31,Comicvine,18005,113928,Action Comics,1938,590, ,https://comicvine.gamespot.com/action-comics-590-better-living-dying-through-chem/4000-113928/,334 days 00:00:00,DC Comics
+217,Swamp Thing,1986,51,Issue,1986-08-31,Comicvine,3465,27059,Swamp Thing,1986,51, ,https://comicvine.gamespot.com/swamp-thing-51-home-free/4000-27059/,1 days 00:00:00,Vertigo
+218,Swamp Thing,1986,52,Issue,1986-09-01,Comicvine,3465,27154,Swamp Thing,1986,52, ,https://comicvine.gamespot.com/swamp-thing-52-natural-consequences/4000-27154/,60 days 00:00:00,Vertigo
+219,Swamp Thing,1986,53,Issue,1986-10-31,Comicvine,3465,27245,Swamp Thing,1986,53, ,https://comicvine.gamespot.com/swamp-thing-53-the-garden-of-earthly-delights/4000-27245/,1 days 00:00:00,Vertigo
+220,Swamp Thing,1986,54,Issue,1986-11-01,Comicvine,3465,27351,Swamp Thing,1986,54, ,https://comicvine.gamespot.com/swamp-thing-54-the-flowers-of-romance/4000-27351/,30 days 00:00:00,Vertigo
+221,Swamp Thing,1986,55,Issue,1986-12-01,Comicvine,3465,27454,Swamp Thing,1986,55, ,https://comicvine.gamespot.com/swamp-thing-55-earth-to-earth/4000-27454/,31 days 00:00:00,Vertigo
+222,Swamp Thing,1986,56,Issue,1987-01-01,Comicvine,3465,27646,Swamp Thing,1986,56, ,https://comicvine.gamespot.com/swamp-thing-56-my-blue-heaven/4000-27646/,150 days 00:00:00,Vertigo
+223,Justice League,1987,1,Issue,1987-05-31,Comicvine,3796,105729,Justice League,1987,1, ,https://comicvine.gamespot.com/justice-league-1-born-again/4000-105729/,30 days 00:00:00,DC Comics
+224,Justice League,1987,2,Issue,1987-06-30,Comicvine,3796,28244,Justice League,1987,2, ,https://comicvine.gamespot.com/justice-league-2-make-war-no-more/4000-28244/,31 days 00:00:00,DC Comics
+225,Justice League,1987,3,Issue,1987-07-31,Comicvine,3796,28362,Justice League,1987,3, ,https://comicvine.gamespot.com/justice-league-3-meltdown/4000-28362/,31 days 00:00:00,DC Comics
+226,Justice League,1987,4,Issue,1987-08-31,Comicvine,3796,28476,Justice League,1987,4, ,https://comicvine.gamespot.com/justice-league-4-winning-hand/4000-28476/,122 days 00:00:00,DC Comics
+227,Justice League Annual,1987,1,Issue,1987-12-31,Comicvine,22904,137517,Justice League Annual,1987,1, ,https://comicvine.gamespot.com/justice-league-annual-1-germ-warfare/4000-137517/,92 days 00:00:00,DC Comics
+228,Justice League,1987,5,Issue,1987-09-30,Comicvine,3796,28587,Justice League,1987,5, ,https://comicvine.gamespot.com/justice-league-5-gray-life-gray-dreams/4000-28587/,31 days 00:00:00,DC Comics
+229,Justice League,1987,6,Issue,1987-10-31,Comicvine,3796,28709,Justice League,1987,6, ,https://comicvine.gamespot.com/justice-league-6-massacre-in-gray/4000-28709/,30 days 00:00:00,DC Comics
+230,Justice League International,1987,7,Issue,1987-11-30,Comicvine,3798,28828,Justice League International,1987,7, ,https://comicvine.gamespot.com/justice-league-international-7-justice-league-inte/4000-28828/,31 days 00:00:00,DC Comics
+231,Justice League International,1987,8,Issue,1987-12-31,Comicvine,3798,106838,Justice League International,1987,8, ,https://comicvine.gamespot.com/justice-league-international-8-moving-day-old-news/4000-106838/,305 days 00:00:00,DC Comics
+232,Legion of Super-Heroes,1984,32,Issue,1987-03-01,Comicvine,3310,27857,Legion of Super-Heroes,1984,32, ,https://comicvine.gamespot.com/legion-of-super-heroes-32-forgotten-heroes/4000-27857/,31 days 00:00:00,DC Comics
+233,Legion of Super-Heroes,1984,33,Issue,1987-04-01,Comicvine,3310,27963,Legion of Super-Heroes,1984,33, ,https://comicvine.gamespot.com/legion-of-super-heroes-33-forgotten-planet/4000-27963/,30 days 00:00:00,DC Comics
+234,Legion of Super-Heroes,1984,34,Issue,1987-05-01,Comicvine,3310,28075,Legion of Super-Heroes,1984,34, ,https://comicvine.gamespot.com/legion-of-super-heroes-34-forgotten-foe/4000-28075/,31 days 00:00:00,DC Comics
+235,Legion of Super-Heroes,1984,35,Issue,1987-06-01,Comicvine,3310,28176,Legion of Super-Heroes,1984,35, ,https://comicvine.gamespot.com/legion-of-super-heroes-35-forgotten-friends/4000-28176/,61 days 00:00:00,DC Comics
+236,Legion of Super-Heroes,1984,37,Issue,1987-08-01,Comicvine,3310,28413,Legion of Super-Heroes,1984,37, ,https://comicvine.gamespot.com/legion-of-super-heroes-37-a-twist-in-time/4000-28413/,30 days 00:00:00,DC Comics
+237,Superman,1987,8,Issue,1987-08-31,Comicvine,3816,28424,Superman,1987,8, ,https://comicvine.gamespot.com/superman-8-future-shock/4000-28424/,0 days 00:00:00,DC Comics
+238,Action Comics,1938,591,Issue,1987-08-31,Comicvine,18005,119276,Action Comics,1938,591, ,https://comicvine.gamespot.com/action-comics-591-past-imperfect/4000-119276/,1 days 00:00:00,DC Comics
+239,Legion of Super-Heroes,1984,38,Issue,1987-09-01,Comicvine,3310,28520,Legion of Super-Heroes,1984,38, ,https://comicvine.gamespot.com/legion-of-super-heroes-38-the-greatest-hero-of-the/4000-28520/,123 days 00:00:00,DC Comics
+240,Suicide Squad,1987,1,Issue,1987-05-01,Comicvine,3815,28084,Suicide Squad,1987,1, ,https://comicvine.gamespot.com/suicide-squad-1-trial-by-blood/4000-28084/,48 days 00:00:00,DC Comics
+241,Suicide Squad,1987,2,Issue,1987-06-18,Comicvine,3815,28186,Suicide Squad,1987,2, ,https://comicvine.gamespot.com/suicide-squad-2-trial-by-fire/4000-28186/,30 days 00:00:00,DC Comics
+242,Suicide Squad,1987,3,Issue,1987-07-18,Comicvine,3815,28298,Suicide Squad,1987,3, ,https://comicvine.gamespot.com/suicide-squad-3-jailbreak/4000-28298/,44 days 00:00:00,DC Comics
+243,Suicide Squad,1987,4,Issue,1987-08-31,Comicvine,3815,28423,Suicide Squad,1987,4, ,https://comicvine.gamespot.com/suicide-squad-4-william-hells-overture/4000-28423/,1 days 00:00:00,DC Comics
+244,Suicide Squad,1987,5,Issue,1987-09-01,Comicvine,3815,28530,Suicide Squad,1987,5, ,https://comicvine.gamespot.com/suicide-squad-5-the-flight-of-the-firebird/4000-28530/,30 days 00:00:00,DC Comics
+245,Suicide Squad,1987,6,Issue,1987-10-01,Comicvine,3815,28649,Suicide Squad,1987,6, ,https://comicvine.gamespot.com/suicide-squad-6-hitting-the-fan/4000-28649/,60 days 00:00:00,DC Comics
+246,Suicide Squad,1987,7,Issue,1987-11-30,Comicvine,3815,28764,Suicide Squad,1987,7, ,https://comicvine.gamespot.com/suicide-squad-7-thrown-to-the-wolves/4000-28764/,30 days 00:00:00,DC Comics
+247,Firestorm,1987,64,Issue,1987-10-31,Comicvine,3115,28632,The Fury of Firestorm,1982,64, ,https://comicvine.gamespot.com/the-fury-of-firestorm-64-through-the-gauntlet/4000-28632/,30 days 00:00:00,DC Comics
+248,Firestorm Vol. 2 Annual,1987,5,Issue,1987-10-01,Comicvine,19313,115927,Firestorm Annual,1987,5, ,https://comicvine.gamespot.com/firestorm-annual-5-ground-zero/4000-115927/,60 days 00:00:00,DC Comics
+249,Superman,1987,11,Issue,1987-11-30,Comicvine,3816,28765,Superman,1987,11, ,https://comicvine.gamespot.com/superman-11-the-name-game/4000-28765/,302 days 00:00:00,DC Comics
+250,Swamp Thing,1986,57,Issue,1987-02-01,Comicvine,3465,27754,Swamp Thing,1986,57, ,https://comicvine.gamespot.com/swamp-thing-57-mysteries-in-space/4000-27754/,28 days 00:00:00,Vertigo
+251,Swamp Thing,1986,58,Issue,1987-03-01,Comicvine,3465,27865,Swamp Thing,1986,58, ,https://comicvine.gamespot.com/swamp-thing-58-exiles/4000-27865/,31 days 00:00:00,Vertigo
+252,Swamp Thing,1986,59,Issue,1987-04-01,Comicvine,3465,27974,Swamp Thing,1986,59, ,https://comicvine.gamespot.com/swamp-thing-59-reunion/4000-27974/,30 days 00:00:00,Vertigo
+253,Swamp Thing,1986,60,Issue,1987-05-01,Comicvine,3465,28086,Swamp Thing,1986,60, ,https://comicvine.gamespot.com/swamp-thing-60-loving-the-alien/4000-28086/,31 days 00:00:00,Vertigo
+254,Swamp Thing,1986,61,Issue,1987-06-01,Comicvine,3465,28188,Swamp Thing,1986,61, ,https://comicvine.gamespot.com/swamp-thing-61-all-flesh-is-grass/4000-28188/,30 days 00:00:00,Vertigo
+255,Swamp Thing,1986,62,Issue,1987-07-01,Comicvine,3465,28300,Swamp Thing,1986,62, ,https://comicvine.gamespot.com/swamp-thing-62-wavelength/4000-28300/,31 days 00:00:00,Vertigo
+256,Swamp Thing,1986,63,Issue,1987-08-01,Comicvine,3465,28425,Swamp Thing,1986,63, ,https://comicvine.gamespot.com/swamp-thing-63-loose-ends-reprise/4000-28425/,31 days 00:00:00,Vertigo
+257,Swamp Thing,1986,64,Issue,1987-09-01,Comicvine,3465,28532,Swamp Thing,1986,64, ,https://comicvine.gamespot.com/swamp-thing-64-return-of-the-good-gumbo/4000-28532/,29 days 00:00:00,Vertigo
+258,Secret Origins,1986,18,Issue,1987-09-30,Comicvine,3616,28525,Secret Origins,1986,18, ,https://comicvine.gamespot.com/secret-origins-18-before-and-after-the-tale-of-gre/4000-28525/,62 days 00:00:00,DC Comics
+259,Suicide Squad,1987,8,Issue,1987-12-01,Comicvine,3815,28887,Suicide Squad,1987,8, ,https://comicvine.gamespot.com/suicide-squad-8-personal-files/4000-28887/,31 days 00:00:00,DC Comics
+260,Phantom Stranger,1987,1,Issue,1987-10-31,Comicvine,3804,28642,The Phantom Stranger,1987,1, ,https://comicvine.gamespot.com/the-phantom-stranger-1-the-heart-of-a-stranger/4000-28642/,30 days 00:00:00,DC Comics
+261,Phantom Stranger,1987,2,Issue,1987-11-30,Comicvine,3804,28756,The Phantom Stranger,1987,2, ,https://comicvine.gamespot.com/the-phantom-stranger-2-the-soul-of-the-man/4000-28756/,31 days 00:00:00,DC Comics
+262,Phantom Stranger,1987,3,Issue,1987-12-31,Comicvine,3804,28877,The Phantom Stranger,1987,3, ,https://comicvine.gamespot.com/the-phantom-stranger-3-thunder-in-the-night/4000-28877/,31 days 00:00:00,DC Comics
+263,Phantom Stranger,1987,4,Issue,1988-01-31,Comicvine,3804,29096,The Phantom Stranger,1987,4, ,https://comicvine.gamespot.com/the-phantom-stranger-4-a-world-full-of-voices/4000-29096/,152 days 00:00:00,DC Comics
+264,Blue Beetle,1986,16,Issue,1987-09-01,Comicvine,3595,28508,Blue Beetle,1986,16, ,https://comicvine.gamespot.com/blue-beetle-16-anywhere-i-hang-my-hat-is-home/4000-28508/,60 days 00:00:00,DC Comics
+265,Blue Beetle,1986,17,Issue,1987-10-31,Comicvine,3595,28625,Blue Beetle,1986,17, ,https://comicvine.gamespot.com/blue-beetle-17-the-way-the-brawl-bounces/4000-28625/,30 days 00:00:00,DC Comics
+266,Blue Beetle,1986,18,Issue,1987-11-30,Comicvine,3595,28742,Blue Beetle,1986,18, ,https://comicvine.gamespot.com/blue-beetle-18-and-death-shall-have-no-dominion/4000-28742/,31 days 00:00:00,DC Comics
+267,Blue Beetle,1986,19,Issue,1987-12-31,Comicvine,3595,28863,Blue Beetle,1986,19, ,https://comicvine.gamespot.com/blue-beetle-19-a-matter-of-animus/4000-28863/,31 days 00:00:00,DC Comics
+268,Wonder Woman,1987,10,Issue,1987-11-30,Comicvine,3824,28771,Wonder Woman,1987,10, ,https://comicvine.gamespot.com/wonder-woman-10-paradise-lost/4000-28771/,31 days 00:00:00,DC Comics
+269,Wonder Woman,1987,11,Issue,1987-12-31,Comicvine,3824,28895,Wonder Woman,1987,11, ,https://comicvine.gamespot.com/wonder-woman-11-fire-and-torment/4000-28895/,91 days 00:00:00,DC Comics
+270,Wonder Woman,1987,14,Issue,1988-03-31,Comicvine,3824,29402,Wonder Woman,1987,14, ,https://comicvine.gamespot.com/wonder-woman-14-for-the-glory-of-gaea/4000-29402/,0 days 00:00:00,DC Comics
+271,Blue Beetle,1986,22,Issue,1988-03-31,Comicvine,3595,29312,Blue Beetle,1986,22, ,https://comicvine.gamespot.com/blue-beetle-22-a-question-of-time/4000-29312/,30 days 00:00:00,DC Comics
+272,Blue Beetle,1986,23,Issue,1988-04-30,Comicvine,3595,29428,Blue Beetle,1986,23, ,https://comicvine.gamespot.com/blue-beetle-23-dont-get-mad-get-even/4000-29428/,31 days 00:00:00,DC Comics
+273,Blue Beetle,1986,24,Issue,1988-05-31,Comicvine,3595,29531,Blue Beetle,1986,24, ,https://comicvine.gamespot.com/blue-beetle-24-if-at-first-you-dont-succeed/4000-29531/,304 days 00:00:00,DC Comics
+274,Green Arrow: The Longbow Hunters,1987,1,Issue,1987-08-01,Comicvine,3793,28409,Green Arrow: The Longbow Hunters,1987,1, ,https://comicvine.gamespot.com/green-arrow-the-longbow-hunters-1-the-hunters/4000-28409/,31 days 00:00:00,DC Comics
+275,Green Arrow: The Longbow Hunters,1987,2,Issue,1987-09-01,Comicvine,3793,28516,Green Arrow: The Longbow Hunters,1987,2, ,https://comicvine.gamespot.com/green-arrow-the-longbow-hunters-2-dragon-hunt/4000-28516/,30 days 00:00:00,DC Comics
+276,Green Arrow: The Longbow Hunters,1987,3,Issue,1987-10-01,Comicvine,3793,28633,Green Arrow: The Longbow Hunters,1987,3, ,https://comicvine.gamespot.com/green-arrow-the-longbow-hunters-3-tracking-snow/4000-28633/,152 days 00:00:00,DC Comics
+277,Batman,1940,417,Issue,1988-03-01,Comicvine,796,29310,Batman,1940,417, ,https://comicvine.gamespot.com/batman-417-ten-nights-of-the-beast-part-i/4000-29310/,31 days 00:00:00,DC Comics
+278,Batman,1940,418,Issue,1988-04-01,Comicvine,796,29426,Batman,1940,418, ,https://comicvine.gamespot.com/batman-418-ten-nights-of-the-beast-part-ii/4000-29426/,30 days 00:00:00,DC Comics
+279,Batman,1940,419,Issue,1988-05-01,Comicvine,796,29529,Batman,1940,419, ,https://comicvine.gamespot.com/batman-419-ten-nights-of-the-beast-part-iii/4000-29529/,31 days 00:00:00,DC Comics
+280,Batman,1940,420,Issue,1988-06-01,Comicvine,796,29651,Batman,1940,420, ,https://comicvine.gamespot.com/batman-420-ten-nights-of-the-beast-part-iv/4000-29651/,29 days 00:00:00,DC Comics
+281,The Killing Joke,1988,1,Issue,1988-06-30,Comicvine,19967,119383,Batman: The Killing Joke,1988,1, ,https://comicvine.gamespot.com/batman-the-killing-joke-1/4000-119383/,62 days 00:00:00,DC Comics
+282,Batman: The Cult,1988,1,Issue,1988-08-31,Comicvine,3979,28995,Batman: The Cult,1988,1, ,https://comicvine.gamespot.com/batman-the-cult-1-ordeal/4000-28995/,30 days 00:00:00,DC Comics
+283,Batman: The Cult,1988,2,Issue,1988-09-30,Comicvine,3979,29013,Batman: The Cult,1988,2, ,https://comicvine.gamespot.com/batman-the-cult-2-capture/4000-29013/,31 days 00:00:00,DC Comics
+284,Batman: The Cult,1988,3,Issue,1988-10-31,Comicvine,3979,29023,Batman: The Cult,1988,3, ,https://comicvine.gamespot.com/batman-the-cult-3-escape/4000-29023/,30 days 00:00:00,DC Comics
+285,Batman: The Cult,1988,4,Issue,1988-11-30,Comicvine,3979,29028,Batman: The Cult,1988,4, ,https://comicvine.gamespot.com/batman-the-cult-4-combat/4000-29028/,183 days 00:00:00,DC Comics
+286,Legion of Super-Heroes,1984,46,Issue,1988-05-31,Comicvine,3310,29541,Legion of Super-Heroes,1984,46, ,https://comicvine.gamespot.com/legion-of-super-heroes-46-on-the-fourth-hand/4000-29541/,30 days 00:00:00,DC Comics
+287,Legion of Super-Heroes,1984,47,Issue,1988-06-30,Comicvine,3310,29662,Legion of Super-Heroes,1984,47, ,https://comicvine.gamespot.com/legion-of-super-heroes-47-conspiracy-theory/4000-29662/,1 days 00:00:00,DC Comics
+288,Legion of Super-Heroes,1984,48,Issue,1988-07-01,Comicvine,3310,29779,Legion of Super-Heroes,1984,48, ,https://comicvine.gamespot.com/legion-of-super-heroes-48-a-time-to-die/4000-29779/,61 days 00:00:00,DC Comics
+289,Legion of Super-Heroes,1984,49,Issue,1988-08-31,Comicvine,3310,29902,Legion of Super-Heroes,1984,49, ,https://comicvine.gamespot.com/legion-of-super-heroes-49-a-time-to-live/4000-29902/,30 days 00:00:00,DC Comics
+290,Legion of Super-Heroes,1984,50,Issue,1988-09-30,Comicvine,3310,30011,Legion of Super-Heroes,1984,50, ,https://comicvine.gamespot.com/legion-of-super-heroes-50-life-and-death-and-the-e/4000-30011/,214 days 00:00:00,DC Comics
+291,Green Arrow,1988,1,Issue,1988-02-29,Comicvine,4003,66692,Green Arrow,1988,1, ,https://comicvine.gamespot.com/green-arrow-1-hunters-moon/4000-66692/,31 days 00:00:00,DC Comics
+292,Green Arrow,1988,2,Issue,1988-03-31,Comicvine,4003,66693,Green Arrow,1988,2, ,https://comicvine.gamespot.com/green-arrow-2-hunters-moon/4000-66693/,30 days 00:00:00,DC Comics
+293,Green Arrow,1988,3,Issue,1988-04-30,Comicvine,4003,66694,Green Arrow,1988,3, ,https://comicvine.gamespot.com/green-arrow-3-the-champions/4000-66694/,31 days 00:00:00,DC Comics
+294,Green Arrow,1988,4,Issue,1988-05-31,Comicvine,4003,66695,Green Arrow,1988,4, ,https://comicvine.gamespot.com/green-arrow-4-the-champions/4000-66695/,30 days 00:00:00,DC Comics
+295,Green Arrow,1988,5,Issue,1988-06-30,Comicvine,4003,66696,Green Arrow,1988,5, ,https://comicvine.gamespot.com/green-arrow-5-gauntlet/4000-66696/,31 days 00:00:00,DC Comics
+296,Green Arrow,1988,6,Issue,1988-07-31,Comicvine,4003,66697,Green Arrow,1988,6, ,https://comicvine.gamespot.com/green-arrow-6-gauntlet-part-2/4000-66697/,31 days 00:00:00,DC Comics
+297,Green Arrow,1988,7,Issue,1988-08-31,Comicvine,4003,66698,Green Arrow,1988,7, ,https://comicvine.gamespot.com/green-arrow-7-untitled/4000-66698/,30 days 00:00:00,DC Comics
+298,Green Arrow,1988,8,Issue,1988-09-30,Comicvine,4003,66699,Green Arrow,1988,8, ,https://comicvine.gamespot.com/green-arrow-8-the-powderhorn-trail/4000-66699/,273 days 00:00:00,DC Comics
+299,The Question,1987,12,Issue,1988-01-01,Comicvine,3805,29097,The Question,1986,12, ,https://comicvine.gamespot.com/the-question-12-poisoned-ground/4000-29097/,31 days 00:00:00,DC Comics
+300,The Question,1987,13,Issue,1988-02-01,Comicvine,3805,29216,The Question,1986,13, ,https://comicvine.gamespot.com/the-question-13-be-all-that-you-can-be/4000-29216/,29 days 00:00:00,DC Comics
+301,The Question,1987,14,Issue,1988-03-01,Comicvine,3805,29325,The Question,1986,14, ,https://comicvine.gamespot.com/the-question-14-saving-face/4000-29325/,31 days 00:00:00,DC Comics
+302,The Question,1987,15,Issue,1988-04-01,Comicvine,3805,29441,The Question,1986,15, ,https://comicvine.gamespot.com/the-question-15-epitaph-for-a-hero/4000-29441/,30 days 00:00:00,DC Comics
+303,The Question,1987,16,Issue,1988-05-01,Comicvine,3805,29546,The Question,1986,16, ,https://comicvine.gamespot.com/the-question-16-who-was-that-masked-man/4000-29546/,31 days 00:00:00,DC Comics
+304,The Question,1987,17,Issue,1988-06-01,Comicvine,3805,29668,The Question,1986,17, ,https://comicvine.gamespot.com/the-question-17-a-dream-of-rorschach/4000-29668/,30 days 00:00:00,DC Comics
+305,The Question,1987,18,Issue,1988-07-01,Comicvine,3805,29786,The Question,1986,18, ,https://comicvine.gamespot.com/the-question-18-desperate-ground/4000-29786/,31 days 00:00:00,DC Comics
+306,The Question,1987,19,Issue,1988-08-01,Comicvine,3805,29909,The Question,1986,19, ,https://comicvine.gamespot.com/the-question-19-the-plastic-dilemma/4000-29909/,61 days 00:00:00,DC Comics
+307,The Question,1987,20,Issue,1988-10-01,Comicvine,3805,30140,The Question,1986,20, ,https://comicvine.gamespot.com/the-question-20-send-in-the-clowns/4000-30140/,30 days 00:00:00,DC Comics
+308,Animal Man,1988,1,Issue,1988-09-01,Comicvine,3976,30000,Animal Man,1988,1, ,https://comicvine.gamespot.com/animal-man-1-the-human-zoo/4000-30000/,30 days 00:00:00,DC Comics
+309,Animal Man,1988,2,Issue,1988-10-01,Comicvine,3976,30122,Animal Man,1988,2, ,https://comicvine.gamespot.com/animal-man-2-life-in-the-concrete-jungle/4000-30122/,31 days 00:00:00,DC Comics
+310,Animal Man,1988,3,Issue,1988-11-01,Comicvine,3976,30249,Animal Man,1988,3, ,https://comicvine.gamespot.com/animal-man-3-the-nature-of-the-beast/4000-30249/,30 days 00:00:00,DC Comics
+311,Animal Man,1988,4,Issue,1988-12-01,Comicvine,3976,30376,Animal Man,1988,4, ,https://comicvine.gamespot.com/animal-man-4-when-we-all-lived-in-the-forest/4000-30376/,0 days 00:00:00,DC Comics
+312,Animal Man,1988,5,Issue,1988-12-01,Comicvine,3976,30611,Animal Man,1988,5, ,https://comicvine.gamespot.com/animal-man-5-the-coyote-gospel/4000-30611/,92 days 00:00:00,DC Comics
+313,World of Metropolis,1988,1,Issue,1988-08-31,Comicvine,4037,29919,The World of Metropolis,1988,1, ,https://comicvine.gamespot.com/the-world-of-metropolis-1-a-reporters-story/4000-29919/,30 days 00:00:00,DC Comics
+314,World of Metropolis,1988,2,Issue,1988-09-30,Comicvine,4037,30030,The World of Metropolis,1988,2, ,https://comicvine.gamespot.com/the-world-of-metropolis-2-how-i-spent-my-summer-va/4000-30030/,31 days 00:00:00,DC Comics
+315,World of Metropolis,1988,3,Issue,1988-10-31,Comicvine,4037,30152,The World of Metropolis,1988,3, ,https://comicvine.gamespot.com/the-world-of-metropolis-3-mr-kent-goes-to-metropol/4000-30152/,30 days 00:00:00,DC Comics
+316,World of Metropolis,1988,4,Issue,1988-11-30,Comicvine,4037,30283,The World of Metropolis,1988,4, ,https://comicvine.gamespot.com/the-world-of-metropolis-4-friends-in-need/4000-30283/,286 days 00:00:00,DC Comics
+317,Suicide Squad,1987,10,Issue,1988-02-18,Comicvine,3815,29227,Suicide Squad,1987,10, ,https://comicvine.gamespot.com/suicide-squad-10-up-against-the-wall/4000-29227/,48 days 00:00:00,DC Comics
+318,Hellblazer,1988,1,Issue,1988-01-01,Comicvine,4008,29089,Hellblazer,1988,1, ,https://comicvine.gamespot.com/hellblazer-1-hunger/4000-29089/,54 days 00:00:00,Vertigo
+319,Hellblazer,1988,2,Issue,1988-02-24,Comicvine,4008,29209,Hellblazer,1988,2, ,https://comicvine.gamespot.com/hellblazer-2-a-feast-of-friends/4000-29209/,29 days 00:00:00,Vertigo
+320,Hellblazer,1988,3,Issue,1988-03-24,Comicvine,4008,29319,Hellblazer,1988,3, ,https://comicvine.gamespot.com/hellblazer-3-going-for-it/4000-29319/,31 days 00:00:00,Vertigo
+321,Hellblazer,1988,4,Issue,1988-04-24,Comicvine,4008,29435,Hellblazer,1988,4, ,https://comicvine.gamespot.com/hellblazer-4-waiting-for-the-man/4000-29435/,30 days 00:00:00,Vertigo
+322,Hellblazer,1988,5,Issue,1988-05-24,Comicvine,4008,29539,Hellblazer,1988,5, ,https://comicvine.gamespot.com/hellblazer-5-when-johnny-comes-marching-home/4000-29539/,37 days 00:00:00,Vertigo
+323,Hellblazer,1988,6,Issue,1988-06-30,Comicvine,4008,29660,Hellblazer,1988,6, ,https://comicvine.gamespot.com/hellblazer-6-extreme-prejudice/4000-29660/,24 days 00:00:00,Vertigo
+324,Hellblazer,1988,7,Issue,1988-07-24,Comicvine,4008,29777,Hellblazer,1988,7, ,https://comicvine.gamespot.com/hellblazer-7-ghosts-in-the-machine/4000-29777/,38 days 00:00:00,Vertigo
+325,Hellblazer,1988,8,Issue,1988-08-31,Comicvine,4008,29899,Hellblazer,1988,8, ,https://comicvine.gamespot.com/hellblazer-8-intensive-care/4000-29899/,335 days 00:00:00,Vertigo
+326,Swamp Thing,1986,65,Issue,1987-10-01,Comicvine,3465,28651,Swamp Thing,1986,65, ,https://comicvine.gamespot.com/swamp-thing-65-we-could-be-diving-for-pearls/4000-28651/,31 days 00:00:00,Vertigo
+327,Swamp Thing,1986,66,Issue,1987-11-01,Comicvine,3465,28766,Swamp Thing,1986,66, ,https://comicvine.gamespot.com/swamp-thing-66-one-flew-over-the-cuckoos-nest/4000-28766/,30 days 00:00:00,Vertigo
+328,Swamp Thing,1986,67,Issue,1987-12-01,Comicvine,3465,28889,Swamp Thing,1986,67, ,https://comicvine.gamespot.com/swamp-thing-67-the-wisdom-of-solomon/4000-28889/,31 days 00:00:00,Vertigo
+329,Swamp Thing,1986,68,Issue,1988-01-01,Comicvine,3465,29107,Swamp Thing,1986,68, ,https://comicvine.gamespot.com/swamp-thing-68-reflections-in-a-golden-eye/4000-29107/,31 days 00:00:00,Vertigo
+330,Swamp Thing,1986,69,Issue,1988-02-01,Comicvine,3465,29229,Swamp Thing,1986,69, ,https://comicvine.gamespot.com/swamp-thing-69-wild-thing/4000-29229/,29 days 00:00:00,Vertigo
+331,Swamp Thing,1986,70,Issue,1988-03-01,Comicvine,3465,29337,Swamp Thing,1986,70, ,https://comicvine.gamespot.com/swamp-thing-70-the-secret-life-of-plants/4000-29337/,31 days 00:00:00,Vertigo
+332,Swamp Thing,1986,71,Issue,1988-04-01,Comicvine,3465,29452,Swamp Thing,1986,71, ,https://comicvine.gamespot.com/swamp-thing-71-fear-of-flying/4000-29452/,30 days 00:00:00,Vertigo
+333,Swamp Thing,1986,72,Issue,1988-05-01,Comicvine,3465,29557,Swamp Thing,1986,72, ,https://comicvine.gamespot.com/swamp-thing-72-gargles-in-the-rat-race-choir/4000-29557/,60 days 00:00:00,Vertigo
+334,Swamp Thing,1986,73,Issue,1988-06-30,Comicvine,3465,29679,Swamp Thing,1986,73, ,https://comicvine.gamespot.com/swamp-thing-73-the-fire-next-door/4000-29679/,1 days 00:00:00,Vertigo
+335,Swamp Thing,1986,74,Issue,1988-07-01,Comicvine,3465,29796,Swamp Thing,1986,74, ,https://comicvine.gamespot.com/swamp-thing-74-center-of-the-cyclone/4000-29796/,31 days 00:00:00,Vertigo
+336,Swamp Thing,1986,75,Issue,1988-08-01,Comicvine,3465,29917,Swamp Thing,1986,75, ,https://comicvine.gamespot.com/swamp-thing-75-the-thinker/4000-29917/,54 days 00:00:00,Vertigo
+337,Hellblazer,1988,9,Issue,1988-09-24,Comicvine,4008,30010,Hellblazer,1988,9, ,https://comicvine.gamespot.com/hellblazer-9-shot-to-hell/4000-30010/,23 days 00:00:00,Vertigo
+338,Swamp Thing,1986,76,Issue,1988-09-01,Comicvine,3465,30025,Swamp Thing,1986,76, ,https://comicvine.gamespot.com/swamp-thing-76-ladoration-de-la-terre/4000-30025/,53 days 00:00:00,Vertigo
+339,Hellblazer,1988,10,Issue,1988-10-24,Comicvine,4008,30134,Hellblazer,1988,10, ,https://comicvine.gamespot.com/hellblazer-10-sex-and-death/4000-30134/,23 days 00:00:00,Vertigo
+340,Swamp Thing,1986,77,Issue,1988-10-01,Comicvine,3465,30148,Swamp Thing,1986,77, ,https://comicvine.gamespot.com/swamp-thing-77-infernal-triangles/4000-30148/,123 days 00:00:00,Vertigo
+341,Martian Manhunter,1988,1,Issue,1988-05-31,Comicvine,4010,29542,Martian Manhunter,1988,1, ,https://comicvine.gamespot.com/martian-manhunter-1-fever-dream/4000-29542/,30 days 00:00:00,DC Comics
+342,Martian Manhunter,1988,2,Issue,1988-06-30,Comicvine,4010,29663,Martian Manhunter,1988,2, ,https://comicvine.gamespot.com/martian-manhunter-2-burning-bright/4000-29663/,31 days 00:00:00,DC Comics
+343,Martian Manhunter,1988,3,Issue,1988-07-31,Comicvine,4010,29781,Martian Manhunter,1988,3, ,https://comicvine.gamespot.com/martian-manhunter-3-who-am-i/4000-29781/,31 days 00:00:00,DC Comics
+344,Martian Manhunter,1988,4,Issue,1988-08-31,Comicvine,4010,29904,Martian Manhunter,1988,4, ,https://comicvine.gamespot.com/martian-manhunter-4-welcome-home/4000-29904/,123 days 00:00:00,DC Comics
+345,Wonder Woman,1987,15,Issue,1988-04-30,Comicvine,3824,29456,Wonder Woman,1987,15, ,https://comicvine.gamespot.com/wonder-woman-15-swan-song/4000-29456/,31 days 00:00:00,DC Comics
+346,Wonder Woman,1987,16,Issue,1988-05-31,Comicvine,3824,29561,Wonder Woman,1987,16, ,https://comicvine.gamespot.com/wonder-woman-16-bird-of-paradisebird-of-prey/4000-29561/,0 days 00:00:00,DC Comics
+347,Action Comics,1938,600,Issue,1988-05-31,Comicvine,18005,110964,Action Comics,1938,600, ,https://comicvine.gamespot.com/action-comics-600-different-worlds-true-love-games/4000-110964/,30 days 00:00:00,DC Comics
+348,Wonder Woman,1987,17,Issue,1988-06-30,Comicvine,3824,29683,Wonder Woman,1987,17, ,https://comicvine.gamespot.com/wonder-woman-17-traces/4000-29683/,31 days 00:00:00,DC Comics
+349,Wonder Woman,1987,18,Issue,1988-07-31,Comicvine,3824,29861,Wonder Woman,1987,18, ,https://comicvine.gamespot.com/wonder-woman-18-creatures-of-the-dark-awakenings/4000-29861/,31 days 00:00:00,DC Comics
+350,Wonder Woman,1987,19,Issue,1988-08-31,Comicvine,3824,29918,Wonder Woman,1987,19, ,https://comicvine.gamespot.com/wonder-woman-19-the-witch-on-the-island/4000-29918/,30 days 00:00:00,DC Comics
+351,Wonder Woman,1987,20,Issue,1988-09-30,Comicvine,3824,30029,Wonder Woman,1987,20, ,https://comicvine.gamespot.com/wonder-woman-20-who-killed-myndi-mayer/4000-30029/,122 days 00:00:00,DC Comics
+352,Action Comics,1938,602,Issue,1988-05-31,Comicvine,3973,29634,Action Comics Weekly,1988,602, ,https://comicvine.gamespot.com/action-comics-weekly-602-requiem-showdown-dog-gone/4000-29634/,7 days 00:00:00,DC Comics
+353,Action Comics,1938,603,Issue,1988-06-07,Comicvine,3973,29649,Action Comics Weekly,1988,603, ,https://comicvine.gamespot.com/action-comics-weekly-603-retribution-spread-your-b/4000-29649/,7 days 00:00:00,DC Comics
+354,Action Comics,1938,604,Issue,1988-06-14,Comicvine,3973,29746,Action Comics Weekly,1988,604, ,https://comicvine.gamespot.com/action-comics-weekly-604-i-the-jury-moral-stand-ch/4000-29746/,7 days 00:00:00,DC Comics
+355,Action Comics,1938,605,Issue,1988-06-21,Comicvine,3973,29750,Action Comics Weekly,1988,605, ,https://comicvine.gamespot.com/action-comics-weekly-605-golgotha-deadman-goes-to-/4000-29750/,7 days 00:00:00,DC Comics
+356,Action Comics,1938,606,Issue,1988-06-28,Comicvine,3973,29751,Action Comics Weekly,1988,606, ,https://comicvine.gamespot.com/action-comics-weekly-606-the-list-the-sins-of-the-/4000-29751/,7 days 00:00:00,DC Comics
+357,Action Comics,1938,607,Issue,1988-07-05,Comicvine,3973,29766,Action Comics Weekly,1988,607, ,https://comicvine.gamespot.com/action-comics-weekly-607-guilty-escape-from-hell-c/4000-29766/,7 days 00:00:00,DC Comics
+358,Action Comics,1938,608,Issue,1988-07-12,Comicvine,3973,29870,Action Comics Weekly,1988,608, ,https://comicvine.gamespot.com/action-comics-weekly-608-where-the-heck-is-green-l/4000-29870/,7 days 00:00:00,DC Comics
+359,Action Comics,1938,609,Issue,1988-07-19,Comicvine,3973,29874,Action Comics Weekly,1988,609, ,https://comicvine.gamespot.com/action-comics-weekly-609-bitter-fruit-part-1-chapt/4000-29874/,7 days 00:00:00,DC Comics
+360,Action Comics,1938,610,Issue,1988-07-26,Comicvine,3973,29876,Action Comics Weekly,1988,610, ,https://comicvine.gamespot.com/action-comics-weekly-610-risky-business-kenny-and-/4000-29876/,7 days 00:00:00,DC Comics
+361,Action Comics,1938,611,Issue,1988-08-02,Comicvine,3973,29887,Action Comics Weekly,1988,611, ,https://comicvine.gamespot.com/action-comics-weekly-611-room-service-chapter-elev/4000-29887/,7 days 00:00:00,DC Comics
+362,Action Comics,1938,612,Issue,1988-08-09,Comicvine,3973,29983,Action Comics Weekly,1988,612, ,https://comicvine.gamespot.com/action-comics-weekly-612-mind-over-matter-out-of-t/4000-29983/,7 days 00:00:00,DC Comics
+363,Action Comics,1938,613,Issue,1988-08-16,Comicvine,3973,29985,Action Comics Weekly,1988,613, ,https://comicvine.gamespot.com/action-comics-weekly-613-head-trip-the-cheshire-co/4000-29985/,7 days 00:00:00,DC Comics
+364,Action Comics,1938,614,Issue,1988-08-23,Comicvine,3973,111595,Action Comics Weekly,1988,614, ,https://comicvine.gamespot.com/action-comics-weekly-614-bring-me-a-man-death-god-/4000-111595/,7 days 00:00:00,DC Comics
+365,Action Comics,1938,615,Issue,1988-08-30,Comicvine,3973,29987,Action Comics Weekly,1988,615, ,https://comicvine.gamespot.com/action-comics-weekly-615-freaks-that-was-no-lady-f/4000-29987/,7 days 00:00:00,DC Comics
+366,Action Comics,1938,616,Issue,1988-09-06,Comicvine,3973,29998,Action Comics Weekly,1988,616, ,https://comicvine.gamespot.com/action-comics-weekly-616-safe-at-home-mission-impl/4000-29998/,7 days 00:00:00,DC Comics
+367,Action Comics,1938,617,Issue,1988-09-13,Comicvine,3973,30099,Action Comics Weekly,1988,617, ,https://comicvine.gamespot.com/action-comics-weekly-617-assault-on-the-green-seem/4000-30099/,7 days 00:00:00,DC Comics
+368,Action Comics,1938,618,Issue,1988-09-20,Comicvine,3973,30104,Action Comics Weekly,1988,618, ,https://comicvine.gamespot.com/action-comics-weekly-618-first-encounter-unhappy-l/4000-30104/,7 days 00:00:00,DC Comics
+369,Action Comics,1938,619,Issue,1988-09-27,Comicvine,3973,30107,Action Comics Weekly,1988,619, ,https://comicvine.gamespot.com/action-comics-weekly-619-veronica-fatal-distractio/4000-30107/,7 days 00:00:00,DC Comics
+370,Action Comics,1938,620,Issue,1988-10-04,Comicvine,3973,30120,Action Comics Weekly,1988,620, ,https://comicvine.gamespot.com/action-comics-weekly-620-last-gasp-fatal-distracti/4000-30120/,7 days 00:00:00,DC Comics
+371,Action Comics,1938,621,Issue,1988-10-11,Comicvine,3973,30229,Action Comics Weekly,1988,621, ,https://comicvine.gamespot.com/action-comics-weekly-621-gremlins-fatal-distractio/4000-30229/,7 days 00:00:00,DC Comics
+372,Action Comics,1938,622,Issue,1988-10-18,Comicvine,3973,30233,Action Comics Weekly,1988,622, ,https://comicvine.gamespot.com/action-comics-weekly-622-the-edge-of-forever-fatal/4000-30233/,7 days 00:00:00,DC Comics
+373,Action Comics,1938,623,Issue,1988-10-25,Comicvine,3973,30235,Action Comics Weekly,1988,623, ,https://comicvine.gamespot.com/action-comics-weekly-623-priest-my-week-in-valhall/4000-30235/,7 days 00:00:00,DC Comics
+374,Action Comics,1938,624,Issue,1988-11-01,Comicvine,3973,30247,Action Comics Weekly,1988,624, ,https://comicvine.gamespot.com/action-comics-weekly-624-faith-sons-of-valhalla-ch/4000-30247/,7 days 00:00:00,DC Comics
+375,Action Comics,1938,625,Issue,1988-11-08,Comicvine,3973,30357,Action Comics Weekly,1988,625, ,https://comicvine.gamespot.com/action-comics-weekly-625-the-law-for-whom-the-toll/4000-30357/,7 days 00:00:00,DC Comics
+376,Action Comics,1938,626,Issue,1988-11-15,Comicvine,3973,30361,Action Comics Weekly,1988,626, ,https://comicvine.gamespot.com/action-comics-weekly-626-bethel-capitol-offenses-i/4000-30361/,259 days 00:00:00,DC Comics
+377,Suicide Squad,1987,11,Issue,1988-03-01,Comicvine,3815,29335,Suicide Squad,1987,11, ,https://comicvine.gamespot.com/suicide-squad-11-blood-snow-part-1/4000-29335/,48 days 00:00:00,DC Comics
+378,Suicide Squad,1987,12,Issue,1988-04-18,Comicvine,3815,29450,Suicide Squad,1987,12, ,https://comicvine.gamespot.com/suicide-squad-12-blood-snow-part-2/4000-29450/,77 days 00:00:00,DC Comics
+379,Doom Patrol and Suicide Squad Special,1988,1,Issue,1988-02-01,Comicvine,26059,154054,Doom Patrol and Suicide Squad Special,1988,1, ,https://comicvine.gamespot.com/doom-patrol-and-suicide-squad-special-1-red-pawn/4000-154054/,303 days 00:00:00,DC Comics
+380,Hellblazer,1988,11,Issue,1988-11-30,Comicvine,4008,30264,Hellblazer,1988,11, ,https://comicvine.gamespot.com/hellblazer-11-newcastle-a-taste-of-things-to-come/4000-30264/,153 days 00:00:00,Vertigo
+381,Adventures of Superman,1987,441,Issue,1988-06-30,Comicvine,3778,29650,Adventures of Superman,1987,441, ,https://comicvine.gamespot.com/adventures-of-superman-441-the-tiny-terror-of-tins/4000-29650/,91 days 00:00:00,DC Comics
+382,Justice League International,1987,11,Issue,1988-03-31,Comicvine,3798,29392,Justice League International,1987,11, ,https://comicvine.gamespot.com/justice-league-international-11-constructions/4000-29392/,30 days 00:00:00,DC Comics
+383,Justice League International,1987,12,Issue,1988-04-30,Comicvine,3798,29502,Justice League International,1987,12, ,https://comicvine.gamespot.com/justice-league-international-12-who-is-maxwell-lor/4000-29502/,31 days 00:00:00,DC Comics
+384,Justice League International,1987,13,Issue,1988-05-31,Comicvine,3798,29616,Justice League International,1987,13, ,https://comicvine.gamespot.com/justice-league-international-13-collision-course/4000-29616/,13 days 00:00:00,DC Comics
+385,Suicide Squad,1987,13,Issue,1988-05-18,Comicvine,3815,29555,Suicide Squad,1987,13, ,https://comicvine.gamespot.com/suicide-squad-13-battle-lines/4000-29555/,43 days 00:00:00,DC Comics
+386,Justice League International,1987,14,Issue,1988-06-30,Comicvine,3798,29726,Justice League International,1987,14, ,https://comicvine.gamespot.com/justice-league-international-14-shop-or-die/4000-29726/,31 days 00:00:00,DC Comics
+387,Justice League International,1987,15,Issue,1988-07-31,Comicvine,3798,29852,Justice League International,1987,15, ,https://comicvine.gamespot.com/justice-league-international-15-gnort-and-south/4000-29852/,31 days 00:00:00,DC Comics
+388,Justice League International,1987,16,Issue,1988-08-31,Comicvine,3798,29964,Justice League International,1987,16, ,https://comicvine.gamespot.com/justice-league-international-16-bialya-my-bialya/4000-29964/,30 days 00:00:00,DC Comics
+389,Justice League International,1987,17,Issue,1988-09-30,Comicvine,3798,30084,Justice League International,1987,17, ,https://comicvine.gamespot.com/justice-league-international-17-only-the-dead-know/4000-30084/,31 days 00:00:00,DC Comics
+390,Justice League International,1987,18,Issue,1988-10-31,Comicvine,3798,30209,Justice League International,1987,18, ,https://comicvine.gamespot.com/justice-league-international-18-where-no-league-ha/4000-30209/,30 days 00:00:00,DC Comics
+391,Justice League International,1987,19,Issue,1988-11-30,Comicvine,3798,30337,Justice League International,1987,19, ,https://comicvine.gamespot.com/justice-league-international-19-no-more-mr-nice-gu/4000-30337/,31 days 00:00:00,DC Comics
+392,Justice League International,1987,20,Issue,1988-12-31,Comicvine,3798,30455,Justice League International,1987,20, ,https://comicvine.gamespot.com/justice-league-international-20-if-its-tuesday-thi/4000-30455/,30 days 00:00:00,DC Comics
+393,Justice League International,1987,21,Issue,1988-12-01,Comicvine,3798,30505,Justice League International,1987,21, ,https://comicvine.gamespot.com/justice-league-international-21-apokolips-wow/4000-30505/,166 days 00:00:00,DC Comics
+394,Suicide Squad,1987,14,Issue,1988-06-18,Comicvine,3815,29677,Suicide Squad,1987,14, ,https://comicvine.gamespot.com/suicide-squad-14-slipping-into-darkness/4000-29677/,43 days 00:00:00,DC Comics
+395,Suicide Squad,1987,15,Issue,1988-07-31,Comicvine,3815,29794,Suicide Squad,1987,15, ,https://comicvine.gamespot.com/suicide-squad-15-devil-to-pay/4000-29794/,18 days 00:00:00,DC Comics
+396,Suicide Squad,1987,16,Issue,1988-08-18,Comicvine,3815,29915,Suicide Squad,1987,16, ,https://comicvine.gamespot.com/suicide-squad-16-deathzone/4000-29915/,31 days 00:00:00,DC Comics
+397,Suicide Squad,1987,17,Issue,1988-09-18,Comicvine,3815,30023,Suicide Squad,1987,17, ,https://comicvine.gamespot.com/suicide-squad-17-battleground-manhattan/4000-30023/,30 days 00:00:00,DC Comics
+398,Suicide Squad,1987,18,Issue,1988-10-18,Comicvine,3815,30146,Suicide Squad,1987,18, ,https://comicvine.gamespot.com/suicide-squad-18-manhattan-massacre/4000-30146/,14 days 00:00:00,DC Comics
+399,Deadshot,1988,1,Issue,1988-11-01,Comicvine,3992,30256,Deadshot,1988,1, ,https://comicvine.gamespot.com/deadshot-1-die-but-once/4000-30256/,30 days 00:00:00,DC Comics
+400,Deadshot,1988,2,Issue,1988-12-01,Comicvine,3992,30383,Deadshot,1988,2, ,https://comicvine.gamespot.com/deadshot-2-suffer-the-child/4000-30383/,0 days 00:00:00,DC Comics
+401,Deadshot,1988,3,Issue,1988-12-01,Comicvine,3992,30483,Deadshot,1988,3, ,https://comicvine.gamespot.com/deadshot-3-victims/4000-30483/,0 days 00:00:00,DC Comics
+402,Deadshot,1988,4,Issue,1988-12-01,Comicvine,3992,30512,Deadshot,1988,4, ,https://comicvine.gamespot.com/deadshot-4-astride-a-grave/4000-30512/,13 days 00:00:00,DC Comics
+403,Suicide Squad,1987,19,Issue,1988-11-18,Comicvine,3815,30277,Suicide Squad,1987,19, ,https://comicvine.gamespot.com/suicide-squad-19-personal-files-amanda-waller/4000-30277/,141 days 00:00:00,DC Comics
+404,Suicide Squad Annual,1988,1,Issue,1988-06-30,Comicvine,34303,233464,Suicide Squad Annual,1988,1, ,https://comicvine.gamespot.com/suicide-squad-annual-1-ghosts-and-shadows/4000-233464/,184 days 00:00:00,DC Comics
+405,Suicide Squad,1987,20,Issue,1988-12-31,Comicvine,3815,30404,Suicide Squad,1987,20, ,https://comicvine.gamespot.com/suicide-squad-20-practice-to-deceive/4000-30404/,0 days 00:00:00,DC Comics
+406,Suicide Squad,1987,21,Issue,1988-12-31,Comicvine,3815,30499,Suicide Squad,1987,21, ,https://comicvine.gamespot.com/suicide-squad-21-rogues/4000-30499/,13 days 00:00:00,DC Comics
+407,Suicide Squad,1987,22,Issue,1988-12-18,Comicvine,3815,30526,Suicide Squad,1987,22, ,https://comicvine.gamespot.com/suicide-squad-22-final-round/4000-30526/,109 days 00:00:00,DC Comics
+408,Superman,1987,20,Issue,1988-08-31,Comicvine,3816,29916,Superman,1987,20, ,https://comicvine.gamespot.com/superman-20-doom-in-the-heartland/4000-29916/,30 days 00:00:00,DC Comics
+409,Superman,1987,21,Issue,1988-09-30,Comicvine,3816,30024,Superman,1987,21, ,https://comicvine.gamespot.com/superman-21-you-cant-go-home-again/4000-30024/,0 days 00:00:00,DC Comics
+410,Adventures of Superman,1987,444,Issue,1988-09-30,Comicvine,3778,29999,Adventures of Superman,1987,444, ,https://comicvine.gamespot.com/adventures-of-superman-444-parallel-lives-meet-at-/4000-29999/,31 days 00:00:00,DC Comics
+411,Superman,1987,22,Issue,1988-10-31,Comicvine,3816,30147,Superman,1987,22, ,https://comicvine.gamespot.com/superman-22-the-price/4000-30147/,61 days 00:00:00,DC Comics
+412,Batman,1940,426,Issue,1988-12-31,Comicvine,796,30377,Batman,1940,426, ,https://comicvine.gamespot.com/batman-426-a-death-in-the-family-chapter-1-and-2/4000-30377/,30 days 00:00:00,DC Comics
+413,Batman,1940,427,Issue,1988-12-01,Comicvine,796,30478,Batman,1940,427, ,https://comicvine.gamespot.com/batman-427-a-death-in-the-family-chapter-3-and-4/4000-30478/,0 days 00:00:00,DC Comics
+414,Batman,1940,428,Issue,1988-12-01,Comicvine,796,30541,Batman,1940,428, ,https://comicvine.gamespot.com/batman-428-a-death-in-the-family-chapter-5/4000-30541/,61 days 00:00:00,DC Comics
+415,Batman,1940,429,Issue,1989-01-31,Comicvine,796,30725,Batman,1940,429, ,https://comicvine.gamespot.com/batman-429-a-death-in-the-family-chapter-6/4000-30725/,91 days 00:00:00,DC Comics
+416,Swamp Thing,1986,78,Issue,1988-11-01,Comicvine,3465,30279,Swamp Thing,1986,78, ,https://comicvine.gamespot.com/swamp-thing-78-to-sow-ones-seed-in-the-wind/4000-30279/,30 days 00:00:00,Vertigo
+417,Swamp Thing,1986,79,Issue,1988-12-01,Comicvine,3465,30406,Swamp Thing,1986,79, ,https://comicvine.gamespot.com/swamp-thing-79-waiting-for-god-oh/4000-30406/,1 days 00:00:00,Vertigo
+418,Cosmic Odyssey,1988,1,Issue,1988-11-30,Comicvine,3990,30255,Cosmic Odyssey,1988,1, ,https://comicvine.gamespot.com/cosmic-odyssey-1-book-one-discovery/4000-30255/,31 days 00:00:00,DC Comics
+419,Cosmic Odyssey,1988,2,Issue,1988-12-31,Comicvine,3990,30382,Cosmic Odyssey,1988,2, ,https://comicvine.gamespot.com/cosmic-odyssey-2-book-two-disaster/4000-30382/,365 days 00:00:00,DC Comics
+420,Cosmic Odyssey,1988,3,Issue,1988-01-01,Comicvine,3990,30729,Cosmic Odyssey,1988,3, ,https://comicvine.gamespot.com/cosmic-odyssey-3-book-three-decisions/4000-30729/,31 days 00:00:00,DC Comics
+421,Cosmic Odyssey,1988,4,Issue,1988-02-01,Comicvine,3990,30850,Cosmic Odyssey,1988,4, ,https://comicvine.gamespot.com/cosmic-odyssey-4-book-four-death/4000-30850/,273 days 00:00:00,DC Comics
+422,Green Arrow,1988,9,Issue,1988-10-31,Comicvine,4003,66700,Green Arrow,1988,9, ,https://comicvine.gamespot.com/green-arrow-9-here-there-be-dragons/4000-66700/,30 days 00:00:00,DC Comics
+423,Green Arrow,1988,10,Issue,1988-11-30,Comicvine,4003,66701,Green Arrow,1988,10, ,https://comicvine.gamespot.com/green-arrow-10-here-there-be-dragons-2/4000-66701/,31 days 00:00:00,DC Comics
+424,Green Arrow,1988,11,Issue,1988-12-31,Comicvine,4003,66702,Green Arrow,1988,11, ,https://comicvine.gamespot.com/green-arrow-11-here-there-be-dragons-3/4000-66702/,30 days 00:00:00,DC Comics
+425,Green Arrow,1988,12,Issue,1988-12-01,Comicvine,4003,66703,Green Arrow,1988,12, ,https://comicvine.gamespot.com/green-arrow-12-here-there-be-dragons-4/4000-66703/,0 days 00:00:00,DC Comics
+426,Green Arrow,1988,13,Issue,1988-12-01,Comicvine,4003,66704,Green Arrow,1988,13, ,https://comicvine.gamespot.com/green-arrow-13-moving-target/4000-66704/,61 days 00:00:00,DC Comics
+427,Green Arrow,1988,14,Issue,1989-01-31,Comicvine,4003,66705,Green Arrow,1988,14, ,https://comicvine.gamespot.com/green-arrow-14-moving-target/4000-66705/,28 days 00:00:00,DC Comics
+428,Green Arrow,1988,15,Issue,1989-02-28,Comicvine,4003,66706,Green Arrow,1988,15, ,https://comicvine.gamespot.com/green-arrow-15-seattle-die/4000-66706/,31 days 00:00:00,DC Comics
+429,Green Arrow,1988,16,Issue,1989-03-31,Comicvine,4003,66707,Green Arrow,1988,16, ,https://comicvine.gamespot.com/green-arrow-16-seattle-die-part-2/4000-66707/,151 days 00:00:00,DC Comics
+430,Wonder Woman,1987,21,Issue,1988-10-31,Comicvine,3824,30151,Wonder Woman,1987,21, ,https://comicvine.gamespot.com/wonder-woman-21-the-cosmic-migration/4000-30151/,30 days 00:00:00,DC Comics
+431,Wonder Woman,1987,22,Issue,1988-11-30,Comicvine,3824,30282,Wonder Woman,1987,22, ,https://comicvine.gamespot.com/wonder-woman-22-through-destinys-door/4000-30282/,31 days 00:00:00,DC Comics
+432,Wonder Woman,1987,23,Issue,1988-12-31,Comicvine,3824,30410,Wonder Woman,1987,23, ,https://comicvine.gamespot.com/wonder-woman-23-a-god-among-men/4000-30410/,30 days 00:00:00,DC Comics
+433,Wonder Woman,1987,24,Issue,1988-12-01,Comicvine,3824,30538,Wonder Woman,1987,24, ,https://comicvine.gamespot.com/wonder-woman-24-combat-zone/4000-30538/,62 days 00:00:00,DC Comics
+434,Firestorm,1987,82,Issue,1989-02-01,Comicvine,3789,30854,"Firestorm, the Nuclear Man",1987,82, ,https://comicvine.gamespot.com/firestorm-the-nuclear-man-82-back-to-campus/4000-30854/,31 days 00:00:00,DC Comics
+435,Swamp Thing,1986,82,Issue,1989-01-01,Comicvine,3465,30751,Swamp Thing,1986,82, ,https://comicvine.gamespot.com/swamp-thing-82-brothers-in-arms-part-two/4000-30751/,31 days 00:00:00,Vertigo
+436,Swamp Thing,1986,83,Issue,1989-02-01,Comicvine,3465,30869,Swamp Thing,1986,83, ,https://comicvine.gamespot.com/swamp-thing-83-brothers-in-arms-part-one/4000-30869/,28 days 00:00:00,Vertigo
+437,Swamp Thing,1986,84,Issue,1989-03-01,Comicvine,3465,30979,Swamp Thing,1986,84, ,https://comicvine.gamespot.com/swamp-thing-84-final-payment/4000-30979/,31 days 00:00:00,Vertigo
+438,Swamp Thing,1986,85,Issue,1989-04-01,Comicvine,3465,31077,Swamp Thing,1986,85, ,https://comicvine.gamespot.com/swamp-thing-85-my-name-is-nobody/4000-31077/,30 days 00:00:00,Vertigo
+439,Swamp Thing,1986,86,Issue,1989-05-01,Comicvine,3465,31192,Swamp Thing,1986,86, ,https://comicvine.gamespot.com/swamp-thing-86-heroes-of-the-revolution/4000-31192/,31 days 00:00:00,Vertigo
+440,Swamp Thing,1986,87,Issue,1989-06-01,Comicvine,3465,31304,Swamp Thing,1986,87, ,https://comicvine.gamespot.com/swamp-thing-87-fall-of-the-house-of-pendragon/4000-31304/,92 days 00:00:00,Vertigo
+441,Swamp Thing,1986,88,Issue,1989-09-01,Comicvine,3465,31630,Swamp Thing,1986,88, ,https://comicvine.gamespot.com/swamp-thing-88-survival-of-the-fittest/4000-31630/,61 days 00:00:00,Vertigo
+442,Swamp Thing,1986,89,Issue,1989-11-01,Comicvine,3465,31845,Swamp Thing,1986,89, ,https://comicvine.gamespot.com/swamp-thing-89-founding-fathers/4000-31845/,30 days 00:00:00,Vertigo
+443,Swamp Thing,1986,90,Issue,1989-12-01,Comicvine,3465,31977,Swamp Thing,1986,90, ,https://comicvine.gamespot.com/swamp-thing-90-journeys/4000-31977/,214 days 00:00:00,Vertigo
+444,Legion of Super-Heroes,1984,60,Issue,1989-05-01,Comicvine,3310,31181,Legion of Super-Heroes,1984,60, ,https://comicvine.gamespot.com/legion-of-super-heroes-60-when-magic-shall-return/4000-31181/,31 days 00:00:00,DC Comics
+445,Legion of Super-Heroes,1984,61,Issue,1989-06-01,Comicvine,3310,31290,Legion of Super-Heroes,1984,61, ,https://comicvine.gamespot.com/legion-of-super-heroes-61-will-magic-or-science-pr/4000-31290/,30 days 00:00:00,DC Comics
+446,Legion of Super-Heroes,1984,62,Issue,1989-07-01,Comicvine,3310,31400,Legion of Super-Heroes,1984,62, ,https://comicvine.gamespot.com/legion-of-super-heroes-62-why-must-magic-triumph/4000-31400/,31 days 00:00:00,DC Comics
+447,Legion of Super-Heroes,1984,63,Issue,1989-08-01,Comicvine,3310,31507,Legion of Super-Heroes,1984,63, ,https://comicvine.gamespot.com/legion-of-super-heroes-63-where-has-all-the-magic-/4000-31507/,273 days 00:00:00,DC Comics
+448,The Question,1987,21,Issue,1988-11-01,Comicvine,3805,30271,The Question,1986,21, ,https://comicvine.gamespot.com/the-question-21-rejects/4000-30271/,30 days 00:00:00,DC Comics
+449,The Question,1987,22,Issue,1988-12-01,Comicvine,3805,30399,The Question,1986,22, ,https://comicvine.gamespot.com/the-question-22-election-day-the-fix/4000-30399/,0 days 00:00:00,DC Comics
+450,The Question,1987,23,Issue,1988-12-01,Comicvine,3805,30535,The Question,1986,23, ,https://comicvine.gamespot.com/the-question-23-election-day-welcome-to-oz/4000-30535/,31 days 00:00:00,DC Comics
+451,The Question,1987,24,Issue,1989-01-01,Comicvine,3805,30744,The Question,1986,24, ,https://comicvine.gamespot.com/the-question-24-election-day-the-dark/4000-30744/,31 days 00:00:00,DC Comics
+452,The Question,1987,25,Issue,1989-02-01,Comicvine,3805,164698,The Question,1986,25, ,https://comicvine.gamespot.com/the-question-25-skells/4000-164698/,28 days 00:00:00,DC Comics
+453,The Question,1987,26,Issue,1989-03-01,Comicvine,3805,135920,The Question,1986,26, ,https://comicvine.gamespot.com/the-question-26-riddles/4000-135920/,92 days 00:00:00,DC Comics
+454,The Question,1987,27,Issue,1989-06-01,Comicvine,3805,31295,The Question,1986,27, ,https://comicvine.gamespot.com/the-question-27-captain-stars-sergeant-stripes/4000-31295/,30 days 00:00:00,DC Comics
+455,The Question,1987,28,Issue,1989-07-01,Comicvine,3805,31405,The Question,1986,28, ,https://comicvine.gamespot.com/the-question-28-a-place-for-the-arts/4000-31405/,31 days 00:00:00,DC Comics
+456,The Question,1987,29,Issue,1989-08-01,Comicvine,3805,31512,The Question,1986,29, ,https://comicvine.gamespot.com/the-question-29-the-slaying/4000-31512/,31 days 00:00:00,DC Comics
+457,The Question,1987,30,Issue,1989-09-01,Comicvine,3805,31620,The Question,1986,30, ,https://comicvine.gamespot.com/the-question-30-whodunit/4000-31620/,185 days 00:00:00,DC Comics
+458,Doom Patrol,1987,19,Issue,1989-02-28,Comicvine,3786,30852,Doom Patrol,1987,19, ,https://comicvine.gamespot.com/doom-patrol-19-crawling-from-the-wreckage/4000-30852/,31 days 00:00:00,Vertigo
+459,Doom Patrol,1987,20,Issue,1989-03-31,Comicvine,3786,30963,Doom Patrol,1987,20, ,https://comicvine.gamespot.com/doom-patrol-20-cautionary-tales/4000-30963/,30 days 00:00:00,Vertigo
+460,Doom Patrol,1987,21,Issue,1989-04-30,Comicvine,3786,31058,Doom Patrol,1987,21, ,https://comicvine.gamespot.com/doom-patrol-21-worlds-in-collision/4000-31058/,31 days 00:00:00,Vertigo
+461,Doom Patrol,1987,22,Issue,1989-05-31,Comicvine,3786,31173,Doom Patrol,1987,22, ,https://comicvine.gamespot.com/doom-patrol-22-the-ossuary/4000-31173/,30 days 00:00:00,Vertigo
+462,Doom Patrol,1987,23,Issue,1989-06-30,Comicvine,3786,31281,Doom Patrol,1987,23, ,https://comicvine.gamespot.com/doom-patrol-23-the-butterfly-collector/4000-31281/,31 days 00:00:00,Vertigo
+463,Doom Patrol,1987,24,Issue,1989-07-31,Comicvine,3786,31391,Doom Patrol,1987,24, ,https://comicvine.gamespot.com/doom-patrol-24-the-house-that-jack-built/4000-31391/,31 days 00:00:00,Vertigo
+464,Doom Patrol,1987,25,Issue,1989-08-31,Comicvine,3786,31495,Doom Patrol,1987,25, ,https://comicvine.gamespot.com/doom-patrol-25-imaginary-friends/4000-31495/,30 days 00:00:00,Vertigo
+465,Doom Patrol,1987,26,Issue,1989-09-30,Comicvine,3786,31604,Doom Patrol,1987,26, ,https://comicvine.gamespot.com/doom-patrol-26-nowhere-man/4000-31604/,61 days 00:00:00,Vertigo
+466,Doom Patrol,1987,27,Issue,1989-11-30,Comicvine,3786,31825,Doom Patrol,1987,27, ,https://comicvine.gamespot.com/doom-patrol-27-the-painting-that-ate-paris/4000-31825/,31 days 00:00:00,Vertigo
+467,Doom Patrol,1987,28,Issue,1989-12-31,Comicvine,3786,31958,Doom Patrol,1987,28, ,https://comicvine.gamespot.com/doom-patrol-28-labyrinths/4000-31958/,31 days 00:00:00,Vertigo
+468,Doom Patrol,1987,29,Issue,1990-01-31,Comicvine,3786,32285,Doom Patrol,1987,29, ,https://comicvine.gamespot.com/doom-patrol-29-the-kingdom-of-no/4000-32285/,336 days 00:00:00,Vertigo
+469,Detective Comics,1937,598,Issue,1989-03-01,Comicvine,18058,106871,Detective Comics,1937,598, ,https://comicvine.gamespot.com/detective-comics-598-blind-justice-chapter-one-the/4000-106871/,31 days 00:00:00,DC Comics
+470,Detective Comics,1937,599,Issue,1989-04-01,Comicvine,18058,106872,Detective Comics,1937,599, ,https://comicvine.gamespot.com/detective-comics-599-blind-justice/4000-106872/,30 days 00:00:00,DC Comics
+471,Detective Comics,1937,600,Issue,1989-05-01,Comicvine,18058,105900,Detective Comics,1937,600, ,https://comicvine.gamespot.com/detective-comics-600-blind-justice/4000-105900/,244 days 00:00:00,DC Comics
+472,Deadman: Love After Death,1989,1,Issue,1989-12-31,Comicvine,4178,32104,Deadman: Love After Death,1989,1, ,https://comicvine.gamespot.com/deadman-love-after-death-1-book-one/4000-32104/,31 days 00:00:00,DC Comics
+473,Deadman: Love After Death,1989,2,Issue,1990-01-31,Comicvine,4178,32119,Deadman: Love After Death,1989,2, ,https://comicvine.gamespot.com/deadman-love-after-death-2-book-two/4000-32119/,365 days 00:00:00,DC Comics
+474,Legend of Aquaman,1989,1,Issue,1989-01-31,Comicvine,25772,152058,Aquaman Special,1989,1, ,https://comicvine.gamespot.com/issue/4000-152058/,150 days 00:00:00,DC Comics
+475,Aquaman,1989,1,Issue,1989-06-30,Comicvine,4170,31273,Aquaman,1989,1, ,https://comicvine.gamespot.com/aquaman-1-aquarium/4000-31273/,31 days 00:00:00,DC Comics
+476,Aquaman,1989,2,Issue,1989-07-31,Comicvine,4170,31384,Aquaman,1989,2, ,https://comicvine.gamespot.com/aquaman-2-still-waters/4000-31384/,31 days 00:00:00,DC Comics
+477,Aquaman,1989,3,Issue,1989-08-31,Comicvine,4170,152346,Aquaman,1989,3, ,https://comicvine.gamespot.com/aquaman-3-queen-to-kings-seven/4000-152346/,30 days 00:00:00,DC Comics
+478,Aquaman,1989,4,Issue,1989-09-30,Comicvine,4170,31598,Aquaman,1989,4, ,https://comicvine.gamespot.com/aquaman-4-the-tide-of-battle/4000-31598/,31 days 00:00:00,DC Comics
+479,Aquaman,1989,5,Issue,1989-10-31,Comicvine,4170,31714,Aquaman,1989,5, ,https://comicvine.gamespot.com/aquaman-5-battle-royal/4000-31714/,123 days 00:00:00,DC Comics
+480,Secret Origins Special,1989,1,Issue,1989-06-30,Comicvine,20004,119456,Secret Origins Special,1989,1, ,https://comicvine.gamespot.com/secret-origins-special-1-featuring-gotham-citys-vi/4000-119456/,122 days 00:00:00,DC Comics
+481,Justice League International,1987,24,Issue,1989-02-28,Comicvine,3798,30913,Justice League International,1987,24, ,https://comicvine.gamespot.com/justice-league-international-24-the-road-less-trav/4000-30913/,61 days 00:00:00,DC Comics
+482,Justice League International,1987,25,Issue,1989-04-30,Comicvine,3798,31128,Justice League International,1987,25, ,https://comicvine.gamespot.com/justice-league-international-25-repossessions/4000-31128/,31 days 00:00:00,DC Comics
+483,Justice League America,1989,26,Issue,1989-05-31,Comicvine,4198,31179,Justice League America,1989,26, ,https://comicvine.gamespot.com/justice-league-america-26-slice-and-dice-or-theres/4000-31179/,30 days 00:00:00,DC Comics
+484,Justice League America,1989,27,Issue,1989-06-30,Comicvine,4198,31288,Justice League America,1989,27, ,https://comicvine.gamespot.com/justice-league-america-27-mindsnap/4000-31288/,31 days 00:00:00,DC Comics
+485,Justice League America,1989,28,Issue,1989-07-31,Comicvine,4198,31398,Justice League America,1989,28, ,https://comicvine.gamespot.com/justice-league-america-28-a-date-with-density/4000-31398/,31 days 00:00:00,DC Comics
+486,Justice League America,1989,29,Issue,1989-08-31,Comicvine,4198,31505,Justice League America,1989,29, ,https://comicvine.gamespot.com/justice-league-america-29-nabu-in-my-mind/4000-31505/,30 days 00:00:00,DC Comics
+487,Justice League America,1989,30,Issue,1989-09-30,Comicvine,4198,31614,Justice League America,1989,30, ,https://comicvine.gamespot.com/justice-league-america-30-teenage-biker-mega-death/4000-31614/,60 days 00:00:00,DC Comics
+488,Hawkworld,1989,1,Issue,1989-08-01,Comicvine,4193,31501,Hawkworld,1989,1, ,https://comicvine.gamespot.com/hawkworld-1-book-1-flashzone/4000-31501/,31 days 00:00:00,DC Comics
+489,Hawkworld,1989,2,Issue,1989-09-01,Comicvine,4193,31610,Hawkworld,1989,2, ,https://comicvine.gamespot.com/hawkworld-2-book-2-freefall/4000-31610/,30 days 00:00:00,DC Comics
+490,Hawkworld,1989,3,Issue,1989-10-01,Comicvine,4193,31722,Hawkworld,1989,3, ,https://comicvine.gamespot.com/hawkworld-3-book-3-phoenix-flight/4000-31722/,273 days 00:00:00,DC Comics
+491,Mister Miracle,1989,1,Issue,1989-01-01,Comicvine,4203,30813,Mister Miracle,1989,1, ,https://comicvine.gamespot.com/mister-miracle-1-be-it-ever-so-humble/4000-30813/,31 days 00:00:00,DC Comics
+492,Mister Miracle,1989,2,Issue,1989-02-01,Comicvine,4203,30917,Mister Miracle,1989,2, ,https://comicvine.gamespot.com/mister-miracle-2-doctors-orders/4000-30917/,28 days 00:00:00,DC Comics
+493,Mister Miracle,1989,3,Issue,1989-03-01,Comicvine,4203,31015,Mister Miracle,1989,3, ,https://comicvine.gamespot.com/mister-miracle-3-fathers-day/4000-31015/,61 days 00:00:00,DC Comics
+494,Mister Miracle,1989,4,Issue,1989-05-01,Comicvine,4203,31243,Mister Miracle,1989,4, ,https://comicvine.gamespot.com/mister-miracle-4-dark-days/4000-31243/,31 days 00:00:00,DC Comics
+495,Mister Miracle,1989,5,Issue,1989-06-01,Comicvine,4203,31354,Mister Miracle,1989,5, ,https://comicvine.gamespot.com/mister-miracle-5-out-of-the-dark/4000-31354/,30 days 00:00:00,DC Comics
+496,Mister Miracle,1989,6,Issue,1989-07-01,Comicvine,4203,31464,Mister Miracle,1989,6, ,https://comicvine.gamespot.com/mister-miracle-6-barking-up-the-wrong-tree/4000-31464/,31 days 00:00:00,DC Comics
+497,Mister Miracle,1989,7,Issue,1989-08-01,Comicvine,4203,31569,Mister Miracle,1989,7, ,https://comicvine.gamespot.com/mister-miracle-7-just-another-day/4000-31569/,31 days 00:00:00,DC Comics
+498,Mister Miracle,1989,8,Issue,1989-09-01,Comicvine,4203,31682,Mister Miracle,1989,8, ,https://comicvine.gamespot.com/mister-miracle-8-with-an-ivo-here-an-ivo-there-ivo/4000-31682/,30 days 00:00:00,DC Comics
+499,Mister Miracle,1989,9,Issue,1989-10-01,Comicvine,4203,118540,Mister Miracle,1989,9, ,https://comicvine.gamespot.com/mister-miracle-9-hero-is-a-four-letter-word/4000-118540/,31 days 00:00:00,DC Comics
+500,Mister Miracle,1989,10,Issue,1989-11-01,Comicvine,4203,156405,Mister Miracle,1989,10, ,https://comicvine.gamespot.com/mister-miracle-10-this-town-isnt-big-enough-for-th/4000-156405/,246 days 00:00:00,DC Comics
+501,Suicide Squad,1987,24,Issue,1989-02-28,Comicvine,3815,111465,Suicide Squad,1987,24, ,https://comicvine.gamespot.com/suicide-squad-24-slings-and-arrows/4000-111465/,31 days 00:00:00,DC Comics
+502,Suicide Squad,1987,25,Issue,1989-03-31,Comicvine,3815,30977,Suicide Squad,1987,25, ,https://comicvine.gamespot.com/suicide-squad-25-sea-of-troubles/4000-30977/,30 days 00:00:00,DC Comics
+503,Suicide Squad,1987,26,Issue,1989-04-30,Comicvine,3815,31075,Suicide Squad,1987,26, ,https://comicvine.gamespot.com/suicide-squad-26-stone-cold-dead/4000-31075/,61 days 00:00:00,DC Comics
+504,Wonder Woman,1987,27,Issue,1989-02-28,Comicvine,3824,30871,Wonder Woman,1987,27, ,https://comicvine.gamespot.com/wonder-woman-27-from-day-into-night/4000-30871/,31 days 00:00:00,DC Comics
+505,Wonder Woman,1987,28,Issue,1989-03-31,Comicvine,3824,30982,Wonder Woman,1987,28, ,https://comicvine.gamespot.com/wonder-woman-28-jungle-sacrament/4000-30982/,30 days 00:00:00,DC Comics
+506,Wonder Woman,1987,29,Issue,1989-04-30,Comicvine,3824,31079,Wonder Woman,1987,29, ,https://comicvine.gamespot.com/wonder-woman-29-bloodvine/4000-31079/,31 days 00:00:00,DC Comics
+507,Wonder Woman,1987,30,Issue,1989-05-31,Comicvine,3824,31195,Wonder Woman,1987,30, ,https://comicvine.gamespot.com/wonder-woman-30-to-live-by-the-sword/4000-31195/,30 days 00:00:00,DC Comics
+508,Wonder Woman,1987,31,Issue,1989-06-30,Comicvine,3824,31306,Wonder Woman,1987,31, ,https://comicvine.gamespot.com/wonder-woman-31-the-savage-moon/4000-31306/,31 days 00:00:00,DC Comics
+509,Wonder Woman,1987,32,Issue,1989-07-31,Comicvine,3824,31413,Wonder Woman,1987,32, ,https://comicvine.gamespot.com/wonder-woman-32-meanwhile/4000-31413/,31 days 00:00:00,DC Comics
+510,Wonder Woman,1987,33,Issue,1989-08-31,Comicvine,3824,63498,Wonder Woman,1987,33, ,https://comicvine.gamespot.com/wonder-woman-33-secrets-in-the-sand/4000-63498/,30 days 00:00:00,DC Comics
+511,Wonder Woman,1987,34,Issue,1989-09-30,Comicvine,3824,63499,Wonder Woman,1987,34, ,https://comicvine.gamespot.com/wonder-woman-34-the-tournament-of-the-crown/4000-63499/,31 days 00:00:00,DC Comics
+512,Wonder Woman,1987,35,Issue,1989-10-31,Comicvine,3824,115895,Wonder Woman,1987,35, ,https://comicvine.gamespot.com/wonder-woman-35-journeys-end/4000-115895/,30 days 00:00:00,DC Comics
+513,Wonder Woman,1987,36,Issue,1989-11-30,Comicvine,3824,63500,Wonder Woman,1987,36, ,https://comicvine.gamespot.com/wonder-woman-36-changes-in-the-wind/4000-63500/,214 days 00:00:00,DC Comics
+514,Green Arrow,1988,17,Issue,1989-04-30,Comicvine,4003,66708,Green Arrow,1988,17, ,https://comicvine.gamespot.com/green-arrow-17-the-horse-man-part-1/4000-66708/,31 days 00:00:00,DC Comics
+515,Green Arrow,1988,18,Issue,1989-05-31,Comicvine,4003,66709,Green Arrow,1988,18, ,https://comicvine.gamespot.com/green-arrow-18-the-horseman-part-2/4000-66709/,30 days 00:00:00,DC Comics
+516,Green Arrow,1988,19,Issue,1989-06-30,Comicvine,4003,66710,Green Arrow,1988,19, ,https://comicvine.gamespot.com/green-arrow-19-the-trial-of-oliver-queen/4000-66710/,31 days 00:00:00,DC Comics
+517,Green Arrow,1988,20,Issue,1989-07-31,Comicvine,4003,66711,Green Arrow,1988,20, ,https://comicvine.gamespot.com/green-arrow-20-the-trial-of-oliver-queen-part-ii/4000-66711/,31 days 00:00:00,DC Comics
+518,Green Arrow,1988,21,Issue,1989-08-31,Comicvine,4003,66712,Green Arrow,1988,21, ,https://comicvine.gamespot.com/green-arrow-21-blood-of-the-dragon-part-one-uchiok/4000-66712/,0 days 00:00:00,DC Comics
+519,Green Arrow,1988,22,Issue,1989-08-31,Comicvine,4003,66713,Green Arrow,1988,22, ,https://comicvine.gamespot.com/green-arrow-22-blood-of-the-dragon-part-ii-hikiwak/4000-66713/,30 days 00:00:00,DC Comics
+520,Green Arrow,1988,23,Issue,1989-09-30,Comicvine,4003,66714,Green Arrow,1988,23, ,https://comicvine.gamespot.com/green-arrow-23-blood-of-the-dragon-part-three-kia/4000-66714/,0 days 00:00:00,DC Comics
+521,Green Arrow,1988,24,Issue,1989-09-30,Comicvine,4003,66715,Green Arrow,1988,24, ,https://comicvine.gamespot.com/green-arrow-24-blood-of-the-dragon-part-iv-hanare/4000-66715/,31 days 00:00:00,DC Comics
+522,Hellblazer,1988,23,Issue,1989-10-31,Comicvine,4008,31723,Hellblazer,1988,23, ,https://comicvine.gamespot.com/hellblazer-23-larger-than-life/4000-31723/,24 days 00:00:00,Vertigo
+523,Hellblazer,1988,24,Issue,1989-11-24,Comicvine,4008,31831,Hellblazer,1988,24, ,https://comicvine.gamespot.com/hellblazer-24-the-family-man/4000-31831/,61 days 00:00:00,Vertigo
+524,Hellblazer,1988,25,Issue,1990-01-24,Comicvine,4008,32292,Hellblazer,1988,25, ,https://comicvine.gamespot.com/hellblazer-25-early-warning/4000-32292/,31 days 00:00:00,Vertigo
+525,Hellblazer,1988,26,Issue,1990-02-24,Comicvine,4008,32387,Hellblazer,1988,26, ,https://comicvine.gamespot.com/hellblazer-26-how-i-learned-to-love-the-bomb/4000-32387/,388 days 00:00:00,Vertigo
+526,Animal Man,1988,8,Issue,1989-02-01,Comicvine,3976,30844,Animal Man,1988,8, ,https://comicvine.gamespot.com/animal-man-8-mirror-moves/4000-30844/,28 days 00:00:00,DC Comics
+527,Animal Man,1988,9,Issue,1989-03-01,Comicvine,3976,30955,Animal Man,1988,9, ,https://comicvine.gamespot.com/animal-man-9-home-improvements/4000-30955/,31 days 00:00:00,DC Comics
+528,Animal Man,1988,10,Issue,1989-04-01,Comicvine,3976,31049,Animal Man,1988,10, ,https://comicvine.gamespot.com/animal-man-10-fox-on-the-run/4000-31049/,30 days 00:00:00,DC Comics
+529,Animal Man,1988,11,Issue,1989-05-01,Comicvine,3976,31164,Animal Man,1988,11, ,https://comicvine.gamespot.com/animal-man-11-out-of-africa/4000-31164/,31 days 00:00:00,DC Comics
+530,Animal Man,1988,12,Issue,1989-06-01,Comicvine,3976,31272,Animal Man,1988,12, ,https://comicvine.gamespot.com/animal-man-12-secret-origins/4000-31272/,30 days 00:00:00,DC Comics
+531,Animal Man,1988,13,Issue,1989-07-01,Comicvine,3976,31383,Animal Man,1988,13, ,https://comicvine.gamespot.com/animal-man-13-hour-of-the-beast/4000-31383/,31 days 00:00:00,DC Comics
+532,Animal Man,1988,14,Issue,1989-08-01,Comicvine,3976,31489,Animal Man,1988,14, ,https://comicvine.gamespot.com/animal-man-14-spooks/4000-31489/,93 days 00:00:00,DC Comics
+533,Justice League Europe,1989,1,Issue,1989-04-30,Comicvine,4199,31065,Justice League Europe,1989,1, ,https://comicvine.gamespot.com/justice-league-europe-1-how-ya-gonna-keep-em-down-/4000-31065/,31 days 00:00:00,DC Comics
+534,Justice League Europe,1989,2,Issue,1989-05-31,Comicvine,4199,31180,Justice League Europe,1989,2, ,https://comicvine.gamespot.com/justice-league-europe-2-somebody-up-there-hates-us/4000-31180/,1 days 00:00:00,DC Comics
+535,Justice League Europe,1989,3,Issue,1989-06-01,Comicvine,4199,31289,Justice League Europe,1989,3, ,https://comicvine.gamespot.com/justice-league-europe-3-another-fine-mess/4000-31289/,30 days 00:00:00,DC Comics
+536,Justice League Europe,1989,4,Issue,1989-07-01,Comicvine,4199,31399,Justice League Europe,1989,4, ,https://comicvine.gamespot.com/justice-league-europe-4-bialya-burning/4000-31399/,31 days 00:00:00,DC Comics
+537,Justice League Europe,1989,5,Issue,1989-08-01,Comicvine,4199,31506,Justice League Europe,1989,5, ,https://comicvine.gamespot.com/justice-league-europe-5-stagg-party/4000-31506/,31 days 00:00:00,DC Comics
+538,Justice League Europe,1989,6,Issue,1989-09-01,Comicvine,4199,31615,Justice League Europe,1989,6, ,https://comicvine.gamespot.com/justice-league-europe-6-no-more-teachers-dirty-loo/4000-31615/,60 days 00:00:00,DC Comics
+539,Justice League America,1989,31,Issue,1989-10-31,Comicvine,4198,31724,Justice League America,1989,31, ,https://comicvine.gamespot.com/justice-league-america-31-crossed-wires/4000-31724/,30 days 00:00:00,DC Comics
+540,Justice League Europe,1989,7,Issue,1989-10-01,Comicvine,4199,31725,Justice League Europe,1989,7, ,https://comicvine.gamespot.com/justice-league-europe-7-teasdale-unbound/4000-31725/,60 days 00:00:00,DC Comics
+541,Justice League America,1989,32,Issue,1989-11-30,Comicvine,4198,31832,Justice League America,1989,32, ,https://comicvine.gamespot.com/justice-league-america-32-breaking-point/4000-31832/,29 days 00:00:00,DC Comics
+542,Justice League Europe,1989,8,Issue,1989-11-01,Comicvine,4199,31833,Justice League Europe,1989,8, ,https://comicvine.gamespot.com/justice-league-europe-8-showdown/4000-31833/,30 days 00:00:00,DC Comics
+543,Justice League Europe,1989,9,Issue,1989-12-01,Comicvine,4199,31966,Justice League Europe,1989,9, ,https://comicvine.gamespot.com/justice-league-europe-9-under-the-skin/4000-31966/,31 days 00:00:00,DC Comics
+544,Justice League Europe,1989,10,Issue,1990-01-01,Comicvine,4199,32294,Justice League Europe,1989,10, ,https://comicvine.gamespot.com/justice-league-europe-10-after-the-fox/4000-32294/,59 days 00:00:00,DC Comics
+545,Atlantis Chronicles,1990,1,Issue,1990-03-01,Comicvine,4352,32476,The Atlantis Chronicles,1990,1, ,https://comicvine.gamespot.com/the-atlantis-chronicles-1-the-deluge/4000-32476/,31 days 00:00:00,DC Comics
+546,Atlantis Chronicles,1990,2,Issue,1990-04-01,Comicvine,4352,32585,The Atlantis Chronicles,1990,2, ,https://comicvine.gamespot.com/the-atlantis-chronicles-2-the-vanishing-sun/4000-32585/,30 days 00:00:00,DC Comics
+547,Atlantis Chronicles,1990,3,Issue,1990-05-01,Comicvine,4352,32684,The Atlantis Chronicles,1990,3, ,https://comicvine.gamespot.com/the-atlantis-chronicles-3-youth/4000-32684/,31 days 00:00:00,DC Comics
+548,Atlantis Chronicles,1990,4,Issue,1990-06-01,Comicvine,4352,32787,The Atlantis Chronicles,1990,4, ,https://comicvine.gamespot.com/the-atlantis-chronicles-4-full-scale-war/4000-32787/,30 days 00:00:00,DC Comics
+549,Atlantis Chronicles,1990,5,Issue,1990-07-01,Comicvine,4352,32914,The Atlantis Chronicles,1990,5, ,https://comicvine.gamespot.com/the-atlantis-chronicles-5-stuff-of-legends/4000-32914/,31 days 00:00:00,DC Comics
+550,Atlantis Chronicles,1990,6,Issue,1990-08-01,Comicvine,4352,33030,The Atlantis Chronicles,1990,6, ,https://comicvine.gamespot.com/the-atlantis-chronicles-6-the-war/4000-33030/,31 days 00:00:00,DC Comics
+551,Atlantis Chronicles,1990,7,Issue,1990-09-01,Comicvine,4352,33149,The Atlantis Chronicles,1990,7, ,https://comicvine.gamespot.com/the-atlantis-chronicles-7-the-birth/4000-33149/,304 days 00:00:00,DC Comics
+552,Legion of Super-Heroes,1989,1,Issue,1989-11-01,Comicvine,4201,31834,Legion of Super-Heroes,1989,1, ,https://comicvine.gamespot.com/legion-of-super-heroes-1-five-years-later/4000-31834/,30 days 00:00:00,DC Comics
+553,Legion of Super-Heroes,1989,2,Issue,1989-12-01,Comicvine,4201,31967,Legion of Super-Heroes,1989,2, ,https://comicvine.gamespot.com/legion-of-super-heroes-2/4000-31967/,31 days 00:00:00,DC Comics
+554,Legion of Super-Heroes,1989,3,Issue,1990-01-01,Comicvine,4201,32295,Legion of Super-Heroes,1989,3, ,https://comicvine.gamespot.com/legion-of-super-heroes-3/4000-32295/,31 days 00:00:00,DC Comics
+555,Legion of Super-Heroes,1989,4,Issue,1990-02-01,Comicvine,4201,32390,Legion of Super-Heroes,1989,4, ,https://comicvine.gamespot.com/legion-of-super-heroes-4/4000-32390/,28 days 00:00:00,DC Comics
+556,Legion of Super-Heroes,1989,5,Issue,1990-03-01,Comicvine,4201,32492,Legion of Super-Heroes,1989,5, ,https://comicvine.gamespot.com/legion-of-super-heroes-5/4000-32492/,31 days 00:00:00,DC Comics
+557,Legion of Super-Heroes,1989,6,Issue,1990-04-01,Comicvine,4201,32600,Legion of Super-Heroes,1989,6, ,https://comicvine.gamespot.com/legion-of-super-heroes-6/4000-32600/,30 days 00:00:00,DC Comics
+558,Legion of Super-Heroes,1989,7,Issue,1990-05-01,Comicvine,4201,32700,Legion of Super-Heroes,1989,7, ,https://comicvine.gamespot.com/legion-of-super-heroes-7/4000-32700/,212 days 00:00:00,DC Comics
+559,The Question,1987,31,Issue,1989-10-01,Comicvine,3805,31729,The Question,1986,31, ,https://comicvine.gamespot.com/the-question-31-boom-the-end/4000-31729/,31 days 00:00:00,DC Comics
+560,The Question,1987,32,Issue,1989-11-01,Comicvine,3805,31837,The Question,1986,32, ,https://comicvine.gamespot.com/the-question-32-the-peacemaker/4000-31837/,30 days 00:00:00,DC Comics
+561,The Question,1987,33,Issue,1989-12-01,Comicvine,3805,31969,The Question,1986,33, ,https://comicvine.gamespot.com/the-question-33-harold/4000-31969/,31 days 00:00:00,DC Comics
+562,The Question,1987,34,Issue,1990-01-01,Comicvine,3805,32297,The Question,1986,34, ,https://comicvine.gamespot.com/the-question-34-were-it-not-that-i-have-bad-dreams/4000-32297/,59 days 00:00:00,DC Comics
+563,The Question,1987,35,Issue,1990-03-01,Comicvine,3805,164711,The Question,1986,35, ,https://comicvine.gamespot.com/the-question-35-let-nothing-you-dismay/4000-164711/,31 days 00:00:00,DC Comics
+564,The Question,1987,36,Issue,1990-04-01,Comicvine,3805,32601,The Question,1986,36, ,https://comicvine.gamespot.com/the-question-36-or-maybe-gomorrah/4000-32601/,23 days 00:00:00,DC Comics
+565,Hellblazer,1988,28,Issue,1990-04-24,Comicvine,4008,32597,Hellblazer,1988,28, ,https://comicvine.gamespot.com/hellblazer-28-thicker-than-water/4000-32597/,30 days 00:00:00,Vertigo
+566,Hellblazer,1988,29,Issue,1990-05-24,Comicvine,4008,32697,Hellblazer,1988,29, ,https://comicvine.gamespot.com/hellblazer-29-sick-at-heart/4000-32697/,31 days 00:00:00,Vertigo
+567,Hellblazer,1988,30,Issue,1990-06-24,Comicvine,4008,32801,Hellblazer,1988,30, ,https://comicvine.gamespot.com/hellblazer-30-fatality/4000-32801/,30 days 00:00:00,Vertigo
+568,Hellblazer,1988,31,Issue,1990-07-24,Comicvine,4008,32929,Hellblazer,1988,31, ,https://comicvine.gamespot.com/hellblazer-31-mourning-of-the-magician/4000-32929/,31 days 00:00:00,Vertigo
+569,Hellblazer,1988,32,Issue,1990-08-24,Comicvine,4008,33043,Hellblazer,1988,32, ,https://comicvine.gamespot.com/hellblazer-32-new-tricks/4000-33043/,31 days 00:00:00,Vertigo
+570,Hellblazer,1988,33,Issue,1990-09-24,Comicvine,4008,33160,Hellblazer,1988,33, ,https://comicvine.gamespot.com/hellblazer-33-sundays-are-different/4000-33160/,358 days 00:00:00,Vertigo
+571,Arkham Asylum: A Serious House on a Serious Earth,1987,1,Issue,1989-10-01,Comicvine,20403,122008,Batman: Arkham Asylum,1989,1, ,https://comicvine.gamespot.com/issue/4000-122008/,304 days 00:00:00,DC Comics
+572,Batman,1940,452,Issue,1990-08-01,Comicvine,796,33031,Batman,1940,452, ,https://comicvine.gamespot.com/batman-452-dark-knight-dark-city/4000-33031/,0 days 00:00:00,DC Comics
+573,Batman,1940,453,Issue,1990-08-01,Comicvine,796,33130,Batman,1940,453, ,https://comicvine.gamespot.com/batman-453-dark-knight-dark-city-part-ii/4000-33130/,31 days 00:00:00,DC Comics
+574,Batman,1940,454,Issue,1990-09-01,Comicvine,796,33150,Batman,1940,454, ,https://comicvine.gamespot.com/batman-454-dark-knight-dark-city-part-iii/4000-33150/,62 days 00:00:00,DC Comics
+575,Detective Comics,1937,618,Issue,1990-07-01,Comicvine,18058,113077,Detective Comics,1937,618, ,https://comicvine.gamespot.com/detective-comics-618-rite-of-passage-part-1-shadow/4000-113077/,31 days 00:00:00,DC Comics
+576,Detective Comics,1937,619,Issue,1990-08-01,Comicvine,18058,113078,Detective Comics,1937,619, ,https://comicvine.gamespot.com/detective-comics-619-rite-of-passage-part-2-beyond/4000-113078/,0 days 00:00:00,DC Comics
+577,Detective Comics,1937,620,Issue,1990-08-01,Comicvine,18058,113079,Detective Comics,1937,620, ,https://comicvine.gamespot.com/detective-comics-620-rite-of-passage-part-3-make-m/4000-113079/,31 days 00:00:00,DC Comics
+578,Detective Comics,1937,621,Issue,1990-09-01,Comicvine,18058,113081,Detective Comics,1937,621, ,https://comicvine.gamespot.com/detective-comics-621-rite-of-passage-part-4-trial-/4000-113081/,60 days 00:00:00,DC Comics
+579,Batman,1940,455,Issue,1990-10-31,Comicvine,796,33268,Batman,1940,455, ,https://comicvine.gamespot.com/batman-455-identity-crisis-part-one/4000-33268/,30 days 00:00:00,DC Comics
+580,Batman,1940,456,Issue,1990-11-30,Comicvine,796,33384,Batman,1940,456, ,https://comicvine.gamespot.com/batman-456-identity-crisis-part-two-without-fear-o/4000-33384/,31 days 00:00:00,DC Comics
+581,Batman,1940,457,Issue,1990-12-31,Comicvine,796,33486,Batman,1940,457, ,https://comicvine.gamespot.com/batman-457-master-of-fear/4000-33486/,31 days 00:00:00,DC Comics
+582,Robin,1991,1,Issue,1991-01-31,Comicvine,4563,33743,Robin,1991,1, ,https://comicvine.gamespot.com/robin-1-big-bad-world/4000-33743/,28 days 00:00:00,DC Comics
+583,Robin,1991,2,Issue,1991-02-28,Comicvine,4563,33845,Robin,1991,2, ,https://comicvine.gamespot.com/robin-2-the-shepardess/4000-33845/,31 days 00:00:00,DC Comics
+584,Robin,1991,3,Issue,1991-03-31,Comicvine,4563,33956,Robin,1991,3, ,https://comicvine.gamespot.com/robin-3-the-destroying-angel/4000-33956/,30 days 00:00:00,DC Comics
+585,Robin,1991,4,Issue,1991-04-30,Comicvine,4563,34065,Robin,1991,4, ,https://comicvine.gamespot.com/robin-4-strange-company/4000-34065/,31 days 00:00:00,DC Comics
+586,Robin,1991,5,Issue,1991-05-31,Comicvine,4563,34172,Robin,1991,5, ,https://comicvine.gamespot.com/robin-5-the-dark/4000-34172/,484 days 00:00:00,DC Comics
+587,Justice League Europe,1989,11,Issue,1990-02-01,Comicvine,4199,32389,Justice League Europe,1989,11, ,https://comicvine.gamespot.com/justice-league-europe-11-family-ties/4000-32389/,28 days 00:00:00,DC Comics
+588,Justice League Europe,1989,12,Issue,1990-03-01,Comicvine,4199,32491,Justice League Europe,1989,12, ,https://comicvine.gamespot.com/justice-league-europe-12-bringing-up-baby/4000-32491/,274 days 00:00:00,DC Comics
+589,Hellblazer,1988,35,Issue,1990-11-30,Comicvine,4008,33392,Hellblazer,1988,35, ,https://comicvine.gamespot.com/hellblazer-35-dead-boys-heart/4000-33392/,395 days 00:00:00,Vertigo
+590,Green Arrow,1988,25,Issue,1989-10-31,Comicvine,4003,66716,Green Arrow,1988,25, ,https://comicvine.gamespot.com/green-arrow-25-witch-hunt-part-one/4000-66716/,30 days 00:00:00,DC Comics
+591,Green Arrow,1988,26,Issue,1989-11-30,Comicvine,4003,66717,Green Arrow,1988,26, ,https://comicvine.gamespot.com/green-arrow-26-witch-hunt-part-2-ollie-of-sherwood/4000-66717/,31 days 00:00:00,DC Comics
+592,Green Arrow,1988,27,Issue,1989-12-31,Comicvine,4003,66718,Green Arrow,1988,27, ,https://comicvine.gamespot.com/green-arrow-27-enter/4000-66718/,31 days 00:00:00,DC Comics
+593,Green Arrow,1988,28,Issue,1990-01-31,Comicvine,4003,66719,Green Arrow,1988,28, ,https://comicvine.gamespot.com/green-arrow-28-siege/4000-66719/,28 days 00:00:00,DC Comics
+594,Green Arrow,1988,29,Issue,1990-02-28,Comicvine,4003,66720,Green Arrow,1988,29, ,https://comicvine.gamespot.com/green-arrow-29-coyote-tears/4000-66720/,31 days 00:00:00,DC Comics
+595,Green Arrow,1988,30,Issue,1990-03-31,Comicvine,4003,66721,Green Arrow,1988,30, ,https://comicvine.gamespot.com/green-arrow-30-coyote-tears-part-ii/4000-66721/,30 days 00:00:00,DC Comics
+596,Green Arrow,1988,31,Issue,1990-04-30,Comicvine,4003,66722,Green Arrow,1988,31, ,https://comicvine.gamespot.com/green-arrow-31-the-canary-is-a-bird-of-prey/4000-66722/,31 days 00:00:00,DC Comics
+597,Green Arrow,1988,32,Issue,1990-05-31,Comicvine,4003,66723,Green Arrow,1988,32, ,https://comicvine.gamespot.com/green-arrow-32-part-two-the-canary-is-a-bird-of-pr/4000-66723/,30 days 00:00:00,DC Comics
+598,Green Arrow,1988,33,Issue,1990-06-30,Comicvine,4003,66724,Green Arrow,1988,33, ,https://comicvine.gamespot.com/green-arrow-33-broken-arrow/4000-66724/,347 days 00:00:00,DC Comics
+599,Suicide Squad,1987,31,Issue,1989-07-18,Comicvine,3815,31410,Suicide Squad,1987,31, ,https://comicvine.gamespot.com/suicide-squad-31-acts-of-contrition/4000-31410/,44 days 00:00:00,DC Comics
+600,Suicide Squad,1987,32,Issue,1989-08-31,Comicvine,3815,31518,Suicide Squad,1987,32, ,https://comicvine.gamespot.com/suicide-squad-32-steel-trap/4000-31518/,30 days 00:00:00,DC Comics
+601,Suicide Squad,1987,33,Issue,1989-09-30,Comicvine,3815,31628,Suicide Squad,1987,33, ,https://comicvine.gamespot.com/suicide-squad-33-into-the-angry-planet/4000-31628/,1 days 00:00:00,DC Comics
+602,Suicide Squad,1987,34,Issue,1989-10-01,Comicvine,3815,31737,Suicide Squad,1987,34, ,https://comicvine.gamespot.com/suicide-squad-34-armagetto/4000-31737/,48 days 00:00:00,DC Comics
+603,Suicide Squad,1987,35,Issue,1989-11-18,Comicvine,3815,31843,Suicide Squad,1987,35, ,https://comicvine.gamespot.com/suicide-squad-35-that-hideous-strength/4000-31843/,43 days 00:00:00,DC Comics
+604,Suicide Squad,1987,36,Issue,1989-12-31,Comicvine,3815,32037,Suicide Squad,1987,36, ,https://comicvine.gamespot.com/suicide-squad-36-in-final-battle/4000-32037/,31 days 00:00:00,DC Comics
+605,Suicide Squad,1987,37,Issue,1990-01-31,Comicvine,3815,32302,Suicide Squad,1987,37, ,https://comicvine.gamespot.com/suicide-squad-37-threads/4000-32302/,59 days 00:00:00,DC Comics
+606,Suicide Squad,1987,38,Issue,1990-03-31,Comicvine,3815,32397,Suicide Squad,1987,38, ,https://comicvine.gamespot.com/suicide-squad-38-caging-the-tiger/4000-32397/,0 days 00:00:00,DC Comics
+607,Suicide Squad,1987,39,Issue,1990-03-31,Comicvine,3815,32499,Suicide Squad,1987,39, ,https://comicvine.gamespot.com/suicide-squad-39-dead-issue/4000-32499/,90 days 00:00:00,DC Comics
+608,Justice League America,1989,33,Issue,1989-12-31,Comicvine,4198,31965,Justice League America,1989,33, ,https://comicvine.gamespot.com/justice-league-america-33-nitwits-knuckleheads-and/4000-31965/,31 days 00:00:00,DC Comics
+609,Justice League America,1989,34,Issue,1990-01-31,Comicvine,4198,32293,Justice League America,1989,34, ,https://comicvine.gamespot.com/justice-league-america-34-club-jli/4000-32293/,28 days 00:00:00,DC Comics
+610,Justice League America,1989,35,Issue,1990-02-28,Comicvine,4198,32388,Justice League America,1989,35, ,https://comicvine.gamespot.com/justice-league-america-35-lifeboat/4000-32388/,31 days 00:00:00,DC Comics
+611,Justice League America,1989,36,Issue,1990-03-31,Comicvine,4198,32490,Justice League America,1989,36, ,https://comicvine.gamespot.com/justice-league-america-36-gnort-by-gnortwest/4000-32490/,182 days 00:00:00,DC Comics
+612,Animal Man,1988,15,Issue,1989-09-30,Comicvine,3976,31597,Animal Man,1988,15, ,https://comicvine.gamespot.com/animal-man-15-the-devil-and-the-deep-blue-sea/4000-31597/,1 days 00:00:00,DC Comics
+613,Animal Man,1988,16,Issue,1989-10-01,Comicvine,3976,31713,Animal Man,1988,16, ,https://comicvine.gamespot.com/animal-man-16-the-clockwork-crimes-of-the-time-com/4000-31713/,31 days 00:00:00,DC Comics
+614,Animal Man,1988,17,Issue,1989-11-01,Comicvine,3976,31820,Animal Man,1988,17, ,https://comicvine.gamespot.com/animal-man-17-consequences/4000-31820/,30 days 00:00:00,DC Comics
+615,Animal Man,1988,18,Issue,1989-12-01,Comicvine,3976,31954,Animal Man,1988,18, ,https://comicvine.gamespot.com/animal-man-18-at-play-in-the-fields-of-the-lord/4000-31954/,31 days 00:00:00,DC Comics
+616,Animal Man,1988,19,Issue,1990-01-01,Comicvine,3976,32279,Animal Man,1988,19, ,https://comicvine.gamespot.com/animal-man-19-a-new-science-of-life/4000-32279/,31 days 00:00:00,DC Comics
+617,Animal Man,1988,20,Issue,1990-02-01,Comicvine,3976,32376,Animal Man,1988,20, ,https://comicvine.gamespot.com/animal-man-20-the-last-enemy/4000-32376/,28 days 00:00:00,DC Comics
+618,Animal Man,1988,21,Issue,1990-03-01,Comicvine,3976,32475,Animal Man,1988,21, ,https://comicvine.gamespot.com/animal-man-21-tooth-and-claw/4000-32475/,31 days 00:00:00,DC Comics
+619,Animal Man,1988,22,Issue,1990-04-01,Comicvine,3976,32584,Animal Man,1988,22, ,https://comicvine.gamespot.com/animal-man-22-time-in-a-bottle/4000-32584/,60 days 00:00:00,DC Comics
+620,Animal Man,1988,23,Issue,1990-05-31,Comicvine,3976,32683,Animal Man,1988,23, ,https://comicvine.gamespot.com/animal-man-23-crisis/4000-32683/,1 days 00:00:00,DC Comics
+621,Animal Man,1988,24,Issue,1990-06-01,Comicvine,3976,32786,Animal Man,1988,24, ,https://comicvine.gamespot.com/animal-man-24-purification-day/4000-32786/,30 days 00:00:00,DC Comics
+622,Animal Man,1988,25,Issue,1990-07-01,Comicvine,3976,32913,Animal Man,1988,25, ,https://comicvine.gamespot.com/animal-man-25-monkey-puzzle/4000-32913/,31 days 00:00:00,DC Comics
+623,Animal Man,1988,26,Issue,1990-08-01,Comicvine,3976,33029,Animal Man,1988,26, ,https://comicvine.gamespot.com/animal-man-26-deus-ex-machina/4000-33029/,213 days 00:00:00,DC Comics
+624,Wonder Woman,1987,37,Issue,1989-12-31,Comicvine,3824,63501,Wonder Woman,1987,37, ,https://comicvine.gamespot.com/wonder-woman-37-strangers-in-paradise/4000-63501/,31 days 00:00:00,DC Comics
+625,Wonder Woman,1987,38,Issue,1990-01-31,Comicvine,3824,63502,Wonder Woman,1987,38, ,https://comicvine.gamespot.com/wonder-woman-38-forbidden-fruit/4000-63502/,28 days 00:00:00,DC Comics
+626,Wonder Woman,1987,39,Issue,1990-02-28,Comicvine,3824,63503,Wonder Woman,1987,39, ,https://comicvine.gamespot.com/wonder-woman-39-poisoned-souls/4000-63503/,31 days 00:00:00,DC Comics
+627,Wonder Woman,1987,40,Issue,1990-03-31,Comicvine,3824,63504,Wonder Woman,1987,40, ,https://comicvine.gamespot.com/wonder-woman-40-divided-we-fall/4000-63504/,30 days 00:00:00,DC Comics
+628,Wonder Woman,1987,41,Issue,1990-04-30,Comicvine,3824,63505,Wonder Woman,1987,41, ,https://comicvine.gamespot.com/wonder-woman-41-the-ties-that-bond/4000-63505/,31 days 00:00:00,DC Comics
+629,Wonder Woman,1987,42,Issue,1990-05-31,Comicvine,3824,63506,Wonder Woman,1987,42, ,https://comicvine.gamespot.com/wonder-woman-42-the-silver-wing-of-terror/4000-63506/,30 days 00:00:00,DC Comics
+630,Wonder Woman,1987,43,Issue,1990-06-30,Comicvine,3824,63507,Wonder Woman,1987,43, ,https://comicvine.gamespot.com/wonder-woman-43-the-armageddon-aria/4000-63507/,31 days 00:00:00,DC Comics
+631,Wonder Woman,1987,44,Issue,1990-07-31,Comicvine,3824,63508,Wonder Woman,1987,44, ,https://comicvine.gamespot.com/wonder-woman-44-caged/4000-63508/,153 days 00:00:00,DC Comics
+632,World’s Finest,1990,1,Issue,1990-12-31,Comicvine,31792,199247,World's Finest,1990,1, ,https://comicvine.gamespot.com/worlds-finest-1-worlds-apart/4000-199247/,0 days 00:00:00,DC Comics
+633,World’s Finest,1990,2,Issue,1990-12-31,Comicvine,31792,199248,World's Finest,1990,2, ,https://comicvine.gamespot.com/worlds-finest-2-worlds-collide/4000-199248/,0 days 00:00:00,DC Comics
+634,World’s Finest,1990,3,Issue,1990-12-31,Comicvine,31792,199249,World's Finest,1990,3, ,https://comicvine.gamespot.com/worlds-finest-3-worlds-at-war/4000-199249/,275 days 00:00:00,DC Comics
+635,Doom Patrol,1987,30,Issue,1990-03-31,Comicvine,3786,32482,Doom Patrol,1987,30, ,https://comicvine.gamespot.com/doom-patrol-30-going-underground/4000-32482/,30 days 00:00:00,Vertigo
+636,Doom Patrol,1987,31,Issue,1990-04-30,Comicvine,3786,32590,Doom Patrol,1987,31, ,https://comicvine.gamespot.com/doom-patrol-31-the-word-made-flesh/4000-32590/,31 days 00:00:00,Vertigo
+637,Doom Patrol,1987,32,Issue,1990-05-31,Comicvine,3786,32690,Doom Patrol,1987,32, ,https://comicvine.gamespot.com/doom-patrol-32-decreator/4000-32690/,30 days 00:00:00,Vertigo
+638,Doom Patrol,1987,33,Issue,1990-06-30,Comicvine,3786,32793,Doom Patrol,1987,33, ,https://comicvine.gamespot.com/doom-patrol-33-the-puppet-theater/4000-32793/,31 days 00:00:00,Vertigo
+639,Doom Patrol,1987,34,Issue,1990-07-31,Comicvine,3786,32921,Doom Patrol,1987,34, ,https://comicvine.gamespot.com/doom-patrol-34-the-soul-of-a-new-machine/4000-32921/,31 days 00:00:00,Vertigo
+640,Doom Patrol,1987,35,Issue,1990-08-31,Comicvine,3786,33036,Doom Patrol,1987,35, ,https://comicvine.gamespot.com/doom-patrol-35-down-paradise-way/4000-33036/,30 days 00:00:00,Vertigo
+641,Doom Patrol,1987,36,Issue,1990-09-30,Comicvine,3786,33154,Doom Patrol,1987,36, ,https://comicvine.gamespot.com/doom-patrol-36-box-of-delights/4000-33154/,31 days 00:00:00,Vertigo
+642,Doom Patrol,1987,37,Issue,1990-10-31,Comicvine,3786,33272,Doom Patrol,1987,37, ,https://comicvine.gamespot.com/doom-patrol-37-persephone/4000-33272/,30 days 00:00:00,Vertigo
+643,Doom Patrol,1987,38,Issue,1990-11-30,Comicvine,3786,33387,Doom Patrol,1987,38, ,https://comicvine.gamespot.com/doom-patrol-38-lost-in-space/4000-33387/,31 days 00:00:00,Vertigo
+644,Doom Patrol,1987,39,Issue,1990-12-31,Comicvine,3786,33489,Doom Patrol,1987,39, ,https://comicvine.gamespot.com/doom-patrol-39-bell-book-and-candle/4000-33489/,31 days 00:00:00,Vertigo
+645,Doom Patrol,1987,40,Issue,1991-01-31,Comicvine,3786,33733,Doom Patrol,1987,40, ,https://comicvine.gamespot.com/doom-patrol-40-battlefield-of-dreams/4000-33733/,28 days 00:00:00,Vertigo
+646,Doom Patrol,1987,41,Issue,1991-02-28,Comicvine,3786,33835,Doom Patrol,1987,41, ,https://comicvine.gamespot.com/doom-patrol-41-fallen-angel/4000-33835/,304 days 00:00:00,Vertigo
+647,Suicide Squad,1987,40,Issue,1990-04-30,Comicvine,3815,32607,Suicide Squad,1987,40, ,https://comicvine.gamespot.com/suicide-squad-40-ashes/4000-32607/,31 days 00:00:00,DC Comics
+648,Suicide Squad,1987,41,Issue,1990-05-31,Comicvine,3815,32705,Suicide Squad,1987,41, ,https://comicvine.gamespot.com/suicide-squad-41-embers/4000-32705/,30 days 00:00:00,DC Comics
+649,Suicide Squad,1987,42,Issue,1990-06-30,Comicvine,3815,32811,Suicide Squad,1987,42, ,https://comicvine.gamespot.com/suicide-squad-42-firefight/4000-32811/,31 days 00:00:00,DC Comics
+650,Suicide Squad,1987,43,Issue,1990-07-31,Comicvine,3815,32939,Suicide Squad,1987,43, ,https://comicvine.gamespot.com/suicide-squad-43-black-queens-mate/4000-32939/,488 days 00:00:00,DC Comics
+651,Batman versus Predator,1991,1,Issue,1991-12-01,Comicvine,4692,33682,Batman versus Predator,1991,1, ,https://comicvine.gamespot.com/batman-versus-predator-1/4000-33682/,31 days 00:00:00,DC Comics
+652,Batman versus Predator,1991,2,Issue,1992-01-01,Comicvine,4692,35177,Batman versus Predator,1991,2, ,https://comicvine.gamespot.com/batman-versus-predator-2/4000-35177/,31 days 00:00:00,DC Comics
+653,Batman versus Predator,1991,3,Issue,1992-02-01,Comicvine,4692,116484,Batman versus Predator,1991,3, ,https://comicvine.gamespot.com/batman-versus-predator-3/4000-116484/,428 days 00:00:00,DC Comics
+654,Lobo,1990,1,Issue,1990-11-30,Comicvine,19236,115327,Lobo,1990,1, ,https://comicvine.gamespot.com/lobo-1-portrait-of-a-psychopath/4000-115327/,31 days 00:00:00,DC Comics
+655,Lobo,1990,2,Issue,1990-12-31,Comicvine,19236,115368,Lobo,1990,2, ,https://comicvine.gamespot.com/lobo-2-lord-of-the-dance/4000-115368/,31 days 00:00:00,DC Comics
+656,Lobo,1990,3,Issue,1991-01-31,Comicvine,19236,115369,Lobo,1990,3, ,https://comicvine.gamespot.com/lobo-3-spell-or-die/4000-115369/,28 days 00:00:00,DC Comics
+657,Lobo,1990,4,Issue,1991-02-28,Comicvine,19236,115370,Lobo,1990,4, ,https://comicvine.gamespot.com/lobo-4-the-last-last-czarnian/4000-115370/,272 days 00:00:00,DC Comics
+658,Hawkworld,1990,1,Issue,1990-06-01,Comicvine,4365,32800,Hawkworld,1990,1, ,https://comicvine.gamespot.com/hawkworld-1-predators/4000-32800/,30 days 00:00:00,DC Comics
+659,Hawkworld,1990,2,Issue,1990-07-01,Comicvine,4365,32928,Hawkworld,1990,2, ,https://comicvine.gamespot.com/hawkworld-2-enter-hawkman/4000-32928/,31 days 00:00:00,DC Comics
+660,Hawkworld,1990,3,Issue,1990-08-01,Comicvine,4365,33042,Hawkworld,1990,3, ,https://comicvine.gamespot.com/hawkworld-3-winged-fury/4000-33042/,31 days 00:00:00,DC Comics
+661,Hawkworld,1990,4,Issue,1990-09-01,Comicvine,4365,33159,Hawkworld,1990,4, ,https://comicvine.gamespot.com/hawkworld-4-partners/4000-33159/,30 days 00:00:00,DC Comics
+662,Hawkworld,1990,5,Issue,1990-10-01,Comicvine,4365,33278,Hawkworld,1990,5, ,https://comicvine.gamespot.com/hawkworld-5-war-of-the-shadows/4000-33278/,61 days 00:00:00,DC Comics
+663,Hawkworld,1990,6,Issue,1990-12-01,Comicvine,4365,33495,Hawkworld,1990,6, ,https://comicvine.gamespot.com/hawkworld-6-strange-worlds/4000-33495/,31 days 00:00:00,DC Comics
+664,Hawkworld,1990,7,Issue,1991-01-01,Comicvine,4365,33840,Hawkworld,1990,7, ,https://comicvine.gamespot.com/hawkworld-7-birds-of-prey/4000-33840/,31 days 00:00:00,DC Comics
+665,Hawkworld,1990,8,Issue,1991-02-01,Comicvine,4365,33928,Hawkworld,1990,8, ,https://comicvine.gamespot.com/hawkworld-8-talons/4000-33928/,28 days 00:00:00,DC Comics
+666,Hawkworld,1990,9,Issue,1991-03-01,Comicvine,4365,33951,Hawkworld,1990,9, ,https://comicvine.gamespot.com/hawkworld-9-hawkwoman-caged/4000-33951/,31 days 00:00:00,DC Comics
+667,Hawkworld,1990,10,Issue,1991-04-01,Comicvine,4365,34058,Hawkworld,1990,10, ,https://comicvine.gamespot.com/hawkworld-10-images/4000-34058/,30 days 00:00:00,DC Comics
+668,Hawkworld,1990,11,Issue,1991-05-01,Comicvine,4365,34166,Hawkworld,1990,11, ,https://comicvine.gamespot.com/hawkworld-11-eight-miles-high/4000-34166/,31 days 00:00:00,DC Comics
+669,Hawkworld,1990,12,Issue,1991-06-01,Comicvine,4365,34266,Hawkworld,1990,12, ,https://comicvine.gamespot.com/hawkworld-12-rebels-and-rogues/4000-34266/,212 days 00:00:00,DC Comics
+670,Books of Magic,1990,1,Issue,1990-11-01,Comicvine,4354,32134,The Books of Magic,1990,1, ,https://comicvine.gamespot.com/the-books-of-magic-1-the-invisible-labyrinth/4000-32134/,30 days 00:00:00,DC Comics
+671,Books of Magic,1990,2,Issue,1990-12-01,Comicvine,4354,32154,The Books of Magic,1990,2, ,https://comicvine.gamespot.com/the-books-of-magic-2-the-shadow-world/4000-32154/,31 days 00:00:00,DC Comics
+672,Books of Magic,1990,3,Issue,1991-01-01,Comicvine,4354,33643,The Books of Magic,1990,3, ,https://comicvine.gamespot.com/the-books-of-magic-3-the-land-of-summers-twilight/4000-33643/,31 days 00:00:00,DC Comics
+673,Books of Magic,1990,4,Issue,1991-02-01,Comicvine,4354,33647,The Books of Magic,1990,4, ,https://comicvine.gamespot.com/the-books-of-magic-4-the-road-to-nowhere/4000-33647/,154 days 00:00:00,DC Comics
+674,Suicide Squad,1987,44,Issue,1990-08-31,Comicvine,3815,33054,Suicide Squad,1987,44, ,https://comicvine.gamespot.com/suicide-squad-44-grave-matters/4000-33054/,212 days 00:00:00,DC Comics
+675,The Flash,1987,48,Issue,1991-03-31,Comicvine,3790,33948,The Flash,1987,48, ,https://comicvine.gamespot.com/the-flash-48-persistence-of-vision/4000-33948/,30 days 00:00:00,DC Comics
+676,The Flash,1987,49,Issue,1991-04-30,Comicvine,3790,34055,The Flash,1987,49, ,https://comicvine.gamespot.com/the-flash-49-savage-season/4000-34055/,31 days 00:00:00,DC Comics
+677,The Flash,1987,50,Issue,1991-05-31,Comicvine,3790,34163,The Flash,1987,50, ,https://comicvine.gamespot.com/the-flash-50-the-fastest-man-alive/4000-34163/,364 days 00:00:00,DC Comics
+678,Firestorm,1987,98,Issue,1990-06-01,Comicvine,3789,32796,"Firestorm, the Nuclear Man",1987,98, ,https://comicvine.gamespot.com/firestorm-the-nuclear-man-98-balance-of-powers/4000-32796/,30 days 00:00:00,DC Comics
+679,Firestorm,1987,99,Issue,1990-07-01,Comicvine,3789,32924,"Firestorm, the Nuclear Man",1987,99, ,https://comicvine.gamespot.com/firestorm-the-nuclear-man-99-mourning-frost/4000-32924/,31 days 00:00:00,DC Comics
+680,Firestorm,1987,100,Issue,1990-08-01,Comicvine,3789,33039,"Firestorm, the Nuclear Man",1987,100, ,https://comicvine.gamespot.com/firestorm-the-nuclear-man-100-blaze-of-glory/4000-33039/,30 days 00:00:00,DC Comics
+681,Wonder Woman,1987,45,Issue,1990-08-31,Comicvine,3824,111303,Wonder Woman,1987,45, ,https://comicvine.gamespot.com/wonder-woman-45-legacy/4000-111303/,30 days 00:00:00,DC Comics
+682,Wonder Woman,1987,46,Issue,1990-09-30,Comicvine,3824,63509,Wonder Woman,1987,46, ,https://comicvine.gamespot.com/wonder-woman-46-chalk-drawings/4000-63509/,31 days 00:00:00,DC Comics
+683,Wonder Woman,1987,47,Issue,1990-10-31,Comicvine,3824,33294,Wonder Woman,1987,47, ,https://comicvine.gamespot.com/wonder-woman-47-common-ground/4000-33294/,30 days 00:00:00,DC Comics
+684,Wonder Woman,1987,48,Issue,1990-11-30,Comicvine,3824,33403,Wonder Woman,1987,48, ,https://comicvine.gamespot.com/wonder-woman-48-fang-and-claw/4000-33403/,31 days 00:00:00,DC Comics
+685,Wonder Woman,1987,49,Issue,1990-12-31,Comicvine,3824,33508,Wonder Woman,1987,49, ,https://comicvine.gamespot.com/wonder-woman-49-no-title/4000-33508/,245 days 00:00:00,DC Comics
+686,Justice League America,1989,37,Issue,1990-04-30,Comicvine,4198,32598,Justice League America,1989,37, ,https://comicvine.gamespot.com/justice-league-america-37-furballs/4000-32598/,29 days 00:00:00,DC Comics
+687,Justice League Europe,1989,13,Issue,1990-04-01,Comicvine,4199,32599,Justice League Europe,1989,13, ,https://comicvine.gamespot.com/justice-league-europe-13-furballs-ii/4000-32599/,30 days 00:00:00,DC Comics
+688,Justice League Europe,1989,14,Issue,1990-05-01,Comicvine,4199,32699,Justice League Europe,1989,14, ,https://comicvine.gamespot.com/justice-league-europe-14-you-oughtta-be-in-picture/4000-32699/,60 days 00:00:00,DC Comics
+689,Justice League Europe,1989,15,Issue,1990-06-30,Comicvine,4199,32803,Justice League Europe,1989,15, ,https://comicvine.gamespot.com/justice-league-europe-15-the-extremist-vector-part/4000-32803/,31 days 00:00:00,DC Comics
+690,Justice League Europe,1989,16,Issue,1990-07-31,Comicvine,4199,32931,Justice League Europe,1989,16, ,https://comicvine.gamespot.com/justice-league-europe-16-the-extremis-vector-part-/4000-32931/,31 days 00:00:00,DC Comics
+691,Justice League Europe,1989,17,Issue,1990-08-31,Comicvine,4199,33045,Justice League Europe,1989,17, ,https://comicvine.gamespot.com/justice-league-europe-17-the-extremist-vector-part/4000-33045/,30 days 00:00:00,DC Comics
+692,Justice League Europe,1989,18,Issue,1990-09-30,Comicvine,4199,33162,Justice League Europe,1989,18, ,https://comicvine.gamespot.com/justice-league-europe-18-the-extremist-vector-part/4000-33162/,31 days 00:00:00,DC Comics
+693,Justice League Europe,1989,19,Issue,1990-10-31,Comicvine,4199,33280,Justice League Europe,1989,19, ,https://comicvine.gamespot.com/justice-league-europe-19-the-extremist-vector-part/4000-33280/,31 days 00:00:00,DC Comics
+694,Suicide Squad,1987,45,Issue,1990-09-30,Comicvine,3815,33169,Suicide Squad,1987,45, ,https://comicvine.gamespot.com/suicide-squad-45-the-jerusalem-serpent/4000-33169/,31 days 00:00:00,DC Comics
+695,Suicide Squad,1987,46,Issue,1990-10-31,Comicvine,3815,33290,Suicide Squad,1987,46, ,https://comicvine.gamespot.com/suicide-squad-46-choice-of-evils/4000-33290/,30 days 00:00:00,DC Comics
+696,Suicide Squad,1987,47,Issue,1990-11-30,Comicvine,3815,33399,Suicide Squad,1987,47, ,https://comicvine.gamespot.com/suicide-squad-47-choice-of-dooms/4000-33399/,31 days 00:00:00,DC Comics
+697,Suicide Squad,1987,48,Issue,1990-12-31,Comicvine,3815,33580,Suicide Squad,1987,48, ,https://comicvine.gamespot.com/suicide-squad-48-in-control/4000-33580/,31 days 00:00:00,DC Comics
+698,Suicide Squad,1987,49,Issue,1991-01-31,Comicvine,3815,33750,Suicide Squad,1987,49, ,https://comicvine.gamespot.com/suicide-squad-49-smile/4000-33750/,1 days 00:00:00,DC Comics
+699,Suicide Squad,1987,50,Issue,1991-02-01,Comicvine,3815,33915,Suicide Squad,1987,50, ,https://comicvine.gamespot.com/suicide-squad-50-debt-of-honor/4000-33915/,31 days 00:00:00,DC Comics
+700,Batman & Dracula: Red Rain,1991,1,Issue,1991-01-01,Comicvine,19168,114715,Batman & Dracula: Red Rain,1991,1, ,https://comicvine.gamespot.com/batman-dracula-red-rain-1-gn/4000-114715/,1096 days 00:00:00,DC Comics
+701,Batman: Bloodstorm,1994,1,Issue,1994-01-01,Comicvine,19169,114716,Batman: Bloodstorm,1994,1, ,https://comicvine.gamespot.com/batman-bloodstorm-1/4000-114716/,1826 days 00:00:00,DC Comics
+702,Batman: Crimson Mist,1998,1,Issue,1999-01-01,Comicvine,19170,114717,Batman: Crimson Mist,1999,1, ,https://comicvine.gamespot.com/batman-crimson-mist-1-batman-crimson-mist/4000-114717/,2650 days 00:00:00,DC Comics
+703,Batman: Holy Terror,1991,1,Issue,1991-09-30,Comicvine,28207,173438,Batman: Holy Terror,1991,1, ,https://comicvine.gamespot.com/batman-holy-terror-1/4000-173438/,29 days 00:00:00,DC Comics
+704,The Flash,1987,54,Issue,1991-09-01,Comicvine,3790,34601,The Flash,1987,54, ,https://comicvine.gamespot.com/the-flash-54-nobody-dies/4000-34601/,397 days 00:00:00,DC Comics
+705,Green Arrow,1988,34,Issue,1990-07-31,Comicvine,4003,66725,Green Arrow,1988,34, ,https://comicvine.gamespot.com/green-arrow-34-untitled/4000-66725/,31 days 00:00:00,DC Comics
+706,Green Arrow,1988,35,Issue,1990-08-31,Comicvine,4003,66726,Green Arrow,1988,35, ,https://comicvine.gamespot.com/green-arrow-35-the-black-arrow-saga-part-i/4000-66726/,30 days 00:00:00,DC Comics
+707,Green Arrow,1988,36,Issue,1990-09-30,Comicvine,4003,66727,Green Arrow,1988,36, ,https://comicvine.gamespot.com/green-arrow-36-the-black-arrow-saga-part-2/4000-66727/,0 days 00:00:00,DC Comics
+708,Green Arrow,1988,37,Issue,1990-09-30,Comicvine,4003,66728,Green Arrow,1988,37, ,https://comicvine.gamespot.com/green-arrow-37-the-black-arrow-saga-part-three-qua/4000-66728/,31 days 00:00:00,DC Comics
+709,Green Arrow,1988,38,Issue,1990-10-31,Comicvine,4003,66729,Green Arrow,1988,38, ,https://comicvine.gamespot.com/green-arrow-38-the-black-arrow-saga-part-4-hunters/4000-66729/,30 days 00:00:00,DC Comics
+710,Green Arrow,1988,39,Issue,1990-11-30,Comicvine,4003,66730,Green Arrow,1988,39, ,https://comicvine.gamespot.com/green-arrow-39-sunday-on-the-tarmac-with-george/4000-66730/,31 days 00:00:00,DC Comics
+711,Green Arrow,1988,40,Issue,1990-12-31,Comicvine,4003,66731,Green Arrow,1988,40, ,https://comicvine.gamespot.com/green-arrow-40-spirit-quest/4000-66731/,0 days 00:00:00,DC Comics
+712,Green Arrow,1988,41,Issue,1990-12-31,Comicvine,4003,66732,Green Arrow,1988,41, ,https://comicvine.gamespot.com/green-arrow-41-hooray-for-ollie-wood/4000-66732/,31 days 00:00:00,DC Comics
+713,Green Arrow,1988,42,Issue,1991-01-31,Comicvine,4003,66733,Green Arrow,1988,42, ,https://comicvine.gamespot.com/green-arrow-42-fall-guy/4000-66733/,28 days 00:00:00,DC Comics
+714,Green Arrow,1988,43,Issue,1991-02-28,Comicvine,4003,66734,Green Arrow,1988,43, ,https://comicvine.gamespot.com/green-arrow-43-legends-of-stupid-heroes/4000-66734/,85 days 00:00:00,DC Comics
+715,Hellblazer,1988,41,Issue,1991-05-24,Comicvine,4008,34167,Hellblazer,1988,41, ,https://comicvine.gamespot.com/hellblazer-41-the-beginning-of-the-end-dangerous-h/4000-34167/,31 days 00:00:00,Vertigo
+716,Hellblazer,1988,42,Issue,1991-06-24,Comicvine,4008,34267,Hellblazer,1988,42, ,https://comicvine.gamespot.com/hellblazer-42-a-drop-of-the-hard-stuff/4000-34267/,30 days 00:00:00,Vertigo
+717,Hellblazer,1988,43,Issue,1991-07-24,Comicvine,4008,34375,Hellblazer,1988,43, ,https://comicvine.gamespot.com/hellblazer-43-friends-in-high-places-dangerous-hab/4000-34375/,31 days 00:00:00,Vertigo
+718,Hellblazer,1988,44,Issue,1991-08-24,Comicvine,4008,34493,Hellblazer,1988,44, ,https://comicvine.gamespot.com/hellblazer-44-my-way-dangerous-habits-part-four/4000-34493/,31 days 00:00:00,Vertigo
+719,Hellblazer,1988,45,Issue,1991-09-24,Comicvine,4008,34606,Hellblazer,1988,45, ,https://comicvine.gamespot.com/hellblazer-45-the-sting-dangerous-habits-part-five/4000-34606/,30 days 00:00:00,Vertigo
+720,Hellblazer,1988,46,Issue,1991-10-24,Comicvine,4008,34727,Hellblazer,1988,46, ,https://comicvine.gamespot.com/hellblazer-46-falling-into-hell-dangerous-habits-e/4000-34727/,31 days 00:00:00,Vertigo
+721,Hellblazer,1988,47,Issue,1991-11-24,Comicvine,4008,34843,Hellblazer,1988,47, ,https://comicvine.gamespot.com/hellblazer-47-the-pub-where-i-was-born/4000-34843/,37 days 00:00:00,Vertigo
+722,Hellblazer,1988,48,Issue,1991-12-31,Comicvine,4008,34964,Hellblazer,1988,48, ,https://comicvine.gamespot.com/hellblazer-48-love-kills/4000-34964/,24 days 00:00:00,Vertigo
+723,Hellblazer,1988,49,Issue,1992-01-24,Comicvine,4008,35227,Hellblazer,1988,49, ,https://comicvine.gamespot.com/hellblazer-49-lord-of-the-dance/4000-35227/,31 days 00:00:00,Vertigo
+724,Hellblazer,1988,50,Issue,1992-02-24,Comicvine,4008,35334,Hellblazer,1988,50, ,https://comicvine.gamespot.com/hellblazer-50-remarkable-lives/4000-35334/,330 days 00:00:00,Vertigo
+725,Suicide Squad,1987,51,Issue,1991-03-31,Comicvine,3815,33964,Suicide Squad,1987,51, ,https://comicvine.gamespot.com/suicide-squad-51-fractured-image/4000-33964/,30 days 00:00:00,DC Comics
+726,Suicide Squad,1987,52,Issue,1991-04-30,Comicvine,3815,34072,Suicide Squad,1987,52, ,https://comicvine.gamespot.com/suicide-squad-52-the-death-and-life-and-death-and-/4000-34072/,31 days 00:00:00,DC Comics
+727,Suicide Squad,1987,53,Issue,1991-05-31,Comicvine,3815,34230,Suicide Squad,1987,53, ,https://comicvine.gamespot.com/suicide-squad-53-dead-ernest/4000-34230/,30 days 00:00:00,DC Comics
+728,Suicide Squad,1987,54,Issue,1991-06-30,Comicvine,3815,34279,Suicide Squad,1987,54, ,https://comicvine.gamespot.com/suicide-squad-54-devine-wind/4000-34279/,31 days 00:00:00,DC Comics
+729,Suicide Squad,1987,55,Issue,1991-07-31,Comicvine,3815,34391,Suicide Squad,1987,55, ,https://comicvine.gamespot.com/suicide-squad-55-dead-mans-hand/4000-34391/,31 days 00:00:00,DC Comics
+730,Suicide Squad,1987,56,Issue,1991-08-31,Comicvine,3815,34508,Suicide Squad,1987,56, ,https://comicvine.gamespot.com/suicide-squad-56-dragons-teeth/4000-34508/,30 days 00:00:00,DC Comics
+731,Suicide Squad,1987,57,Issue,1991-09-30,Comicvine,3815,34622,Suicide Squad,1987,57, ,https://comicvine.gamespot.com/suicide-squad-57-dragons-blood/4000-34622/,394 days 00:00:00,DC Comics
+732,Animal Man,1988,27,Issue,1990-09-01,Comicvine,3976,33148,Animal Man,1988,27, ,https://comicvine.gamespot.com/animal-man-27-the-coma-kid/4000-33148/,30 days 00:00:00,DC Comics
+733,Animal Man,1988,28,Issue,1990-10-01,Comicvine,3976,33267,Animal Man,1988,28, ,https://comicvine.gamespot.com/animal-man-28-the-naked-afternoon-snack/4000-33267/,31 days 00:00:00,DC Comics
+734,Animal Man,1988,29,Issue,1990-11-01,Comicvine,3976,33383,Animal Man,1988,29, ,https://comicvine.gamespot.com/animal-man-29-born-to-be-wild/4000-33383/,30 days 00:00:00,DC Comics
+735,Animal Man,1988,30,Issue,1990-12-01,Comicvine,3976,33485,Animal Man,1988,30, ,https://comicvine.gamespot.com/animal-man-30-a-nice-day-for-a-weird-wedding/4000-33485/,31 days 00:00:00,DC Comics
+736,Animal Man,1988,31,Issue,1991-01-01,Comicvine,3976,33729,Animal Man,1988,31, ,https://comicvine.gamespot.com/animal-man-31-rites-of-passage/4000-33729/,31 days 00:00:00,DC Comics
+737,Animal Man,1988,32,Issue,1991-02-01,Comicvine,3976,110451,Animal Man,1988,32, ,https://comicvine.gamespot.com/animal-man-32-schrodingers-pizza/4000-110451/,28 days 00:00:00,DC Comics
+738,Animal Man,1988,33,Issue,1991-03-01,Comicvine,3976,33941,Animal Man,1988,33, ,https://comicvine.gamespot.com/animal-man-33-i-am-the-man-of-deep-ungodly-powers/4000-33941/,31 days 00:00:00,DC Comics
+739,Animal Man,1988,34,Issue,1991-04-01,Comicvine,3976,34048,Animal Man,1988,34, ,https://comicvine.gamespot.com/animal-man-34-requiem-for-a-bird-of-prey/4000-34048/,30 days 00:00:00,DC Comics
+740,Animal Man,1988,35,Issue,1991-05-01,Comicvine,3976,34155,Animal Man,1988,35, ,https://comicvine.gamespot.com/animal-man-35-dead-dogs-on-ice/4000-34155/,31 days 00:00:00,DC Comics
+741,Animal Man,1988,36,Issue,1991-06-01,Comicvine,3976,34257,Animal Man,1988,36, ,https://comicvine.gamespot.com/animal-man-36-the-call-of-the-wild/4000-34257/,30 days 00:00:00,DC Comics
+742,Animal Man,1988,37,Issue,1991-07-01,Comicvine,3976,110452,Animal Man,1988,37, ,https://comicvine.gamespot.com/animal-man-37-the-zoo-at-worlds-end/4000-110452/,213 days 00:00:00,DC Comics
+743,New Titans,1988,71,Issue,1990-11-30,Comicvine,4014,74646,The New Titans,1988,71, ,https://comicvine.gamespot.com/the-new-titans-71-beginnings-endings-and-we-promis/4000-74646/,32 days 00:00:00,DC Comics
+744,New Titans,1988,72,Issue,1991-01-01,Comicvine,4014,74647,The New Titans,1988,72, ,https://comicvine.gamespot.com/the-new-titans-72-death-of-a-hero/4000-74647/,31 days 00:00:00,DC Comics
+745,New Titans,1988,73,Issue,1991-02-01,Comicvine,4014,74648,The New Titans,1988,73, ,https://comicvine.gamespot.com/the-new-titans-73-paradise-lost/4000-74648/,28 days 00:00:00,DC Comics
+746,New Titans,1988,74,Issue,1991-03-01,Comicvine,4014,74649,The New Titans,1988,74, ,https://comicvine.gamespot.com/the-new-titans-74-when-pantha-strikes/4000-74649/,31 days 00:00:00,DC Comics
+747,New Titans,1988,75,Issue,1991-04-01,Comicvine,4014,34135,The New Titans,1988,75, ,https://comicvine.gamespot.com/the-new-titans-75-countdown-to-doomsday/4000-34135/,61 days 00:00:00,DC Comics
+748,New Titans,1988,76,Issue,1991-06-01,Comicvine,4014,34236,The New Titans,1988,76, ,https://comicvine.gamespot.com/the-new-titans-76-tower-of-the-damned/4000-34236/,60 days 00:00:00,DC Comics
+749,New Titans,1988,77,Issue,1991-07-31,Comicvine,4014,34333,The New Titans,1988,77, ,https://comicvine.gamespot.com/the-new-titans-77-red-star-rising/4000-34333/,31 days 00:00:00,DC Comics
+750,New Titans,1988,78,Issue,1991-08-31,Comicvine,4014,34567,The New Titans,1988,78, ,https://comicvine.gamespot.com/the-new-titans-78-mind-over-machine/4000-34567/,30 days 00:00:00,DC Comics
+751,New Titans,1988,79,Issue,1991-09-30,Comicvine,4014,34684,The New Titans,1988,79, ,https://comicvine.gamespot.com/the-new-titans-79-prelude/4000-34684/,77 days 00:00:00,DC Comics
+752,New Titans Annual,1989,7,Issue,1991-07-15,Comicvine,4204,33659,The New Titans Annual,1989,7, ,https://comicvine.gamespot.com/the-new-titans-annual-7-2001-a-titans-odyssey/4000-33659/,109 days 00:00:00,DC Comics
+753,New Titans,1988,80,Issue,1991-11-01,Comicvine,4014,74650,The New Titans,1988,80, ,https://comicvine.gamespot.com/the-new-titans-80-once-and-future/4000-74650/,274 days 00:00:00,DC Comics
+754,Wonder Woman,1987,50,Issue,1991-01-31,Comicvine,3824,33753,Wonder Woman,1987,50, ,https://comicvine.gamespot.com/wonder-woman-50-embrace-the-coming-dawn/4000-33753/,28 days 00:00:00,DC Comics
+755,Wonder Woman,1987,51,Issue,1991-02-28,Comicvine,3824,63510,Wonder Woman,1987,51, ,https://comicvine.gamespot.com/wonder-woman-51-speeding-image/4000-63510/,31 days 00:00:00,DC Comics
+756,Wonder Woman,1987,52,Issue,1991-03-31,Comicvine,3824,33967,Wonder Woman,1987,52, ,https://comicvine.gamespot.com/wonder-woman-52-shards/4000-33967/,30 days 00:00:00,DC Comics
+757,Wonder Woman,1987,53,Issue,1991-04-30,Comicvine,3824,34075,Wonder Woman,1987,53, ,https://comicvine.gamespot.com/wonder-woman-53-welcome-to-my-nightmare/4000-34075/,31 days 00:00:00,DC Comics
+758,Wonder Woman,1987,54,Issue,1991-05-31,Comicvine,3824,34182,Wonder Woman,1987,54, ,https://comicvine.gamespot.com/wonder-woman-54-mind-games/4000-34182/,30 days 00:00:00,DC Comics
+759,Wonder Woman,1987,55,Issue,1991-06-30,Comicvine,3824,34283,Wonder Woman,1987,55, ,https://comicvine.gamespot.com/wonder-woman-55-psycho-path/4000-34283/,1 days 00:00:00,DC Comics
+760,Hawkworld,1990,13,Issue,1991-07-01,Comicvine,4365,34374,Hawkworld,1990,13, ,https://comicvine.gamespot.com/hawkworld-13-wall-street-raider/4000-34374/,31 days 00:00:00,DC Comics
+761,Hawkworld,1990,14,Issue,1991-08-01,Comicvine,4365,34492,Hawkworld,1990,14, ,https://comicvine.gamespot.com/hawkworld-14-gods-and-devils/4000-34492/,1 days 00:00:00,DC Comics
+762,Wonder Woman,1987,56,Issue,1991-07-31,Comicvine,3824,34393,Wonder Woman,1987,56, ,https://comicvine.gamespot.com/wonder-woman-56-victims/4000-34393/,31 days 00:00:00,DC Comics
+763,Wonder Woman,1987,57,Issue,1991-08-31,Comicvine,3824,34510,Wonder Woman,1987,57, ,https://comicvine.gamespot.com/wonder-woman-57-the-fugitive-kind/4000-34510/,154 days 00:00:00,DC Comics
+764,Wonder Woman,1987,62,Issue,1992-02-01,Comicvine,3824,63511,Wonder Woman,1987,62, ,https://comicvine.gamespot.com/wonder-woman-62-an-era-ends-for-wonder-woman/4000-63511/,31 days 00:00:00,DC Comics
+765,New Titans,1988,82,Issue,1992-01-01,Comicvine,4014,74652,The New Titans,1988,82, ,https://comicvine.gamespot.com/the-new-titans-82-the-jericho-gambit-part-one-the-/4000-74652/,31 days 00:00:00,DC Comics
+766,New Titans,1988,83,Issue,1992-02-01,Comicvine,4014,74653,The New Titans,1988,83, ,https://comicvine.gamespot.com/the-new-titans-83-the-jericho-gambit-part-2-a-thou/4000-74653/,29 days 00:00:00,DC Comics
+767,New Titans,1988,84,Issue,1992-03-01,Comicvine,4014,74654,The New Titans,1988,84, ,https://comicvine.gamespot.com/the-new-titans-84-the-jericho-gambit-part-three-en/4000-74654/,821 days 00:00:00,DC Comics
+768,Mister Miracle,1989,11,Issue,1989-12-01,Comicvine,4203,156406,Mister Miracle,1989,11, ,https://comicvine.gamespot.com/mister-miracle-11-what-and-give-up-show-business/4000-156406/,31 days 00:00:00,DC Comics
+769,Mister Miracle,1989,12,Issue,1990-01-01,Comicvine,4203,156407,Mister Miracle,1989,12, ,https://comicvine.gamespot.com/mister-miracle-12-head-of-the-clash/4000-156407/,59 days 00:00:00,DC Comics
+770,Mister Miracle,1989,13,Issue,1990-03-01,Comicvine,4203,156408,Mister Miracle,1989,13, ,https://comicvine.gamespot.com/mister-miracle-13-a-fine-kettle-of-fish/4000-156408/,31 days 00:00:00,DC Comics
+771,Mister Miracle,1989,14,Issue,1990-04-01,Comicvine,4203,156409,Mister Miracle,1989,14, ,https://comicvine.gamespot.com/mister-miracle-14-eating-pain/4000-156409/,30 days 00:00:00,DC Comics
+772,Mister Miracle,1989,15,Issue,1990-05-01,Comicvine,4203,156410,Mister Miracle,1989,15, ,https://comicvine.gamespot.com/mister-miracle-15-power-fantasy/4000-156410/,31 days 00:00:00,DC Comics
+773,Mister Miracle,1989,16,Issue,1990-06-01,Comicvine,4203,156411,Mister Miracle,1989,16, ,https://comicvine.gamespot.com/mister-miracle-16-the-sewer-sticks/4000-156411/,30 days 00:00:00,DC Comics
+774,Mister Miracle,1989,17,Issue,1990-07-01,Comicvine,4203,142098,Mister Miracle,1989,17, ,https://comicvine.gamespot.com/mister-miracle-17-fury-hath-no-females-like-apokol/4000-142098/,31 days 00:00:00,DC Comics
+775,Mister Miracle,1989,18,Issue,1990-08-01,Comicvine,4203,142099,Mister Miracle,1989,18, ,https://comicvine.gamespot.com/mister-miracle-18-apokolips-then-and-now/4000-142099/,31 days 00:00:00,DC Comics
+776,Mister Miracle,1989,19,Issue,1990-09-01,Comicvine,4203,118783,Mister Miracle,1989,19, ,https://comicvine.gamespot.com/mister-miracle-19-mutants/4000-118783/,0 days 00:00:00,DC Comics

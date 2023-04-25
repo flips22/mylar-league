@@ -169,13 +169,13 @@ def parseCBLfiles():
                     #print("Parsing %s" % (filename))
                     tree = ET.parse(filename)
                     fileroot = tree.getroot()
-
                     cblinput = fileroot.findall("./Books/Book")
                     for series in cblinput:
-                        if len(list(series)) <= 1:
-                            line = series.attrib['Series'].replace(",",""),series.attrib['Volume'],'Unknown','Unknown'
-                        else:
-                            line = series.attrib['Series'].replace(",",""),series.attrib['Volume'],'Unknown',series[0].attrib['Series']
+                        try:
+                            cblseries = series[0].attrib['Series']
+                        except:
+                            cblseries = 'Unknown'
+                        line = series.attrib['Series'].replace(",",""),series.attrib['Volume'],'Unknown',cblseries
                         series_list.append(list(line))
                 except:
                     print("Unable to process file at %s" % ( os.path.join(str(root), str(file)) ))

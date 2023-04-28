@@ -1,9 +1,9 @@
-,SeriesName,SeriesStartYear,IssueNum,IssueType,CoverDate,Name,SeriesID,IssueID,CV Series Name,CV Series Year,CV Issue Number,CV Cover Image,CV Issue URL,Days Between Issues,CV Series Publisher
-1,Batman,1940,587,Issue,2001-03-01,Comicvine,796,98702,Batman,1940,587, ,https://comicvine.gamespot.com/issue/4000-98702/,0 days 00:00:00,DC Comics
-2,Robin,1993,86,Issue,2001-03-01,Comicvine,4975,46631,Robin,1993,nan, ,https://comicvine.gamespot.com/issue/4000-46631/,0 days 00:00:00,DC Comics
-3,Batgirl,2000,12,Issue,2001-03-01,Comicvine,7205,121088,Batgirl,2000,12, ,https://comicvine.gamespot.com/issue/4000-121088/,0 days 00:00:00,DC Comics
-4,Birds of Prey,1999,27,Issue,2001-03-01,Comicvine,6498,73280,Birds of Prey,1999,27, ,https://comicvine.gamespot.com/birds-of-prey-27-officer-down-part-three-armed-and/4000-73280/,0 days 00:00:00,DC Comics
-5,Catwoman,1993,90,Issue,2001-03-01,Comicvine,4955,133925,Catwoman,1993,90, ,https://comicvine.gamespot.com/issue/4000-133925/,0 days 00:00:00,DC Comics
-6,Nightwing,1996,53,Issue,2001-03-01,Comicvine,5755,47049,Nightwing,1996,53, ,https://comicvine.gamespot.com/issue/4000-47049/,0 days 00:00:00,DC Comics
-7,Detective Comics,1937,754,Issue,2001-03-01,Comicvine,18058,113220,Detective Comics,1937,754, ,https://comicvine.gamespot.com/issue/4000-113220/,0 days 00:00:00,DC Comics
-8,Batman: Gotham Knights,2000,13,Issue,2001-03-01,Comicvine,7207,55307,Batman: Gotham Knights,2000,13, ,https://comicvine.gamespot.com/issue/4000-55307/,0 days 00:00:00,DC Comics
+,SeriesName,SeriesStartYear,IssueNum,IssueType,CoverDate,Name,SeriesID,IssueID,CV Series Name,CV Series Year,CV Issue Number,CV Series Publisher,CV Cover Image,CV Issue URL,Days Between Issues
+1,Batman,1940,587,Issue,2001-03-01,Comicvine,796,98702,Batman,1940,587,DC Comics, ,https://comicvine.gamespot.com/issue/4000-98702/,0 days 00:00:00
+2,Robin,1993,86,Issue,2001-03-01,Comicvine,4975,46631,Robin,1993,86,DC Comics, ,https://comicvine.gamespot.com/robin-86-officer-down-part-two-behind-the-lines/4000-46631/,0 days 00:00:00
+3,Batgirl,2000,12,Issue,2001-03-01,Comicvine,7205,121088,Batgirl,2000,12,DC Comics, ,https://comicvine.gamespot.com/issue/4000-121088/,0 days 00:00:00
+4,Birds of Prey,1999,27,Issue,2001-03-01,Comicvine,6498,73280,Birds of Prey,1999,27,DC Comics, ,https://comicvine.gamespot.com/birds-of-prey-27-officer-down-part-three-armed-and/4000-73280/,0 days 00:00:00
+5,Catwoman,1993,90,Issue,2001-03-01,Comicvine,4955,133925,Catwoman,1993,90,DC Comics, ,https://comicvine.gamespot.com/issue/4000-133925/,0 days 00:00:00
+6,Nightwing,1996,53,Issue,2001-03-01,Comicvine,5755,47049,Nightwing,1996,53,DC Comics, ,https://comicvine.gamespot.com/issue/4000-47049/,0 days 00:00:00
+7,Detective Comics,1937,754,Issue,2001-03-01,Comicvine,18058,113220,Detective Comics,1937,754,DC Comics, ,https://comicvine.gamespot.com/issue/4000-113220/,0 days 00:00:00
+8,Batman: Gotham Knights,2000,13,Issue,2001-03-01,Comicvine,7207,55307,Batman: Gotham Knights,2000,13,DC Comics, ,https://comicvine.gamespot.com/issue/4000-55307/,0 days 00:00:00

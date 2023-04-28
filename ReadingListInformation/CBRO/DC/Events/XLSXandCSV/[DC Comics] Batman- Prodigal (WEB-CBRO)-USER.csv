@@ -1,13 +1,13 @@
-,SeriesName,SeriesStartYear,IssueNum,IssueType,CoverDate,Name,SeriesID,IssueID,CV Series Name,CV Series Year,CV Issue Number,CV Cover Image,CV Issue URL,Days Between Issues,CV Series Publisher
-1,Batman,1940,512,Issue,1994-11-01,Comicvine,796,39887,Batman,1940,512, ,https://comicvine.gamespot.com/issue/4000-39887/,0 days 00:00:00,DC Comics
-2,Shadow of the Bat,1992,32,Issue,1994-11-01,Comicvine,4724,39990,Batman: Shadow of the Bat,1992,32, ,https://comicvine.gamespot.com/issue/4000-39990/,0 days 00:00:00,DC Comics
-3,Detective Comics,1937,679,Issue,1994-11-01,Comicvine,18058,113132,Detective Comics,1937,679, ,https://comicvine.gamespot.com/issue/4000-113132/,0 days 00:00:00,DC Comics
-4,Robin,1993,11,Issue,1994-11-01,Comicvine,4975,39902,Robin,1993,nan, ,https://comicvine.gamespot.com/issue/4000-39902/,30 days 00:00:00,DC Comics
-5,Batman,1940,513,Issue,1994-12-01,Comicvine,796,40020,Batman,1940,513, ,https://comicvine.gamespot.com/issue/4000-40020/,0 days 00:00:00,DC Comics
-6,Shadow of the Bat,1992,33,Issue,1994-12-01,Comicvine,4724,40129,Batman: Shadow of the Bat,1992,33, ,https://comicvine.gamespot.com/issue/4000-40129/,0 days 00:00:00,DC Comics
-7,Detective Comics,1937,680,Issue,1994-12-01,Comicvine,18058,113133,Detective Comics,1937,680, ,https://comicvine.gamespot.com/issue/4000-113133/,0 days 00:00:00,DC Comics
-8,Robin,1993,12,Issue,1994-12-01,Comicvine,4975,40036,Robin,1993,nan, ,https://comicvine.gamespot.com/issue/4000-40036/,31 days 00:00:00,DC Comics
-9,Batman,1940,514,Issue,1995-01-01,Comicvine,796,40261,Batman,1940,514, ,https://comicvine.gamespot.com/issue/4000-40261/,0 days 00:00:00,DC Comics
-10,Shadow of the Bat,1992,34,Issue,1995-01-01,Comicvine,4724,40371,Batman: Shadow of the Bat,1992,34, ,https://comicvine.gamespot.com/issue/4000-40371/,0 days 00:00:00,DC Comics
-11,Detective Comics,1937,681,Issue,1995-01-01,Comicvine,18058,113143,Detective Comics,1937,681, ,https://comicvine.gamespot.com/issue/4000-113143/,0 days 00:00:00,DC Comics
-12,Robin,1993,13,Issue,1995-01-01,Comicvine,4975,40277,Robin,1993,nan, ,https://comicvine.gamespot.com/issue/4000-40277/,0 days 00:00:00,DC Comics
+,SeriesName,SeriesStartYear,IssueNum,IssueType,CoverDate,Name,SeriesID,IssueID,CV Series Name,CV Series Year,CV Issue Number,CV Series Publisher,CV Cover Image,CV Issue URL,Days Between Issues
+1,Batman,1940,512,Issue,1994-11-01,Comicvine,796,39887,Batman,1940,512,DC Comics, ,https://comicvine.gamespot.com/issue/4000-39887/,0 days 00:00:00
+2,Shadow of the Bat,1992,32,Issue,1994-11-01,Comicvine,4724,39990,Batman: Shadow of the Bat,1992,32,DC Comics, ,https://comicvine.gamespot.com/issue/4000-39990/,0 days 00:00:00
+3,Detective Comics,1937,679,Issue,1994-11-01,Comicvine,18058,113132,Detective Comics,1937,679,DC Comics, ,https://comicvine.gamespot.com/issue/4000-113132/,0 days 00:00:00
+4,Robin,1993,11,Issue,1994-11-01,Comicvine,4975,39902,Robin,1993,11,DC Comics, ,https://comicvine.gamespot.com/robin-11-two-in-every-crowd/4000-39902/,30 days 00:00:00
+5,Batman,1940,513,Issue,1994-12-01,Comicvine,796,40020,Batman,1940,513,DC Comics, ,https://comicvine.gamespot.com/issue/4000-40020/,0 days 00:00:00
+6,Shadow of the Bat,1992,33,Issue,1994-12-01,Comicvine,4724,40129,Batman: Shadow of the Bat,1992,33,DC Comics, ,https://comicvine.gamespot.com/issue/4000-40129/,0 days 00:00:00
+7,Detective Comics,1937,680,Issue,1994-12-01,Comicvine,18058,113133,Detective Comics,1937,680,DC Comics, ,https://comicvine.gamespot.com/issue/4000-113133/,0 days 00:00:00
+8,Robin,1993,12,Issue,1994-12-01,Comicvine,4975,40036,Robin,1993,12,DC Comics, ,https://comicvine.gamespot.com/robin-12-bullies/4000-40036/,31 days 00:00:00
+9,Batman,1940,514,Issue,1995-01-01,Comicvine,796,40261,Batman,1940,514,DC Comics, ,https://comicvine.gamespot.com/issue/4000-40261/,0 days 00:00:00
+10,Shadow of the Bat,1992,34,Issue,1995-01-01,Comicvine,4724,40371,Batman: Shadow of the Bat,1992,34,DC Comics, ,https://comicvine.gamespot.com/issue/4000-40371/,0 days 00:00:00
+11,Detective Comics,1937,681,Issue,1995-01-01,Comicvine,18058,113143,Detective Comics,1937,681,DC Comics, ,https://comicvine.gamespot.com/issue/4000-113143/,0 days 00:00:00
+12,Robin,1993,13,Issue,1995-01-01,Comicvine,4975,40277,Robin,1993,13,DC Comics, ,https://comicvine.gamespot.com/robin-13-wings-over-gotham/4000-40277/,0 days 00:00:00

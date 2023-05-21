@@ -104,8 +104,8 @@ CV_SEARCH_LIMIT = 10000 #Maximum allowed number of CV API calls
 CV_API_KEY = config['comicVine']['cv_api_key']
 CV_API_RATE = 2 #Seconds between CV API calls
 FORCE_RECHECK_CV = False
-PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown"]
-PUBLISHER_PREFERRED = ["Marvel","DC Comics"] #If multiple matches found, prefer this result
+PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska","TidalWave Productions"]
+PUBLISHER_PREFERRED = ["Marvel","DC Comics","Vertigo"] #If multiple matches found, prefer this result
 #CV = None
 
 #Mylar prefs
@@ -113,6 +113,8 @@ mylarAPI = config['mylar']['mylarapi']
 mylarBaseURL = config['mylar']['mylarbaseurl']
 
 FORCE_RECHECK_MYLAR_MATCHES = False
+
+#Add series to mylar or just simulate:
 ADD_NEW_SERIES_TO_MYLAR = False
 
 mylarAddURL = mylarBaseURL + 'api?apikey=' + mylarAPI + '&cmd=addComic&id='
@@ -502,6 +504,8 @@ def main():
     outputData(mergedData)
 
     #Print summary to terminal
+    if not ADD_NEW_SERIES_TO_MYLAR:
+        print("ADD_NEW_SERIES_TO_MYLAR set to false, no series added to mylar. Below are only simulated results:")
     print("Total Number of Series From CSV File: %s, New Series Added From CBL Files: %s,  Existing Series (Mylar): %s,  Missing Series (Mylar): %s,  New Matches (CV): %s, Unfound Series (CV): %s" % (numExistingSeries,numNewSeries,mylarExisting,mylarMissing,CVFound,CVNotFound))
 
     ## TODO: Summarise list of publishers in results

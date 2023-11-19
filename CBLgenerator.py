@@ -45,7 +45,7 @@ else:
 VERBOSE = True
 #Prevent overwriting of main CSV data file
 TEST_MODE = False
-
+searchTurthDB = True
 #File prefs
 SCRIPT_DIR = os.getcwd()
 READINGLIST_DIR = os.path.join(SCRIPT_DIR, "ReadingLists")
@@ -61,7 +61,7 @@ CACHE_RETENTION_TIME = 120 #days
 CV_API_KEY = config['comicVine']['cv_api_key']
 CV_API_RATE = 1 #Seconds between CV API calls
 FORCE_RECHECK_CV = False
-PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska"]
+PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska","ECC Ediciones","RW Edizioni","Titan Comics","Dargaud","Federal", "Marvel UK/Panini UK","Grupo Editorial Vid"]
 PUBLISHER_PREFERRED = ["Marvel","DC Comics","Vertigo"] #If multiple matches found, prefer this result
 SERIESID_BLACKLIST = [137835,147775,89852,96070,78862,58231,50923]
 SERIESID_GOODLIST = [42722,3824,4975,69322,3816,38005,1628] #index matches above list
@@ -156,7 +156,7 @@ resultsFile = os.path.join(resultsDirectory, "results-%s.txt" % (timeString))
 problemsFile = os.path.join(resultsDirectory, "problems-%s.txt" % (timeString))
 uniqueSeriesFile = os.path.join(resultsDirectory, "uniqueSeriesWarnings-%s.txt" % (timeString))
 #truthDB = os.path.join(dataDirectory, "truthDB.db")
-truthDB = os.path.join(dataDirectory, "CMRO.db")
+truthDB = os.path.join(dataDirectory, "CBRO.db")
 
 cvCacheFile = os.path.join(dataDirectory, "CV.db")
 
@@ -217,19 +217,25 @@ def main():
     fileCount = 0
     for root, dirs, files in os.walk(readingListDirectory):
         for file in files:
-            if file.endswith(".json") or file.endswith(".cbl"):
+            if file.endswith(".json") or file.endswith(".cbl") or file.endswith(".ccc"):
                 inputfile = file
                 print('Processing %s'%(inputfile))
                 if file.endswith(".json"):
-                    outputfile = os.path.join(readingListDirectory, inputfile.replace('.json','') + '-USER.xlsx')
-                    outputcsvfile = os.path.join(readingListDirectory, inputfile.replace('.json','') + '-USER.csv')
-                    outputhtmlfile = os.path.join(readingListDirectory, inputfile.replace('.json','') + '-USER.html')
+                    outputfile = os.path.join(readingListDirectory, inputfile.replace('.json','') + '.xlsx')
+                    outputcsvfile = os.path.join(readingListDirectory, inputfile.replace('.json','') + '.csv')
+                    outputhtmlfile = os.path.join(readingListDirectory, inputfile.replace('.json','') + '.html')
                     outputcblfile = os.path.join(outputDirectory, inputfile.replace('.json','') + '.cbl')
                 if file.endswith(".cbl"):
-                    outputfile = os.path.join(readingListDirectory, inputfile.replace('.cbl','') + '-USER.xlsx')
-                    outputcsvfile = os.path.join(readingListDirectory, inputfile.replace('.cbl','') + '-USER.csv')
-                    outputhtmlfile = os.path.join(readingListDirectory, inputfile.replace('.cbl','') + '-USER.html')
+                    outputfile = os.path.join(readingListDirectory, inputfile.replace('.cbl','') + '.xlsx')
+                    outputcsvfile = os.path.join(readingListDirectory, inputfile.replace('.cbl','') + '.csv')
+                    outputhtmlfile = os.path.join(readingListDirectory, inputfile.replace('.cbl','') + '.html')
                     outputcblfile = os.path.join(outputDirectory, inputfile.replace('.cbl','') + '.cbl')
+                if file.endswith(".ccc"):
+                    outputfile = os.path.join(readingListDirectory, inputfile.replace('.ccc','') + '.xlsx')
+                    outputcsvfile = os.path.join(readingListDirectory, inputfile.replace('.ccc','') + '.csv')
+                    outputhtmlfile = os.path.join(readingListDirectory, inputfile.replace('.ccc','') + '.html')
+                    outputcblfile = os.path.join(outputDirectory, inputfile.replace('.ccc','') + '.cbl')
+
 
                 inputfile = os.path.join(readingListDirectory, inputfile)
                 
@@ -252,6 +258,10 @@ def main():
                     
                 elif firstRun and inputfile.endswith(".cbl"):
                     df = importCBL(inputfile)
+
+                elif firstRun and inputfile.endswith(".ccc"):
+                    df = importCCC(inputfile)
+                    
                 else:
                     df = importXLSX(outputfile)
                     df.index = np.arange(1, len(df) + 1)
@@ -290,7 +300,7 @@ def main():
                         firstRun = True
 
                     #if sqliteConnection:
-                    if firstRun and sqliteConnection:
+                    if firstRun and sqliteConnection and searchTurthDB:
                     
                         try:
                             truthMatch = cursor.execute(
@@ -302,31 +312,32 @@ def main():
                             print('Match found in truth table')
                             
                             #print(truthMatch)
-                            seriesID = truthMatch[0][5]
-                            issueID = truthMatch[0][6]
-                            cvSeriesName = truthMatch[0][7]
-                            cvSeriesYear = truthMatch[0][8]
-                            issueNum = truthMatch[0][9]
-                            cvIssueURL = truthMatch[0][12]
-                            cvSeriesPublisher = truthMatch[0][10]
+                            seriesID = truthMatch[0][6]
+                            issueID = truthMatch[0][7]
+                            cvSeriesName = truthMatch[0][8]
+                            cvSeriesYear = truthMatch[0][9]
+                            issueNum = truthMatch[0][10]
+                            cvIssueURL = truthMatch[0][13]
+                            cvSeriesPublisher = truthMatch[0][11]
                             # try:
                             #     cvSeriesPublisher = truthMatch[0][11]
                             # except:
                             #     cvSeriesPublisher = ''
                         except:
-                            print('No match found in truth table')
-                        try:
-                            truthMatch = cursor.execute(
-                            "SELECT * FROM comics WHERE SeriesName = ? AND SeriesStartYear = ?",
-                            (seriesName,seriesStartYear),
-                            ).fetchall()
-                            #'Action Comics', 1938, '1', 'Issue', '1938-06-30 00:00:00', 'Comicvine', 18005, 105403, 'Action Comics', 1938, ' ', 'https://comicvine.gamespot.com/issue/4000-105403/', 153, '1')
-                            #coverDate = truthMatch[0][4]
-                            #print(truthMatch)
-                            seriesID = truthMatch[0][5]
+                            print('No match found in truth table, trying only series and year')
                             
-                        except:
-                            print('No match found in truth table')
+                            try:
+                                truthMatch = cursor.execute(
+                                "SELECT * FROM comics WHERE SeriesName = ? AND SeriesStartYear = ?",
+                                (seriesName,seriesStartYear),
+                                ).fetchall()
+                                #'Action Comics', 1938, '1', 'Issue', '1938-06-30 00:00:00', 'Comicvine', 18005, 105403, 'Action Comics', 1938, ' ', 'https://comicvine.gamespot.com/issue/4000-105403/', 153, '1')
+                                #coverDate = truthMatch[0][4]
+                                #print(truthMatch)
+                                seriesID = truthMatch[0][6]
+                                
+                            except:
+                                print('No match found in truth table')
                         
                         
                     if issueNum == '' or issueNum == 'nan':
@@ -607,7 +618,7 @@ def main():
                 if numIssueMissing == 0:
                     try:
                         print(inputfile)
-                        cblName = str(file).replace(readingListDirectory,'').replace('.json','').replace('.cbl','').strip('\\')
+                        cblName = str(file).replace(readingListDirectory,'').replace('.json','').replace('.cbl','').replace('.ccc','').strip('\\')
                         print(cblName)
                         cblData = getCBLData(df.data,cblName,numIssueFound)
                         with open(outputcblfile, 'w', encoding='utf-8') as f:
@@ -837,6 +848,107 @@ def importCBL(inputfile):
 
     return (df)
 
+def importCCC(inputfile):
+    bookList = []
+    finalBookList = []
+    print(inputfile)
+    with open(inputfile) as ccc_file:
+        for row in ccc_file:
+            cccLine = row.split(";")
+            finalBookList.append([cccLine[0], cccLine[1]])
+            df = pd.DataFrame(finalBookList, columns =['SeriesID', 'IssueID'])
+   
+
+    #df['issueID'] = 0
+    df['IssueNumber'] = 1
+    
+    df.fillna({'IssueNumber':0}, inplace=True)
+    df = df.astype({'IssueNumber':str,'IssueID':int})#.fillna(0)#,errors='ignore')#.fillna(0)#,'IssueID':'int'})
+
+
+    df.rename(columns={'seriesName': 'SeriesName', 'seriesYear': 'SeriesStartYear', 'issueNumber': 'IssueNum', 'issueID':'IssueID'}, inplace=True)
+
+
+
+    df['IssueType'] = ''
+    df['IssueNum'] = ''
+
+    df['SeriesName'] = ''
+    df['SeriesStartYear'] = ''
+    df['CoverDate'] = ''
+    df['Name'] = ''
+    #df['SeriesID'] = ''
+    #df['IssueID'] = ''
+    df['CV Series Name'] = ''
+    df['CV Series Year'] = ''
+    df['CV Issue Number'] = ''#df['IssueNum']
+    df['CV Series Publisher'] = ''
+    df['CV Cover Image'] = ''
+    df['CV Issue URL'] = ''
+
+
+    # print(bookSet)
+    
+    # #Iterate through unique list of series
+    # if VERBOSE: print('Compiling set of issueNumbers from CBLs',2)
+    # for series in bookSet:
+    #     curSeriesName = series[0]
+    #     curSeriesYear = series[1]
+    #     curSeriesIssues = []
+    #     #Check every book for matches with series
+    #     for book in bookList:
+    #         if book['seriesName'] == curSeriesName and book['seriesYear'] == curSeriesYear:
+    #             #Book matches current series! Add issueNumber to list
+    #             curSeriesIssues.append({'issueNumber':book['issueNumber'],'issueID':"Unknown"})
+
+
+    #     finalBookList.append({'seriesName':curSeriesName,'seriesYear':curSeriesYear,'issueNumberList':curSeriesIssues})
+
+    # print(finalBookList[1]['issueNumberList'])
+    # #print(type(finalBookList[1]['issueNumberList'][issueID]))
+    # issuedict = finalBookList[1]['issueNumberList']
+    # print(issuedict[issueID])
+    
+    # #print(finalBookList)
+    # #print(type(finalBookList))
+    # df = pd.DataFrame(finalBookList, columns =['seriesName', 'seriesYear', 'issueNumberList'])
+    # #df = pd.DataFrame(finalBookList['issueNumberList'], columns =['issueNumber', 'fissueID'])
+    
+    # #df = pd.DataFrame(finalBookList, columns =['SeriesName', 'SeriesStartYear', 'IssueNum'])
+    # #print(df['issueNumberList'].values.tolist())
+
+    # #print(finalBookList[0]['issueNumberList']['issueNumber'])
+    # #rowlist = 
+    # #print(rowlist['issueID'])
+    # #print(rowlist[2]['issueNumberList'])
+    # #print(len(finalBookList))
+    # for i in range(len(finalBookList)):
+    #     # y = i+1
+    #     # #df.loc[i,'issueNumberList'] = rowlist[i]['issueNumberList']
+    #     # if finalBookList[i]['issueNumberList'] == None or finalBookList[i]['issueNumberList'] == '':
+    #     #     finalBookList[i]['issueNumberList'] = 0
+        
+    #     # if rowlist[i]['issueID'] == None or rowlist[i]['issueID'] == '':
+    #     #     rowlist[i]['issueID'] = 0
+  
+    #     #print(finalBookList[i]['issueNumberList'][0])
+    #     #print(finalBookList[i]['issueNumberList'][1])
+    #     df.loc[i,'issueNumber'] = finalBookList[i]['issueNumberList'][0]
+    #     df.loc[i,'issueID'] = finalBookList[i]['issueNumberList'][1]
+        
+    #     #print(rowlist[i]['IssueID'])
+    #     #print(df[i, 'IssueID'])
+    #     ###df.fillna({'issueNumber':0, 'issueID':0}, inplace=True)
+    #     #df = df.astype({'SeriesID':float,'IssueID':float}).astype({'SeriesID':int,'IssueID':int})#.fillna(0)#,errors='ignore')#.fillna(0)#,'IssueID':'int'})
+    #     ###df = df.astype({'issueNumber':int,'issueID':int})#.fillna(0)#,errors='ignore')#.fillna(0)#,'IssueID':'int'})
+
+
+    # df = df.drop('issueNumberList', axis='columns')
+
+   
+    #print(df)
+
+    return (df)
 
 def importXLSX(outputfile):
 
@@ -855,10 +967,17 @@ def importXLSX(outputfile):
 
 def getCBLData(df,name,numissues):
     lines = []
-    name = name.strip('.json')
+    #name = name.strip('.json')
     lines.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
     lines.append(
         "<ReadingList xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n")
+    
+    print("     Creating CBL: %s " % (name))
+    if '&' in name:
+        name = name.replace('&','&#38;')
+    else:
+        name = name
+
     lines.append("<Name>%s</Name>\n" % (name))
     lines.append("<NumIssues>%s</NumIssues>\n" % (numissues))
     #lines.append("<Source>%s</Source>\n" % (self.source.name))
@@ -955,7 +1074,7 @@ def findIssueID(seriesID,issueNum):
             searchparam = "volume:" + str(seriesID)
 
 
-            response = session.issue_list(params={"filter": searchparam},max_results=1500)
+            response = session.list_issues(params={"filter": searchparam},max_results=1500)
             if len(response) == 0: #change to response 200?
                 print("     No results found for %s" % (seriesID))
             else: #Results were found
@@ -970,7 +1089,7 @@ def findIssueID(seriesID,issueNum):
                         print(type(result.number))
                         print(issueNum)
                         print(type(issueNum))
-                        issueID = result.issue_id
+                        issueID = result.id
 
         except Exception as e:
             print("     There was an error processing %s)" % (seriesID))
@@ -989,7 +1108,7 @@ def getVolumeDetails(seriesID):
             print("     Searching for %s volume details on CV" % (str(seriesID)))
             #time.sleep(CV_API_RATE)
             session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
-            response = session.volume(seriesID)
+            response = session.get_volume(seriesID)
             cvSeriesName = response.name
             cvSeriesYear = response.start_year
             cvSeriesPublisher = response.publisher.name
@@ -1007,8 +1126,8 @@ def getSeriesIDfromIssue(issueID):
     try:
         session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
 
-        response = session.issue(issue_id=issueID)
-        seriesid = response.volume.id_
+        response = session.get_issue(issue_id=issueID)
+        seriesid = response.volume.id
         print('found series id')
         print(seriesid)
     except Exception as e:
@@ -1030,8 +1149,8 @@ def getIssueDetails(issueID):
             #time.sleep(CV_API_RATE)
             session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
 
-            response = session.issue(issueID)
-            cvImageURL = response.image.medium
+            response = session.get_issue(issueID)
+            cvImageURL = response.image.medium_url
             cvIssueURL = response.site_url
             #seriesID = response.volume
             coverDate = response.cover_date
@@ -1138,7 +1257,7 @@ def findVolume(series,year):
             session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
             searchparam = "name:" + series
 
-            response = session.volume_list(params={"filter": searchparam},max_results=1500)
+            response = session.list_volumes(params={"filter": searchparam},max_results=1500)
             if len(response) == 0:
                 print("     No results found for %s (%s)" % (series,year))
             else: #Results were found
@@ -1162,7 +1281,7 @@ def findVolume(series,year):
                         result_publishers.append(publisher_temp)
 
                         series_matches.append(result)
-                        if result.volume_id in SERIESID_BLACKLIST:
+                        if result.id in SERIESID_BLACKLIST:
                             print('Series ID found in blacklist, skipping')
                         if publisher_temp in PUBLISHER_BLACKLIST:
                             result_matches_blacklist += 1
@@ -1172,7 +1291,7 @@ def findVolume(series,year):
                             result_matches += 1
                             publisher = publisher_temp
                             if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
-                            comicID = result.volume_id
+                            comicID = result.id
                             numIssues = result.issue_count
                             print("         Found on comicvine: %s - %s (%s) : %s (%s issues)" % (publisher, series, year, comicID, numIssues))
 

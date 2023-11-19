@@ -8,6 +8,9 @@ __pycache__/
 
 
 /*.csv
+temp.cbl
+
+CV.db
 writeconfigfile.py
 
 configPRIVATE.ini
@@ -15,6 +18,7 @@ configPRIVATE.ini
 .~lock*
 
 ReadingLists/*
+ReadingLists-HTML/*
 ReadingLists
-
+CVCoverImages/*
 mylarLeagueWishlist-TEST.py

@@ -70,7 +70,8 @@ SERIESID_GOODLIST = [42722,3824,4975,69322,3816,38005,1628] #index matches above
 dynamicNameTemplate = '[^a-zA-Z0-9]'
 stop_words = ['the', 'a', 'and']
 yearStringCleanTemplate = '[^0-9]'
-cleanStringTemplate = '[^a-zA-Z0-9\:\-\(\) ]'
+#cleanStringTemplate = '[^a-zA-Z0-9\:\-\(\) ]'
+#cleanStringTemplate = '[^a-zA-Z0-9:\-\(\) ]'
 
 
 dfOrderList = ['SeriesName', 'SeriesStartYear', 'IssueNum', 'IssueType', 'CoverDate', 'Name', 'SeriesID', 'IssueID', 'CV Series Name', 'CV Series Year', 'CV Issue Number', 'CV Series Publisher', 'CV Cover Image', 'CV Issue URL', 'Days Between Issues']
@@ -531,6 +532,7 @@ def main():
                     df.loc[index,'IssueType'] = 'Issue' # everything's an issue?
                     df.loc[index,'Name'] = 'Comicvine'
                     df.loc[index,'SeriesID'] = seriesID
+                    df = df.astype({'Days Between Issues':'timedelta64[ns]'})
                     df.loc[index,'Days Between Issues'] = dateDelta
                     
                     # clear variables
@@ -598,7 +600,7 @@ def main():
                 [{"selector": "", "props": [("border", "1px solid grey")]},
                 {"selector": "tbody td", "props": [("border", "1px solid grey")]},
                 {"selector": "th", "props": [("border", "1px solid grey")]}
-                ]).set_caption(summaryString).applymap(color_cels).format({'CV Issue URL': make_clickable})#.to_html(outputhtmlfile)#,formatters={'CV Cover Image': image_formatter}, escape=False)
+                ]).set_caption(summaryString).map(color_cels).format({'CV Issue URL': make_clickable})#.to_html(outputhtmlfile)#,formatters={'CV Cover Image': image_formatter}, escape=False)
                 df.to_html(outputhtmlfile)
             #FIX    dfe['CoverDate'] = pd.to_datetime(dfe['CoverDate']).dt.date
                 dfe['CV Cover Image'] = ' '
@@ -607,7 +609,7 @@ def main():
                 [{"selector": "", "props": [("border", "1px solid grey")]},
                 {"selector": "tbody td", "props": [("border", "1px solid grey")]},
                 {"selector": "th", "props": [("border", "1px solid grey")]}
-                ]).applymap(color_cels).format({'CV Issue URL': make_clickable})#.to_html(outputhtmlfile)#,formatters={'CV Cover Image': image_formatter}, escape=False)
+                ]).map(color_cels).format({'CV Issue URL': make_clickable})#.to_html(outputhtmlfile)#,formatters={'CV Cover Image': image_formatter}, escape=False)
                 dfe.to_excel(outputfile)
                 
                 print(outputfile)

@@ -1,3 +1,4 @@
+
 import re
 import os
 import pandas as pd
@@ -70,15 +71,15 @@ for root, dirs, files in os.walk(readingListDirectory):
                 print (file)
                 inputFile = os.path.join(readingListDirectory, inputfile)
                 print('Processing %s'%(inputfile))
-                outputfile = file.replace('.txt', '-USER.xlsx')
+                outputfile = file.replace('.txt', '.xlsx')
                 outputFile = os.path.join(readingListDirectory, outputfile)
-                touchjsonfile = outputfile.replace('-USER.xlsx','') + '.json'
+                touchjsonfile = outputfile.replace('.xlsx','') + '.json'
                 touchjsonFile = os.path.join(readingListDirectory, touchjsonfile)
                 if not os.path.exists(outputFile):
 
 
                     df = pd.DataFrame(columns=dfOrderList)
-                    with open (inputFile, mode='r') as file:
+                    with open (inputFile, mode='r', encoding='utf-8') as file:
 
                         for line in file:
                             if '#' in line:

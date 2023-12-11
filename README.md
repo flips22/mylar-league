@@ -1,6 +1,11 @@
 # CBL Generation
 
 ## CBLgenerator
+Update Dec 10, 2023:
+  - Removed the need to have a matching json file. I disabled json import as there isn't big demand for this at the time being. If this changes I can improve the json implementation at that time.
+  - Added the search for a volume if there is no year defined.  There's a tendancy to find multiple matches. At the moment it picks the series with the largest number of issues. In the future, I will try to make this smarter using the filename as the year range.
+
+
 This is a first pass as a way to create CBL files outside of ComicRack.
 
 The program looks for a XLSX file in the ReadingList-ImportExport and then searches using the first few colums in comicvine. If it finds a match it will add the information for the rest of the rows. If it doesn't find a proper match it will wait for you to open the XLSX file and put in the series ID manually.  There is a hyperlink to help you search comicvine. If it finds the wrong match delese all the old information and then put in the correct volume ID. If you don't delete the old information the script doesn't know that you updated the volume id.

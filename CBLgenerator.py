@@ -1549,8 +1549,14 @@ def findVolumeNoYear(series,issuenumber):
         series = series.replace(' & ', '/')
         series = series.replace(' USA', ' U.S.A.')
         #series = series.replace(' v1', '')
+        
+        
+        series = series.replace('Saga of the Swamp Thing', 'The Saga of the Swamp Thing')
+        series = series.replace(', ', ': ')
+        #series = series.replace(': ', ', ')
+        series = series.replace('Cloak and Dagger', 'The Mutant Misadventures of Cloak and Dagger')
+        series = series.replace(' / ', '/')
         '''
-
 
         session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
         searchparam = "name:" + series
@@ -1576,7 +1582,10 @@ def findVolumeNoYear(series,issuenumber):
                 #if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
                 #if result.name.lower() == series.lower() and year -1 <=result.start_year <= year + 1:
                 #if result.name.lower() == series.lower() and str(result.start_year) == year:
-                if resultCleanName == seriesCleanName and not result.publisher.name in PUBLISHER_BLACKLIST:# and year -1 <=result.start_year <= year + 1:
+                if result.publisher:
+                    publisher = result.publisher.name
+
+                if resultCleanName == seriesCleanName and not publisher in PUBLISHER_BLACKLIST:# and year -1 <=result.start_year <= year + 1:
                     print(f"     Found match for series: {result.name} ({result.start_year})")
                     cvIssueFind = findIssueID(result.id,issuenumber)
                     issueID = cvIssueFind

@@ -77,6 +77,13 @@ This is a collection of various tools to aid in the integration of mylar and kom
     - CV_SEARCH_LIMIT : Set a limit on the number of CV API calls made during this processing.
                         This is useful for large collections if you want to break the process into smaller chunks.
 
+## mylarLeagueEvent
+### Use:
+- Run the script and paste in a hyperlink for an event.
+## Notes:
+ - The xlsx file will output and then can be used with the CBL generator script.
+
+
 ## mylarCollectionExport
 ### Use:
 - Running the script the first time will create a mylarcollection.csv master file.

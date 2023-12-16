@@ -58,7 +58,7 @@ def parseWishlist():
 
     global title
     matchTitle = re.findall(titlePattern, wishlistData)
-    title = matchTitle[0].replace(' Event Reading Order & Checklist', '').replace(':','')
+    title = matchTitle[0].replace(' Event Reading Order & Checklist', '').replace(':','').replace('?','').replace('/','-')
     #year1 = matchyearRange[0]
     #year2 = matchyearRange[1]
     print(title)
@@ -108,14 +108,14 @@ def main():
     #df.fillna({'SeriesStartYear':0}, inplace=True)
     #df = df.astype({'IssueNum':int, 'SeriesStartYear':int})
 
-    fileNamePat = r'\/([^\/]+)$'
+    #fileNamePat = r'\/([^\/]+)$'
 
     # Use re.search() to find the matching substring
-    match = re.search(fileNamePat, wishlistURL)
+   # match = re.search(fileNamePat, wishlistURL)
 
-    if match:
+    #if match:
         # Extract the matched substring
-        readinglistName = match.group(1)
+       # readinglistName = match.group(1)
     #outputFile = '[' + yearRange.replace(' ', '') + '] ' + readinglistName +'.xlsx'
     outputFile = '[' + yearRange.replace(' ', '') + '] ' + title +'.xlsx'
 

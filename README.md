@@ -1,6 +1,9 @@
 # CBL Generation
 
 ## CBLgenerator
+Update Dec 16, 2023
+ - Made a number of updates to the searching logic. It now checks if it has searched for the series previously. Also if there is no year, it uses the filename to find the year range, and then looks to see if the coverdate of the issue is between that range (+/-1). The filename format needs to be [2022-2023].  I have done quite a bit of testing, but there's a risk that I missed something, if so, let me know.
+
 Update Dec 10, 2023:
   - Removed the need to have a matching json file. I disabled json import as there isn't big demand for this at the time being. If this changes I can improve the json implementation at that time.
   - Added the search for a volume if there is no year defined.  There's a tendancy to find multiple matches. At the moment it picks the series with the largest number of issues. In the future, I will try to make this smarter using the filename as the year range.

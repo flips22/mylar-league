@@ -29,6 +29,8 @@ from IPython.display import HTML
 
 import unicodedata  # Needed to strip character accents
 from datetime import datetime
+#from datetime import date
+#import datetime
 import sqlite3
 
 
@@ -247,18 +249,34 @@ def main():
                 # Example string
 
                 # Extract years from the string
+                global seriesNotFoundList
+                seriesNotFoundList = []
+                global year1
+                global year2
                 year1, year2 = extract_years_from_filename(inputfile)
+                #print (year1)
+                #print (year2)
 
+                if int(year1) > 0 and int(year2) > 0:
+                
+                    year1 = int(year1) -1
+                    year2 = int(year2) +1
+                    print(f"     Year range use will be: {year1} to {year2}")
+                else:
+                    print(f"     Year range was not found in file name. Continuing...")
+                    
 
 
                 
                 if os.path.exists(outputfile):
                     firstRun = False
-                    print('Not First Run')
+                    #will also not be first run if xlsx is input file.
+                    #print('Previous run detected')
 
                 else:
                     firstRun = True
-                    print('First Run')
+
+                    #print('First run for this file')
 
 
 
@@ -311,6 +329,8 @@ def main():
                     if (df['SeriesID'] == 0).all():
                         firstRun = True
 
+                    
+
                     #if sqliteConnection:
                     if firstRun and sqliteConnection and searchTurthDB:
                     
@@ -354,10 +374,16 @@ def main():
                         
                     if issueNum == '' or issueNum == 'nan':
                         issueNum = dbissueNum
+
+                    if seriesStartYear == 0:
+
+                        print(f"Checking {seriesName} #{issueNum}...")
+                    else:
+                        print(f"Checking {seriesName} ({seriesStartYear}) #{issueNum}...")
                         
 
-                    if isinstance(coverDate, str):
-                        print('coveDate is a string')
+                    #if isinstance(coverDate, str):
+                        #print('coveDate is a string')
 
                     if isinstance(seriesID,int) and not seriesID == 0:
                         seriesIDPres = True
@@ -379,24 +405,60 @@ def main():
                     else:
                         missingSeriesDetails = False
                     if issueIDPres and not seriesIDPres:
-                        print('getting series id from issueid')
+                        print('     Searching for series id from issueid')
 
                         seriesID = getSeriesIDfromIssue(issueID)
-                        if seriesID > 0:
+                        if not seriesID == 0:
                             seriesIDPres = True
                         #seriesID = seriesIDList[0]
                     validYear = is_valid_year(seriesStartYear)
-                    if not seriesIDPres:
+                    if not seriesIDPres and not issueIDPres:
                         if validYear:
                             volumeresults = findVolume(seriesName,seriesStartYear)
-                            seriesID = volumeresults[1]
+                            print(f"Seaching for match using series and year...")
                             print(seriesID)
-                            seriesIDPres = True
-                        else:
-                            volumeresults = findVolumeNoYear(seriesName)
-                            seriesID = volumeresults[1]
-                            print(seriesID)
-                            seriesIDPres = True
+                            
+
+                            if not volumeresults[1] == 0:
+                                seriesID = volumeresults[1]
+                                seriesIDPres = True
+                            
+                        if not validYear and not year1 == 0:
+                            #try:
+
+                                #seriesSearch = df.loc[df['SeriesName'] == seriesName, 'SeriesID'].values[0]# or .item()
+                            #seriesSearch = df.query("SeriesName==seriesName")["SeriesID"]
+                            
+                            #print(f"     Checking if series name was searched for previously")
+
+                            if seriesName in seriesNotFoundList:
+                                print(f"     Searched for series previously and wasn't found, skipping...")
+                            else:
+                                    
+
+                                seriesSearch = df.loc[(df['SeriesName'] == seriesName,'SeriesID')].values[0]
+                                #print('seriesSearch: ' + str(seriesSearch))
+                                
+                                if not seriesSearch == 0:
+                                #    
+                                    seriesID = seriesSearch
+                                    seriesIDPres = True
+                                    print(f"     Found series ID ({seriesSearch}) in previous search...")
+                                else:
+                                    print(f"     Searching for match using series and year range...")
+                                    volumeresults = findVolumeNoYear(seriesName, issueNum)
+                                    
+                                    
+                                    #print(seriesID)
+                                    if not volumeresults[1] == 0:
+                                        seriesIDPres = True
+                                        seriesID = volumeresults[1]
+                                        print(f"     Found matching series id: {seriesID}")
+                                    if not volumeresults[2] == 0:
+                                        issueIDPres = True
+                                        issueID = volumeresults[2]
+                                        print(f"     Found matching issue ID: {issueID}")
+                            
                             
                     # if seriesIDPres:
                     #     imageFileName = str(issueID) + '.jpg'
@@ -513,29 +575,31 @@ def main():
                         #print(str(seriesStartYear))
                         #cvIssueURL = searchCV(seriesName,seriesStartYear)
                         #cvIssueURL = ('https://www.google.com/search?q=' + str(seriesName) + '+' + str(seriesStartYear) + '+comicvine').replace(" ", "%20")
-                        cvIssueURL = ('https://comicvine.gamespot.com/search/?i=volume&q=' + seriesName + '+' + str(seriesStartYear)).replace(' &', '+%26').replace(" ", "+")
-                    dateDelta = pd.Timedelta(0)
+                        cvIssueURL = ('https://comicvine.gamespot.com/search/?i=volume&q=' + str(seriesName) + '+' + str(seriesStartYear)).replace(' &', '+%26').replace(" ", "+")
+                    dateDelta = pd.to_timedelta(0, unit='D')#pd.Timedelta(0)#
                     if index == 0:
-                        dateDelta = pd.Timedelta(0)
+                        dateDelta = pd.to_timedelta(0, unit='D')#pd.Timedelta(0)#
                     indexbefore = index + 1
                     try:
                         coverDateAbove = (df.iloc[index]['CoverDate'])
                     except:
-                        print('date no worky')
+                        print('Possible date issue, moving along...')
+                        #continue
                     if not coverDate == pd.NaT and not coverDateAbove == pd.NaT:
 
                         #dateDelta = daysBetween(coverDate,coverDateAbove)
                         try:
                             #dateDelta = abs(coverDate - coverDateAbove)
                             dateDelta = coverDateAbove - coverDate
-
+                            if dateDelta == 0:
+                               dateDelta = pd.NaT
 
                             #print(coverDateAbove)
                             #print(coverDate)
                         #     #print(dateDelta)
                         except:
-                            print('no worky 2')
-                            
+                            print('Possible date issue, moving along...')
+                            #continue
                     
                     #print('     Found issueid: %s'%(str(issueID)))
                     df.loc[index,'CoverDate'] = coverDate
@@ -562,7 +626,7 @@ def main():
                     cvSeriesPublisher = ''
                     #issueType = ''
                     seriesID = 0
-                    dateDelta = pd.Timedelta(0)
+                    dateDelta = pd.to_timedelta(0, unit='D')#pd.Timedelta(0)#
 
 
 
@@ -665,19 +729,55 @@ def main():
 
 def extract_years_from_filename(filename):
     # Define the regular expression pattern to find years in the string with brackets
-    patternYearFileName = r'\[(\d{4})\s*-\s*(\d{4})\]'  # Matches years in the format [YYYY - YYYY]
+    year1 = 0
+    year2 = 0
+    #patternYearFileName = r'\[(\d{4})\s*-\s*(\d{4})\]'  # Matches years in the format [YYYY - YYYY]
+    #patternYearFileName = r'(\d{4} - \d{4})|([0-9]{4} - Present)|(\d{4})'
 
     # Find all matches of the pattern in the input string
-    matches = re.search(patternYearFileName, filename)
+    #matches = re.findall(patternYearFileName, filename)
+    yearRangeMatch =  re.findall(r'\[(\d{4}-\d{4})\]', filename)
+    yearRangeMatchPresent = re.findall(r'\[(\d{4}-Present)\]', filename)
+    yearRangeMatchSingleYear = re.findall(r'\[(\d{4})\]', filename)
+    #if re.match(r'\[(\d{4}-\d{4})\]', filename):
+    if yearRangeMatch:
+        print(f"     Found date range.")
+        year1year2Pattern = r'\[(\d{4})-(\d{4})\]'
+        yearRange = re.findall(year1year2Pattern, filename)
+        year1 = yearRange[0][0]
+        year2 = yearRange[0][1]
+        # Do something specific for date range like storing or processing
+    elif yearRangeMatchPresent:
+        print(f"     Found 'Present' date range.")
+        year1year2Pattern = r'\[(\d{4})-Present'
+        yearRange = re.findall(year1year2Pattern, filename)
+        year1 = yearRange[0]
+        year2 = datetime.now().year
+        # Handle the case when 'Present' is matched
+    elif yearRangeMatchSingleYear:
+        print(f"     Found single year match")
+        year1year2Pattern = r'\d{4}'
+        yearRange = re.findall(year1year2Pattern, filename)
+        year1 = yearRange[0]
+        year2 = yearRange[0]
+        # Handle the case when only a single year is matched
 
+
+
+
+
+
+    '''
     if matches:
         # Extract years from the matched pattern groups
         year1 = matches.group(1)
         year2 = matches.group(2)
-        return year1, year2
-    else:
-        return None, None
-
+        print(filename)
+        print(year1)
+        print(year2)
+    '''
+    return year1, year2
+    
 
 def checkDirectories():
 
@@ -993,6 +1093,17 @@ def importXLSX(outputfile):
     df['CV Series Year'] = pd.to_numeric(df['CV Series Year'], errors='coerce').fillna(0).astype(int)
     df['CV Issue Number'] = df['CV Issue Number'].astype(str).str.replace(".0","",regex=False)
     df['IssueNum'] = df['IssueNum'].astype(str).str.replace(".0","",regex=False)
+    df['CV Issue URL'] = df['CV Issue URL'].astype(str)
+    '''
+    for col in df.columns:
+        if df[col].dtype == 'object':
+            df[col].fillna('', inplace=True)  # Fill string columns with empty string
+        elif df[col].dtype == 'datetime64[ns]':
+            df[col].fillna(pd.NaT, inplace=True)  # Fill datetime columns with NaT
+        else:
+            df[col].fillna(0, inplace=True) 
+    
+    '''
     df.fillna('', inplace=True)
     #rowint = 0
 
@@ -1163,8 +1274,8 @@ def getSeriesIDfromIssue(issueID):
 
         response = session.get_issue(issue_id=issueID)
         seriesid = response.volume.id
-        print('found series id')
-        print(seriesid)
+        #print('found series id')
+        #print(seriesid)
     except Exception as e:
             print("     There was an error processing %s" % (issueID))
             print(repr(e))
@@ -1194,7 +1305,7 @@ def getIssueDetails(issueID):
         except Exception as e:
             print("     There was an error processing %s" % (issueID))
             print(repr(e))
-        print(cvImageURL, cvIssueURL, coverDate, cvIssueNum)
+        #print(cvImageURL, cvIssueURL, coverDate, cvIssueNum)
     return [cvImageURL, cvIssueURL, coverDate, cvIssueNum]
 
 
@@ -1219,7 +1330,7 @@ def searchCV(seriesName,seriesStartYear):
     #print(type(seriesStartYear))
     #searchURL = ('https://www.google.com/search?q=' + seriesName + '+' + str(seriesStartYear) + '+comic vine').replace(" ", "%20").replace('&', '%26')
     searchURL = ('https://comicvine.gamespot.com/search/?i=volume&q=' + seriesName + '+' + str(seriesStartYear)).replace(' &', '+%26').replace(" ", "+")
-    print(searchURL)
+    #print(searchURL)
     return '<a target="_blank" href="{}">{}</a>'.format(searchURL, 'Search for Series')
 
 def get_thumbnail(path):
@@ -1328,27 +1439,30 @@ def findVolume(series,year):
                 #if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
                 #if result.name.lower() == series.lower() and year -1 <=result.start_year <= year + 1:
                 #if result.name.lower() == series.lower() and str(result.start_year) == year:
-                if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
+                try:
+                    if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
 
 
-                    print('made it this far')
-                    publisher_temp = result.publisher.name
-                    result_publishers.append(publisher_temp)
+                        print('made it this far')
+                        publisher_temp = result.publisher.name
+                        result_publishers.append(publisher_temp)
 
-                    series_matches.append(result)
-                    if result.id in SERIESID_BLACKLIST:
-                        print('Series ID found in blacklist, skipping')
-                    if publisher_temp in PUBLISHER_BLACKLIST:
-                        result_matches_blacklist += 1
-                        publisher_blacklist_results.add(publisher_temp)
-                    else:
-                        found = True
-                        result_matches += 1
-                        publisher = publisher_temp
-                        if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
-                        comicID = result.id
-                        numIssues = result.issue_count
-                        print("         Found on comicvine: %s - %s (%s) : %s (%s issues)" % (publisher, series, year, comicID, numIssues))
+                        series_matches.append(result)
+                        if result.id in SERIESID_BLACKLIST:
+                            print('Series ID found in blacklist, skipping')
+                        if publisher_temp in PUBLISHER_BLACKLIST:
+                            result_matches_blacklist += 1
+                            publisher_blacklist_results.add(publisher_temp)
+                        else:
+                            found = True
+                            result_matches += 1
+                            publisher = publisher_temp
+                            if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
+                            comicID = result.id
+                            numIssues = result.issue_count
+                            print("         Found on comicvine: %s - %s (%s) : %s (%s issues)" % (publisher, series, year, comicID, numIssues))
+                except:
+                    print('Year is in wrong format')
 
                 #Handle multiple publisher matches
                 if result_matches > 1:
@@ -1396,9 +1510,10 @@ def findVolume(series,year):
     return [publisher,int(comicID)]
 
 
-def findVolumeNoYear(series):
+def findVolumeNoYear(series,issuenumber):
     found = False
     comicID = 0
+    issueID = 0
     publisher = "Unknown"
     global searchCount
     global CVNotFound
@@ -1444,7 +1559,7 @@ def findVolumeNoYear(series):
             print("     No results found for %s" % (series))
             
         else: #Results were found
-            print('Found ' + str(len(response)) +' volumes')
+            print('     Found ' + str(len(response)) +' volumes. Checking for match..')
 
             for result in response: #Iterate through CV results
                 #If exact series name and year match
@@ -1455,13 +1570,63 @@ def findVolumeNoYear(series):
                 #print(year +1)
                 resultCleanName = getCleanName(result.name)
                 seriesCleanName = getCleanName(series)
-                print(resultCleanName)
-                print(seriesCleanName)
-
+                #print(resultCleanName)
+                #print(seriesCleanName)
+                publisher = ''
                 #if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
                 #if result.name.lower() == series.lower() and year -1 <=result.start_year <= year + 1:
                 #if result.name.lower() == series.lower() and str(result.start_year) == year:
-                if resultCleanName == seriesCleanName:# and year -1 <=result.start_year <= year + 1:
+                if resultCleanName == seriesCleanName and not result.publisher.name in PUBLISHER_BLACKLIST:# and year -1 <=result.start_year <= year + 1:
+                    print(f"     Found match for series: {result.name} ({result.start_year})")
+                    cvIssueFind = findIssueID(result.id,issuenumber)
+                    issueID = cvIssueFind
+                    if not issueID == 0:
+
+                        cvIssueDetails = getIssueDetails(issueID)
+                    
+                        coverDate = cvIssueDetails[2]
+                        #print(coverDate)
+                        #print(type(coverDate))
+                        if not coverDate is None:
+                            print(f'     Cover date is: ({coverDate})')
+                            #print(f'Cover date ({coverDate}) is type: {type(coverDate)} and is a proper date')
+                        #if not type(coverDate) is type(None) and int(year1) > 0 and int(year2) > 0:
+                            #print(coverDate.year)
+                            #print(year1)
+                            
+                            #print(coverDate.year)
+                            #print(year2)
+
+                            if int(year1) <= coverDate.year <= int(year2):
+                                found =True
+                                comicID = result.id
+                                issueID = cvIssueFind
+                                
+                                publisher = result.publisher.name
+                                print(f"     Found Match: Series ID: {comicID} and Issue ID: {issueID} with a cover date of: {coverDate}.")
+                                break
+                            #else:
+                            #    comicID = 0
+                            #    issueID = 0
+                            #    publisher=''
+                            #    print(f"Issue number is in series, but cover date ({coverDate}) is not between {year1} and {year2}")
+                        else:
+                            print(f'     Cover date ({coverDate}) is type: {type(coverDate)} and is not a proper date')
+                            #print(type(coverDate))
+                    else:
+                        print(f"     Series did not contain issue number: {issuenumber}, continuing.")
+                    '''
+
+
+
+
+
+
+
+
+
+
+
 
 
                     print('Searching for the right year')
@@ -1478,42 +1643,91 @@ def findVolumeNoYear(series):
                         
                         found = True
                         result_matches += 1
+                        print(result_matches)
                         publisher = publisher_temp
                         if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
                         comicID = result.id
                         numIssues = result.issue_count
                         print("         Found on comicvine: %s - %s: %s (%s issues)" % (publisher, series, comicID, numIssues))
 
+
+
+
+
                 #Handle multiple publisher matches
-                if result_matches > 1:
-                    print("             Warning: Multiple valid matches found! Publishers: %s" % (", ".join(result_publishers)))
-                    #print(series_matches)
-                    #set result to preferred publisher
-                    for item in series_matches:
-                        #print(item)
-                        #print(type(item))
-                        #print(item.id)
-                        if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
-                            numIssues = item.issue_count
-                            if numIssues > issueCounter:
-                                #Current series has more issues than any other preferred results!
-                                publisher = item.publisher.name
+            if result_matches > 1:
+                print("             Warning: Multiple valid matches found! Publishers: %s" % (", ".join(result_publishers)))
+                #print(series_matches)
+                #set result to preferred publisher
+                for item in series_matches:
+                    print('matches:')
+                    print(len(series_matches))
+                    print(item.name)
+                    #print(item)
+                    #print(type(item))
+                    #print(item.id)
+                    cvIssueFind = findIssueID(item.id,issuenumber)
+                    issueID = cvIssueFind
+                    if not issueID == 0:
+
+                        cvIssueDetails = getIssueDetails(issueID)
+                    
+                        coverDate = cvIssueDetails[2]
+                        
+                        if not type(coverDate) is type(None) and int(year1) > 0 and int(year2) > 0:
+                            print(coverDate.year)
+                            if int(year1) <= coverDate.year <= int(year2):
+
                                 comicID = item.id
-                                issueCounter = numIssues
-                                ## TODO: Remove "preferred text labels"
-                                print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                            
-                            #if numIssues > issueCounter and year ==result.start_year:
-                            #    #Current series has more issues than any other preferred results!
-                            #    publisher = item['publisher']['name']
-                            #    comicID = item['id']
-                            #    issueCounter = numIssues
-                            #    ## TODO: Remove "preferred text labels"
-                            #    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                            
-                            else:
-                                #Another series has more issues
-                                print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
+                                
+                                if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
+                                    numIssues = item.issue_count
+                                    
+                                    if numIssues > issueCounter:
+                                        #Current series has more issues than any other preferred results!
+                                        publisher = item.publisher.name
+                                        comicID = item.id
+                                        issueCounter = numIssues
+                                        ## TODO: Remove "preferred text labels"
+                                        print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                    
+                                    #if numIssues > issueCounter and year ==result.start_year:
+                                    #    #Current series has more issues than any other preferred results!
+                                    #    publisher = item['publisher']['name']
+                                    #    comicID = item['id']
+                                    #    issueCounter = numIssues
+                                    #    ## TODO: Remove "preferred text labels"
+                                    #    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                    
+                                    else:
+                                        #Another series has more issues
+                                        print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
+                                
+
+                        
+                        else: 
+                            if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
+                                numIssues = item.issue_count
+                                
+                                if numIssues > issueCounter:
+                                    #Current series has more issues than any other preferred results!
+                                    publisher = item.publisher.name
+                                    comicID = item.id
+                                    issueCounter = numIssues
+                                    ## TODO: Remove "preferred text labels"
+                                    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                
+                                #if numIssues > issueCounter and year ==result.start_year:
+                                #    #Current series has more issues than any other preferred results!
+                                #    publisher = item['publisher']['name']
+                                #    comicID = item['id']
+                                #    issueCounter = numIssues
+                                #    ## TODO: Remove "preferred text labels"
+                                #    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                
+                                else:
+                                    #Another series has more issues
+                                    print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
 
                 if len(response) == 0: # is this going to work?
                     print("         No results found for %s (%s)" % (series))
@@ -1524,15 +1738,19 @@ def findVolumeNoYear(series):
         #except Exception as e:
             #print("     There was an error processing %s" % (series))
             #print(repr(e))
-
+'''
     #Update counters
     if not found:
         #CVNotFound += 1
-        print('not found')
-    else:
+        #print('not found')
+        seriesNotFoundList.append(series)
+    #else:
         #CVFound += 1
-        print('found')
-    return [publisher,int(comicID)]
+        #print('found')
+        #print(publisher,int(comicID),int(issueID))
+        
+
+    return [publisher,int(comicID), int(issueID)]
 
 # def daysBetween(d1, d2):
 #     d1 = datetime.strptime(str(d1), "%Y-%m-%d")

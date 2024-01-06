@@ -48,6 +48,9 @@ VERBOSE = True
 #Prevent overwriting of main CSV data file
 TEST_MODE = False
 searchTurthDB = False
+
+
+
 #File prefs
 SCRIPT_DIR = os.getcwd()
 READINGLIST_DIR = os.path.join(SCRIPT_DIR, "ReadingLists")
@@ -58,12 +61,12 @@ IMAGE_DIR = os.path.join(SCRIPT_DIR, "CVCoverImages")
 
 #CV prefs
 #CV_SEARCH_LIMIT = 10000 #Maximum allowed number of CV API calls
-CACHE_RETENTION_TIME = 120 #days
+CACHE_RETENTION_TIME = 180 #days
 
 CV_API_KEY = config['comicVine']['cv_api_key']
 CV_API_RATE = 1 #Seconds between CV API calls
 FORCE_RECHECK_CV = False
-PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska","ECC Ediciones","RW Edizioni","Titan Comics","Dargaud","Federal", "Marvel UK/Panini UK","Grupo Editorial Vid","JuniorPress BV","Pocket Books"]
+PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska","ECC Ediciones","RW Edizioni","Titan Comics","Dargaud","Federal", "Marvel UK/Panini UK","Grupo Editorial Vid","JuniorPress BV","Pocket Books", "Caliber Comics", "Panini Comics"]
 PUBLISHER_PREFERRED = ["Marvel","DC Comics","Vertigo"] #If multiple matches found, prefer this result
 SERIESID_BLACKLIST = [137835,147775,89852,96070,78862,58231,50923]
 SERIESID_GOODLIST = [42722,3824,4975,69322,3816,38005,1628] #index matches above list
@@ -158,10 +161,17 @@ outputDirectory = os.path.join(rootDirectory, "ReadingList-Output")
 resultsFile = os.path.join(resultsDirectory, "results-%s.txt" % (timeString))
 problemsFile = os.path.join(resultsDirectory, "problems-%s.txt" % (timeString))
 uniqueSeriesFile = os.path.join(resultsDirectory, "uniqueSeriesWarnings-%s.txt" % (timeString))
-#truthDB = os.path.join(dataDirectory, "truthDB.db")
-truthDB = os.path.join(dataDirectory, "CBRO.db")
+duplicateIssueFile = os.path.join(resultsDirectory, "duplicateIssuesRemoved-%s.txt" % (timeString))
 
-cvCacheFile = os.path.join(dataDirectory, "CV.db")
+#truthDB = os.path.join(dataDirectory, "truthDB.db")
+#truthDB = os.path.join(dataDirectory, "CBRO.db")
+#truthDB = os.path.join(dataDirectory, "x-men.db")
+truthDB = os.path.join(dataDirectory, "CMRO.db")
+
+#cvCacheFile = os.path.join(dataDirectory, "CV.db")
+cvCacheFile = os.path.join(dataDirectory, "CV-NEW.db")
+#vCacheFile = os.path.join(dataDirectory, "CV-TEMP.db")
+
 
 # inputfile = " ".join(sys.argv[1:])
 # #inputfile = '[Marvel] All-New, All Different Marvel- All-New, All-Different Marvel Part #2 (WEB-RIPCBRO).json'
@@ -189,6 +199,10 @@ def main():
     problemResults = []
     uniqueSeriesWarnings = []
     uniqueSeriesWarnings.append('Found series with the same title and different Series IDs:\n')
+    global duplicateIssues
+    duplicateIssues = []
+    
+
 
     
     try:
@@ -335,10 +349,17 @@ def main():
                     if firstRun and sqliteConnection and searchTurthDB:
                     
                         try:
+                            #truthMatch = cursor.execute(
+                            #"SELECT * FROM comics WHERE SeriesName = ? AND SeriesStartYear = ? AND IssueNum = ? AND ReadingList = ?",
+                            #(seriesName,seriesStartYear,dbissueNum,file),
+                            #).fetchall()
                             truthMatch = cursor.execute(
                             "SELECT * FROM comics WHERE SeriesName = ? AND SeriesStartYear = ? AND IssueNum = ?",
                             (seriesName,seriesStartYear,dbissueNum),
                             ).fetchall()
+                            
+                            
+                            
                             #'Action Comics', 1938, '1', 'Issue', '1938-06-30 00:00:00', 'Comicvine', 18005, 105403, 'Action Comics', 1938, ' ', 'https://comicvine.gamespot.com/issue/4000-105403/', 153, '1')
                             #coverDate = truthMatch[0][4]
                             print('Match found in truth table')
@@ -378,9 +399,10 @@ def main():
                     if seriesStartYear == 0:
 
                         print(f"Checking {seriesName} #{issueNum}...")
+                        #pass
                     else:
                         print(f"Checking {seriesName} ({seriesStartYear}) #{issueNum}...")
-                        
+                        #pass
 
                     #if isinstance(coverDate, str):
                         #print('coveDate is a string')
@@ -719,18 +741,22 @@ def main():
 
                     
                 
-    with open(resultsFile, 'w') as f:
+    with open(resultsFile, 'w', encoding='utf-8') as f:
         f.writelines(summaryResults)
-    with open(problemsFile, 'w') as f:
+    with open(problemsFile, 'w', encoding='utf-8') as f:
         f.writelines(problemResults)
     with open(uniqueSeriesFile, 'w', encoding='utf-8') as f:
         f.writelines(uniqueSeriesWarnings)
+    with open(duplicateIssueFile, 'w', encoding='utf-8') as f:
+        f.writelines(duplicateIssues)
+        
+    
     return
 
 def extract_years_from_filename(filename):
     # Define the regular expression pattern to find years in the string with brackets
-    year1 = 0
-    year2 = 0
+    year1 = 2019
+    year2 = 2024
     #patternYearFileName = r'\[(\d{4})\s*-\s*(\d{4})\]'  # Matches years in the format [YYYY - YYYY]
     #patternYearFileName = r'(\d{4} - \d{4})|([0-9]{4} - Present)|(\d{4})'
 
@@ -1113,6 +1139,8 @@ def importXLSX(outputfile):
 
 def getCBLData(df,name,numissues):
     lines = []
+    IDsList = []
+    duplicateIssues.append('\n' + name + ':\n')
     #name = name.strip('.json')
     lines.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n")
     lines.append(
@@ -1151,17 +1179,24 @@ def getCBLData(df,name,numissues):
         issueYear = coverDate.year
         if not isinstance(issueYear,int):
             issueYear = 0
+        if issueID in IDsList:
+            duplicateIssues.append('     ' + seriesName + ' (' + str(seriesStartYear) + ') #' + str(issueNum) + '  Issue ID: ' + str(issueID) + '  CV: ' + cvSeriesName + ' (' + str(cvSeriesYear) + ')\n')
+            print('Found Duplicate Issue: ' + str(issueID))
 
-        if isinstance(issueID,int) and not issueID == 0:
-            if '&' in cvSeriesName:
-                cvSeriesNameCBL = cvSeriesName.replace('&','&#38;')
-            else:
-                cvSeriesNameCBL = cvSeriesName
-            lines.append("<Book Series=\"%s\" Number=\"%s\" Volume=\"%s\" Year=\"%s\">\n" % (
-                    cvSeriesNameCBL, issueNum, cvSeriesYear, issueYear))
-            lines.append(
-                    "<Database Name=\"cv\" Series=\"%s\" Issue=\"%s\" />\n" % (seriesID, issueID))
-            lines.append("</Book>\n")
+        else:
+                
+            if isinstance(issueID,int) and not issueID == 0:
+                if '&' in cvSeriesName:
+                    cvSeriesNameCBL = cvSeriesName.replace('&','&#38;')
+                else:
+                    cvSeriesNameCBL = cvSeriesName
+                lines.append("<Book Series=\"%s\" Number=\"%s\" Volume=\"%s\" Year=\"%s\">\n" % (
+                        cvSeriesNameCBL, issueNum, cvSeriesYear, issueYear))
+                lines.append(
+                        "<Database Name=\"cv\" Series=\"%s\" Issue=\"%s\" />\n" % (seriesID, issueID))
+                lines.append("</Book>\n")
+                IDsList.append(issueID)
+
         
     # # For each issue in arc
     # for key, issue in sorted(self.issueList.items()):
@@ -1555,8 +1590,23 @@ def findVolumeNoYear(series,issuenumber):
         series = series.replace(', ', ': ')
         #series = series.replace(': ', ', ')
         series = series.replace('Cloak and Dagger', 'The Mutant Misadventures of Cloak and Dagger')
+        
+
+        series = series.replace(': The Darkseid War - ',': Darkseid War: ')
+
+        
+        series = series.replace('Convergence:', 'Convergence')
         series = series.replace(' / ', '/')
+        series = series.replace(': ', ' ')
+        series = series.replace('Sinestro', 'The Sinestro')
+        series = series.replace(' - ', ': ')
+        
         '''
+        #series = series.replace(' and ', ' & ')
+        series = series.replace('Black:','Black -')
+        #series = series.replace(':', '')
+        #series = re.sub(r' \([^)]*\)', '', series)
+        #series = re.sub(r' \d\D\D series','',series)
 
         session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
         searchparam = "name:" + series

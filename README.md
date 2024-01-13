@@ -125,9 +125,14 @@ This is a collection of various tools to aid in the integration of mylar and kom
 - If you want to see the results you can review that in the CBL-Output.csv file
 - The script will look at that CSV file and won't re-search those series by default. That can change in the script options or by just deleting the .csv file.
 
+## mylarCBLimportHTML
+### Use:
+- Running the script will create a HTML file next to your CBL file which will show what series you have in mylar and which are missing.  You can add them individually, or add them all at once.  As with the other script, the .cbl files need to be in the 'ReadingLists'. Running the script once, will create all the necessary folders.
+### Notes:
+- The script downloads images for the first issue of each series. Those images are stored in the CVCoverImages folder. The HTML is standalone by embeding the image into the HTML as a base64 encoding.
 
 ## Comments and Thanks
 - The mylar Wishlist and mylar CBL import scripts are nearly identical.
 - I created a CBL import script a while back, and TheMadman made a bunch of improvements (Thank You!), and used much better programming techniques than I. This script is based on his, with the main change to use the Simyan comicvine wrapper.
 - I should add that I'm not a software engineer and really don't have any training in python or any other language, so I know there are places where things could be better or what I copied off stack overflow wasn't really correct.  I'm welcome to comments, issues, pull requests or any other help you can provide.
-- I hope others find these useful. Find me on discord @filps in the mylar or komga servers for support.
+- I hope others find these useful. Find me on discord: https://discord.gg/DQmHfzFdGG for support.

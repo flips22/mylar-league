@@ -15,31 +15,33 @@ readingListDirectory = os.path.join(rootDirectory, "ReadingLists-Text")
 #truthDB = os.path.join(dataDirectory, "CMRO.db")
 truthDB = os.path.join(dataDirectory, "dbTruthTable-230312173308.db")
 
+SearchDB = False
+
 inputFile = 'inputtest.txt'
 dbFile = 'cmrolistgood.db'
 
-yearPattern = '\(([0-9]{4})\)'
-yearRemovalString = ' \([0-9]{4}\)'
+yearPattern = r'\(([0-9]{4})\)'
+yearRemovalString = r' \([0-9]{4}\)'
+noteRemovalString = r'\([^)]*\)'
 
-seedYearPattern = '^[0-9]{4}$'
+seedYearPattern = r'^[0-9]{4}$'
 
-fromToPattern = '#?\d+\s?(?:-|–)\s?#?\d+'
-fromToPatternBeg = '^#?\d+\s?(?:-|–)\s?#?\d+'
-fromToPatternEnd = '#?\d+\s?(?:-|–)\s?#?\d+$'
+fromToPattern = r'#?\d+\s?(?:-|–)\s?#?\d+'
+fromToPatternBeg = r'^#?\d+\s?(?:-|–)\s?#?\d+'
+fromToPatternEnd = r'#?\d+\s?(?:-|–)\s?#?\d+$'
 
 
 #oneCommaPattern = '\s?,\s?#?\d+'
-oneCommaPatternBeg = '^#?\d+\s?,\s?'
-oneCommaPatternEnd= '\s?,\s?#?\d+$'
+oneCommaPatternBeg = r'^#?\d+\s?,\s?'
+oneCommaPatternEnd= r'\s?,\s?#?\d+$'
 
+twoCommaPattern = r'#?\d+\s?,\s?#?\d+'
+twoCommaPatternBeg = r'^#?\d+\s?,\s?#?\d+'
+twoCommaPatternEnd= r'#?\d+\s?,\s?#?\d+$'
 
-twoCommaPattern = '#?\d+\s?,\s?#?\d+'
-twoCommaPatternBeg = '^#?\d+\s?,\s?#?\d+'
-twoCommaPatternEnd= '#?\d+\s?,\s?#?\d+$'
-
-threeCommaPattern = '#?\d+\s?,\s?#?\d+,\s?#?\d+'
-threeCommaPatternBeg = '^#?\d+\s?,\s?#?\d+,\s?#?\d+'
-threeCommaPatternEnd= '#?\d+\s?,\s?#?\d+,\s?#?\d+$'
+threeCommaPattern = r'#?\d+\s?,\s?#?\d+,\s?#?\d+'
+threeCommaPatternBeg = r'^#?\d+\s?,\s?#?\d+,\s?#?\d+'
+threeCommaPatternEnd= r'#?\d+\s?,\s?#?\d+,\s?#?\d+$'
 
 
 
@@ -82,6 +84,7 @@ for root, dirs, files in os.walk(readingListDirectory):
                     with open (inputFile, mode='r', encoding='utf-8') as file:
 
                         for line in file:
+                            print(line)
                             if '#' in line:
                                 yearReSearch = re.search(yearPattern,line)
                                 year = 0
@@ -93,14 +96,16 @@ for root, dirs, files in os.walk(readingListDirectory):
                                     line = re.sub(yearRemovalString,'',line)
                                     yearintext = True
                                 #print(line)
+                                line = re.sub(noteRemovalString,'',line)
                                 titleNumSplit = line.split(' #',1)
                                 series = titleNumSplit[0]
                                 #print(series)
                                 issuerange = titleNumSplit[1]
                                 issuerange = issuerange.strip()
                                 #print(issuerange)
-                                
-                                allnums = re.findall('\d+',issuerange)
+                                issueNumPattern = r'\d+(\.\d+)?'
+                                #issueNumPattern = r'\d+'
+                                allnums = re.findall(issueNumPattern ,issuerange)
                                 #print(len(allnums))
 
                                 if len(allnums) == 1:
@@ -121,7 +126,7 @@ for root, dirs, files in os.walk(readingListDirectory):
                                             df.loc[index,'SeriesStartYear'] = year
                                             index += 1
                                     if re.search(twoCommaPattern,issuerange):
-                                        issuelist = re.findall(r'\d+', issuerange)
+                                        issuelist = re.findall(issueNumPattern, issuerange)
                                         for issue in issuelist:
                                             print(series)
                                             print(issue)
@@ -140,14 +145,14 @@ for root, dirs, files in os.walk(readingListDirectory):
                                             df.loc[index,'IssueNum'] = issue
                                             df.loc[index,'SeriesStartYear'] = year
                                             index += 1
-                                        issuelist = re.findall(r'\d+', issuerange)
+                                        issuelist = re.findall(issueNumPattern, issuerange)
                                         df.loc[index,'SeriesName'] = series
                                         df.loc[index,'IssueNum'] = issuelist[2]
                                         df.loc[index,'SeriesStartYear'] = year
                                         index += 1
                                     if re.search(fromToPatternEnd, issuerange) and re.search(twoCommaPatternBeg, issuerange):
                                         issueFromTo = re.sub(oneCommaPatternBeg,'', issuerange)
-                                        issuelist = re.findall(r'\d+', issuerange)
+                                        issuelist = re.findall(issueNumPattern, issuerange)
                                         print(series)
                                         print(issue)
                                         df.loc[index,'SeriesName'] = series
@@ -230,7 +235,7 @@ for root, dirs, files in os.walk(readingListDirectory):
                         print(seriesName)
                         print(issueNum)
                         print(seriesStartYear)
-                        if sqliteConnection and seriesStartYear == 0:
+                        if sqliteConnection and seriesStartYear == 0 and SearchDB:
                             # try:
                             yearSearch = cursor.execute(
                             "SELECT SeriesStartYear, CoverDate FROM comics WHERE SeriesName = ? AND IssueNum = ?",
@@ -291,7 +296,7 @@ for root, dirs, files in os.walk(readingListDirectory):
                             #     print('No match found in DB file')
 
                     df.fillna({'SeriesStartYear':0}, inplace=True)
-                    df = df.astype({'IssueNum':int, 'SeriesStartYear':int})
+                    df = df.astype({'IssueNum':str, 'SeriesStartYear':int})
 
                     print(df)
                     df.to_excel(outputFile)

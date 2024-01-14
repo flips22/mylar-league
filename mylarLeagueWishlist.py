@@ -104,7 +104,7 @@ mylarAPI = config['mylar']['mylarapi']
 mylarBaseURL = config['mylar']['mylarbaseurl']
 
 FORCE_RECHECK_MYLAR_MATCHES = False
-ADD_NEW_SERIES_TO_MYLAR = True
+ADD_NEW_SERIES_TO_MYLAR = False
 
 mylarAddURL = mylarBaseURL + 'api?apikey=' + mylarAPI + '&cmd=addComic&id='
 mylarCheckURL = mylarBaseURL + 'api?apikey=' + mylarAPI + '&cmd=getComic&id='
@@ -242,7 +242,7 @@ def findVolumeDetails(series,year):
             session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache())
             searchparam = "name:" + series
 
-            response = session.volume_list(params={"filter": searchparam})
+            response = session.list_volumes(params={"filter": searchparam})
 
             if len(response) == 0:
                 print("     No results found for %s (%s)" % (series,year))
@@ -264,7 +264,7 @@ def findVolumeDetails(series,year):
                             result_matches += 1
                             publisher = publisher_temp
                             if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
-                            comicID = result.volume_id
+                            comicID = result.id
                             numIssues = result.issue_count
                             print("         Found on comicvine: %s - %s (%s) : %s (%s issues)" % (publisher, series, year, comicID, numIssues))
 

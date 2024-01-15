@@ -131,6 +131,12 @@ This is a collection of various tools to aid in the integration of mylar and kom
 ### Notes:
 - The script downloads images for the first issue of each series. Those images are stored in the CVCoverImages folder. The HTML is standalone by embeding the image into the HTML as a base64 encoding.
 
+## mylarCBLimportQuick
+### Use:
+- This is a command line variation on the mylarCBL import script. There are no CV API calls, it works with the IDs in the CBL and the mylar API. It will analze all the CBLs and then offer you the ability to add the missing series. This script unlike the others also looks at the issues IDs.  If you have mylar set up to automatically set all issues as wanted, then you can leave the variable ANALYZE_ISSUES set to False. If you want to only monitor the missing issues in the CBL then set ANALYZE_ISSUES to True.
+### Notes:
+- When you add a series to mylar it is queued up and will take a little time to add and populate the issues from CV. After the series are populated you will have to come back and run the script again to set the newly added issues to wanted.
+
 ## Comments and Thanks
 - The mylar Wishlist and mylar CBL import scripts are nearly identical.
 - I created a CBL import script a while back, and TheMadman made a bunch of improvements (Thank You!), and used much better programming techniques than I. This script is based on his, with the main change to use the Simyan comicvine wrapper.

@@ -1,29 +1,10 @@
 '''
-This script will search you wishlist at league of comic geeks, and then add each series to mylar. If you add one issue for a series, it will
-just add the series (and search for missing issues if you have that setting selected in mylar)
-The URL for your wishlist is: https://leagueofcomicgeeks.com/profile/[username]/wish-list
-I think it is possible to change to use your collection instead, by changing the wishlistURL, but I haven't testing that much.  Ideally, it would pull your 
-pull list, but the page layout for that is more complicated as each week is a page. If you upgrade to pro for $2 a month, your pull list will auto add to either wishlist or 
-your collection, but I haven't tested that either.
-This script was based on TheMadman's script also listed here in the gist. The biggest change was that it now uses the simyan to search the comicvine api.  It works 
-much better than the old design. TheMadman has a way deluxe implementation of simyan for his project at:
-https://github.com/themadman0980/ReadingListManager
-This script doesn't have near the error handling and everything, so I'm positive it won't work as well, but it does work from a small bit of testing I've done.
-It does rely on the series title in leagueofcomicgeeks to exactly (case insensitive) match the series title in comicvine.  I've seen some that don't, and I'm
-sure there are special characters that I haven't handled (I only did &).
-The reading list function is still in place, it is just commented out.
-is an updated script from TheMadman which adds a ton of functionality to my script and also cleans up the code. Here's a description from him:
-It will import all the CBL files in a subfolder called 'ReadingLists' and store the data in a csv file to keep track of changes. It will keep a register 
-of series name and year (as found in your readinglists), and lookup the CV id and publisher which match (allowing for preferred and blacklisted publishers). 
-It will then check/add to Mylar based on user preference.
-If you add new files to your readinglist folder and re-run the script, it will merge the new series it finds with the existing data from previous runs rather
-than potentially double handling the same series every time you read a cbl file.
-Only issue I've found is that sometimes there are 2 matches for a series with the same year found in CV (both with Marvel as publisher) so it's impossible to 
-know which comicID is correct without more info.
+This script will create an HTML file to allow you to see what series you have in mylar and which you are missing given a .CBL file.
 Installation:
 1) Download & install this package (required for searching the comicvine api):
    https://github.com/Metron-Project/Simyan
-2) Only necessary if also doing reading list: Create a folder called 'ReadingLists' in the same directory as the script and add any CBL files you want to process into this folder
+1b) Install all other requirements from the requirements.txt file as needed.
+2) Create a folder called 'ReadingLists' in the same directory as the script and add any CBL files you want to process into this folder
 3) In config.ini replace [MYLAR API KEY] with your Mylar3 api key
 4) In config.ini replace [MYLAR SERVER ADDRESS] with your server in the format: http://servername:port/  (make sure to include the slash at the end)
 5) In config.ini replace [CV API KEY] with your comicvine api key

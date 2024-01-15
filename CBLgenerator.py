@@ -47,7 +47,7 @@ else:
 VERBOSE = True
 #Prevent overwriting of main CSV data file
 TEST_MODE = False
-searchTurthDB = False
+searchTruthDB = False
 
 
 
@@ -275,7 +275,7 @@ def main():
                 
                     year1 = int(year1) -1
                     year2 = int(year2) +1
-                    print(f"     Year range use will be: {year1} to {year2}")
+                    print(f"     If no date is in defined, the year range for searching will be: {year1} to {year2}")
                 else:
                     print(f"     Year range was not found in file name. Continuing...")
                     
@@ -346,7 +346,7 @@ def main():
                     
 
                     #if sqliteConnection:
-                    if firstRun and sqliteConnection and searchTurthDB:
+                    if sqliteConnection and searchTruthDB and issueID == 0:# and firstRun:
                     
                         try:
                             #truthMatch = cursor.execute(
@@ -398,11 +398,11 @@ def main():
 
                     if seriesStartYear == 0:
 
-                        print(f"Checking {seriesName} #{issueNum}...")
-                        #pass
+                        #print(f"Checking {seriesName} #{issueNum}...")
+                        pass
                     else:
-                        print(f"Checking {seriesName} ({seriesStartYear}) #{issueNum}...")
-                        #pass
+                        #print(f"Checking {seriesName} ({seriesStartYear}) #{issueNum}...")
+                        pass
 
                     #if isinstance(coverDate, str):
                         #print('coveDate is a string')
@@ -762,13 +762,17 @@ def extract_years_from_filename(filename):
 
     # Find all matches of the pattern in the input string
     #matches = re.findall(patternYearFileName, filename)
-    yearRangeMatch =  re.findall(r'\[(\d{4}-\d{4})\]', filename)
+    #yearRangeMatch =  re.findall(r'\[(\d{4}-\d{4})\]', filename)
+    yearRangeMatch =  re.findall(r'(\d{4}-\d{4})', filename)
+
     yearRangeMatchPresent = re.findall(r'\[(\d{4}-Present)\]', filename)
     yearRangeMatchSingleYear = re.findall(r'\[(\d{4})\]', filename)
     #if re.match(r'\[(\d{4}-\d{4})\]', filename):
     if yearRangeMatch:
         print(f"     Found date range.")
-        year1year2Pattern = r'\[(\d{4})-(\d{4})\]'
+        #year1year2Pattern = r'\[(\d{4})-(\d{4})\]'
+        year1year2Pattern = r'(\d{4})-(\d{4})'
+        
         yearRange = re.findall(year1year2Pattern, filename)
         year1 = yearRange[0][0]
         year2 = yearRange[0][1]
@@ -872,7 +876,7 @@ def importJSON(inputfile):
 
 def importCBL(inputfile):
     bookList = []
-
+    
     # print("Checking CBL files in %s" % (READINGLIST_DIR),2)
     # for root, dirs, files in os.walk(READINGLIST_DIR):
     #     for file in files:
@@ -897,8 +901,13 @@ def importCBL(inputfile):
         fileroot = tree.getroot()
 
         cblinput = fileroot.findall("./Books/Book")
+    
         for entry in cblinput:
-            book = {'seriesName':entry.attrib['Series'],'seriesYear':entry.attrib['Volume'],'issueNumber':entry.attrib['Number']}#,'issueYear':entry.attrib['Year']}
+            try:
+                book = {'seriesName':entry.attrib['Series'],'seriesYear':entry.attrib['Volume'],'issueNumber':entry.attrib['Number'], 'seriesID':entry[0].attrib['Series'], 'issueID':entry[0].attrib['Issue']}#,'issueYear':entry.attrib['Year']}
+
+            except:
+                book = {'seriesName':entry.attrib['Series'],'seriesYear':entry.attrib['Volume'],'issueNumber':entry.attrib['Number'], 'issueID':0, 'seriesID':0}#,'issueYear':entry.attrib['Year']}
             bookList.append(book)
     except Exception as e:
         print("Unable to process file at %s" % (str(inputfile)))
@@ -913,11 +922,13 @@ def importCBL(inputfile):
         curSeriesName = book['seriesName']
         curSeriesYear = book['seriesYear']
         curIssueNumber = book['issueNumber']
+        curSeriesID = book['seriesID']
+        curIssueID = book['issueID']
 
         #bookSet.add((curSeriesName,curSeriesYear,curIssueNumber))
-        finalBookList.append([curSeriesName,curSeriesYear,curIssueNumber])
+        finalBookList.append([curSeriesName,curSeriesYear,curIssueNumber,curSeriesID, curIssueID])
     #df = pd.DataFrame(bookSet, columns =['seriesName', 'seriesYear', 'issueNumber'])
-    df = pd.DataFrame(finalBookList, columns =['seriesName', 'seriesYear', 'issueNumber'])
+    df = pd.DataFrame(finalBookList, columns =['seriesName', 'seriesYear', 'issueNumber', 'seriesID', 'issueID'])
     
     #print(df)
     
@@ -983,12 +994,12 @@ def importCBL(inputfile):
     # df = df.drop('issueNumberList', axis='columns')
 
     # print(df)
-    df['issueID'] = 0
+    #df['issueID'] = 0
     df.fillna({'issueNumber':0, 'issueID':0}, inplace=True)
-    df = df.astype({'issueNumber':str,'issueID':int})#.fillna(0)#,errors='ignore')#.fillna(0)#,'IssueID':'int'})
+    df = df.astype({'issueNumber':str, 'seriesID':int,'issueID':int})#.fillna(0)#,errors='ignore')#.fillna(0)#,'IssueID':'int'})
 
 
-    df.rename(columns={'seriesName': 'SeriesName', 'seriesYear': 'SeriesStartYear', 'issueNumber': 'IssueNum', 'issueID':'IssueID'}, inplace=True)
+    df.rename(columns={'seriesName': 'SeriesName', 'seriesYear': 'SeriesStartYear', 'issueNumber': 'IssueNum', 'issueID':'IssueID','seriesID':'SeriesID'}, inplace=True)
 
 
 
@@ -996,14 +1007,19 @@ def importCBL(inputfile):
     df['IssueType'] = ''
     df['CoverDate'] = ''
     df['Name'] = ''
-    df['SeriesID'] = ''
+    #df['SeriesID'] = ''
     #df['IssueID'] = ''
     df['CV Series Name'] = ''
     df['CV Series Year'] = ''
     df['CV Issue Number'] = df['IssueNum']
+    df['CV Issue Number'] = ''
+
     df['CV Series Publisher'] = ''
     df['CV Cover Image'] = ''
     df['CV Issue URL'] = ''
+    df['Days Between Issues'] = ''
+    #print(df)
+    #df = df[dfOrderList]
     #print(df)
 
     return (df)

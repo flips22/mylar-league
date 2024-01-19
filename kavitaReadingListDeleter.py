@@ -59,3 +59,5 @@ if confirmation == 'Yes':
         exit()
 else:
     print('Exiting...  No changes made')
+
+print('\n\nTo prevent Reading Lists from being added again:\n     Click on the 3 dots next to your library\n     Settings, then Advanced\n     Untick Manage Reading Lists.')

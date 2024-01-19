@@ -57,6 +57,32 @@ def getRange(issuerange):
     
     return num_range
 
+def parse_issueline(ti):
+    ttit = []
+    comment = []
+    
+    incom = False
+    ename = None
+    title = ''
+    issue_number = 0
+    year = 0
+
+
+
+    pat = re.search(r'\((\d{4})\)', ti)
+    issuepat = re.search(r'#(\w+(\.?\w+)?)',ti)
+    titlepat = re.search(r'(^.*) #',ti)
+    if pat:
+        year = pat.group(1)
+    if issuepat:
+        issue_number = issuepat.group(1)
+    if titlepat:
+        title = titlepat.group(1)
+        
+    
+    return (title, issue_number, year, comment)
+
+
 #useSeedYears = True
 #seedStartYear = input("Enter seed start year, return for none: ")
 #seedEndYear = input("Enter seed end year, return for none: ")
@@ -73,16 +99,72 @@ for root, dirs, files in os.walk(readingListDirectory):
                 print (file)
                 inputFile = os.path.join(readingListDirectory, inputfile)
                 print('Processing %s'%(inputfile))
+                if 'CBRO' in file:
+                    CBRO_MODE = True
+                    print('CBRO file detected. Starting CBRO mode...')
+                else:
+                    CBRO_MODE = False
                 outputfile = file.replace('.txt', '.xlsx')
                 outputFile = os.path.join(readingListDirectory, outputfile)
 #                touchjsonfile = outputfile.replace('.xlsx','') + '.json'
 #                touchjsonFile = os.path.join(readingListDirectory, touchjsonfile)
-                if not os.path.exists(outputFile):
+                if not os.path.exists(outputFile) and CBRO_MODE:
 
 
                     df = pd.DataFrame(columns=dfOrderList)
                     with open (inputFile, mode='r', encoding='utf-8') as file:
 
+                    
+                        for line in file:
+                            if not line.strip():
+                                continue
+                            #line = 'Archer & Armstrong Vol. 2 #14'
+                            seriespattern = re.compile(r' Vol\. \d+',re.IGNORECASE)
+
+                            # Use sub to replace the pattern with an empty string
+                            
+                            title, issue_number, year, comment = parse_issueline(line)
+                            #titleclean = re.sub( Vol)
+                            print(title)
+                            print(year)
+                            titleClean = re.sub(seriespattern, '', title)
+                            print(titleClean)
+                            
+                            if title is not None and year is None:
+                                year = 0
+                            df.loc[index, 'IssueNum'] = issue_number
+                            df.loc[index, 'SeriesName'] = titleClean
+                            df.loc[index,'SeriesStartYear'] = year
+                            index += 1
+                        title_years = {}
+
+                        # Iterate through the DataFrame and update the years
+                        for indexyear, row in df.iterrows():
+                            title = row['SeriesName']
+                            year = row['SeriesStartYear']
+                            if year != 0:
+                                title_years[title] = year
+                            else:
+                            # Check if the title has been encountered before
+                                if title in title_years:
+                                    # Update the year if it was initially set to 0
+                                    
+                                    df.at[indexyear, 'SeriesStartYear'] = title_years[title]
+
+                    df.fillna({'SeriesStartYear':0}, inplace=True)
+                    df = df.astype({'IssueNum':str, 'SeriesStartYear':int})
+
+                    print(df)
+                    df.to_excel(outputFile)
+                
+                if not os.path.exists(outputFile) and not CBRO_MODE:
+
+
+                    df = pd.DataFrame(columns=dfOrderList)
+                    with open (inputFile, mode='r', encoding='utf-8') as file:
+
+                    
+                    
                         for line in file:
                             print(line)
                             if '#' in line:
@@ -220,90 +302,82 @@ for root, dirs, files in os.walk(readingListDirectory):
                                             df.loc[index,'IssueNum'] = issue
                                             df.loc[index,'SeriesStartYear'] = year
                                             index += 1
+
+
+                                    
+                        
+                        df.fillna({'SeriesStartYear':0}, inplace=True)
+                        df = df.astype({'IssueNum':str, 'SeriesStartYear':int})
+
+                        print(df)
+                        df.to_excel(outputFile)
                     
-                    df.fillna({'SeriesStartYear':0}, inplace=True)
-                    df = df.astype({'IssueNum':str, 'SeriesStartYear':int})
-
-                    print(df)
-                    df.to_excel(outputFile)
-                    
 
 
-'''
-                    #try:
-                    #    sqliteConnection = sqlite3.connect(truthDB,detect_types=sqlite3.PARSE_DECLTYPES)
-                    #    cursor = sqliteConnection.cursor()
+def parse_issueline(ti):
+    ttit = []
+    comment = []
+    issue_number = year = None
+    incom = False
+    ename = None
 
-                    #except sqlite3.Error as error:
-                    #    print("Error while connecting to sqlite", error)
-                    for index, row in df.iterrows():
-                        seriesName = row['SeriesName']
-                        seriesStartYear = row['SeriesStartYear']
-                        issueNum = row['IssueNum']
-                        print(seriesName)
-                        print(issueNum)
-                        print(seriesStartYear)
-                        if sqliteConnection and seriesStartYear == 0 and SearchDB:
-                            # try:
-                            yearSearch = cursor.execute(
-                            "SELECT SeriesStartYear, CoverDate FROM comics WHERE SeriesName = ? AND IssueNum = ?",
-                            (seriesName,issueNum),
-                            ).fetchall()
-                            yearSearch = cursor.execute(
-                            'SELECT "CV Series Year", CoverDate FROM comics WHERE "CV Series Name" = ? AND "CV Issue Number" = ?',
-                            (seriesName,issueNum),
-                            ).fetchall()
+    '''    
+    pat = self.evre.search(ti)
+    if pat is not None:
+        ename = pat.group(1)
+        ptp = self.make_likearg(ename)
+        
+        sql = 'SELECT olistid FROM olists WHERE title LIKE ?;'
+        tlink = (ename, )
+        linkid = None
+        for row in self.con.execute(sql, tlink):
+            linkid = row[0]
 
-                            print(type(yearSearch))
-                            if len(yearSearch)  == 0:
-                                
-                                yearSearch = cursor.execute(
-                                "SELECT SeriesStartYear, CoverDate FROM comics WHERE SeriesName = ? AND IssueNum = ?",
-                                (seriesName,issueNum),
-                                ).fetchall()
-                                if len(yearSearch)  == 0:
-                                    print('No match found in DB file')
+        if linkid is None:
+            pat = re.search(r'(.+) \((\d{4})\)', ename)
+            if pat is not None:
+                ename2, year = pat.groups()
+                sql = 'SELECT olistid FROM olists WHERE title LIKE ? AND start_year=?;'
+                tlink = (ename2, year)
+                print("Looking for linkid for sql params: %s AND %s IN %s" % (ename2, year, ename))
+                for row in self.con.execute(sql, tlink):
+                    linkid = row[0]
+            
+        if linkid is None:
+            tlink = (ptp, )
+            sql = 'SELECT olistid FROM  olists WHERE title LIKE ?;'
+            for row in self.con.execute(sql, tlink):
+                linkid = row[0]
+                
+        if linkid is None:
+            print("Cannot locate event: %s ti: %s" % (tlink, ti))
+            return (None, None, None, None)
+        return (f'@{linkid}', None, None, None)
+    '''
+    for ti in ti.split(' '):
+        if ti[0] == '-':
+            incom = True
+            
+        if incom:
+            if year is not None or issue_number is not None:
+                comment.append(ti)
+        else:
+            if ti[0] == '#':
+                issue_number = ti[1:]
+            elif ti[0] == '(' and ti[-1] == ')' and len(ti) == 6:
+                year = int(ti[1:5], 10)
+                continue
+            else:
+                if year is not None or issue_number is not None:
+                    comment.append(ti)
+                else:
+                    ttit.append(ti)
+    
+    title = ' '.join(ttit)
+    if len(comment) > 0:
+        comment = ' '.join(comment)
+    else:
+        comment = None
+    
+    return (title, issue_number, year, comment)
 
-                            if len(yearSearch) == 1:
-                                seriesStartYear = yearSearch[0][0]
-                                print('Match found in DB file')
-                                print(seriesStartYear)
-                                df.loc[index,'SeriesStartYear'] = seriesStartYear
-
-                            if len(yearSearch) > 1:
-                                print("Multiple Matches found...")
-                                i = 0
-                                for match in yearSearch:
-                                    print(type(yearSearch[i][0]))
-                                    print(yearSearch[i][0])
-                                    if int(seedStartYear) <= int(yearSearch[i][1].year) <= int(seedEndYear):
-                                        seriesStartYear = yearSearch[i][0]
-                                    i += 1
-                                df.loc[index,'SeriesStartYear'] = seriesStartYear
-                                print(seriesName)
-                                print(yearSearch)
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                #  if useSeedYears:
-                                #     for i in range(yearSearch:
-                                #         if yearSearch[i] 
-                                # seriesStartYear = yearSearch[0][0]
-                                # print(seriesStartYear)
-                                
-                            # else:
-                            #     seriesStartYear = yearSearch[0][0]
-                            #     print(seriesStartYear)
-                            #     df.loc[index,'SeriesStartYear'] = seriesStartYear
-
-                            # except:
-                            #     print('No match found in DB file')
-'''
-
-                    #open(touchjsonFile, 'w').close()
-
-  

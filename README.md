@@ -37,6 +37,8 @@ https://comicvine.gamespot.com/the-amazing-spider-man/4050-2127/
 After those are manually updated (I use use the auto filters to group the volumes together). I run the script again. If all the issue information is complete (no red) then I run it one last time and check that all the days between issues make sense.
 
 ## textToReadingList:
+Update January 19, 2024: Added specific parsing for CBRO website. Put CBRO somewhere in the file name to switch to CBRO mode.
+
 This script takes a text file with a basic written reading list and creates an xlsx file to feed into the CBLgenerator. I'm sure the logic could be imporoved, but way it is currently written works like this:
 
 

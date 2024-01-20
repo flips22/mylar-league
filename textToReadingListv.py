@@ -185,7 +185,7 @@ for root, dirs, files in os.walk(readingListDirectory):
                                 issuerange = titleNumSplit[1]
                                 issuerange = issuerange.strip()
                                 #print(issuerange)
-                                issueNumPattern = r'\d+(\.\d+)?'
+                                issueNumPattern = r'\d+|\d+.\d+'
                                 #issueNumPattern = r'\d+'
                                 allnums = re.findall(issueNumPattern ,issuerange)
                                 #print(len(allnums))

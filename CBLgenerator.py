@@ -66,7 +66,7 @@ CACHE_RETENTION_TIME = 180 #days
 CV_API_KEY = config['comicVine']['cv_api_key']
 CV_API_RATE = 1 #Seconds between CV API calls
 FORCE_RECHECK_CV = False
-PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska","ECC Ediciones","RW Edizioni","Titan Comics","Dargaud","Federal", "Marvel UK/Panini UK","Grupo Editorial Vid","JuniorPress BV","Pocket Books", "Caliber Comics", "Panini Comics"]
+PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska","ECC Ediciones","RW Edizioni","Titan Comics","Dargaud","Federal", "Marvel UK/Panini UK","Grupo Editorial Vid","JuniorPress BV","Pocket Books", "Caliber Comics", "Panini Comics","Planeta DeAgostini","Newton Comics","Atlas Publishing"]
 PUBLISHER_PREFERRED = ["Marvel","DC Comics","Vertigo"] #If multiple matches found, prefer this result
 SERIESID_BLACKLIST = [137835,147775,89852,96070,78862,58231,50923]
 SERIESID_GOODLIST = [42722,3824,4975,69322,3816,38005,1628] #index matches above list
@@ -765,8 +765,9 @@ def extract_years_from_filename(filename):
     #yearRangeMatch =  re.findall(r'\[(\d{4}-\d{4})\]', filename)
     yearRangeMatch =  re.findall(r'(\d{4}-\d{4})', filename)
 
-    yearRangeMatchPresent = re.findall(r'\[(\d{4}-Present)\]', filename)
-    yearRangeMatchSingleYear = re.findall(r'\[(\d{4})\]', filename)
+    yearRangeMatchPresent = re.findall(r'\[(\d{4}-Present)\]|\((\d{4}-Present)\)', filename)
+    #yearRangeMatchSingleYear = re.findall(r'\[(\d{4})\]', filename)
+    yearRangeMatchSingleYear = re.findall(r'\[(\d{4})\]|\((\d{4})\)',filename)
     #if re.match(r'\[(\d{4}-\d{4})\]', filename):
     if yearRangeMatch:
         print(f"     Found date range.")
@@ -912,6 +913,7 @@ def importCBL(inputfile):
     except Exception as e:
         print("Unable to process file at %s" % (str(inputfile)))
         print(repr(e))
+        
 
 
 
@@ -1259,104 +1261,127 @@ def getCBLData(df,name,numissues):
 
 
 def findIssueID(seriesID,issueNum):
-    found = False
+    goodResponse = False
     issueID = 0 # did this fix the len?
     coverDate = ""
+    while not goodResponse:
+        goodResponse = True
+        if not seriesID == 0:
+            try:
+                if VERBOSE: print("     Searching for %s on CV" % (seriesID))
+            
+                session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
+                searchparam = "volume:" + str(seriesID)
 
-    if not seriesID == 0:
-        try:
-            if VERBOSE: print("     Searching for %s on CV" % (seriesID))
-           
-            session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
-            searchparam = "volume:" + str(seriesID)
 
-
-            response = session.list_issues(params={"filter": searchparam},max_results=1500)
-            if len(response) == 0: #change to response 200?
-                print("     No results found for %s" % (seriesID))
-            else: #Results were found
-                for result in response: #Iterate through CV results
-                    #print(result.number)
-                    #print(type(result.number))
-                    #print(issueNum)
-                    #print(type(issueNum))
-                    #If exact series name and year match
-                    if result.number == str(issueNum):
+                response = session.list_issues(params={"filter": searchparam},max_results=1500)
+                if len(response) == 0: #change to response 200?
+                    print("     No results found for %s" % (seriesID))
+                else: #Results were found
+                    for result in response: #Iterate through CV results
                         #print(result.number)
                         #print(type(result.number))
                         #print(issueNum)
                         #print(type(issueNum))
-                        issueID = result.id
+                        #If exact series name and year match
+                        if result.number == str(issueNum):
+                            #print(result.number)
+                            #print(type(result.number))
+                            #print(issueNum)
+                            #print(type(issueNum))
+                            issueID = result.id
 
-        except Exception as e:
-            print("     There was an error processing %s)" % (seriesID))
-            print(repr(e))
-
+            except Exception as e:
+                print("     There was an error processing %s)" % (seriesID))
+                print(repr(e))
+                goodResponse = False
+                if 'Rate limit exceeded' in repr(e):
+                    print('Rate limited sleeping 200 seconds...')
+                    time.sleep(200)
     #print(issueID)
     return (issueID)
 
 def getVolumeDetails(seriesID):
+    goodResponse = False
     cvSeriesName = ''
     cvSeriesYear = ''
     cvSeriesPublisher = ''
-    if seriesID > 0:
+    while not goodResponse:
+        goodResponse = True
+        if seriesID > 0:
 
-        try:
-            print("     Searching for %s volume details on CV" % (str(seriesID)))
-            #time.sleep(CV_API_RATE)
-            session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
-            response = session.get_volume(seriesID)
-            cvSeriesName = response.name
-            cvSeriesYear = response.start_year
-            cvSeriesPublisher = response.publisher.name
-            
+            try:
+                print("     Searching for %s volume details on CV" % (str(seriesID)))
+                #time.sleep(CV_API_RATE)
+                session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
+                response = session.get_volume(seriesID)
+                cvSeriesName = response.name
+                cvSeriesYear = response.start_year
+                cvSeriesPublisher = response.publisher.name
+                
 
-        except Exception as e:
-            print("     There was an error processing %s" % (str(seriesID)))
-            print(repr(e))
+            except Exception as e:
+                print("     There was an error processing %s" % (str(seriesID)))
+                print(repr(e))
+                goodResponse = False
+                if 'Rate limit exceeded' in repr(e):
+                    print('Rate limited sleeping 200 seconds...')
+                    time.sleep(200)
 
 
     return[cvSeriesName, cvSeriesYear, cvSeriesPublisher]
 
 def getSeriesIDfromIssue(issueID):
+    goodResponse = False
     seriesid = 0
-    try:
-        session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
+    while not goodResponse:
+        goodResponse = True
+        try:
+            session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
 
-        response = session.get_issue(issue_id=issueID)
-        seriesid = response.volume.id
-        #print('found series id')
-        #print(seriesid)
-    except Exception as e:
-            print("     There was an error processing %s" % (issueID))
-            print(repr(e))
+            response = session.get_issue(issue_id=issueID)
+            seriesid = response.volume.id
+            #print('found series id')
+            #print(seriesid)
+        except Exception as e:
+                print("     There was an error processing %s" % (issueID))
+                print(repr(e))
+                goodResponse = False
+                if 'Rate limit exceeded' in repr(e):
+                    print('Rate limited sleeping 200 seconds...')
+                    time.sleep(200)
     return seriesid
 
 def getIssueDetails(issueID):
-
+    goodResponse = False
     cvImageURL = ''
     cvIssueURL = ''
     coverDate = ''
     cvIssueNum = ''
+    while not goodResponse:
+        goodResponse = True
+        if not issueID == 0:
+                
+            try:
+                print("     Searching for %s issue details on CV" % (str(issueID)))
+                #time.sleep(CV_API_RATE)
+                session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
 
-    if not issueID == 0:
-            
-        try:
-            print("     Searching for %s issue details on CV" % (str(issueID)))
-            #time.sleep(CV_API_RATE)
-            session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
-
-            response = session.get_issue(issueID)
-            cvImageURL = response.image.medium_url
-            cvIssueURL = response.site_url
-            #seriesID = response.volume
-            coverDate = response.cover_date
-            cvIssueNum = response.number
-            #print('new cover Date type: %s'%(type(coverDate)))
-        except Exception as e:
-            print("     There was an error processing %s" % (issueID))
-            print(repr(e))
-        #print(cvImageURL, cvIssueURL, coverDate, cvIssueNum)
+                response = session.get_issue(issueID)
+                cvImageURL = response.image.medium_url
+                cvIssueURL = response.site_url
+                #seriesID = response.volume
+                coverDate = response.cover_date
+                cvIssueNum = response.number
+                #print('new cover Date type: %s'%(type(coverDate)))
+            except Exception as e:
+                print("     There was an error processing %s" % (issueID))
+                print(repr(e))
+                goodResponse = False
+                if 'Rate limit exceeded' in repr(e):
+                    print('Rate limited sleeping 200 seconds...')
+                    time.sleep(200)
+            #print(cvImageURL, cvIssueURL, coverDate, cvIssueNum)
     return [cvImageURL, cvIssueURL, coverDate, cvIssueNum]
 
 
@@ -1448,6 +1473,7 @@ def stripAccents(s):
 
 
 def findVolume(series,year):
+    goodResponse = False
     found = False
     comicID = 0
     publisher = "Unknown"
@@ -1455,113 +1481,122 @@ def findVolume(series,year):
     global CVNotFound
     global CVFound
     #global CV
+    while not goodResponse:
+        goodResponse = True
+        if isinstance(series,str):
+            try:
+                #searchCount += 1
 
-    if isinstance(series,str):
-        #searchCount += 1
+                result_matches = 0
+                preferred_matches = 0
+                result_publishers = []
+                result_matches_blacklist = 0
+                issueCounter = 0
 
-        result_matches = 0
-        preferred_matches = 0
-        result_publishers = []
-        result_matches_blacklist = 0
-        issueCounter = 0
+                series_matches = []
+                publisher_blacklist_results = set()
 
-        series_matches = []
-        publisher_blacklist_results = set()
+                #try:
+                if VERBOSE: print("     Searching for %s (%s) on CV" % (series,year))
+                
+                session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
+                searchparam = "name:" + series
 
-        #try:
-        if VERBOSE: print("     Searching for %s (%s) on CV" % (series,year))
-        
-        session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
-        searchparam = "name:" + series
-
-        response = session.list_volumes(params={"filter": searchparam},max_results=1500)
-        if len(response) == 0:
-            print("     No results found for %s (%s)" % (series,year))
-        else: #Results were found
-            for result in response: #Iterate through CV results
-                #If exact series name and year match
-                #print(type(result.start_year))
-                #print(type(year))
-                year = int(year)
-                #print(year-1)
-                #print(year +1)
-                resultCleanName = getCleanName(result.name)
-                seriesCleanName = getCleanName(series)
-                #if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
-                #if result.name.lower() == series.lower() and year -1 <=result.start_year <= year + 1:
-                #if result.name.lower() == series.lower() and str(result.start_year) == year:
-                try:
-                    if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
+                response = session.list_volumes(params={"filter": searchparam},max_results=1500)
+                if len(response) == 0:
+                    print("     No results found for %s (%s)" % (series,year))
+                else: #Results were found
+                    for result in response: #Iterate through CV results
+                        #If exact series name and year match
+                        #print(type(result.start_year))
+                        #print(type(year))
+                        year = int(year)
+                        #print(year-1)
+                        #print(year +1)
+                        resultCleanName = getCleanName(result.name)
+                        seriesCleanName = getCleanName(series)
+                        #if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
+                        #if result.name.lower() == series.lower() and year -1 <=result.start_year <= year + 1:
+                        #if result.name.lower() == series.lower() and str(result.start_year) == year:
+                        try:
+                            if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
 
 
-                        print('made it this far')
-                        publisher_temp = result.publisher.name
-                        result_publishers.append(publisher_temp)
+                                print('made it this far')
+                                publisher_temp = result.publisher.name
+                                result_publishers.append(publisher_temp)
 
-                        series_matches.append(result)
-                        if result.id in SERIESID_BLACKLIST:
-                            print('Series ID found in blacklist, skipping')
-                        if publisher_temp in PUBLISHER_BLACKLIST:
-                            result_matches_blacklist += 1
-                            publisher_blacklist_results.add(publisher_temp)
-                        else:
-                            found = True
-                            result_matches += 1
-                            publisher = publisher_temp
-                            if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
-                            comicID = result.id
-                            numIssues = result.issue_count
-                            print("         Found on comicvine: %s - %s (%s) : %s (%s issues)" % (publisher, series, year, comicID, numIssues))
-                except:
-                    print('Year is in wrong format')
+                                series_matches.append(result)
+                                if result.id in SERIESID_BLACKLIST:
+                                    print('Series ID found in blacklist, skipping')
+                                if publisher_temp in PUBLISHER_BLACKLIST:
+                                    result_matches_blacklist += 1
+                                    publisher_blacklist_results.add(publisher_temp)
+                                else:
+                                    found = True
+                                    result_matches += 1
+                                    publisher = publisher_temp
+                                    if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
+                                    comicID = result.id
+                                    numIssues = result.issue_count
+                                    print("         Found on comicvine: %s - %s (%s) : %s (%s issues)" % (publisher, series, year, comicID, numIssues))
+                        except:
+                            print('Year is in wrong format')
 
-                #Handle multiple publisher matches
-                if result_matches > 1:
-                    print("             Warning: Multiple valid matches found! Publishers: %s" % (", ".join(result_publishers)))
-                    #print(series_matches)
-                    #set result to preferred publisher
-                    for item in series_matches:
-                        if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
-                            numIssues = item.issue_count
-                            if numIssues > issueCounter and year ==result.start_year:
-                                #Current series has more issues than any other preferred results!
-                                publisher = item.publisher.name
-                                comicID = item.id
-                                issueCounter = numIssues
-                                ## TODO: Remove "preferred text labels"
-                                print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                            if numIssues > issueCounter and year ==result.start_year:
-                                #Current series has more issues than any other preferred results!
-                                publisher = item.publisher.name
-                                comicID = item.id
-                                issueCounter = numIssues
-                                ## TODO: Remove "preferred text labels"
-                                print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                            else:
-                                #Another series has more issues
-                                print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
+                        #Handle multiple publisher matches
+                        if result_matches > 1:
+                            print("             Warning: Multiple valid matches found! Publishers: %s" % (", ".join(result_publishers)))
+                            #print(series_matches)
+                            #set result to preferred publisher
+                            for item in series_matches:
+                                if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
+                                    numIssues = item.issue_count
+                                    if numIssues > issueCounter and year ==result.start_year:
+                                        #Current series has more issues than any other preferred results!
+                                        publisher = item.publisher.name
+                                        comicID = item.id
+                                        issueCounter = numIssues
+                                        ## TODO: Remove "preferred text labels"
+                                        print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                    if numIssues > issueCounter and year ==result.start_year:
+                                        #Current series has more issues than any other preferred results!
+                                        publisher = item.publisher.name
+                                        comicID = item.id
+                                        issueCounter = numIssues
+                                        ## TODO: Remove "preferred text labels"
+                                        print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                    else:
+                                        #Another series has more issues
+                                        print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
 
-                if len(response) == 0: # is this going to work?
-                    print("         No results found for %s (%s)" % (series,year))
+                        if len(response) == 0: # is this going to work?
+                            print("         No results found for %s (%s)" % (series,year))
 
-                if result_matches_blacklist > 0 and result_matches == 0:
-                    #Only invalid results found
-                    print("             No valid results found for %s (%s). %s blacklisted results found with the following publishers: %s" % (series,year,result_matches_blacklist, ",".join(publisher_blacklist_results)))
-        #except Exception as e:
-            #print("     There was an error processing %s (%s)" % (series,year))
-            #print(repr(e))
+                        if result_matches_blacklist > 0 and result_matches == 0:
+                            #Only invalid results found
+                            print("             No valid results found for %s (%s). %s blacklisted results found with the following publishers: %s" % (series,year,result_matches_blacklist, ",".join(publisher_blacklist_results)))
+            except Exception as e:
+                print("     There was an error processing %s (%s)" % (series,year))
+                print(repr(e))
+                goodResponse = False
+                if 'Rate limit exceeded' in repr(e):
+                    print('Rate limited sleeping 200 seconds...')
+                    time.sleep(200)
+            #Update counters
+            if not found:
+                #CVNotFound += 1
+                print('not found')
+            else:
+                #CVFound += 1
+                print('found')
 
-    #Update counters
-    if not found:
-        #CVNotFound += 1
-        print('not found')
-    else:
-        #CVFound += 1
-        print('found')
+
+
     return [publisher,int(comicID)]
 
 
 def findVolumeNoYear(series,issuenumber):
+    goodResponse = False
     found = False
     comicID = 0
     issueID = 0
@@ -1571,249 +1606,273 @@ def findVolumeNoYear(series,issuenumber):
     global CVFound
     #global CV
 
-    if isinstance(series,str):
-        #searchCount += 1
 
-        result_matches = 0
-        preferred_matches = 0
-        result_publishers = []
-        result_matches_blacklist = 0
-        issueCounter = 0
+    '''
+    #series = series.replace('Spider-Man -', 'Spider-Man:')
+    series = series.replace(' vs ', ' vs. ')
+    series = series.replace(' - ', ': ')
+    series = series.replace('Spider Island', 'Spider-Island')
+    series = series.replace('Mr. ', 'Mister ')
+    series = series.replace('2009-2099', '2009/2099')
+    series = series.replace('Ghost Spider', 'Ghost-Spider')
+    series = series.replace(' Inc ', ' Inc. ')
+    #series = series.replace(' & ', ' and ')
+    series = series.replace(' & ', '/')
+    series = series.replace(' USA', ' U.S.A.')
+    #series = series.replace(' v1', '')
+    
+    
+    series = series.replace('Saga of the Swamp Thing', 'The Saga of the Swamp Thing')
+    series = series.replace(', ', ': ')
+    #series = series.replace(': ', ', ')
+    series = series.replace('Cloak and Dagger', 'The Mutant Misadventures of Cloak and Dagger')
+    
 
-        series_matches = []
-        publisher_blacklist_results = set()
+    series = series.replace(': The Darkseid War - ',': Darkseid War: ')
 
-        #try:
-        if VERBOSE: print("     Searching for %s on CV" % (series))
-        
+    
+    series = series.replace('Convergence:', 'Convergence')
+    series = series.replace(' / ', '/')
+    series = series.replace(': ', ' ')
+    series = series.replace('Sinestro', 'The Sinestro')
+    series = series.replace(' - ', ': ')
         #TEMP:
-        '''
-        #series = series.replace('Spider-Man -', 'Spider-Man:')
-        series = series.replace(' vs ', ' vs. ')
-        series = series.replace(' - ', ': ')
-        series = series.replace('Spider Island', 'Spider-Island')
-        series = series.replace('Mr. ', 'Mister ')
-        series = series.replace('2009-2099', '2009/2099')
-        series = series.replace('Ghost Spider', 'Ghost-Spider')
-        series = series.replace(' Inc ', ' Inc. ')
-        #series = series.replace(' & ', ' and ')
-        series = series.replace(' & ', '/')
-        series = series.replace(' USA', ' U.S.A.')
-        #series = series.replace(' v1', '')
-        
-        
-        series = series.replace('Saga of the Swamp Thing', 'The Saga of the Swamp Thing')
-        series = series.replace(', ', ': ')
-        #series = series.replace(': ', ', ')
-        series = series.replace('Cloak and Dagger', 'The Mutant Misadventures of Cloak and Dagger')
-        
+    
+    #series = series.replace(' and ', ' & ')
+    series = series.replace('Black:','Black -')
+    #series = series.replace(':', '')
+    #series = re.sub(r' \([^)]*\)', '', series)
+    #series = re.sub(r' \d\D\D series','',series)
+    '''
 
-        series = series.replace(': The Darkseid War - ',': Darkseid War: ')
 
-        
-        series = series.replace('Convergence:', 'Convergence')
-        series = series.replace(' / ', '/')
-        series = series.replace(': ', ' ')
-        series = series.replace('Sinestro', 'The Sinestro')
-        series = series.replace(' - ', ': ')
-        
-        '''
-        #series = series.replace(' and ', ' & ')
-        series = series.replace('Black:','Black -')
-        #series = series.replace(':', '')
-        #series = re.sub(r' \([^)]*\)', '', series)
-        #series = re.sub(r' \d\D\D series','',series)
 
-        session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
-        searchparam = "name:" + series
-        response = session.list_volumes(params={"filter": searchparam},max_results=1500)
-        if len(response) == 0:
-            print("     No results found for %s" % (series))
+
+    if isinstance(series,str):
+        while not goodResponse:
             
-        else: #Results were found
-            print('     Found ' + str(len(response)) +' volumes. Checking for match..')
+            goodResponse = True
+            try:
 
-            for result in response: #Iterate through CV results
-                #If exact series name and year match
-                #print(type(result.start_year))
-                #print(type(year))
-                ##year = int(year)
-                #print(year-1)
-                #print(year +1)
-                resultCleanName = getCleanName(result.name)
-                seriesCleanName = getCleanName(series)
-                #print(resultCleanName)
-                #print(seriesCleanName)
-                publisher = ''
-                #if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
-                #if result.name.lower() == series.lower() and year -1 <=result.start_year <= year + 1:
-                #if result.name.lower() == series.lower() and str(result.start_year) == year:
-                if result.publisher:
-                    publisher = result.publisher.name
+                #searchCount += 1
 
-                if resultCleanName == seriesCleanName and not publisher in PUBLISHER_BLACKLIST:# and year -1 <=result.start_year <= year + 1:
-                    print(f"     Found match for series: {result.name} ({result.start_year})")
-                    cvIssueFind = findIssueID(result.id,issuenumber)
-                    issueID = cvIssueFind
-                    if not issueID == 0:
+                result_matches = 0
+                preferred_matches = 0
+                result_publishers = []
+                result_matches_blacklist = 0
+                issueCounter = 0
 
-                        cvIssueDetails = getIssueDetails(issueID)
+                series_matches = []
+                publisher_blacklist_results = set()
+
+                #try:
+                if VERBOSE: print("     Searching for %s on CV" % (series))
+                
+    
+
+                session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
+                searchparam = "name:" + series
+                response = session.list_volumes(params={"filter": searchparam},max_results=1500)
+                if len(response) == 0:
+                    print("     No results found for %s" % (series))
                     
-                        coverDate = cvIssueDetails[2]
-                        #print(coverDate)
-                        #print(type(coverDate))
-                        if not coverDate is None:
-                            print(f'     Cover date is: ({coverDate})')
-                            #print(f'Cover date ({coverDate}) is type: {type(coverDate)} and is a proper date')
-                        #if not type(coverDate) is type(None) and int(year1) > 0 and int(year2) > 0:
-                            #print(coverDate.year)
-                            #print(year1)
+                else: #Results were found
+                    print('     Found ' + str(len(response)) +' volumes. Checking for match..')
+
+                    for result in response: #Iterate through CV results
+                        #If exact series name and year match
+                        #print(type(result.start_year))
+                        #print(type(year))
+                        ##year = int(year)
+                        #print(year-1)
+                        #print(year +1)
+                        resultCleanName = getCleanName(result.name)
+                        seriesCleanName = getCleanName(series)
+                        #print(resultCleanName)
+                        #print(seriesCleanName)
+                        publisher = ''
+                        #if resultCleanName == seriesCleanName and year -1 <=result.start_year <= year + 1:
+                        #if result.name.lower() == series.lower() and year -1 <=result.start_year <= year + 1:
+                        #if result.name.lower() == series.lower() and str(result.start_year) == year:
+                        if result.publisher:
+                            publisher = result.publisher.name
+
+                        if resultCleanName == seriesCleanName and not publisher in PUBLISHER_BLACKLIST:# and year -1 <=result.start_year <= year + 1:
+                            print(f"     Found match for series: {result.name} ({result.start_year})")
+                            cvIssueFind = findIssueID(result.id,issuenumber)
+                            issueID = cvIssueFind
+                            if not issueID == 0:
+
+                                cvIssueDetails = getIssueDetails(issueID)
                             
-                            #print(coverDate.year)
-                            #print(year2)
-
-                            if int(year1) <= coverDate.year <= int(year2):
-                                found =True
-                                comicID = result.id
-                                issueID = cvIssueFind
-                                
-                                publisher = result.publisher.name
-                                print(f"     Found Match: Series ID: {comicID} and Issue ID: {issueID} with a cover date of: {coverDate}.")
-                                break
-                            #else:
-                            #    comicID = 0
-                            #    issueID = 0
-                            #    publisher=''
-                            #    print(f"Issue number is in series, but cover date ({coverDate}) is not between {year1} and {year2}")
-                        else:
-                            print(f'     Cover date ({coverDate}) is type: {type(coverDate)} and is not a proper date')
-                            #print(type(coverDate))
-                    else:
-                        print(f"     Series did not contain issue number: {issuenumber}, continuing.")
-                    '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    print('Searching for the right year')
-                    publisher_temp = result.publisher.name
-                    result_publishers.append(publisher_temp)
-
-                    series_matches.append(result)
-                    if result.id in SERIESID_BLACKLIST:
-                        print('Series ID found in blacklist, skipping')
-                    if publisher_temp in PUBLISHER_BLACKLIST:
-                        result_matches_blacklist += 1
-                        publisher_blacklist_results.add(publisher_temp)
-                    else:
-                        
-                        found = True
-                        result_matches += 1
-                        print(result_matches)
-                        publisher = publisher_temp
-                        if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
-                        comicID = result.id
-                        numIssues = result.issue_count
-                        print("         Found on comicvine: %s - %s: %s (%s issues)" % (publisher, series, comicID, numIssues))
-
-
-
-
-
-                #Handle multiple publisher matches
-            if result_matches > 1:
-                print("             Warning: Multiple valid matches found! Publishers: %s" % (", ".join(result_publishers)))
-                #print(series_matches)
-                #set result to preferred publisher
-                for item in series_matches:
-                    print('matches:')
-                    print(len(series_matches))
-                    print(item.name)
-                    #print(item)
-                    #print(type(item))
-                    #print(item.id)
-                    cvIssueFind = findIssueID(item.id,issuenumber)
-                    issueID = cvIssueFind
-                    if not issueID == 0:
-
-                        cvIssueDetails = getIssueDetails(issueID)
-                    
-                        coverDate = cvIssueDetails[2]
-                        
-                        if not type(coverDate) is type(None) and int(year1) > 0 and int(year2) > 0:
-                            print(coverDate.year)
-                            if int(year1) <= coverDate.year <= int(year2):
-
-                                comicID = item.id
-                                
-                                if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
-                                    numIssues = item.issue_count
+                                coverDate = cvIssueDetails[2]
+                                #print(coverDate)
+                                #print(type(coverDate))
+                                if not coverDate is None:
+                                    print(f'     Cover date is: ({coverDate})')
+                                    #print(f'Cover date ({coverDate}) is type: {type(coverDate)} and is a proper date')
+                                #if not type(coverDate) is type(None) and int(year1) > 0 and int(year2) > 0:
+                                    #print(coverDate.year)
+                                    #print(year1)
                                     
-                                    if numIssues > issueCounter:
-                                        #Current series has more issues than any other preferred results!
-                                        publisher = item.publisher.name
-                                        comicID = item.id
-                                        issueCounter = numIssues
-                                        ## TODO: Remove "preferred text labels"
-                                        print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                                    
-                                    #if numIssues > issueCounter and year ==result.start_year:
-                                    #    #Current series has more issues than any other preferred results!
-                                    #    publisher = item['publisher']['name']
-                                    #    comicID = item['id']
-                                    #    issueCounter = numIssues
-                                    #    ## TODO: Remove "preferred text labels"
-                                    #    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                                    
+                                    #print(coverDate.year)
+                                    #print(year2)
+                                    if coverDate == '':
+                                        coverYear = 0
                                     else:
-                                        #Another series has more issues
-                                        print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
-                                
+                                        coverYear = coverDate.year
+                                        
 
-                        
-                        else: 
-                            if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
-                                numIssues = item.issue_count
-                                
-                                if numIssues > issueCounter:
-                                    #Current series has more issues than any other preferred results!
-                                    publisher = item.publisher.name
-                                    comicID = item.id
-                                    issueCounter = numIssues
-                                    ## TODO: Remove "preferred text labels"
-                                    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                                
-                                #if numIssues > issueCounter and year ==result.start_year:
-                                #    #Current series has more issues than any other preferred results!
-                                #    publisher = item['publisher']['name']
-                                #    comicID = item['id']
-                                #    issueCounter = numIssues
-                                #    ## TODO: Remove "preferred text labels"
-                                #    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
-                                
+                                    if int(year1) <= coverYear <= int(year2):
+                                        found =True
+                                        comicID = result.id
+                                        issueID = cvIssueFind
+                                        
+                                        publisher = result.publisher.name
+                                        print(f"     Found Match: Series ID: {comicID} and Issue ID: {issueID} with a cover date of: {coverDate}.")
+                                        break
+                                    #else:
+                                    #    comicID = 0
+                                    #    issueID = 0
+                                    #    publisher=''
+                                    #    print(f"Issue number is in series, but cover date ({coverDate}) is not between {year1} and {year2}")
                                 else:
-                                    #Another series has more issues
-                                    print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
+                                    print(f'     Cover date ({coverDate}) is type: {type(coverDate)} and is not a proper date')
+                                    #print(type(coverDate))
+                            else:
+                                print(f"     Series did not contain issue number: {issuenumber}, continuing.")
+                            '''
 
-                if len(response) == 0: # is this going to work?
-                    print("         No results found for %s (%s)" % (series))
 
-                if result_matches_blacklist > 0 and result_matches == 0:
-                    #Only invalid results found
-                    print("             No valid results found for %s. %s blacklisted results found with the following publishers: %s" % (series,result_matches_blacklist, ",".join(publisher_blacklist_results)))
-        #except Exception as e:
-            #print("     There was an error processing %s" % (series))
-            #print(repr(e))
-'''
+
+
+
+
+
+
+
+
+
+
+
+                            print('Searching for the right year')
+                            publisher_temp = result.publisher.name
+                            result_publishers.append(publisher_temp)
+
+                            series_matches.append(result)
+                            if result.id in SERIESID_BLACKLIST:
+                                print('Series ID found in blacklist, skipping')
+                            if publisher_temp in PUBLISHER_BLACKLIST:
+                                result_matches_blacklist += 1
+                                publisher_blacklist_results.add(publisher_temp)
+                            else:
+                                
+                                found = True
+                                result_matches += 1
+                                print(result_matches)
+                                publisher = publisher_temp
+                                if publisher in PUBLISHER_PREFERRED: preferred_matches += 1
+                                comicID = result.id
+                                numIssues = result.issue_count
+                                print("         Found on comicvine: %s - %s: %s (%s issues)" % (publisher, series, comicID, numIssues))
+
+
+
+
+
+                        #Handle multiple publisher matches
+                    if result_matches > 1:
+                        print("             Warning: Multiple valid matches found! Publishers: %s" % (", ".join(result_publishers)))
+                        #print(series_matches)
+                        #set result to preferred publisher
+                        for item in series_matches:
+                            print('matches:')
+                            print(len(series_matches))
+                            print(item.name)
+                            #print(item)
+                            #print(type(item))
+                            #print(item.id)
+                            cvIssueFind = findIssueID(item.id,issuenumber)
+                            issueID = cvIssueFind
+                            if not issueID == 0:
+
+                                cvIssueDetails = getIssueDetails(issueID)
+                            
+                                coverDate = cvIssueDetails[2]
+                                
+                                if not type(coverDate) is type(None) and int(year1) > 0 and int(year2) > 0:
+                                    print(coverDate.year)
+                                    if int(year1) <= coverDate.year <= int(year2):
+
+                                        comicID = item.id
+                                        
+                                        if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
+                                            numIssues = item.issue_count
+                                            
+                                            if numIssues > issueCounter:
+                                                #Current series has more issues than any other preferred results!
+                                                publisher = item.publisher.name
+                                                comicID = item.id
+                                                issueCounter = numIssues
+                                                ## TODO: Remove "preferred text labels"
+                                                print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                            
+                                            #if numIssues > issueCounter and year ==result.start_year:
+                                            #    #Current series has more issues than any other preferred results!
+                                            #    publisher = item['publisher']['name']
+                                            #    comicID = item['id']
+                                            #    issueCounter = numIssues
+                                            #    ## TODO: Remove "preferred text labels"
+                                            #    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                            
+                                            else:
+                                                #Another series has more issues
+                                                print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
+                                        
+
+                                
+                                else: 
+                                    if item.publisher.name in PUBLISHER_PREFERRED or preferred_matches == 0:
+                                        numIssues = item.issue_count
+                                        
+                                        if numIssues > issueCounter:
+                                            #Current series has more issues than any other preferred results!
+                                            publisher = item.publisher.name
+                                            comicID = item.id
+                                            issueCounter = numIssues
+                                            ## TODO: Remove "preferred text labels"
+                                            print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                        
+                                        #if numIssues > issueCounter and year ==result.start_year:
+                                        #    #Current series has more issues than any other preferred results!
+                                        #    publisher = item['publisher']['name']
+                                        #    comicID = item['id']
+                                        #    issueCounter = numIssues
+                                        #    ## TODO: Remove "preferred text labels"
+                                        #    print("             Selected series from multiple results: %s - %s (%s issues)" % (publisher,comicID,numIssues))
+                                        
+                                        else:
+                                            #Another series has more issues
+                                            print("             Skipped Series : %s - %s (%s issues) - another preferred series has more issues!" % (item.publisher.name,item.id,numIssues))
+
+                        if len(response) == 0: # is this going to work?
+                            print("         No results found for %s (%s)" % (series))
+
+                        if result_matches_blacklist > 0 and result_matches == 0:
+                            #Only invalid results found
+                            print("             No valid results found for %s. %s blacklisted results found with the following publishers: %s" % (series,result_matches_blacklist, ",".join(publisher_blacklist_results)))
+                #except Exception as e:
+                    #print("     There was an error processing %s" % (series))
+                    #print(repr(e))
+        '''
+            except Exception as e:
+                print("     There was an error processing %s #%s" % (series,issuenumber))
+                print(repr(e))
+                goodResponse = False
+                if 'Rate limit exceeded' in repr(e):
+                    print('Rate limited sleeping 200 seconds...')
+                    time.sleep(200)
+
     #Update counters
     if not found:
         #CVNotFound += 1

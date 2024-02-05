@@ -1,3 +1,7 @@
+
+![logo_cropped](https://github.com/flips22/mylar-league/assets/1898114/547788db-bcbe-470c-9e45-968f041b8753)
+
+
 # CBL Generation
 
 ## CBLgenerator

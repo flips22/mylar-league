@@ -1,6 +1,12 @@
+
+![logo_cropped](https://github.com/flips22/mylar-league/assets/1898114/547788db-bcbe-470c-9e45-968f041b8753)
+
+
 # CBL Generation
 
 ## CBLgenerator
+Update Feb 3, 2024
+ - Updated API logic to handle the recent change to the comicvine API limits
 Update Dec 16, 2023
  - Made a number of updates to the searching logic. It now checks if it has searched for the series previously. Also if there is no year, it uses the filename to find the year range, and then looks to see if the coverdate of the issue is between that range (+/-1). The filename format needs to be [2022-2023].  I have done quite a bit of testing, but there's a risk that I missed something, if so, let me know.
 
@@ -49,6 +55,12 @@ For example:
 This should set the year and the volume name when listed as (YEAR). The # sign must be there as those are the only lines it looks at.  There is a method to also check a sqlite database which will use the seed start and end year to find the year of the issue and then the corresponding volume start year.  I need to fine tune that a bit, so I haven't posed the db generator yet. Also, only the regular dash works at the momemnt. It won't work with a fancy dash. I need to fix that in the code. For now you have to do a find replace in a text editor.
 
 
+# Year In Review
+This script looks at all the new volumes on comicvine for for a given year and compares to your mylar instance.  The output are HTML files for each publisher, each year as well as an interactive chart (also in HTML). The yearly HTML files show you the cover images, and provides link to view on comicvine and view in mylar or add to mylar.
+
+There is an effort made to try to classify each series release. The code, which was "borrowed" from mylar and then made a bit more restrive in a number of ways looks at the description and deck for each volume and the first issue of the seris (if that answer can't be gained by parsing the volume). You can see the differant volume types listed and which are kept. By default any reprinted or TPB/HCs are removed from the analysis. I'm sure this isn't perfect so if you see some issues, let me know.
+
+Unfortunately there isn't a way to preciesly query CV for a year and a publisher, so you aren't able to even check a single year and single publisher without the 280,000 API calls. Because of this I included my own cache file of all the API calls. I felt like a typical user would not have wanted to spend more than 2 months, running the script 24/7 to get this output. Now it takes just a couple of minutes to analyze 90 years of comics.
 
 
 # Mylar / Komga / Comic Geeks  Integration Tools

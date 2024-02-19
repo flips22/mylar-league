@@ -33,7 +33,7 @@ ReadingList-Results: Text files of summary of results for each run.
 
 ### Installation
 
-There are some prerequsites that you should identify on the first run. also after it runs it should create all the proper folders. If I have a chance I will create a requirements file. From there you can put in your excel file. Or fill in what is in the template folder.
+Install pre-requisites per the requirements.txt file. On the first run it should create all the proper folders. From there you can put in your excel file in the working folder (ReadingList-ImportExport) Or fill in what is in the template folder and move it to the working folder.
 
 Once all the issues are identified a CBL is created.  The logic on the days between issue has to be run a second time after you complete the list.
 

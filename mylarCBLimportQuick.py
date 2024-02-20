@@ -253,7 +253,7 @@ def main():
         print(f'     Issue IDs Missing in Mylar: {len(missingIssueIDs)}')
     
     if not len(missingSeriesIDs) == 0:
-        add_series = ask_yes_no_question("Add all missing sereis to mylar?", "Y")
+        add_series = ask_yes_no_question("Add all missing series to mylar?", "Y")
     
         if add_series =='Y':
             for id in missingSeriesIDs:

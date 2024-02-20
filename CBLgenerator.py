@@ -48,7 +48,8 @@ VERBOSE = True
 #Prevent overwriting of main CSV data file
 TEST_MODE = False
 searchTruthDB = False
-
+#Change forceCreateCBL to True to create CBL even if there are missing issues.
+forceCreateCBL = False
 
 
 #File prefs
@@ -720,7 +721,7 @@ def main():
                 summaryResults.append(inputfile + '\n' + outputfile + '\n' + summaryString + '\n')
                 if not numIssueMissing == 0:
                     problemResults.append(inputfile + '\n' + outputfile + '\n' + summaryString + '\n')
-                if numIssueMissing == 0:
+                if numIssueMissing == 0 or forceCreateCBL:
                     try:
                         print(inputfile)
                         cblName = str(file).replace(readingListDirectory,'').replace('.json','').replace('.cbl','').replace('.ccc','').replace('.xlsx','').strip('\\')

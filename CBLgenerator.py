@@ -1298,6 +1298,9 @@ def findIssueID(seriesID,issueNum):
                 if 'Rate limit exceeded' in repr(e):
                     print('Rate limited sleeping 200 seconds...')
                     time.sleep(200)
+                if 'Object Not Found' in repr(e):
+                    print('Not Found...  moving on....')
+                    goodResponse = True
     #print(issueID)
     return (issueID)
 
@@ -1327,7 +1330,9 @@ def getVolumeDetails(seriesID):
                 if 'Rate limit exceeded' in repr(e):
                     print('Rate limited sleeping 200 seconds...')
                     time.sleep(200)
-
+                if 'Object Not Found' in repr(e):
+                    print('Not Found...  moving on....')
+                    goodResponse = True
 
     return[cvSeriesName, cvSeriesYear, cvSeriesPublisher]
 
@@ -1350,6 +1355,9 @@ def getSeriesIDfromIssue(issueID):
                 if 'Rate limit exceeded' in repr(e):
                     print('Rate limited sleeping 200 seconds...')
                     time.sleep(200)
+                if 'Object Not Found' in repr(e):
+                    print('Not Found...  moving on....')
+                    goodResponse = True
     return seriesid
 
 def getIssueDetails(issueID):
@@ -1381,6 +1389,9 @@ def getIssueDetails(issueID):
                 if 'Rate limit exceeded' in repr(e):
                     print('Rate limited sleeping 200 seconds...')
                     time.sleep(200)
+                if 'Object Not Found' in repr(e):
+                    print('Not Found...  moving on....')
+                    goodResponse = True
             #print(cvImageURL, cvIssueURL, coverDate, cvIssueNum)
     return [cvImageURL, cvIssueURL, coverDate, cvIssueNum]
 
@@ -1582,6 +1593,9 @@ def findVolume(series,year):
                 if 'Rate limit exceeded' in repr(e):
                     print('Rate limited sleeping 200 seconds...')
                     time.sleep(200)
+                if 'Object Not Found' in repr(e):
+                    print('Not Found...  moving on....')
+                    goodResponse = True
             #Update counters
             if not found:
                 #CVNotFound += 1
@@ -1872,6 +1886,9 @@ def findVolumeNoYear(series,issuenumber):
                 if 'Rate limit exceeded' in repr(e):
                     print('Rate limited sleeping 200 seconds...')
                     time.sleep(200)
+                if 'Object Not Found' in repr(e):
+                    print('Not Found...  moving on....')
+                    goodResponse = True
 
     #Update counters
     if not found:

@@ -1,7 +1,9 @@
 import requests
 import json
+import time
 import os
 import re
+import csv
 import configparser
 import sqlite3
 import pandas as pd
@@ -25,7 +27,7 @@ rootDirectory = os.getcwd()
 dataDirectory = os.path.join(rootDirectory, "ReadingList-DB")
 cvSeriesDB = os.path.join(dataDirectory, "yearInReview-Type.db")
 YearInReviewDirectory = os.path.join(rootDirectory, "ReadingList-YearInReview")
-if not os.path.isdir(YearInReviewDirectory): os.mkdir(YearInReviewDirectory)
+if not os.path.isdir(YearInReviewDirectory): os.mkdirs(YearInReviewDirectory)
 resultsLines = []
 resultsLines.append(f'Publisher;Year;Total Series;In Mylar;Missing\n')
 
@@ -156,9 +158,9 @@ def main():
                         
                         seriesIssueCount = allSeries[y][6]
                         seriesType = allSeries[y][12]
-                        cover = allSeries[y][16]
+                        cover = allSeries[y][17]
                         try:
-                            cover_date = allSeries[y][17]
+                            cover_date = allSeries[y][18]
                         except:
                             cover_date = ''
                         volumeString = seriesName + ' (' + str(seriesYear) +')'

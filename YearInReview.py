@@ -55,7 +55,7 @@ def getAllSeries():
     IDlist = []
     global newIssueCounter
     print("         Pulling all series data from mylar")
-    
+    print(f'         API URL:{mylarGetAllURL}')
     try :
         mylarAllData = requests.get(mylarGetAllURL).text
     except requests.exceptions.RequestException as e:

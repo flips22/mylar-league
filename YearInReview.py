@@ -63,7 +63,7 @@ def getAllSeries():
         raise SystemExit(e)
 
     jsonAllData = json.loads(mylarAllData)
-    print(f'         Found {len(jsonAllData['data'])} series in mylar') 
+    print(f"         Found {len(jsonAllData['data'])} series in mylar") 
     # Don't use headers, but might at a later date
     #headers = ['ComicID', 'Publisher Name', 'Series Name', 'Series Year Begins', 'Issue Number']
     

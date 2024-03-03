@@ -10,7 +10,7 @@ import pandas as pd
 from datetime import datetime
 import plotly.graph_objects as go
 
-PubIDs = [31,10]
+
 
 # ID     Publisher
 # 31     Marvel
@@ -43,6 +43,7 @@ if os.path.exists('configPRIVATE.ini'): # an attempt to prevent me from sharing 
 else:
     config.read('config.ini')
 
+PubIDs = config['yearinreview']['pubidsetting'].split(',')
 mylarAPI = config['mylar']['mylarapi']
 mylarBaseURL = config['mylar']['mylarbaseurl']
 

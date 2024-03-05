@@ -1,23 +1,70 @@
+4 Dell
 10 DC
 31 Marvel
+89 EC
+101 Archie
+125 Charlton
+252 Atlas Comics
 285 Eclipse
 337 Continuity
 367 Eternity
 364 Dark Horse
 447 Malibu
-485 Valiant/Acclaim
+485 Valiant/Acclaim # Special character (/) in name breaks HTML parsing currently.
 488 Antarctic Press
 513 image
+519 Topps
+530 Bongo
 536 Heavy Metal
+591 London Night Studios
 600 Verotik
 606 Top Cow
+639 Eurotica
+651 Event Comics
+667 Arrow
 708 WildStorm
 718 Avatar Press
 823 Eros
 824 Aircel
+1092 Fantaco
+1099 Crossgen
 1859 Dynamite
 1862 Aspen MLT
 1863 Devil's Due
 1864 Chaos! Comics
+1868 Boom! Studios
+1870 Awesome Comics
+1899 Basement Comics
+1923 Fathom Press
+1968 Broadsword Comics
+1986 Zenescope Entertainment
+2045 Dead Dog
+2019 Rebellion
 2073 Coffin Comics
+2104 Aftershock Comics
+2133 Asylum Press
+2186 Fangoria
+2244 Brainstorm
+2634 Aria Press
+2800 Bagheera
+4266 Black Mask Studios
+4417 Blue Juice Comics
+6338 Avery Hill Publishing
+6683 Benitez Publishing
+6984 Scout Comics
+7369 American Mythology Productions
+9506 Death Rattle
+11141 Rodent Entertainment
+11154 Blood Moon Comics
+11160 Erie County Comics Inc
 11192 McFarland Entertainment
+11212 Crave Comics
+11221 Brilliant Enterprise
+11231 Death Obscene Magazine
+11236 Berserker Comics
+11241 Dauntless Stories
+11244 Mind Control
+11245 DSTLRY
+11251 Red Leaf Comics
+11255 Ethereal Comics
+11257 Darkside Comics

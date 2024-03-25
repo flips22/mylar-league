@@ -17,7 +17,7 @@
 367 Eternity
 364 Dark Horse
 447 Malibu
-485 Valiant/Acclaim # Special character (/) in name breaks HTML parsing currently.
+485 Valiant/Acclaim
 488 Antarctic Press
 496 Harris Comics
 513 image
@@ -68,7 +68,9 @@
 2800 Bagheera
 2805 Dark Fantasy Productions
 2946 Comic Zone Productions
+3510 AAM/Markosia
 3521 MonkeyBrain Comics
+3755 Amigo Comica
 3957 Trendmaster Comix
 4266 Black Mask Studios
 4417 Blue Juice Comics
@@ -81,6 +83,7 @@
 7385 Mad Cave Studios
 7369 American Mythology Productions
 7801 Vault Comics
+8600 Ahoy Comics
 8773 Cave Pictures Publishing
 8916 Swords & Sassery
 9506 Death Rattle
@@ -99,4 +102,5 @@
 11251 Red Leaf Comics
 11255 Ethereal Comics
 11257 Darkside Comics
+59995 Red 5 Comics
 63177 Space Goat Productions

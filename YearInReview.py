@@ -17,7 +17,7 @@ import plotly.graph_objects as go
 # 10     DC Comics
 # 2707   Marvel Digital Comics Unlimited
 
-KeepTypes = ['Print', 'One-Shot', 'Digital', 'None']
+KeepTypes = ['Print', 'One-Shot', 'Digital', 'None', 'GN', 'HC', 'TPB']
 #All Types: One-Shot, Print, None, Reprint, HC, TPB, Digital, GN
 
 minYear = 1930
@@ -136,15 +136,17 @@ def main():
                 'SELECT * FROM volumes WHERE "CV Series PublisherID" = ? AND "CV Series Year" = ?',
                 (pubid, year),
                 ).fetchall()
-            
+
             if not len(allSeries) == 0:
                 countAllSeries = len(allSeries)
                 lines = []
                 y = 0
-                file = '[' + allSeries[0][5] + '] ' + str(year) + '.html'
-                yearChart.append(year)
                 publisherChart = allSeries[0][5]
+                publisherChart = publisherChart.replace("/", "-")  # Replace "/" with "-"
+                file = '[' + publisherChart + '] ' + str(year) + '.html'
+                yearChart.append(year)
                 outputhtmlfile = os.path.join(YearInReviewDirectory, file)
+
                 
                 for x in allSeries:
                     #print(allSeries)
@@ -249,6 +251,7 @@ def main():
                             ]).set_caption(summaryText).map(color_cels)#.format({'CV Issue URL': make_clickable})#.to_html(outputhtmlfile)#,formatters={'CV Cover Image': image_formatter}, escape=False)
                 df.to_html(outputhtmlfile)
 
+            publisherChart = publisherChart.replace("/", "-")
             chartfilename = '[' + publisherChart + '] Summary Chart.html'
             chartTitle = publisherChart + ' Summary ' + datetime.today().strftime("%Y-%B-%d")
             outputchartfile = os.path.join(YearInReviewDirectory, chartfilename)

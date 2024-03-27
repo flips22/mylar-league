@@ -4,18 +4,27 @@
 89 EC
 101 Archie
 125 Charlton
+144 Comic Media
+173 Warren
+178 Western Publishing
 252 Atlas Comics
+278 Waro Graphics
 285 Eclipse
+291 Capital Comics
+321 Catalan Communications
+336 Comico
 337 Continuity
 367 Eternity
 364 Dark Horse
 447 Malibu
-485 Valiant/Acclaim # Special character (/) in name breaks HTML parsing currently.
+485 Valiant/Acclaim
 488 Antarctic Press
+496 Harris Comics
 513 image
 519 Topps
 530 Bongo
 536 Heavy Metal
+573 Caliber
 591 London Night Studios
 600 Verotik
 606 Top Cow
@@ -28,32 +37,57 @@
 824 Aircel
 1092 Fantaco
 1099 Crossgen
+1112 Dreamwave Productions
 1859 Dynamite
 1862 Aspen MLT
 1863 Devil's Due
 1864 Chaos! Comics
+1865 UDON
 1868 Boom! Studios
 1870 Awesome Comics
 1899 Basement Comics
 1923 Fathom Press
 1968 Broadsword Comics
 1986 Zenescope Entertainment
+2004 Darkchylde Entertainment
+2007 DeadBox Art Studio
 2045 Dead Dog
 2019 Rebellion
+2068 Dabel Brothers Productions
 2073 Coffin Comics
 2104 Aftershock Comics
 2133 Asylum Press
 2186 Fangoria
 2244 Brainstorm
+2250 Express Publications
+2344 Cinebook
+2496 Big Dog Ink
+2521 Exploding Albatross Funnybooks
 2634 Aria Press
+2698 Cherry Comics
 2800 Bagheera
+2805 Dark Fantasy Productions
+2946 Comic Zone Productions
+3510 AAM/Markosia
+3521 MonkeyBrain Comics
+3755 Amigo Comica
+3957 Trendmaster Comix
 4266 Black Mask Studios
 4417 Blue Juice Comics
+5850 Tiny Donkey Studios
+5974 Top Secret Press
 6338 Avery Hill Publishing
 6683 Benitez Publishing
+6816 Double Take
 6984 Scout Comics
+7385 Mad Cave Studios
 7369 American Mythology Productions
+7801 Vault Comics
+8600 Ahoy Comics
+8773 Cave Pictures Publishing
+8916 Swords & Sassery
 9506 Death Rattle
+10430 Wicked Comics
 11141 Rodent Entertainment
 11154 Blood Moon Comics
 11160 Erie County Comics Inc
@@ -68,3 +102,5 @@
 11251 Red Leaf Comics
 11255 Ethereal Comics
 11257 Darkside Comics
+59995 Red 5 Comics
+63177 Space Goat Productions

@@ -1,5 +1,6 @@
 4 Dell
 10 DC
+20 Harvey
 31 Marvel
 89 EC
 101 Archie
@@ -7,6 +8,12 @@
 144 Comic Media
 173 Warren
 178 Western Publishing
+238 Kitchen Sink
+252 Atlas Comics
+278 Warp Graphics
+285 Eclipse
+291 Capital Comics
+309 Fantagraphics
 252 Atlas Comics
 278 Waro Graphics
 285 Eclipse
@@ -14,9 +21,13 @@
 321 Catalan Communications
 336 Comico
 337 Continuity
-367 Eternity
 364 Dark Horse
+367 Eternity
+369 Fleetway
+390 Now Comics
+446 Innovation
 447 Malibu
+470 Millennium Publications
 485 Valiant/Acclaim
 488 Antarctic Press
 496 Harris Comics
@@ -26,6 +37,8 @@
 536 Heavy Metal
 573 Caliber
 591 London Night Studios
+592 Maximum Press
+595 Sirius Entertainment
 600 Verotik
 606 Top Cow
 639 Eurotica
@@ -33,6 +46,7 @@
 667 Arrow
 708 WildStorm
 718 Avatar Press
+778 Broadway
 823 Eros
 824 Aircel
 1092 Fantaco
@@ -46,9 +60,13 @@
 1868 Boom! Studios
 1870 Awesome Comics
 1899 Basement Comics
+1906 Adventure
+1913 Atomeka Press
 1923 Fathom Press
+1932 Rip Off Press
 1968 Broadsword Comics
 1986 Zenescope Entertainment
+1990 Halloween Comics
 2004 Darkchylde Entertainment
 2007 DeadBox Art Studio
 2045 Dead Dog
@@ -58,6 +76,7 @@
 2104 Aftershock Comics
 2133 Asylum Press
 2186 Fangoria
+2263 Fireman Press Ltd.
 2244 Brainstorm
 2250 Express Publications
 2344 Cinebook
@@ -68,10 +87,14 @@
 2800 Bagheera
 2805 Dark Fantasy Productions
 2946 Comic Zone Productions
+2958 Arboris
+3411 Starblaze Graphics
 3510 AAM/Markosia
 3521 MonkeyBrain Comics
 3755 Amigo Comica
 3957 Trendmaster Comix
+4083 Avalon Studios
+4216 John Brown
 4266 Black Mask Studios
 4417 Blue Juice Comics
 5850 Tiny Donkey Studios

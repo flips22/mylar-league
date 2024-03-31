@@ -5,6 +5,12 @@
 # CBL Generation
 
 ## CBLgenerator
+Updates through March 31, 2024
+ - Config options for YearInReview now all located in the config.ini, this includes PubIDs, year span, and book types. All options for book types listed in config.ini comment.
+ - Publisher IDs for the above are all located in two places. pubids.txt is a starter set of 100+ western comic focused publishers with a large span of genre an interest. superpubids.txt is every pubid within the DB.
+ - This has been tested with over 450 publishers at once with a full span and a custom span. Large queries like this will take longer to generate so pick and choose from the superpubids.txt rather than feed directly into your config.
+ - Speaking of your config.ini, there is a new injector from pubids.txt to your config.ini called pubidstoconfig.py, run this when you have your pubids.txt as you would like for the search. 
+
 Update Feb 3, 2024
  - Updated API logic to handle the recent change to the comicvine API limits
 Update Dec 16, 2023

@@ -11,18 +11,6 @@ from datetime import datetime
 import plotly.graph_objects as go
 
 
-
-# ID     Publisher
-# 31     Marvel
-# 10     DC Comics
-# 2707   Marvel Digital Comics Unlimited
-
-KeepTypes = ['Print', 'One-Shot', 'Digital', 'None', 'GN', 'HC', 'TPB']
-#All Types: One-Shot, Print, None, Reprint, HC, TPB, Digital, GN
-
-minYear = 1930
-maxYear = 2025
-
 rootDirectory = os.getcwd()
 dataDirectory = os.path.join(rootDirectory, "ReadingList-DB")
 cvSeriesDB = os.path.join(dataDirectory, "yearInReview-Type.db")
@@ -43,6 +31,9 @@ if os.path.exists('configPRIVATE.ini'): # an attempt to prevent me from sharing 
 else:
     config.read('config.ini')
 
+minYear = config['yearinreview']['startyear']
+maxYear = config['yearinreview']['endyear']
+KeepTypes = config['yearinreview'['booktypes'].split(',')
 PubIDs = config['yearinreview']['pubidsetting'].split(',')
 mylarAPI = config['mylar']['mylarapi']
 mylarBaseURL = config['mylar']['mylarbaseurl']

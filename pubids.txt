@@ -14,6 +14,10 @@
 285 Eclipse
 291 Capital Comics
 309 Fantagraphics
+252 Atlas Comics
+278 Waro Graphics
+285 Eclipse
+291 Capital Comics
 321 Catalan Communications
 336 Comico
 337 Continuity

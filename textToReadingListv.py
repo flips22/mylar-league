@@ -166,6 +166,16 @@ for root, dirs, files in os.walk(readingListDirectory):
                     
                     
                         for line in file:
+                            #parse for a volume that doesn't have a # in it, so assume it is talking about #1
+                            lineNoNumberPat = r'(?!.*#)(?=.*\(\d{4}\)).*'
+                            lineNoNumberMatch = re.match(lineNoNumberPat, line)
+                            if lineNoNumberMatch:
+                                line = line.rstrip('\n') + ' #1'
+                            #redwing specific
+                            redwingNotLines = ['READING ORDER','#','nuff said']
+                            if '(RW)' in file:
+                                if all(value not in line for value in redwingNotLines):
+                                    line = line.rstrip('\n') + ' #1'
                             print(line)
                             if '#' in line:
                                 yearReSearch = re.search(yearPattern,line)
@@ -181,7 +191,8 @@ for root, dirs, files in os.walk(readingListDirectory):
                                 line = re.sub(noteRemovalString,'',line)
                                 titleNumSplit = line.split(' #',1)
                                 series = titleNumSplit[0]
-                                #print(series)
+                                seriesCleanPat = re.compile(r' Vol \d+')
+                                series = re.sub(seriesCleanPat, '', series)
                                 issuerange = titleNumSplit[1]
                                 issuerange = issuerange.strip()
                                 #print(issuerange)

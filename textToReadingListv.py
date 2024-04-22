@@ -173,9 +173,9 @@ for root, dirs, files in os.walk(readingListDirectory):
                                 line = line.rstrip('\n') + ' #1'
                             #redwing specific
                             redwingNotLines = ['READING ORDER','#','nuff said']
-                            if '(RW)' in file:
-                                if all(value not in line for value in redwingNotLines):
-                                    line = line.rstrip('\n') + ' #1'
+                            #if '(RW)' in file:
+                            if all(value not in line for value in redwingNotLines):
+                                line = line.rstrip('\n') + ' #1'
                             print(line)
                             if '#' in line:
                                 yearReSearch = re.search(yearPattern,line)

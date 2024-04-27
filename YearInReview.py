@@ -15,7 +15,7 @@ rootDirectory = os.getcwd()
 dataDirectory = os.path.join(rootDirectory, "ReadingList-DB")
 cvSeriesDB = os.path.join(dataDirectory, "yearInReview-Type.db")
 YearInReviewDirectory = os.path.join(rootDirectory, "ReadingList-YearInReview")
-if not os.path.isdir(YearInReviewDirectory): os.mkdirs(YearInReviewDirectory)
+if not os.path.isdir(YearInReviewDirectory): os.makedirs(YearInReviewDirectory)
 resultsLines = []
 resultsLines.append(f'Publisher;Year;Total Series;In Mylar;Missing\n')
 

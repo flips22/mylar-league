@@ -33,6 +33,8 @@ else:
 
 minYear = config['yearinreview']['startyear']
 maxYear = config['yearinreview']['endyear']
+minYear = int(minYear)
+maxYear = int(maxYear)
 KeepTypes = config['yearinreview']['booktypes'].split(',')
 PubIDs = config['yearinreview']['pubidsetting'].split(',')
 mylarAPI = config['mylar']['mylarapi']

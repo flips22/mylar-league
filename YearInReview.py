@@ -92,6 +92,12 @@ def main():
     except sqlite3.Error as error:
         print("Error while connecting to sqlite", error)
 
+    update_query = f"""
+        UPDATE volumes
+        SET "CV Series Year" = TRIM("CV Series Year")
+    """
+
+    cur.execute(update_query)
 
     for pubid in PubIDs:
         print('now working on publisher %s' % (pubid))
@@ -106,7 +112,30 @@ def main():
 
         publisherChart = ''
 
-        for year in range (minYear, maxYear):
+        minYearDB = cur.execute(
+                'SELECT MIN("CV Series Year") FROM volumes WHERE "CV Series PublisherID" = ?',
+                (pubid,),
+                ).fetchone()
+        maxYearDB = cur.execute(
+                'SELECT MAX("CV Series Year") FROM volumes WHERE "CV Series PublisherID" = ?',
+                (pubid,),
+                ).fetchone()
+        print(minYearDB[0])
+        print(maxYearDB[0])
+        try:
+            minYearDBint = int(minYearDB[0])
+            if 1900 <= minYearDBint <= 2035:
+                minYearPub = minYearDBint
+        except:
+            print('Invalid min year found falling back to min year in config file')
+        try:
+            maxYearDBint = int(maxYearDB[0])
+            if 1900 <= maxYearDBint <= 2035:
+                maxYearPub = maxYearDBint
+        except:
+            print('Invalid max year found falling back to min year in config file')
+
+        for year in range (minYearPub, maxYearPub+1):
             print('now working on %s' % (year))
             
             df = pd.DataFrame(columns =['SeriesID', 'CoverImage', 'Volume', 'Type', 'Number of Issues', 'Publisher', 'Release Date', 'Add to Mylar'])
@@ -154,9 +183,9 @@ def main():
                         
                         seriesIssueCount = allSeries[y][6]
                         seriesType = allSeries[y][12]
-                        cover = allSeries[y][17]
+                        cover = allSeries[y][18]
                         try:
-                            cover_date = allSeries[y][18]
+                            cover_date = allSeries[y][17]
                         except:
                             cover_date = ''
                         volumeString = seriesName + ' (' + str(seriesYear) +')'

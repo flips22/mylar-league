@@ -1,17 +1,24 @@
 import sqlite3
 import configparser
+import os
 
 # Function to read the database path from config.ini or configPRIVATE.ini
 def read_database_path(config_ini_path):
-    config = configparser.ConfigParser()
-    config.read(config_ini_path)
-    if 'mylar' in config and 'mylardb' in config['mylar']:
-        return config['mylar']['mylardb']
+    if os.path.exists(config_ini_path):
+        config = configparser.ConfigParser()
+        config.read(config_ini_path)
+        if 'mylar' in config and 'mylardb' in config['mylar']:
+            return config['mylar']['mylardb']
     return None
 
 # Function to update both config files with the database path
 def update_config_files(database_path):
-    for config_file in ['config.ini', 'configPRIVATE.ini']:
+    if os.path.exists('configPRIVATE.ini'):
+        config_files = ['config.ini', 'configPRIVATE.ini']
+    else:
+        config_files = ['config.ini']
+
+    for config_file in config_files:
         config = configparser.ConfigParser()
         config.read(config_file)
         if 'mylar' not in config:

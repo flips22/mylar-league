@@ -100,7 +100,7 @@ def main():
     write_to_text_file(unique_values, mylar_publishers_file)
 
     # Match values from two text files and prepend numerical values
-    pubids_file_path = 'pubidsall.txt'
+    pubids_file_path = 'superpubids.txt'
     match_and_prepend_values(pubids_file_path, mylar_publishers_file)
 
     # Parse numerical values and write back to config.ini

@@ -1,14 +1,17 @@
 import requests
 import json
+import time
 import os
 import re
+import csv
 import configparser
 import sqlite3
 import pandas as pd
 from datetime import datetime
-#import plotly.graph_objects as go
+import plotly.graph_objects as go
 
-
+#charID = 1780 #Aunt May
+#charID = 58731 #Norah?
 
 rootDirectory = os.getcwd()
 dataDirectory = os.path.join(rootDirectory, "ReadingList-DB")
@@ -92,6 +95,16 @@ def get_search_mode():
         else:
             print("Invalid input. Please enter 'C' for Character IDs or 'P' for PeopleIDs.")
 
+def get_textID_mode():
+    while True:
+        mode = input("Enter C to search Character IDs, enter P to search PeopleIDs: ").strip().upper()
+        if mode == 'C':
+            return 'character'
+        elif mode == 'P':
+            return 'people'
+        else:
+            print("Invalid input. Please enter 'C' for Character IDs or 'P' for PeopleIDs.")
+
 def get_id(prompt):
     while True:
         user_input = input(prompt).strip()
@@ -105,10 +118,12 @@ def main():
 
     cpMode = get_search_mode()
     print(f"Search mode set to: {cpMode}")
+
+    textOrID = 0
     charID = get_id(f"Enter {cpMode} ID to search: ")
 
     mylarIDs = getAllSeries()
-    print(len(mylarIDs))
+    #print(len(mylarIDs))
 
     try:
         sqliteConnection = sqlite3.connect(cvSeriesDB,detect_types=sqlite3.PARSE_DECLTYPES)
@@ -147,7 +162,7 @@ def main():
 
 
     #for year in range (minYearPub, maxYearPub+1):
-    print('now working on %s' % (charID))
+    print('Now working on %s:' % (charID))
     
     df = pd.DataFrame(columns =['SeriesID', 'CoverImage', 'Volume', 'Type', 'Number of Issues', 'Publisher', 'Release Date', 'Add to Mylar'])
     CoverImage = []
@@ -174,6 +189,7 @@ def main():
             'SELECT * FROM characterIDs WHERE "charid" = ?',
             (charID,),
             ).fetchone()
+        cvLink = 'https://comicvine.gamespot.com/character/4005-' + charID + '/'
     if cpMode == 'people':
         charVolumes = curCP.execute(
             'SELECT * FROM people WHERE "personid" = ?',
@@ -184,6 +200,8 @@ def main():
             'SELECT * FROM peopleIDs WHERE "charid" = ?',
             (charID,),
             ).fetchone()
+
+        cvLink = 'https://comicvine.gamespot.com/person/4040-' + charID + '/'
     print(charName[1])
     file = str(charName[1]) +' (' + str(charName[0]) + ')' + '.html'
     #yearChart.append(year)
@@ -296,9 +314,10 @@ def main():
         #comicAddAllURL = "%s%s" % (mylarAddURL, missingSeriesIDString)
         #mylarURLaddAllHTML = '<a target="_blank" href="{}">{}</a>'.format(comicAddAllURL, 'Add all missing series to mylar')
 
-
-    summaryText = 'Total Series: ' + str(countSeries) + '  |   In mylar: ' + str(countInMylar) + '  |   Missing in mylar: ' + str(countNotInMylar) + '    ' + mylarURLaddAllHTML
-    resultsSingleLine = f'{charName};{str(countSeries)};{str(countInMylar)};{str(countNotInMylar)}'
+    cvlinkhtml = '<a href = ' + cvLink + '>'+ charID + '</a>'
+    #print(cvlinkhtml)
+    summaryText = str(charName[1]) + ' (' + cvlinkhtml + ')' + ': Total Series: ' + str(countSeries) + '  |   In mylar: ' + str(countInMylar) + '  |   Missing in mylar: ' + str(countNotInMylar) + '    ' + mylarURLaddAllHTML
+    resultsSingleLine = f'{charName[1]};{str(countSeries)};{str(countInMylar)};{str(countNotInMylar)}'
     totalChart.append(countSeries)
     haveChart.append(countInMylar)
     missingChart.append(countNotInMylar)
@@ -313,6 +332,7 @@ def main():
                 {"selector": "th", "props": [("border", "1px solid grey")]}
                 ]).set_caption(summaryText).map(color_cels)#.format({'CV Issue URL': make_clickable})#.to_html(outputhtmlfile)#,formatters={'CV Cover Image': image_formatter}, escape=False)
     df.to_html(outputhtmlfile)
+    print(f'HTML file exported to`: {outputhtmlfile}')
     '''
     publisherChart = publisherChart.replace("/", "-")
     chartfilename = '[' + publisherChart + '] Summary Chart.html'

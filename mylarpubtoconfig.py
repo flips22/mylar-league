@@ -1,17 +1,24 @@
 import sqlite3
 import configparser
+import os
 
 # Function to read the database path from config.ini or configPRIVATE.ini
 def read_database_path(config_ini_path):
-    config = configparser.ConfigParser()
-    config.read(config_ini_path)
-    if 'mylar' in config and 'mylardb' in config['mylar']:
-        return config['mylar']['mylardb']
+    if os.path.exists(config_ini_path):
+        config = configparser.ConfigParser()
+        config.read(config_ini_path)
+        if 'mylar' in config and 'mylardb' in config['mylar']:
+            return config['mylar']['mylardb']
     return None
 
 # Function to update both config files with the database path
 def update_config_files(database_path):
-    for config_file in ['config.ini', 'configPRIVATE.ini']:
+    if os.path.exists('configPRIVATE.ini'):
+        config_files = ['config.ini', 'configPRIVATE.ini']
+    else:
+        config_files = ['config.ini']
+
+    for config_file in config_files:
         config = configparser.ConfigParser()
         config.read(config_file)
         if 'mylar' not in config:
@@ -32,12 +39,6 @@ def read_unique_values_from_database(database_path, column_name):
     connection.close()
 
     return unique_values
-
-# Function to write unique values to a text file
-def write_to_text_file(values, file_path):
-    with open(file_path, 'w') as file:
-        for value in values:
-            file.write(value + '\n')
 
 # Function to match values from two text files and prepend numerical values
 def match_and_prepend_values(pubids_file_path, mylar_publishers_file_path):
@@ -90,7 +91,6 @@ def main():
     # Read unique values from database and write to text file
     unique_values = read_unique_values_from_database(database_path, 'ComicPublisher')
     mylar_publishers_file = 'mylarpublishers.txt'
-    write_to_text_file(unique_values, mylar_publishers_file)
 
     # Match values from two text files and prepend numerical values
     pubids_file_path = 'pubidsall.txt'

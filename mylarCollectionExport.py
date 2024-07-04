@@ -108,7 +108,7 @@ def getAllSeries():
                     
                     issueIDsearch = jsonIssueData['data']['issues'][issue]['id'] + ';'
                     addIssue = True
-                    with open(masterFile, 'r') as searchfile:
+                    with open(masterFile, 'r', encoding='utf-8') as searchfile:
                         for line in searchfile:
 
                             if issueIDsearch in line:
@@ -142,7 +142,7 @@ def getAllSeries():
 def leagueify():
     f_out = csv.writer(open(LOCGinputFile, 'w', encoding='utf-8'), delimiter=';', lineterminator='\n')
     
-    with open(collectionFile,'r') as f:
+    with open(collectionFile,'r', encoding='utf-8') as f:
         collection_list = list(csv.reader(f, delimiter=";", lineterminator='\n'))
         for line in range(len(collection_list)):
             if not re.match('^0', collection_list[line][5]):#prefer release date, if zeros, fall back to issue date
@@ -166,7 +166,7 @@ def leagueify():
 
 def chunkify():
     print("         Splitting files for import...")
-    with open(LOCGinputFile, "r") as f_all:
+    with open(LOCGinputFile, "r", encoding='utf-8') as f_all:
         count = 0
         #header = f_all.readline()
         lines = []
@@ -183,7 +183,7 @@ def chunkify():
 
 def write_chunk(part, lines):
     
-    with open(collectionFile.strip('.csv') + '-IMPORT-'+ str(part) +'.csv', 'w') as f_out:
+    with open(collectionFile.strip('.csv') + '-IMPORT-'+ str(part) +'.csv', 'w', encoding='utf-8') as f_out:
         #f_out.write(header)
         f_out.writelines(lines)
     return()
@@ -194,7 +194,7 @@ def main():
         print("       First run of export starting...")
         getAllSeries()
         leagueify()
-        with open(LOCGinputFile, "r") as f_length:
+        with open(LOCGinputFile, "r", encoding='utf-8') as f_length:
             if(len(f_length.readlines())) >= chunk_size:
                 chunkify()
     else:
@@ -204,7 +204,7 @@ def main():
         if not newIssueCounter == 0:
             leagueify()
             print('         Found ' + str(newIssueCounter) + ' issues')
-            with open(LOCGinputFile, "r") as f_length:
+            with open(LOCGinputFile, "r", encoding='utf-8') as f_length:
                 if(len(f_length.readlines())) >= chunk_size:
                     chunkify()
         else:

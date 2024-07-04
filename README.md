@@ -21,9 +21,17 @@ Creates a sqlite DB file from multiple xlsx files so a future list can use the s
 # Year In Review
 A script that will compare you mylar instance to all volumes on comicvine for each year and each publisher.
 ### **YearInReview.py**
-This script looks at all the new volumes on comicvine for for a given year and compares to your mylar instance. The output are HTML files for each publisher, each year as well as an interactive chart (also in HTML). The yearly HTML files show you the cover images, and provides link to view on comicvine and view in mylar or add to mylar. The 
+This script looks at all the new volumes on comicvine for for a given year and compares to your mylar instance. The output are HTML files for each publisher, each year as well as an interactive chart (also in HTML). The yearly HTML files show you the cover images, and provides link to view on comicvine and view in mylar or add to mylar. 
 ### **pubidtoconfig.py**
 Created to inject publisher ids from the text file to config.ini
+
+# Character / People In Review
+A script that will compare you mylar instance to all volumes on comicvine for a specific character or person.
+### **CharacterPeopleInReview.py**
+This script looks at all the  volumes on comicvine for for a given person or character and compares to your mylar instance. The output are HTML files for each ID. The HTML file shows you the cover images, and provides link to view on comicvine and view in mylar or add to mylar.
+
+The DB file is at the same mega link as the Year in Review DB file.  Also included are two CSV files with all the names and IDs for characters and people, or you can find the IDs on comicvine.  I have some code to enable searching directly in the app, which I plan to add later.
+
 
 # Installation:
 See detailed tutorial at: [CBLtoolsInstallation.md](CBLtoolsInstallation.md)

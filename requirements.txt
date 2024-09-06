@@ -8,4 +8,4 @@ pandas==2.1.3
 requests==2.31.0
 Simyan==1.2.0
 image==1.5.33
-plotly=>5.2.0
+plotly>=5.2.0

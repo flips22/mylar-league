@@ -7,7 +7,7 @@
 # Should probably be re-written as a generic module for use in other CBL generation tools ...
 import argparse
 import os
-import pathlib
+from pathlib import Path
 from bs4 import BeautifulSoup 
 
 def checkFile(filePath, bookcount=True, duplicates=True, timeJumps=True, timeThreshold=2):
@@ -38,9 +38,19 @@ def checkFile(filePath, bookcount=True, duplicates=True, timeJumps=True, timeThr
                         except:
                             print(f"\tException thrown while trying to compare entries: {''.join(str(books[i]).splitlines())} | {''.join(str(books[j]).splitlines())}")
 
+        
+        
         lastYear = 0
+        try:
+            lastYear = int(books[0].attrs['Year'])
+        except:
+            print(f"Ran into problem parsing year for the first book")
+            print(f"\t\t{''.join(str(books[0]).splitlines())}")
+
+        print(lastYear)
+
         if (timeJumps):            
-            for i in range(0, len(books)):
+            for i in range(1, len(books)):
                 try:
                     thisYear = int(books[i].attrs['Year'])
                 except:
@@ -53,10 +63,10 @@ def checkFile(filePath, bookcount=True, duplicates=True, timeJumps=True, timeThr
                                 f"{books[i-1].attrs['Series']} ({books[i-1].attrs['Volume']}) #{books[i-1].attrs['Number']} in {lastYear} "
                                 f"to {books[i].attrs['Series']} ({books[i].attrs['Volume']}) #{books[i].attrs['Number']} in {thisYear}")
                 
-                            lastYear = thisYear
                         except:
                             print(f"\tThere was an error getting the attributes of entry {i}: ")
                             print(f"\t\t{''.join(str(books[i]).splitlines())}")
+                lastYear = thisYear
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -70,15 +80,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # Either single file processing, or multi-file processing
-    if not os.path.exists(args.target):
+    root = Path(args.target)
+    
+    if not root.exists():
         print(f"Error: {args.target} does not exist")
         exit()
 
-    if os.path.isfile(args.target):
-        checkFile(args.target, bookcount = not args.xc, duplicates = not args.xd, timeJumps= not args.xt, timeThreshold = args.time_threshold)
-    elif os.path.isdir(args.target):
-        rootFolder = pathlib.Path(args.target)
-        cblFiles = rootFolder.rglob("*.cbl")
+    if root.is_file() :
+        checkFile(root, bookcount = not args.xc, duplicates = not args.xd, timeJumps= not args.xt, timeThreshold = args.time_threshold)
+    elif root.is_dir():
+        
+        cblFiles = root.rglob("*.cbl")
 
         for cblFile in cblFiles:
             checkFile(cblFile, bookcount = not args.xc, duplicates = not args.xd, timeJumps= not args.xt, timeThreshold = args.time_threshold)

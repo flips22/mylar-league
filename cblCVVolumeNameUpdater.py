@@ -95,7 +95,7 @@ def check_file(filePath, save_old=False, use_mylar=False):
                         response = cv_session.get_volume(cv_series_id)
 
                     except Exception as e:
-                        print(f"=== CV error looking up {cv_series_id}")
+                        print(f"=== CV error looking up {cv_series_id} in {filePath}")
                         print(repr(e))
                         goodResponse = False
                         if 'Rate limit exceeded' in repr(e):

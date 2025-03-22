@@ -5,6 +5,16 @@ Welcome to a collection (or more of a menagerie) of various apps for comic book 
 A lot of the tools supplement the great CBL collection at:
 https://github.com/DieselTech/CBL-ReadingLists
 I really don't have a background in programming, so don't expect perfection. I am welcome PRs, and I appreciate all those that helped me though PRs and advice and direction.
+
+## Drag and Drop CBL Import
+>If you want to import all the missing volumes from a CBL file into mylar and not mess with any of the other scripts, the fastest and easiest way to do that is with  `mylarCBLimport-Drag-Drop-Standalone.py`. 
+1. Install Python. 
+2. Download `mylarCBLimport-Drag-Drop-Standalone.py` to your hard drive. 
+3. Find a .CBL file and then drag and drop it onto the icon for `mylarCBLimport-Drag-Drop-Standalone.py`. 
+
+On the first run it will install the requests with pip and ask you for your mylar server address in the format `http://mymylarserver:8080/` and your mylar API key. Those entries will be saved in `configDND.ini`. The script will pop up search your mylar server for missing volumes and then give you the option to add all the missing volumes. There are more features and options in the following CBL import scripts.
+
+
 # CBL Generation
 A set of tools to create comic book reading lists in the format of a .CBL file.
 ### **CBLgenerator.py**

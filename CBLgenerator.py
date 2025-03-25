@@ -67,7 +67,7 @@ CACHE_RETENTION_TIME = 180 #days
 CV_API_KEY = config['comicVine']['cv_api_key']
 CV_API_RATE = 1 #Seconds between CV API calls
 FORCE_RECHECK_CV = False
-PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska","ECC Ediciones","RW Edizioni","Titan Comics","Dargaud","Federal", "Marvel UK/Panini UK","Grupo Editorial Vid","JuniorPress BV","Pocket Books", "Caliber Comics", "Panini Comics","Planeta DeAgostini","Newton Comics","Atlas Publishing"]
+PUBLISHER_BLACKLIST = ["Panini Comics","Editorial Televisa","Planeta DeAgostini","Unknown","Urban Comics","Dino Comics","Ediciones Zinco","Abril","Panini Verlag","Panini España","Panini France","Panini Brasil","Egmont Polska","ECC Ediciones","RW Edizioni","Titan Comics","Dargaud","Federal", "Marvel UK/Panini UK","Grupo Editorial Vid","JuniorPress BV","Pocket Books", "Caliber Comics", "Panini Comics","Planeta DeAgostini","Newton Comics","Atlas Publishing","Heroic Publishing","TM-Semic"]
 PUBLISHER_PREFERRED = ["Marvel","DC Comics","Vertigo"] #If multiple matches found, prefer this result
 SERIESID_BLACKLIST = [137835,147775,89852,96070,78862,58231,50923]
 SERIESID_GOODLIST = [42722,3824,4975,69322,3816,38005,1628] #index matches above list
@@ -1166,10 +1166,7 @@ def getCBLData(df,name,numissues):
         "<ReadingList xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n")
     
     print("     Creating CBL: %s " % (name))
-    if '&' in name:
-        name = name.replace('&','&#38;')
-    else:
-        name = name
+    name = name.replace("&","&amp;").replace('"',"&quot;").replace("'","&apos;").replace("<","&lt;").replace(">","&gt;")
 
     lines.append("<Name>%s</Name>\n" % (name))
     lines.append("<NumIssues>%s</NumIssues>\n" % (numissues))
@@ -1205,10 +1202,8 @@ def getCBLData(df,name,numissues):
         else:
                 
             if isinstance(issueID,int) and not issueID == 0:
-                if '&' in cvSeriesName:
-                    cvSeriesNameCBL = cvSeriesName.replace('&','&#38;')
-                else:
-                    cvSeriesNameCBL = cvSeriesName
+                cvSeriesNameCBL = cvSeriesName.replace("&","&amp;").replace('"',"&quot;").replace("'","&apos;").replace("<","&lt;").replace(">","&gt;")
+                
                 lines.append("<Book Series=\"%s\" Number=\"%s\" Volume=\"%s\" Year=\"%s\">\n" % (
                         cvSeriesNameCBL, issueNum, cvSeriesYear, issueYear))
                 lines.append(

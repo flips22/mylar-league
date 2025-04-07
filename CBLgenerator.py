@@ -756,8 +756,8 @@ def main():
 
 def extract_years_from_filename(filename):
     # Define the regular expression pattern to find years in the string with brackets
-    year1 = 2019
-    year2 = 2024
+    year1 = 1930
+    year2 = 2026
     #patternYearFileName = r'\[(\d{4})\s*-\s*(\d{4})\]'  # Matches years in the format [YYYY - YYYY]
     #patternYearFileName = r'(\d{4} - \d{4})|([0-9]{4} - Present)|(\d{4})'
 

@@ -1,4 +1,4 @@
-# Check CBL files with ComicVine IDs for up-to-date volume names.  Will use cached CV data younger than 30 days.
+# Check CBL files with ComicVine IDs for up-to-date volume info.  Will use cached CV data younger than 60 days.
 # By default this will change the cbl files in place.
 #
 # Can be run against a folder of CBLs recursively, or against individual files
@@ -33,7 +33,7 @@ else:
 
 rootDirectory = os.getcwd()
 dataDirectory = os.path.join(rootDirectory, "ReadingList-DB")
-cvCacheFile = os.path.join(dataDirectory, "CV-VolumeNames.db")
+cvCacheFile = os.path.join(dataDirectory, "CV-VolumeData.db")
 
 #Mylar prefs
 mylarAPI = config['mylar']['mylarapi']
@@ -42,15 +42,19 @@ mylarBaseURL = config['mylar']['mylarbaseurl']
 mylarVolumeURL = mylarBaseURL + 'api?apikey=' + mylarAPI + '&cmd=getComic&id='
 
 #CV prefs
-CACHE_RETENTION_TIME = 30 #days
+CACHE_RETENTION_TIME = 60 #days
 
 CV_API_KEY = config['comicVine']['cv_api_key']
 #CV_API_RATE = 0.1 #Seconds between CV API calls
 
 def check_file(filePath, save_old=False, use_mylar=False):
-    cbl = ET.parse(filePath, parser=ElementTree.XMLParser(target=CommentedTreeBuilder()))
-    cbl.getroot().set('xmlns:xsd', "http://www.w3.org/2001/XMLSchema")
-    cbl.getroot().set('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
+    try:
+        cbl = ET.parse(filePath, parser=ElementTree.XMLParser(target=CommentedTreeBuilder()))
+        cbl.getroot().set('xmlns:xsd', "http://www.w3.org/2001/XMLSchema")
+        cbl.getroot().set('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
+    except:
+        print(f"{filePath} Error parsing CBL.  No changes made.")
+        return
 
     books = cbl.findall(".//Book")
     first_entry_database = books[0].find(".//Database[@Name='cv']")
@@ -70,6 +74,7 @@ def check_file(filePath, save_old=False, use_mylar=False):
     try:
         for book in books:
             series_name = book.get("Series")
+            series_year = book.get("Volume")
             cv_series_id = book.find(".//Database[@Name='cv']").get("Series")
 
             if cv_series_id is None:
@@ -103,13 +108,16 @@ def check_file(filePath, save_old=False, use_mylar=False):
                             time.sleep(200)
                 
                 current_name = response.name
+                current_year = str(response.start_year)
             else:
                 current_name = mylarComicData[0]['name']
+                current_year = str(mylarComicData[0]['year'])
 
-            if series_name != current_name:
+            if series_name != current_name or series_year != current_year:
                 book.attrib["Series"] = current_name
+                book.attrib["Volume"] = current_year
                 update_counter += 1
-                series_updates[series_name] = current_name
+                series_updates[f'{series_name} ({series_year})'] = f'{current_name} ({current_year})'
             
             #time.sleep(CV_API_RATE)
 
@@ -120,7 +128,7 @@ def check_file(filePath, save_old=False, use_mylar=False):
 
             cbl.write(filePath, encoding='utf-8', xml_declaration=True)
                                   
-            print(f"{filePath} {update_counter} books updated. {series_updates}")
+            print(f"{filePath} {update_counter} entries updated. {series_updates}")
         else:
             print(f"{filePath} No updates needed for file.")
     except Exception as e:
@@ -134,8 +142,8 @@ def check_file(filePath, save_old=False, use_mylar=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-                    prog='CBL Sanity Checker',
-                    description='Reviews Comic Book Lists for potential issues')
+                    prog='CBL CV Data Refresh',
+                    description='Reviews CBL files for up to date CV data on volumes')
     parser.add_argument('target', help='Either a folder containing CBL files or a single CBL file to analyse')
     parser.add_argument('-b', help='If a cbl is updated, save the original file with an .old suffix', action='store_true')
     parser.add_argument('-m', help='Use mylar for a data source (if available)', action='store_true')

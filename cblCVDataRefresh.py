@@ -49,29 +49,30 @@ CV_API_KEY = config['comicVine']['cv_api_key']
 
 def check_file(filePath, save_old=False, use_mylar=False):
     try:
-        cbl = ET.parse(filePath, parser=ElementTree.XMLParser(target=CommentedTreeBuilder()))
-        cbl.getroot().set('xmlns:xsd', "http://www.w3.org/2001/XMLSchema")
-        cbl.getroot().set('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
-    except:
-        print(f"{filePath} Error parsing CBL.  No changes made.")
-        return
+        try:
+            cbl = ET.parse(filePath, parser=ElementTree.XMLParser(target=CommentedTreeBuilder()))
+            cbl.getroot().set('xmlns:xsd', "http://www.w3.org/2001/XMLSchema")
+            cbl.getroot().set('xmlns:xsi', "http://www.w3.org/2001/XMLSchema-instance")
+        except:
+            print(f"{filePath} Error parsing CBL.  No changes made.")
+            return
 
-    books = cbl.findall(".//Book")
-    first_entry_database = books[0].find(".//Database[@Name='cv']")
-    if first_entry_database is None:
-        print(f"{filePath} does not contain cv Database IDs.  No changes made.")
-        return
-        
-    volumes_updated = False
-    update_counter = 0
-    series_updates = {}
-    try:
-        cv_session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
-    except:
-        print(f"{filePath} Error creating CV session.  No changes made.")
-        return
+        books = cbl.findall(".//Book")
+        first_entry_database = books[0].find(".//Database[@Name='cv']")
+        if first_entry_database is None:
+            print(f"{filePath} does not contain cv Database IDs.  No changes made.")
+            return
+            
+        volumes_updated = False
+        update_counter = 0
+        series_updates = {}
+        try:
+            cv_session = Comicvine(api_key=CV_API_KEY, cache=SQLiteCache(cvCacheFile,CACHE_RETENTION_TIME))
+        except:
+            print(f"{filePath} Error creating CV session.  No changes made.")
+            return
 
-    try:
+    
         for book in books:
             series_name = book.get("Series")
             series_year = book.get("Volume")

@@ -25,8 +25,7 @@ Create a CBL file from an xlsx file. The xlsx file can be updated to make manual
 Convert a text file to an xlsx file that can then be used to create a CBL.
 
 ### **leagueHTMLtoReadingList.py**
-Convert a event or community list from League of Comic Geeks to an xlsx file that can then be used to create a CBL. The previous script doesn't work anymore with the site's updated CloudFlare protection. This script scrapes saved HTML files. Add the rendered HTML file to the "ReadingList-HTML-League" folder, then run the script. The event pages seem to be fully rendered when you same the HTML file, but community lists are not. To save the community lists, you need to use an extension like "Save Page WE": https://chromewebstore.google.com/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof?hl=en-US
-League of Comic Geeks Community Lists: https://leagueofcomicgeeks.com/community/lists
+Convert a event or community list from League of Comic Geeks to an xlsx file that can then be used to create a CBL.
 
 
 ### **dbTruthTableGenerator.py**
@@ -106,6 +105,11 @@ For example:
 
 This should set the year and the volume name when listed as (YEAR). The # sign must be there as those are the only lines it looks at.  Also, only the regular dash works at the moment. It won't work with a fancy dash. I need to fix that in the code. For now you have to do a find replace in a text editor.
 
+## leagueHTMLtoReadingList:
+This script parses a rendered HTML file from leagueofcomicgeeks.com and converts to an xlsx file that can be used in the CBL Generator script.
+
+ The previous script doesn't work anymore (moved to the obsolete folder) with the site's updated CloudFlare protection. This script scrapes saved HTML files. Add the rendered HTML file to the "ReadingList-HTML-League" folder, then run the script. The event pages seem to be fully rendered when you same the HTML file, but community lists are not. To save the community lists, you need to use an extension like "Save Page WE": https://chromewebstore.google.com/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof?hl=en-US
+League of Comic Geeks Community Lists: https://leagueofcomicgeeks.com/community/lists
 
 # Year In Review
 This script looks at all the new volumes on comicvine for for a given year and compares to your mylar instance.  The output are HTML files for each publisher, each year as well as an interactive chart (also in HTML). The yearly HTML files show you the cover images, and provides link to view on comicvine and view in mylar or add to mylar.

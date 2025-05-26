@@ -2,6 +2,7 @@ import os
 import re
 import pandas as pd
 from glob import glob
+import numpy as np
 
 # HTML and Output Directory
 html_folder = "ReadingList-HTML-League"
@@ -50,11 +51,12 @@ def main():
     html_files = glob(os.path.join(html_folder, '*.html'))
 
     for html_file in html_files:
+        print(f"Working on: {html_file}")
         with open(html_file, 'r', encoding='utf-8') as file:
             html_data = file.read()
         
         cblSeriesList = parseWishlist(html_data)
-
+        df = pd.DataFrame(columns=dfOrderList)
         index = len(df)
         for line in cblSeriesList:
             if '#' in line:
@@ -87,5 +89,5 @@ def main():
         output_path = os.path.join(html_folder, output_filename)
         df.to_excel(output_path, index=True)
         print(f"Saved Excel file: {output_path}")
-
+        
 main()

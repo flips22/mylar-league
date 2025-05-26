@@ -22,7 +22,12 @@ A set of tools to create comic book reading lists in the format of a .CBL file.
 Create a CBL file from an xlsx file. The xlsx file can be updated to make manual matches to comicvine, or search based on title and dates.
 
 ### **textToReadingList.py**
-Convert a text file to an xlsx file that can then be used to create a CBL
+Convert a text file to an xlsx file that can then be used to create a CBL.
+
+### **leagueHTMLtoReadingList.py**
+Convert a event or community list from League of Comic Geeks to an xlsx file that can then be used to create a CBL. The previous script doesn't work anymore with the site's updated CloudFlare protection. This script scrapes saved HTML files. Add the rendered HTML file to the "ReadingList-HTML-League" folder, then run the script. The event pages seem to be fully rendered when you same the HTML file, but community lists are not. To save the community lists, you need to use an extension like "Save Page WE": https://chromewebstore.google.com/detail/save-page-we/dhhpefjklgkmgeafimnjhojgjamoafof?hl=en-US
+League of Comic Geeks Community Lists: https://leagueofcomicgeeks.com/community/lists
+
 
 ### **dbTruthTableGenerator.py**
 Creates a sqlite DB file from multiple xlsx files so a future list can use the same matching logic.

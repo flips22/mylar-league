@@ -9,7 +9,7 @@ from sys import argv
 import numpy as np
 import re
 from simyan.comicvine import Comicvine
-from simyan.sqlite_cache import SQLiteCache
+from simyan.cache import SQLiteCache
 import configparser
 from PIL import Image
 import pandas as pd

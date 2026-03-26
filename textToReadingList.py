@@ -50,7 +50,7 @@ dfOrderList = ['SeriesName', 'SeriesStartYear', 'IssueNum', 'IssueType', 'CoverD
 index = 0
 
 def getRange(issuerange):
-    numbers = re.findall(r'\d+', issuerange)
+    numbers = re.findall(r'\d+(?:\.\d+)?', issuerange)
 
     # Convert the numbers to integers and extract the range
     num_range = list(range(int(numbers[0]), int(numbers[1])+1))
@@ -279,7 +279,7 @@ for root, dirs, files in os.walk(readingListDirectory):
                                             df.loc[index,'IssueNum'] = issue
                                             df.loc[index,'SeriesStartYear'] = year
                                             index += 1
-                                        issuelist = re.findall(r'\d+', issuerange)
+                                        issuelist = re.findall(r'\d+(?:\.\d+)?', issuerange)
                                     
                                         print(series)
                                         print(issue)
@@ -294,7 +294,7 @@ for root, dirs, files in os.walk(readingListDirectory):
                                         
                                     if re.search(fromToPatternEnd, issuerange) and re.search(threeCommaPatternBeg, issuerange):
                                         issueFromTo = re.sub(twoCommaPatternBeg,'', issuerange)
-                                        issuelist = re.findall(r'\d+', issueFromTo)
+                                        issuelist = re.findall(r'\d+(?:\.\d+)?', issueFromTo)
                                         print(series)
                                         print(issue)
                                         df.loc[index,'SeriesName'] = series

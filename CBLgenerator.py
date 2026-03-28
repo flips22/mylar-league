@@ -766,7 +766,7 @@ def extract_years_from_filename(filename):
     #yearRangeMatch =  re.findall(r'\[(\d{4}-\d{4})\]', filename)
     yearRangeMatch =  re.findall(r'(\d{4}-\d{4})', filename)
 
-    yearRangeMatchPresent = re.findall(r'\[(\d{4}-Present)\]|\((\d{4}-Present)\)', filename)
+    yearRangeMatchPresent = re.findall(r'\[(\d{4}-Present)\]|\((\d{4}-Present)\)', filename, re.IGNORECASE)
     #yearRangeMatchSingleYear = re.findall(r'\[(\d{4})\]', filename)
     yearRangeMatchSingleYear = re.findall(r'\[(\d{4})\]|\((\d{4})\)',filename)
     #if re.match(r'\[(\d{4}-\d{4})\]', filename):

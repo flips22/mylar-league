@@ -22,7 +22,7 @@ from sys import argv
 import numpy as np
 import re
 from simyan.comicvine import Comicvine
-from simyan.sqlite_cache import SQLiteCache
+from simyan.cache import SQLiteCache
 import configparser
 from PIL import Image
 import pandas as pd
@@ -32,6 +32,7 @@ from PIL import Image
 from io import BytesIO
 from IPython.display import HTML
 import datetime
+from datetime import timedelta
 
 from bs4 import BeautifulSoup as Soup
 
@@ -76,7 +77,7 @@ dataDirectory = os.path.join(rootDirectory, "ReadingList-DB")
 if not os.path.isdir(dataDirectory): os.mkdir(dataDirectory)
 
 cvCacheFile = os.path.join(dataDirectory, "CV.db")
-CACHE_RETENTION_TIME = 120 #days
+CACHE_RETENTION_TIME = timedelta(days=120)
 
 IMAGE_DIR = os.path.join(rootDirectory, "CVCoverImages")
 if not os.path.isdir(IMAGE_DIR): os.mkdir(IMAGE_DIR)

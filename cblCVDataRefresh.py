@@ -14,9 +14,9 @@ import json
 from xml.etree import ElementTree
 import xml.etree.ElementTree as ET
 
-
+from datetime import timedelta
 from simyan.comicvine import Comicvine
-from simyan.sqlite_cache import SQLiteCache
+from simyan.cache import SQLiteCache
 
 class CommentedTreeBuilder(ElementTree.TreeBuilder):
     def comment(self, data):
@@ -42,7 +42,7 @@ mylarBaseURL = config['mylar']['mylarbaseurl']
 mylarVolumeURL = mylarBaseURL + 'api?apikey=' + mylarAPI + '&cmd=getComic&id='
 
 #CV prefs
-CACHE_RETENTION_TIME = 60 #days
+CACHE_RETENTION_TIME = timedelta(days=60)
 
 CV_API_KEY = config['comicVine']['cv_api_key']
 #CV_API_RATE = 0.1 #Seconds between CV API calls

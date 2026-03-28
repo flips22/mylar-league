@@ -9,7 +9,7 @@ from sys import argv
 import numpy as np
 import re
 from simyan.comicvine import Comicvine
-from simyan.sqlite_cache import SQLiteCache
+from simyan.cache import SQLiteCache
 import configparser
 #import xlsxwriter
 from PIL import Image
@@ -28,7 +28,7 @@ from io import BytesIO
 from IPython.display import HTML
 
 import unicodedata  # Needed to strip character accents
-from datetime import datetime
+from datetime import datetime, timedelta
 #from datetime import date
 #import datetime
 import sqlite3
@@ -62,7 +62,7 @@ IMAGE_DIR = os.path.join(SCRIPT_DIR, "CVCoverImages")
 
 #CV prefs
 #CV_SEARCH_LIMIT = 10000 #Maximum allowed number of CV API calls
-CACHE_RETENTION_TIME = 180 #days
+CACHE_RETENTION_TIME = timedelta(days=180)
 
 CV_API_KEY = config['comicVine']['cv_api_key']
 CV_API_RATE = 1 #Seconds between CV API calls

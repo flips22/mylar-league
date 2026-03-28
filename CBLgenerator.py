@@ -82,7 +82,7 @@ yearStringCleanTemplate = '[^0-9]'
 
 dfOrderList = ['SeriesName', 'SeriesStartYear', 'IssueNum', 'IssueType', 'CoverDate', 'Name', 'SeriesID', 'IssueID', 'CV Series Name', 'CV Series Year', 'CV Issue Number', 'CV Series Publisher', 'CV Cover Image', 'CV Issue URL', 'Days Between Issues']
 
-'''
+r'''
 
 class col(IntEnum):
     # listOrder = 0
@@ -164,13 +164,13 @@ problemsFile = os.path.join(resultsDirectory, "problems-%s.txt" % (timeString))
 uniqueSeriesFile = os.path.join(resultsDirectory, "uniqueSeriesWarnings-%s.txt" % (timeString))
 duplicateIssueFile = os.path.join(resultsDirectory, "duplicateIssuesRemoved-%s.txt" % (timeString))
 
-#truthDB = os.path.join(dataDirectory, "truthDB.db")
+truthDB = os.path.join(dataDirectory, "truthDB.db")
 #truthDB = os.path.join(dataDirectory, "CBRO.db")
 #truthDB = os.path.join(dataDirectory, "x-men.db")
-truthDB = os.path.join(dataDirectory, "CMRO.db")
+#truthDB = os.path.join(dataDirectory, "CMRO.db")
 
-#cvCacheFile = os.path.join(dataDirectory, "CV.db")
-cvCacheFile = os.path.join(dataDirectory, "CV-NEW.db")
+cvCacheFile = os.path.join(dataDirectory, "CV.db")
+#cvCacheFile = os.path.join(dataDirectory, "CV-NEW.db")
 #vCacheFile = os.path.join(dataDirectory, "CV-TEMP.db")
 
 
@@ -625,7 +625,7 @@ def main():
                             #continue
                     
                     #print('     Found issueid: %s'%(str(issueID)))
-                    df.loc[index,'CoverDate'] = coverDate
+                    df.loc[index, 'CoverDate'] = pd.to_datetime(coverDate)
                     df.loc[index,'IssueID'] = issueID
                     df.loc[index,'CV Series Name'] = cvSeriesName
                     df.loc[index,'CV Series Year'] = cvSeriesYear
@@ -1149,7 +1149,7 @@ def importXLSX(outputfile):
             df[col].fillna(0, inplace=True) 
     
     '''
-    df.fillna('', inplace=True)
+    df = df.astype(object).fillna('')
     #rowint = 0
 
     df = df.reset_index(drop=True)  # make sure indexes pair with number of rows
@@ -1617,7 +1617,7 @@ def findVolumeNoYear(series,issuenumber):
     #global CV
 
 
-    '''
+    r'''
     #series = series.replace('Spider-Man -', 'Spider-Man:')
     series = series.replace(' vs ', ' vs. ')
     series = series.replace(' - ', ': ')

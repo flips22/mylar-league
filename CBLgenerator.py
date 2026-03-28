@@ -164,13 +164,13 @@ problemsFile = os.path.join(resultsDirectory, "problems-%s.txt" % (timeString))
 uniqueSeriesFile = os.path.join(resultsDirectory, "uniqueSeriesWarnings-%s.txt" % (timeString))
 duplicateIssueFile = os.path.join(resultsDirectory, "duplicateIssuesRemoved-%s.txt" % (timeString))
 
-#truthDB = os.path.join(dataDirectory, "truthDB.db")
+truthDB = os.path.join(dataDirectory, "truthDB.db")
 #truthDB = os.path.join(dataDirectory, "CBRO.db")
 #truthDB = os.path.join(dataDirectory, "x-men.db")
-truthDB = os.path.join(dataDirectory, "CMRO.db")
+#truthDB = os.path.join(dataDirectory, "CMRO.db")
 
-#cvCacheFile = os.path.join(dataDirectory, "CV.db")
-cvCacheFile = os.path.join(dataDirectory, "CV-NEW.db")
+cvCacheFile = os.path.join(dataDirectory, "CV.db")
+#cvCacheFile = os.path.join(dataDirectory, "CV-NEW.db")
 #vCacheFile = os.path.join(dataDirectory, "CV-TEMP.db")
 
 

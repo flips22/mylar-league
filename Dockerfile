@@ -1,11 +1,13 @@
 FROM lscr.io/linuxserver/baseimage-alpine:3.23
 
-RUN apk add --no-cache python3 python3-dev py3-pip;chown -R abc:abc /app
+RUN apk add --no-cache python3 python3-dev py3-pip wget;chown -R abc:abc /app /config
 COPY --chown=abc:abc *.py /app
+COPY --chown=abc:abc config.ini /config
 COPY --chown=abc:abc requirements.txt /app
+COPY docker/service/etc /etc
+RUN chmod +x /etc/s6-overlay/s6-rc.d/**/run
 
-USER abc
-
+WORKDIR /config
 ENV VIRTUAL_ENV=/app/.venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"

@@ -6,7 +6,7 @@ def extract_pubids(filename):
     with open(filename, 'r') as file:
         for line in file:
             # Extract numerical digits from the line
-            digits = re.findall(r'\d+(?:\.\d+)?', line)
+            digits = re.findall(r'\d+', line)
             if digits:
                 # Convert the digits into a comma-separated value string
                 pubid = ','.join(digits)

@@ -1,0 +1,14 @@
+#! /command/with-contenv bash
+
+echo "Initializing configuration setup"
+chown -R abc:abc /config /app
+mkdir -p /config/ReadingLists/{Input,Output,Text,DB}
+ln -s /config/ReadingLists/Input /app/ReadingList-ImportExport
+ln -s /config/ReadingLists/Output /app/ReadingList-Output
+ln -s /config/ReadingLists/Text /app/ReadingLists-Text
+ln -s /config/ReadingLists/DB /app/ReadingList-DB
+mkdir -p /config/dbTruthTable/Output
+ln -s /config/dbTruthTable/Output /app/dbTruthTable-Output
+wget -O /config/config.ini https://raw.githubusercontent.com/flips22/mylar-league/refs/heads/master/config.ini
+ln -s /config/config.ini /app/config.ini
+chown -R abc:abc /config /app

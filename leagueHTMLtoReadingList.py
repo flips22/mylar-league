@@ -71,7 +71,7 @@ def main():
                 series = series.replace("–", "-")
 
                 issuerange = titleNumSplit[1].strip()
-                allnums = re.findall(r'\d+', issuerange)
+                allnums = re.findall(r'\d+(?:\.\d+)?', issuerange)
 
                 if allnums:
                     issuenumber = allnums[0]
